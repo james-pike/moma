@@ -1,9 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Image } from "@unpic/qwik";
-import Carousel from "./Carousel";
-
-const coverImage =
-  "https://images.unsplash.com/photo-1590767950092-42b8362368da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80";
+import HeroCarousel from "./HeroCarousel";
 
 export default component$(() => {
   return (
@@ -43,7 +39,7 @@ export default component$(() => {
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
-                  <button class="btn w-full bg-primary-300 dark:bg-transparent">Learn more</button>
+                  <button class="btn w-full bg-primary-300 dark:bg-primary-500">Learn more</button>
                 </div>
               </div>
             </div>
@@ -59,7 +55,7 @@ export default component$(() => {
               priority={true}
               breakpoints={[320, 480, 640, 768, 1024]}
             /> */}
-            <Carousel/>
+            <HeroCarousel/>
           </div>
         </div>
       </div>
