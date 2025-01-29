@@ -17,13 +17,13 @@ const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBra
 const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
+import LogoCloud from "~/components/widgets/LogoCloud";
 
 export default component$(() => {
   return (
     <>
-    
       <Hero />
-  
+      <LogoCloud/>
       <Features
         highlight="Features"
         title="What you get with Qwind"
