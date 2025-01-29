@@ -3,7 +3,7 @@ import { Carousel } from 'flowbite-qwik'
 
 export default component$(() => {
   return (
-    <Carousel pauseOnHover>
+    <Carousel pauseOnHover noControls>
       <Carousel.Slide>
         <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
       </Carousel.Slide>
