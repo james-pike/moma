@@ -17,7 +17,6 @@ const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBra
 const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
-import FAQAccordion from "~/components/widgets/FAQAccordion";
 
 export default component$(() => {
   return (
