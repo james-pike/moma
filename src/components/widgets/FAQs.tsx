@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import { ItemGrid } from "~/components/ui/ItemGrid";
 import IconArrowDownRight from "~/components/icons/IconArrowDownRight"
+import FAQAccordion from "./FAQAccordion";
 
 interface Item {
   title?: string;
@@ -45,7 +46,7 @@ export default component$((props: Props) => {
       >
         <Headline
           title={title}
-          subtitle={subtitle}
+          // subtitle={subtitle}
           highlight={highlight}
           classes={{
             container: "max-w-xl sm:mx-auto lg:max-w-2xl",
@@ -53,7 +54,7 @@ export default component$((props: Props) => {
             ...(classes?.headline ?? {}),
           }}
         />
-        <div class="sm:mx-auto">
+        <div class="sm:mx-auto hidden sm:block">
           <ItemGrid
             items={items}
             defaultIcon={IconArrowDownRight}
@@ -63,6 +64,11 @@ export default component$((props: Props) => {
             }}
           />
         </div>
+
+            <div class="block sm:hidden">
+              <FAQAccordion/>
+            </div>
+
       </div>
     </section>
   );
