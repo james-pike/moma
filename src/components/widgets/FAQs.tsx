@@ -46,7 +46,7 @@ export default component$((props: Props) => {
       >
         <Headline
           title={title}
-          // subtitle={subtitle}
+          subtitle={subtitle}
           highlight={highlight}
           classes={{
             container: "max-w-xl sm:mx-auto lg:max-w-2xl",
