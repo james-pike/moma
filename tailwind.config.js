@@ -14,20 +14,33 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          ...colors.brown, // Using Tailwind's default brown as a base for primary
-          50:  '#f5f0e6',  // Soft sandy beige
-          100: '#e0d6c4',  // Light tan
-          200: '#cbb89e',  // Warm taupe
-          300: '#b49a78',  // Earthy brown
-          400: '#9c7d58',  // Classic capybara fur color
-          500: '#866441',  // Rich brown (base)
-          600: '#6e4f32',  // Deep brown
-          700: '#573d26',  // Dark walnut brown
-          800: '#3f2c1a',  // Espresso brown
-          900: '#291d10',  // Almost black-brown
-          950: '#1b120a',  // Ultra-dark brown for deep contrast // Very dark blue (even more professional)
+          50:  '#eef4fc',  
+          100: '#d5e3f9',  
+          200: '#acc7f3',  
+          300: '#7faaf0',  
+          400: '#508ded',  
+          500: '#2970e6',  // Core blue (base)
+          DEFAULT: '#2970e6', // Default primary
+          600: '#1f5ac1',  
+          700: '#174699',  
+          800: '#0f3270',  
+          900: '#081d47',  
+          950: '#040e27',  
         },
-        secondary: colors.sky,
+        secondary: {
+          50:  '#e6f9f7',  
+          100: '#c0f0ea',  
+          200: '#88e1d4',  
+          300: '#4fcdbd',  
+          400: '#26b4a3',  
+          500: '#129086',  // Core teal (base)
+          DEFAULT: '#129086', // Default secondary
+          600: '#0f736a',  
+          700: '#0b5851',  
+          800: '#073e39',  
+          900: '#042724',  
+          950: '#021514',  
+        },
       },
       fontFamily: {
         sans: ["'Inter Variable'", ...defaultTheme.fontFamily.sans],

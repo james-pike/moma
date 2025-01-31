@@ -8,14 +8,14 @@ export default component$(() => {
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="pt-0 md:pt-[36px] pointer-events-none"></div>
-        <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
+        <div class="py-5 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
           <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
-          {/* <a href="https://kas.fyi/token/krc20/WIENER" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                <span class="text-xs bg-primary-400 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Minting Now In Progress!</span>
+          <a href="https://kas.fyi/token/krc20/WIENER" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <span class="text-xs bg-primary-400 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Free Web Audit & SEO Report</span>
                 <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-              </a> */}
+              </a>
             <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-primary-400">
-              <span class="text-primary-600">$BARA</span>  the Kaspian <span class="text-primary-600">Kapybara</span><br class="hidden lg:block" />{" "}
+              <span class="text-primary-600">Website</span>  Design & Development <span class="text-primary-600">Services</span><br class="hidden lg:block" />{" "}
               {/* <span class="hidden lg:inline">create a website using </span>  */}
               {/* <span class="text-[#039de1]">Qwik</span> +{" "}
               <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CSS</span> */}
@@ -23,7 +23,7 @@ export default component$(() => {
             <div class="max-w-3xl mx-auto lg:max-w-none">
               <p class="text-xl text-muted mb-6 dark:text-slate-300">
 
-                He’s the talk of Hollywood 🎬  voice of daytime radio 📻 and currently making waves in the Japanese anime scene 🇯🇵 #Kapybara fair-launched on $KAS
+              Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.
 
               </p>
 
@@ -46,24 +46,8 @@ export default component$(() => {
 
                     </div>
                   </a>
-                  <a href="/images/WIENER-WHITEPAPER.pdf" download="WIENER-WHITEPAPER.pdf">
-                    <div class="flex w-full">
-
-                      <button class="btn w-full bg-primary-100 dark:bg-primary-500 py-2 rounded-md ">
-                        Whitepaper
-                      </button>
-
-                    </div>
-                  </a>
-                  <a href="https://kas.fyi/token/krc20/WIENER">
-                    <div class="flex w-full">
-
-                      <button class="btn w-full bg-primary-400 py-2 rounded-md ">
-                        Buy $BARA
-                      </button>
-
-                    </div>
-                  </a>
+             
+           
                 </div>
             </div>
           </div>
