@@ -27,7 +27,7 @@ export default component$(() => {
 
               </p>
 
-              <div class=" sm:max-w-md m-auto grid grid-cols-2 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+              <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
                   <a href="https://x.com/wienerKRC20">
                     <div class="flex w-full">
 
