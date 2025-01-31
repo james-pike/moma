@@ -36,7 +36,7 @@ export default component$(() => {
             icon: IconBrandTailwind,
           },
           {
-            title: "Ready-to-use Components",
+            title: "Ready-to-use Component",
             description:
               "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
             icon: IconApps,
