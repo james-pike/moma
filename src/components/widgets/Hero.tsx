@@ -32,7 +32,7 @@ export default component$(() => {
                     <div class="flex w-full">
 
                       <button class="btn w-full bg-primary-400 dark:bg-primary-700 py-2 rounded-md ">
-                        Book A Consultation
+                      Request A Quote
                       </button>
 
                     </div>
@@ -41,7 +41,7 @@ export default component$(() => {
                     <div class="flex w-full">
 
                       <button class="btn w-full bg-primary-300 dark:bg-primary-600 py-2 rounded-md ">
-                        Request A Quote
+                      Book A Consultation
                       </button>
 
                     </div>
