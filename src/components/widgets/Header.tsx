@@ -7,6 +7,7 @@ import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
+import StylePopover from "./StylePopover";
 
 export default component$(() => {
   const store = useStore({
@@ -38,6 +39,7 @@ export default component$(() => {
            <Logo/>
           </a>
           <div class="flex items-center md:hidden">
+            <StylePopover/>
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <a
                         class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
