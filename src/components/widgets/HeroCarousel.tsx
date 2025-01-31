@@ -5,14 +5,18 @@ export default component$(() => {
   return (
     <Carousel pauseOnHover noControls>
       <Carousel.Slide>
-        <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
+        <img src="/images/hero1.jpg" alt="..." />
       </Carousel.Slide>
       <Carousel.Slide>
-        <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
+        <img src="/images/hero5.jpg" alt="..." />
+      </Carousel.Slide>
+    
+      {/* <Carousel.Slide>
+        <img src="/images/hero7.jpg" alt="..." />
       </Carousel.Slide>
       <Carousel.Slide>
-        <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
-      </Carousel.Slide>
+        <img src="/images/hero6.jpg" alt="..." />
+      </Carousel.Slide> */}
     </Carousel>
   )
 })

@@ -14,18 +14,18 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          ...colors.blue, // Using Tailwind's default blue as a base for primary
-          50: '#ebf8ff',
-          100: '#bee3f8',
-          200: '#90cdf4',
-          300: '#63b3ed',
-          400: '#4299e1',
-          500: '#3182ce', // Base professional blue (you can adjust this)
-          600: '#2b6cb0',
-          700: '#2c5282',
-          800: '#2a4365',
-          900: '#1A365D', // Darker blue for high contrast
-          950: '#153e75', // Very dark blue (even more professional)
+          ...colors.brown, // Using Tailwind's default brown as a base for primary
+          50:  '#f5f0e6',  // Soft sandy beige
+          100: '#e0d6c4',  // Light tan
+          200: '#cbb89e',  // Warm taupe
+          300: '#b49a78',  // Earthy brown
+          400: '#9c7d58',  // Classic capybara fur color
+          500: '#866441',  // Rich brown (base)
+          600: '#6e4f32',  // Deep brown
+          700: '#573d26',  // Dark walnut brown
+          800: '#3f2c1a',  // Espresso brown
+          900: '#291d10',  // Almost black-brown
+          950: '#1b120a',  // Ultra-dark brown for deep contrast // Very dark blue (even more professional)
         },
         secondary: colors.sky,
       },
