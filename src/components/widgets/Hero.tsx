@@ -31,8 +31,8 @@ export default component$(() => {
                   <a href="https://x.com/wienerKRC20">
                     <div class="flex w-full">
 
-                      <button class="btn w-full bg-primary-300 dark:bg-primary-700 py-2 rounded-md ">
-                        Join Telegram
+                      <button class="btn w-full bg-primary-400 dark:bg-primary-700 py-2 rounded-md ">
+                        Book A Consultation
                       </button>
 
                     </div>
@@ -40,8 +40,8 @@ export default component$(() => {
                   <a href="https://t.me/+Civ_RQYiZH03Y2I5">
                     <div class="flex w-full">
 
-                      <button class="btn w-full bg-primary-200 dark:bg-primary-600 py-2 rounded-md ">
-                        Share on X
+                      <button class="btn w-full bg-primary-300 dark:bg-primary-600 py-2 rounded-md ">
+                        Request a Quote
                       </button>
 
                     </div>
