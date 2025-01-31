@@ -8,11 +8,11 @@ import IconBrandTailwind from '../icons/IconBrandTailwind';
 
 export default component$(() => {
   return (
-    <Popover.Root flip={true} gutter={8} preventdefault:scroll>
+    <Popover.Root flip={false} gutter={8}>
       <Popover.Trigger class={buttonVariants({ look: 'outline' })}>
         <IconBrandTailwind/>
       </Popover.Trigger>
-      <Popover.Panel>
+      <Popover.Panel class="overflow-hidden">
         <div class="grid gap-4">
           <div class="space-y-2">
             <h4 class="font-medium leading-none">Dimensions</h4>
