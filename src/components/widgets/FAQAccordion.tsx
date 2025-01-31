@@ -12,14 +12,14 @@ export default component$(() => {
         </Accordion.Content>
       </Accordion.Item>
       <Accordion.Item>
-        <Accordion.Trigger  class="text-lg" >Is it styled?</Accordion.Trigger>
+        <Accordion.Trigger  class="text-md" >Is it styled?</Accordion.Trigger>
         <Accordion.Content>
           Yes. It comes with default styles that matches the other components&apos;
           aesthetic.
         </Accordion.Content>
       </Accordion.Item>
       <Accordion.Item>
-        <Accordion.Trigger>Is it animated?</Accordion.Trigger>
+        <Accordion.Trigger  class="text-md">Is it animated?</Accordion.Trigger>
         <Accordion.Content>
           Yes. It's animated by default, but you can disable it if you prefer.
         </Accordion.Content>
