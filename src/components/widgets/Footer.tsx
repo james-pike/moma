@@ -9,19 +9,18 @@ import IconTelegram from "../icons/IconTelegram";
 export default component$(() => {
   const links = [
     {
-      title: "Product",
+      title: "About",
       items: [
         { title: "Features", href: "#" },
         { title: "Security", href: "#" },
         { title: "Team", href: "#" },
         { title: "Enterprise", href: "#" },
         { title: "Customer stories", href: "#" },
-        { title: "Pricing", href: "#" },
-        { title: "Resources", href: "#" },
+      
       ],
     },
     {
-      title: "Platform",
+      title: "Services",
       items: [
         { title: "Developer API", href: "#" },
         { title: "Partners", href: "#" },
@@ -47,9 +46,7 @@ export default component$(() => {
         { title: "Blog", href: "#" },
         { title: "Careers", href: "#" },
         { title: "Press", href: "#" },
-        { title: "Inclusion", href: "#" },
-        { title: "Social Impact", href: "#" },
-        { title: "Shop", href: "#" },
+
       ],
     },
   ];
