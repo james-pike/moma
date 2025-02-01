@@ -12,7 +12,7 @@ export default component$(() => {
         <img src="/images/hero2.jpg" alt="..." />
       </Carousel.Slide>
       <Carousel.Slide>
-        <img src="/images/hero3.jpg" alt="..." />
+        <img class="object-cover h-full w-full" src="/images/hero3.jpg" alt="..." />
       </Carousel.Slide>
 
     
