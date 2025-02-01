@@ -19,6 +19,7 @@ const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 import { SITE } from "~/config.mjs";
 import LogoCloud from "~/components/widgets/LogoCloud";
 import Pricing from "~/components/widgets/Pricing";
+import Reviews from "~/components/widgets/Reviews";
 
 export default component$(() => {
   return (
@@ -68,6 +69,12 @@ export default component$(() => {
         ]}
       />
       <Steps />
+      <Reviews highlight="Features"
+        title="What our clients say"
+        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+        items={[
+          
+        ]}/>
       <FAQs
         title="Frequently Asked Questions"
         subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
