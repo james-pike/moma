@@ -5,6 +5,7 @@ import IconTwitter from "~/components/icons/IconTwitter"
 import IconInstagram from "~/components/icons/IconInstagram"
 import IconFacebook from "~/components/icons/IconFacebook"
 import IconGithub from "~/components/icons/IconGithub"
+import IconTelegram from "../icons/IconTelegram";
 
 export default component$(() => {
   const links = [
@@ -60,8 +61,8 @@ export default component$(() => {
     { label: "Facebook", icon: IconFacebook, href: "#" },
     {
       label: "Github",
-      icon: IconGithub,
-      href: "https://github.com/onwidget/qwind",
+      icon: IconTelegram,
+      href: "",
     },
   ];
 
@@ -71,13 +72,12 @@ export default component$(() => {
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-2">
-              <Link class="inline-block font-bold text-xl" href={"/"}>
-                Qwind
+              <Link class="inline-block text-primary font-bold text-xl" href={"/"}>
+                Energy At Work Massage
               </Link>
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi
-              risus tempus nulla
+            Experience the convenience of fully clothed, mess-free chair massages—set up anywhere, anytime, and tailored to any budget.
             </div>
           </div>
           {links.map(({ title, items }, index) => (
@@ -118,11 +118,7 @@ export default component$(() => {
 
           <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
             <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-            Made by{" "}
-            <a class="text-secondary-800 underline dark:text-gray-200" href="https://onwidget.com/">
-              {" "}
-              onWidget
-            </a>{" "}
+            © 2025 Energy At Work Massage
             · All rights reserved.
           </div>
         </div>
