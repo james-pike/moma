@@ -4,7 +4,6 @@ import { Link } from "@builder.io/qwik-city";
 import IconTwitter from "~/components/icons/IconTwitter"
 import IconInstagram from "~/components/icons/IconInstagram"
 import IconFacebook from "~/components/icons/IconFacebook"
-import IconGithub from "~/components/icons/IconGithub"
 import IconTelegram from "../icons/IconTelegram";
 
 export default component$(() => {
