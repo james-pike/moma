@@ -1,11 +1,13 @@
 # Menu
 
-## Pages
+## Services
 
-- [Services](#)
-- [Porfolio](#)
-- [About us](#)
-- [Terms](/terms)
-- [Privacy](/privacy)
+- [Corporate Wellness](/corporate)
+- [Special Events](/events)
+- [Massage At Home](/massage)
 
-## [Blog](/blog)
+
+## [About](/about)
+## [Testimonials](/testimonials)
+## [FAQ](/faq)
+## [Contact](/contact)

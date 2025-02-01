@@ -6,7 +6,7 @@ export default component$(() => {
       <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
-            132K
+            133K
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
             Downloads

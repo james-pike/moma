@@ -1,13 +1,11 @@
 import { component$, useStore } from "@builder.io/qwik";
 import { useContent } from "@builder.io/qwik-city";
 
-import ToggleTheme from "~/components/common/ToggleTheme";
 import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
-import StylePopover from "./StylePopover";
 
 export default component$(() => {
   const store = useStore({
@@ -39,16 +37,9 @@ export default component$(() => {
            <Logo/>
           </a>
           <div class="flex items-center md:hidden">
-            <StylePopover/>
-            <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
-            <a
-                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                        aria-label={"Telegram"}
-                        title={"Telegram"}
-                        href={"https://t.me/+Civ_RQYiZH03Y2I5"}
-                      >
-                        <IconTelegram />
-                      </a>
+           
+            {/* <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" /> */}
+        
           <a
                         class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                         aria-label={"Telegram"}
@@ -56,6 +47,14 @@ export default component$(() => {
                         href={"https://x.com/wienerKRC20"}
                       >
                         <IconTwitter />
+                      </a>
+                      <a
+                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label={"Telegram"}
+                        title={"Telegram"}
+                        href={"https://t.me/+Civ_RQYiZH03Y2I5"}
+                      >
+                        <IconTelegram />
                       </a>
             <ToggleMenu />
           </div>
@@ -99,14 +98,30 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <div class="flex">
-              <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
+              {/* <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" /> */}
+              {/* <a
+                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label={"Telegram"}
+                        title={"Telegram"}
+                        href={"https://x.com/wienerKRC20"}
+                      >
+                        <IconTwitter />
+                      </a> */}
+              <a
+                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label={"Telegram"}
+                        title={"Telegram"}
+                        href={"https://t.me/+Civ_RQYiZH03Y2I5"}
+                      >
+                        <IconTelegram /> 613 282-6217
+                      </a>
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               <a
                 href="https://github.com/onwidget/qwind"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Download
+                Book A Chair Massage
               </a>
             </span>
           </div>

@@ -24,7 +24,7 @@ export default component$(() => {
   return (
     <>
       <Hero />
-      <LogoCloud/>
+      <LogoCloud />
       <Features
         highlight="Features"
         title="What you get with Qwinds"
