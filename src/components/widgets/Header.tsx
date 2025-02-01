@@ -5,7 +5,6 @@ import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
-import { Logo } from "../common/Logo";
 
 export default component$(() => {
   const store = useStore({
@@ -34,7 +33,8 @@ export default component$(() => {
       <div class="relative text-default py-3 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
-           <Logo/>
+           {/* <Logo/> */}
+           <img width={150} height={100} src="/images/logo.png"></img>
           </a>
           <div class="flex items-center md:hidden">
            
