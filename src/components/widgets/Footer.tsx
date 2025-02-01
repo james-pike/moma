@@ -76,7 +76,7 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
-            Experience the convenience of fully clothed, mess-free chair massages—set up anywhere, anytime, and tailored to any budget.
+            Increase employee productivity with fully clothed, mess-free chair massages—set up anywhere, anytime, and tailored to any budget.
             </div>
           </div>
           {links.map(({ title, items }, index) => (
