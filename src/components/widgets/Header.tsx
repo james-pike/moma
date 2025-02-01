@@ -19,7 +19,7 @@ export default component$(() => {
       id="header"
       class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-slate-900"
+          ? " md:bg-primary-25/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-25 dark:bg-slate-900"
           : ""
       }`}
       window:onScroll$={() => {
