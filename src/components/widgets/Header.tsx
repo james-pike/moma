@@ -44,7 +44,7 @@ export default component$(() => {
                         class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                         aria-label={"Telegram"}
                         title={"Telegram"}
-                        href={"https://x.com/wienerKRC20"}
+                        href="mailto:info@webdev.ca"
                       >
                         <IconTwitter />
                       </a>
@@ -52,7 +52,7 @@ export default component$(() => {
                         class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                         aria-label={"Telegram"}
                         title={"Telegram"}
-                        href={"https://t.me/+Civ_RQYiZH03Y2I5"}
+                       href="tel:+6132826217"
                       >
                         <IconTelegram />
                       </a>
