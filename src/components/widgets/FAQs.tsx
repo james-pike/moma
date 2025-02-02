@@ -54,7 +54,7 @@ export default component$((props: Props) => {
             ...(classes?.headline ?? {}),
           }}
         />
-        <div class="sm:mx-auto hidden sm:block">
+     
           <ItemGrid
             items={items}
             defaultIcon={IconArrowDownRight}
@@ -63,7 +63,7 @@ export default component$((props: Props) => {
               ...(classes?.items ?? {}),
             }}
           />
-        </div>
+     
 
           
 
