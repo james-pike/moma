@@ -15,7 +15,7 @@ export default component$(() => {
         { title: "Security", href: "#" },
         { title: "Team", href: "#" },
         { title: "Enterprise", href: "#" },
-        { title: "Customer stories", href: "#" },
+     
       
       ],
     },
@@ -34,8 +34,7 @@ export default component$(() => {
         { title: "Docs", href: "#" },
         { title: "Community Forum", href: "#" },
         { title: "Professional Services", href: "#" },
-        { title: "Skills", href: "#" },
-        { title: "Status", href: "#" },
+ 
       ],
     },
     {
