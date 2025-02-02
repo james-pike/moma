@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-
 import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import Steps from "~/components/widgets/Steps";
@@ -21,6 +20,7 @@ import Pricing from "~/components/widgets/Pricing";
 import Reviews from "~/components/widgets/Reviews";
 import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
+import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 
 export default component$(() => {
   return (
@@ -78,7 +78,7 @@ export default component$(() => {
         ]}
       />
       <Steps />
-      <Reviews highlight="Features"
+      <ReviewsIndex highlight="Features"
         title="What our clients say"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
         items={[
