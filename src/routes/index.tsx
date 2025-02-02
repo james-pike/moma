@@ -5,7 +5,6 @@ import Features from "~/components/widgets/Features";
 import Steps from "~/components/widgets/Steps";
 import Stats from "~/components/widgets/Stats";
 import CallToAction from "~/components/widgets/CallToAction";
-
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
 const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
@@ -16,7 +15,6 @@ const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
 import LogoCloud from "~/components/widgets/LogoCloud";
-import Pricing from "~/components/widgets/Pricing";
 import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
@@ -120,7 +118,7 @@ export default component$(() => {
           },
         ]}
       />
-            <Pricing
+            {/* <Pricing
         highlight="Features"
         title="What you get with Qwinds"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -161,7 +159,7 @@ export default component$(() => {
             icon: IconBulb
           },
         ]}
-      />
+      /> */}
       <Stats />
       <CallToAction />
     </>

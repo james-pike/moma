@@ -26,7 +26,6 @@ export default component$(() => {
         { title: "Partners", href: "#" },
         { title: "Atom", href: "#" },
         { title: "Electron", href: "#" },
-        { title: "Qwind Desktop", href: "#" },
       ],
     },
     {
@@ -45,7 +44,7 @@ export default component$(() => {
         { title: "About", href: "#" },
         { title: "Blog", href: "#" },
         { title: "Careers", href: "#" },
-        { title: "Press", href: "#" },
+
 
       ],
     },
