@@ -14,7 +14,6 @@ const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBra
 const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
-import LogoCloud from "~/components/widgets/LogoCloud";
 import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
@@ -23,7 +22,7 @@ export default component$(() => {
   return (
     <>
       <Hero />
-      <LogoCloud />
+  
       <Services
         highlight="Services"
         title="What We Offer"
