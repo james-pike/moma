@@ -2,8 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
-import Steps from "~/components/widgets/Steps";
-import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
 const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
@@ -73,7 +71,7 @@ export default component$(() => {
           },
         ]}
       />
-      <Steps />
+   
       <ReviewsIndex highlight="Features"
         title="What our clients say"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -159,7 +157,7 @@ export default component$(() => {
           },
         ]}
       /> */}
-      <Stats />
+    
       <Contact/>
     </>
   );
