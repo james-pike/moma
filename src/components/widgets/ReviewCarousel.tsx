@@ -3,6 +3,7 @@ import { Carousel } from 'flowbite-qwik'
 
 export default component$(() => {
   return (
+    <div class="relative">
     <Carousel class="!h-96 " pauseOnHover>
    <Carousel.Slide>
            <section class="isolate overflow-hidden bg-primary-25/50 px-6 lg:px-8">
@@ -64,5 +65,13 @@ export default component$(() => {
      
 
     </Carousel>
+
+         {/* Link to Reviews Page */}
+         <div class="absolute bottom-4 right-4">
+        <a href="/reviews" class="text-primary-600 hover:underline font-semibold text-lg">
+          Read More Reviews →
+        </a>
+      </div>
+    </div>
   )
 })

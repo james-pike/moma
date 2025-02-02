@@ -10,7 +10,14 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-<p>hey</p>
+ <Services
+        highlight="Services"
+        title="What We Offer"
+        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+        items={[
+         
+        ]}
+      />
     </>
   );
 });
