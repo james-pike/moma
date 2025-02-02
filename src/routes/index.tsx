@@ -21,6 +21,7 @@ import LogoCloud from "~/components/widgets/LogoCloud";
 import Pricing from "~/components/widgets/Pricing";
 import Reviews from "~/components/widgets/Reviews";
 import Services from "~/components/widgets/Services";
+import FAQindex from "~/components/widgets/FAQindex";
 
 export default component$(() => {
   return (
@@ -84,7 +85,7 @@ export default component$(() => {
         items={[
           
         ]}/>
-      <FAQs
+      <FAQindex
         title="Frequently Asked Questions"
         subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
         highlight="FAQs"

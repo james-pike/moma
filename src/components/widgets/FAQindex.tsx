@@ -65,7 +65,9 @@ export default component$((props: Props) => {
           />
         </div>
 
-          
+            <div class="block sm:hidden">
+              <FAQAccordion/>
+            </div>
 
       </div>
     </section>
