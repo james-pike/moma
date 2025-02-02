@@ -68,9 +68,11 @@ export default component$(() => {
 
          {/* Link to Reviews Page */}
       
-        <a href="/reviews" class="text-primary-600 hover:underline font-semibold text-lg">
-          Read More Reviews →
-        </a>
+         <div class="flex justify-end mt-4">
+  <a href="/reviews" class="text-primary-600 hover:underline font-semibold text-lg">
+    Read More Reviews →
+  </a>
+</div>
    
     </div>
   )
