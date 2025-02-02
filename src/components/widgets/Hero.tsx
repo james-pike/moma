@@ -14,8 +14,8 @@ export default component$(() => {
                 <span class="text-xs bg-primary-400 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Minting Now In Progress!</span>
                 <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
               </a> */}
-            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-primary-400">
-              <span class="text-primary-600">Relieve</span>  Stress & Tension <span class="text-primary-600">At Work</span><br class="hidden lg:block" />{" "}
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-primary-500">
+              <span class="text-primary-900">Relieve</span>  Stress & Tension <span class="text-primary-900">At Work</span><br class="hidden lg:block" />{" "}
               {/* <span class="hidden lg:inline">create a website using </span>  */}
               {/* <span class="text-[#039de1]">Qwik</span> +{" "}
               <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CSS</span> */}
