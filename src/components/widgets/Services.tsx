@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
+
 const services = [
     {
       title: "Exhibit Photography",
@@ -86,7 +87,7 @@ export default component$((props: Props) => {
         <div key={index} class="group relative overflow-hidden rounded-lg shadow-md">
           <img
             width={700}
-            height={400}
+            height={200}
             src={image}
             alt={alt}
             class="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-105"
