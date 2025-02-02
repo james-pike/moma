@@ -17,7 +17,6 @@ const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 import { SITE } from "~/config.mjs";
 import LogoCloud from "~/components/widgets/LogoCloud";
 import Pricing from "~/components/widgets/Pricing";
-import Reviews from "~/components/widgets/Reviews";
 import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
