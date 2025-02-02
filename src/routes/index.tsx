@@ -4,7 +4,6 @@ import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import Steps from "~/components/widgets/Steps";
 import Stats from "~/components/widgets/Stats";
-import CallToAction from "~/components/widgets/CallToAction";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
 const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
