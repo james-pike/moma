@@ -4,7 +4,7 @@ import { Headline } from '../ui/Headline';
 export default component$(() => {
   return (
  
-    <div class="relative isolate bg-primary-25 rounded-lg dark:bg-gray-900">
+    <div class="relative isolate bg-white rounded-lg dark:bg-gray-900">
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div class="relative px-6 pb-8 pt-8 sm:pt-32 lg:static lg:px-8 lg:py-24">
             <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
