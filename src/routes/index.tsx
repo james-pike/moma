@@ -15,20 +15,15 @@ import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
+import Pricing from "~/components/widgets/Pricing";
+import Steps from "~/components/widgets/Steps";
 
 export default component$(() => {
   return (
     <>
       <Hero />
  
-      <Services
-        highlight="Services"
-        title="What We Offer"
-        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
-        items={[
-         
-        ]}
-      />
+   
       <Features
         highlight="Features"
         title="What you get with Qwinds"
@@ -71,7 +66,15 @@ export default component$(() => {
           },
         ]}
       />
-   
+      <Services
+        highlight="Services"
+        title="What We Offer"
+        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+        items={[
+         
+        ]}
+      />
+      <Steps/>
       <ReviewsIndex highlight="Features"
         title="What our clients say"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -115,7 +118,7 @@ export default component$(() => {
           },
         ]}
       />
-            {/* <Pricing
+             <Pricing
         highlight="Features"
         title="What you get with Qwinds"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -156,7 +159,7 @@ export default component$(() => {
             icon: IconBulb
           },
         ]}
-      /> */}
+      /> 
     
       <Contact/>
     </>
