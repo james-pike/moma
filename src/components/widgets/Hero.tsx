@@ -35,7 +35,7 @@ export default component$(() => {
 
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="/contact">
                     <div class="flex w-full">
 
                       <button class="btn w-full bg-primary-100 hover:bg-primary-200 dark:bg-primary-600 py-2 rounded-md ">
