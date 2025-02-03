@@ -9,6 +9,7 @@ import { Button } from '../ui/Button';
 export default component$(() => {
   return (
     <Tabs.Root class="max-w-[400px]">
+      
       <Tabs.List class="grid w-full grid-cols-2">
         <Tabs.Tab>Account</Tabs.Tab>
         <Tabs.Tab>Password</Tabs.Tab>

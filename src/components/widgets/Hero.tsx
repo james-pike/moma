@@ -15,7 +15,7 @@ export default component$(() => {
                 <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
               </a> */}
             <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-primary-500">
-              <span class="text-primary-800">Relieve</span>  Stress & Tension <span class="text-primary-800">At Work</span><br class="hidden lg:block" />{" "}
+              <span class="text-primary-800">Website</span>  Design & Development<span class="text-primary-800"> For Your Business</span><br class="hidden lg:block" />{" "}
               {/* <span class="hidden lg:inline">create a website using </span>  */}
               {/* <span class="text-[#039de1]">Qwik</span> +{" "}
               <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CSS</span> */}
@@ -23,8 +23,7 @@ export default component$(() => {
             <div class="max-w-3xl mx-auto lg:max-w-none">
               <p class="text-xl text-muted mb-6 dark:text-slate-300">
 
-              Increase employee productivity with fully clothed, mess-free chair massages—set up anywhere, anytime, and tailored to any budget.
-              </p>
+              Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
 
               <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
                   <a href="#">
@@ -40,7 +39,7 @@ export default component$(() => {
                     <div class="flex w-full">
 
                       <button class="btn w-full bg-primary-100 hover:bg-primary-200 dark:bg-primary-600 py-2 rounded-md ">
-                      Book A Chair Massage
+                      Book A Consultation
                       </button>
 
                     </div>
