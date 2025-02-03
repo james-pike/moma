@@ -67,11 +67,11 @@ export default component$(() => {
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-2">
               <Link class="inline-block text-primary font-bold text-xl" href={"/"}>
-                Energy At Work Massage
-              </Link>
+Webdev.ca              </Link>
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
-            Increase employee productivity with fully clothed, mess-free chair massages—set up anywhere, anytime, and tailored to any budget.
+            Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.     
+
             </div>
           </div>
           {links.map(({ title, items }, index) => (
@@ -111,7 +111,7 @@ export default component$(() => {
           </ul>
 
           <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-            © 2025 Energy At Work Massage
+            © 2025 Webdev.ca
             · All rights reserved.
           </div>
         </div>
