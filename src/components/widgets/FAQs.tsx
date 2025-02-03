@@ -41,7 +41,7 @@ export default component$((props: Props) => {
         </slot>
       </div>
       <div
-        class={twMerge("relative text-default px-4 md:px-6 py-8 md:py-12 lg:py-16 mx-auto max-w-6xl", isDark ? "dark" : "")}
+        class={twMerge("relative text-default px-4 md:px-6 py-10 md:py-14 lg:py-16 mx-auto max-w-6xl", isDark ? "dark" : "")}
       >
         <Headline
           title={title}
