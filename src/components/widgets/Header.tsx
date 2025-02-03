@@ -5,6 +5,7 @@ import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
+import { Logo } from "../common/Logo";
 
 export default component$(() => {
   const store = useStore({
@@ -16,7 +17,7 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 bg-gradient-to-r from-primary-100 to-primary-50 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out ${
         store.isScrolling
           ? " md:bg-primary-50/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
           : "bg-primary-50"
@@ -33,8 +34,8 @@ export default component$(() => {
       <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
-           {/* <Logo/> */}
-           <img width={150} height={100} src="/images/logo.png"></img>
+           <Logo/>
+           {/* <img width={150} height={100} src="/images/logo.png"></img> */}
           </a>
           <div class="flex items-center md:hidden">
            
