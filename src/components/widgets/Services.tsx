@@ -108,3 +108,9 @@ export default component$((props: Props) => {
      
   );
 });
+
+
+// 15000 5000
+// 13000 5000
+// 0
+
