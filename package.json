@@ -32,6 +32,7 @@
     "@fontsource-variable/inter": "^5.0.20",
     "@qwik-ui/utils": "^0.3.1",
     "@unpic/qwik": "^0.0.46",
+    "@vercel/analytics": "^1.4.1",
     "class-variance-authority": "^0.7.1",
     "flowbite-qwik": "^0.38.2",
     "flowbite-qwik-icons": "^0.1.8",
