@@ -1,46 +1,48 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
-
 import IconStar from "~/components/icons/IconStar";
-const sideImg =
-  "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80";
+
 
 export default component$(() => {
   const stepsData = {
-    title: "Sed ac magna sit amet risus tristique interdum. hac.",
+    title: "Our Process: From Idea to Finished Print",
     items: [
       {
-        title: "Step 1",
+        title: "Step 1: Request a Quote",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.",
+          "Start by requesting a personalized quote for your printing needs. Share your project details, and we'll provide you with a clear and competitive estimate.",
         icon: IconStar,
       },
       {
-        title: "Step 2",
+        title: "Step 2: Custom Design Assistance",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
+          "Our expert design team can help you refine your artwork or create a custom design that meets your vision. We ensure your project is print-ready and perfect for production.",
         icon: IconStar,
       },
       {
-        title: "Step 3",
+        title: "Step 3: High-Quality Printing",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
+          "Once approved, we bring your project to life using state-of-the-art printing technology. We guarantee vibrant colors, sharp details, and exceptional quality in every print.",
         icon: IconStar,
       },
       {
-        title: "Ready!",
+        title: "Step 4: Quality Check & Delivery",
+        description:
+          "Before your order leaves our shop, we conduct a thorough quality check to ensure perfection. Then, we pack and deliver your prints right to your doorstep, on time and in perfect condition.",
         icon: IconStar,
       },
     ],
     image: {
-      src: sideImg,
-      alt: "Steps image",
+      src: "/assets/images/print-steps.webp",
+      alt: "Steps to professional printing success",
     },
   };
+  
+  
   const { title, items, image } = stepsData;
 
   return (
-    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 bg-gray-100 dark:bg-gray-800">
       <div class="row-gap-10 grid gap-6 md:grid-cols-2">
         <div class="mb-4 md:mb-0 md:py-4 md:pr-16">
           {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{title}</h2>}
@@ -81,7 +83,7 @@ export default component$(() => {
           {typeof image !== "undefined" && (
             <Image
               layout="constrained"
-              src={image.src}
+              src="/images/steps.webp"
               width={532}
               height={704}
               alt={image.alt}
