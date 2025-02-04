@@ -83,7 +83,7 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
         <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {services.map(({ title, description, details, image, alt }, index) => (
+      {services.map(({ title, description, image, alt }, index) => (
         <div key={index} class="group relative overflow-hidden rounded-lg shadow-md">
           <img
             width={700}
