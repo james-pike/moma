@@ -51,6 +51,7 @@ module.exports = {
         'from-right': 'slideFromRight 0.2s 1',
         'accordion-up': 'collapsible-up 0.2s ease-out 0s 1 normal forwards',
         'accordion-down': 'collapsible-down 0.2s ease-out 0s 1 normal forwards',
+        'rotate-shape': 'rotateShape 20s linear infinite',
       },
       keyframes: {
         'collapsible-down': {
@@ -68,6 +69,10 @@ module.exports = {
         slideFromRight: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        rotateShape: {
+          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
         },
       },
     },

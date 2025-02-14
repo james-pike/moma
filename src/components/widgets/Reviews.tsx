@@ -24,7 +24,9 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
   return (
-    <section class="relative bg-primary-25 scroll-mt-16" {...(id ? { id } : {})}>
+    
+    <section class="relative bg-gradient-to-r from-primary-50 to-primary-25 scroll-mt-16" {...(id ? { id } : {})}>
+     
       <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
         <slot name="bg">
           <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
@@ -39,7 +41,7 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
  
-        <div class="grid pt-2 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
+        <div class="grid bg-white rounded-md  p-4 md:px-6 md:py-6 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
             <div class="space-y-6">
                 <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
