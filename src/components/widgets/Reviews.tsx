@@ -41,7 +41,7 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
  
-        <div class="grid bg-white rounded-md  p-2 md:p-4 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
+        <div class="grid bg-white rounded-md  p-3 md:p-5 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
             <div class="space-y-6">
                 <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
