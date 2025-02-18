@@ -15,7 +15,6 @@ import Services from "~/components/widgets/Services";
 import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
-import Pricing from "~/components/widgets/Pricing";
 import Steps from "~/components/widgets/Steps";
 
 export default component$(() => {
@@ -89,7 +88,7 @@ export default component$(() => {
           
         ]}
       />
-             <Pricing
+             {/* <Pricing
         highlight="Features"
         title="What you get with Qwinds"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -130,7 +129,7 @@ export default component$(() => {
             icon: IconBulb
           },
         ]}
-      /> 
+      />  */}
     
       <Contact/>
     </>
