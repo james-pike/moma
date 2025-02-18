@@ -4,7 +4,7 @@ import HeroCarousel from "./HeroCarousel";
 
 export default component$(() => {
   return (
-    <section class="relative intersect-once intersect:motion-preset-slide-up bg-gradient-to-b from-primary-50 to-primary-25 md:-mt-[76px] not-prose">
+    <section class="relative intersect-once intersect:motion-preset-slide-up bg-gradient-to-b from-primary-50 to-primary-25 dark:from-primary-700 dark:to-primary-600  md:-mt-[76px] not-prose">
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="pt-0 md:pt-[36px] pointer-events-none"></div>

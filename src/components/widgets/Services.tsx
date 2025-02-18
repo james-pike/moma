@@ -69,41 +69,44 @@ export default component$((props: Props) => {
 
   return (
     <section class="relative bg-gray-50 scroll-mt-16" {...(id ? { id } : {})}>
-      <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
-        <slot name="bg">
-          <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
-        </slot>
-      </div>
-      <div
-        class={twMerge(
-          "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default",
-          classes?.container,
-          isDark ? "dark" : ""
-        )}
-      >
-        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-        <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {services.map(({ title, description, image, alt }, index) => (
-        <div key={index} class="group relative overflow-hidden rounded-lg shadow-md">
-          <img
-            width={700}
-            height={400}
-            src={image}
-            alt={alt}
-            class="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-          {/* <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
-            <p class="text-white text-center px-4">{details}</p>
-          </div> */}
-          <div class="px-4 py-3 bg-gray-50 dark:bg-gray-800">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
-          </div>
-        </div>
-      ))}
+    <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
+      <slot name="bg">
+        <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
+      </slot>
     </div>
+  
+    <div
+      class={twMerge(
+        "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default",
+        classes?.container,
+        isDark ? "dark" : ""
+      )}
+    >
+      <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+  
+      <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group">
+  {services.map(({ title, description, image, alt }, index) => (
+    <div
+      key={index}
+      class={`group relative overflow-hidden rounded-lg shadow-md opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 100}ms]`}
+    >
+      <img
+        width={700}
+        height={400}
+        src={image}
+        alt={alt}
+        class="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div class="px-4 py-3 bg-gray-50 dark:bg-gray-800">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
       </div>
-    </section>
+    </div>
+  ))}
+</div>
+    </div>
+  </section>
+  
 
      
   );
