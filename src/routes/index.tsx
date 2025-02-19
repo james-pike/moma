@@ -10,11 +10,8 @@ const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBra
 const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
-import Services from "~/components/widgets/Services";
-import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
-import Steps from "~/components/widgets/Steps";
 import Hero3 from "~/components/widgets/Hero3";
 
 export default component$(() => {
@@ -65,29 +62,29 @@ export default component$(() => {
           },
         ]}
       />
-      <Services
+      {/* <Services
         highlight="Services"
         title="What We Offer"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
         items={[
          
         ]}
-      />
-      <Steps/>
+      /> */}
+      {/* <Steps/> */}
       <ReviewsIndex highlight="Testimonials"
         title="What our clients say"
         subtitle="Discover the experiences and success stories from our clients."
         items={[
           
         ]}/>
-      <FAQindex
+      {/* <FAQindex
         title="Frequently Asked Questions"
         
         highlight="FAQs"
         items={[
           
         ]}
-      />
+      /> */}
              {/* <Pricing
         highlight="Features"
         title="What you get with Qwinds"
