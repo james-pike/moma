@@ -31,31 +31,33 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0 pointer-events-none"></div>
-      <div class="w-full h-6 bg-primary-300  px-4 mx-auto text-white">
-        <p>Today's Specials: Freshly brewed, just for you!</p>
-        <div id="test" class="flex justify-end gap-4 hidden sm:block">
-          <a
-            class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-            aria-label={"Telegram"}
-            title={"Telegram"}
-            href="mailto:info@webdev.ca"
-          >
-            <IconTelegram />
-            <p>(613) 218-8063</p>
-          </a>
+      <div class="w-full h-6 bg-primary-300 px-4 md:px-7 mx-auto text-white flex justify-between items-center">
+  <div>
+    <p>Today's Specials: Freshly brewed, just for you!</p>
+  </div>
 
-          <p class="text-gray-50">|</p>
-          <a
-            class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-            aria-label={"Telegram"}
-            title={"Telegram"}
-            href="mailto:info@webdev.ca"
-          >
-            <IconTwitter />
-            <p>info@webdev.ca</p>
-          </a>
-        </div>
-      </div>
+ 
+  <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+    <a
+      class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+      href="tel:+16132188063"
+    >
+      <IconTelegram />
+      <p class="pl-1">(613) 218-8063</p>
+    </a>
+
+    <p class="text-gray-50">|</p>
+
+    <a
+      class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+      href="mailto:info@webdev.ca"
+    >
+      <IconTwitter />
+      <p class="pl-1">info@webdev.ca</p>
+    </a>
+  </div>
+</div>
+
       <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>

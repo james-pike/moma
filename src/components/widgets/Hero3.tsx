@@ -15,27 +15,25 @@ export default component$(() => {
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-center p-4">
         <h1 class="text-5xl md:text-7xl mb-4 font-bold font-heading">Welcome to Aroma Cafe</h1>
         <div class="max-w-3xl mx-auto lg:max-w-none">
-              <p class="text-2xl text-muted mb-6 dark:text-slate-300">
+          <p class="text-2xl text-muted mb-6 dark:text-slate-300">
 
-                Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
+            Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
+            <div class="w-full flex justify-center">
+  <div class="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 w-full sm:max-w-md lg:max-w-7xl px-4">
+    <a href="#menu" class="w-full sm:w-auto">
+      <button class="btn w-full max-w-[400px] text-white bg-primary-700 hover:bg-primary-400 dark:bg-primary-700 py-2 rounded-md">
+        Explore Menu
+      </button>
+    </a>
+    <a href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3" class="w-full sm:w-auto">
+      <button class="btn w-full max-w-[400px] bg-primary-300 text-white hover:bg-primary-500 dark:bg-primary-600 py-2 rounded-md">
+        Order Online
+      </button>
+    </a>
+  </div>
+</div>
 
-              <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
-               <a href="#menu">
-  <div class="flex w-full justify-center">
-    <button class="btn w-full max-w-[400px] text-white bg-primary-700 hover:bg-primary-400 dark:bg-primary-700 py-2 rounded-md">
-      Explore Menu
-    </button>
-  </div>
-</a>
-<a href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3">
-  <div class="flex w-full justify-center">
-    <button class="btn w-full max-w-[400px] bg-primary-300 text-white hover:bg-primary-500 dark:bg-primary-600 py-2 rounded-md">
-      Order Online
-    </button>
-  </div>
-</a>
-              </div>
-            </div>
+        </div>
       </div>
     </section>
   );
