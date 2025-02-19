@@ -26,7 +26,7 @@ export const ItemGrid = (props: Props) => {
 
   return (
     items.length && (
-      <div class={twMerge("grid motion-group mx-auto gap-8", containerClass)}>
+      <div class={twMerge("grid motion-group mx-auto gap-6 sm:gap-8", containerClass)}>
         {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
           <div key={`${title}${index}`}>
            <div
