@@ -15,7 +15,7 @@ export default component$(() => {
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-center p-4">
         <h1 class="text-5xl md:text-7xl mb-4 font-bold font-heading">Welcome to Aroma Cafe</h1>
         <div class="max-w-3xl mx-auto lg:max-w-none">
-              <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              <p class="text-2xl text-muted mb-6 dark:text-slate-300">
 
                 Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
 
