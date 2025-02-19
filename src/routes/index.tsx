@@ -22,7 +22,7 @@ export default component$(() => {
    
       <Features id="menu"
         highlight="Menu"
-        title="Explore Our Flavors"
+        title="Explore Our Menu"
         subtitle="Featuring expertly crafted coffee, tea lattes, and cold drinks, alongside a diverse selection of Middle Eastern, North African, European, South Asian, and Canadian dishes—plus decadent cakes and sweets, all at an affordable price."
         items={[
        
