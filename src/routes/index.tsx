@@ -25,41 +25,44 @@ export default component$(() => {
         title="Explore Our Flavors"
         subtitle="Featuring expertly crafted coffee, tea lattes, and cold drinks, alongside a diverse selection of Middle Eastern, North African, European, South Asian, and Canadian dishes—plus decadent cakes and sweets, all at an affordable price."
         items={[
+       
           {
-            title: "Qwik + Tailwind CSS Integration",
+            title: "Custom-Coded, High-Performance Design",
             description:
-              "A seamless integration between two great frameworks that offer high productivity, performance and versatility.",
-            icon: IconBrandTailwind,
+              "We build fully custom-coded websites tailored to your brand, ensuring a unique digital presence with optimized performance and maintainability.",
+            icon: IconBulb,
           },
           {
-            title: "Ready-to-use Component",
+            title: "Blazing Fast Page Speeds",
             description:
-              "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
-            icon: IconApps,
-          },
-          {
-            title: "Best Practices",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-          },
-          {
-            title: "Excellent Page Speed",
-            description:
-              "Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.",
+              "Performance is at the core of our development approach—fast-loading pages improve user experience, increase engagement, and boost search engine rankings.",
             icon: IconRocket,
           },
           {
             title: "Search Engine Optimization (SEO)",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
+              "From clean code to strategic on-page optimizations, we ensure your site is built with SEO best practices to improve visibility and organic reach.",
             icon: IconBrandGoogle,
           },
           {
-            title: "Open to new ideas and contributions",
+            title: "Future-Proof & Scalable Solutions",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-            icon: IconBulb
+              "We develop with scalability in mind, ensuring your site can grow with your business while remaining lightweight, maintainable, and adaptable.",
+            icon: IconApps,
           },
+          {
+            title: "Ready-to-use Components",
+            description:
+              "Beautifully crafted UI components built with Tailwind CSS, ready for use in marketing websites, SaaS platforms, blogs, personal brands, and small businesses.",
+            icon: IconApps,
+          },
+          {
+            title: "Open to New Ideas & Contributions",
+            description:
+              "We embrace collaboration and innovation—whether it's refining designs, integrating new technologies, or optimizing user experience, we welcome fresh ideas.",
+            icon: IconBulb,
+          }
+          
         ]}
       />
       {/* <Services
