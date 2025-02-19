@@ -39,7 +39,7 @@ export default component$(() => {
   };
 
 
-  const { title, items, image } = stepsData;
+  const { items, image } = stepsData;
 
   return (
     <section class="mx-auto  max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 bg-gray-100 dark:bg-gray-800">
