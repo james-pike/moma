@@ -26,10 +26,13 @@ export const ItemGrid = (props: Props) => {
 
   return (
     items.length && (
-      <div class={twMerge("grid mx-auto gap-8", containerClass)}>
+      <div class={twMerge("grid motion-group mx-auto gap-8", containerClass)}>
         {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
           <div key={`${title}${index}`}>
-            <div class={twMerge("flex flex-row max-w-md", panelClass, itemClasses.panel)}>
+           <div
+  class={twMerge("flex flex-row max-w-md opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up", panelClass, itemClasses.panel)}
+  style={{ animationDelay: `${index * 150}ms` }}
+>
               <div class="flex justify-center">
                 {(Icon || DefaultIcon) &&
                   (Icon ? (
