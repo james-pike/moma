@@ -20,10 +20,10 @@ export default component$(() => {
       <Hero3 />
  
    
-      <Features
-        highlight="Features"
-        title="What you get with Qwinds"
-        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+      <Features id="menu"
+        highlight="Menu"
+        title="Explore Our Flavors"
+        subtitle="Featuring expertly crafted coffee, tea lattes, and cold drinks, alongside a diverse selection of Middle Eastern, North African, European, South Asian, and Canadian dishes—plus decadent cakes and sweets, all at an affordable price."
         items={[
           {
             title: "Qwik + Tailwind CSS Integration",
@@ -71,9 +71,9 @@ export default component$(() => {
         ]}
       /> */}
       {/* <Steps/> */}
-      <ReviewsIndex highlight="Testimonials"
-        title="What our clients say"
-        subtitle="Discover the experiences and success stories from our clients."
+      <ReviewsIndex highlight="Reviews"
+        title="What our guests say"
+        subtitle="See what our customers love about our café—great coffee, delicious food, and a welcoming atmosphere."
         items={[
           
         ]}/>

@@ -21,11 +21,7 @@ export default component$(() => {
             description:
               "Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!",
           },
-          {
-            title: "Is there outdoor seating available?",
-            description:
-              "Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.",
-          },
+      
           {
             title: "Do you offer takeout?",
             description:
@@ -40,6 +36,11 @@ export default component$(() => {
             title: "Do you take reservations?",
             description:
               "We operate mostly on a walk-in basis, but for larger groups or special occasions, feel free to give us a call to arrange a reservation.",
+          },
+          {
+            title: "Is there outdoor seating available?",
+            description:
+              "Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.",
           },
           {
             title: "What are your opening hours?",

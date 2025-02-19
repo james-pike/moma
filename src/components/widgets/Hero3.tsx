@@ -4,7 +4,7 @@ import { Carousel } from 'flowbite-qwik';
 export default component$(() => {
   return (
     <section class="relative w-full !h-[70vh] text-white overflow-hidden">
-      <Carousel noControls  slideInterval={4000} class="w-full !h-full">
+      <Carousel noControls slideInterval={4000} class="w-full !h-full">
         <Carousel.Slide class="w-full !h-full flex">
           <img class="flex-1 w-full !h-full object-cover" src="/images/hero1.webp" alt="Freshly Brewed Coffee" />
         </Carousel.Slide>
@@ -20,7 +20,7 @@ export default component$(() => {
                 Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
 
               <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
-               <a href="#">
+               <a href="#menu">
   <div class="flex w-full justify-center">
     <button class="btn w-full max-w-[400px] text-white bg-primary-700 hover:bg-primary-400 dark:bg-primary-700 py-2 rounded-md">
       Explore Menu
