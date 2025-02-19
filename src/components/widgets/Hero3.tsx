@@ -19,23 +19,22 @@ export default component$(() => {
 
                 Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.              </p>
 
-   <div class="sm:max-w-md md:max-w-lg lg:max-w-xl m-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-  <a href="#">
-    <div class="flex justify-center">
-      <button class="btn w-full max-w-[400px] motion-preset-slide-right text-white bg-primary-700 hover:bg-primary-300 dark:bg-primary-700 py-2 rounded-md">
-        Explore Menu
-      </button>
-    </div>
-  </a>
-  <a href="/contact">
-    <div class="flex justify-center">
-      <button class="btn w-full max-w-[400px] bg-primary-200 hover:bg-primary-300 dark:bg-primary-600 py-2 rounded-md">
-        Order Online
-      </button>
-    </div>
-  </a>
-</div>
-
+              <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+               <a href="#">
+  <div class="flex w-full justify-center">
+    <button class="btn w-full max-w-[400px] motion-preset-slide-right text-white bg-primary-700 hover:bg-primary-300 dark:bg-primary-700 py-2 rounded-md">
+      Explore Menu
+    </button>
+  </div>
+</a>
+<a href="/contact">
+  <div class="flex w-full justify-center">
+    <button class="btn w-full max-w-[400px] bg-primary-200 hover:bg-primary-300 dark:bg-primary-600 py-2 rounded-md">
+      Order Online
+    </button>
+  </div>
+</a>
+              </div>
             </div>
       </div>
     </section>
