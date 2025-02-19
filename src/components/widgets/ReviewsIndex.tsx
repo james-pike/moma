@@ -71,7 +71,7 @@ export default component$((props: Props) => {
                 <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
-                        <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
+                        <p class="my-4">"I recently got my hands on Flowbite, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
                     </blockquote>
                     <figcaption class="flex items-center space-x-3">
                         <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture"/>
