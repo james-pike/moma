@@ -43,7 +43,7 @@ export default component$((props: Props) => {
  
         <div class="grid bg-white rounded-md p-3 md:p-5 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
             <div class="space-y-6">
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
                         <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from two different worlds: Figma and Tailwind.”</p>
@@ -56,7 +56,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">A must-have for designers</h3>
                         <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.”</p>
@@ -69,7 +69,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
                         <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
@@ -84,7 +84,7 @@ export default component$((props: Props) => {
                 </figure>
             </div>
             <div class="space-y-6">
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
                         <p class="my-4">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.”</p>
@@ -97,7 +97,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
                         <p class="my-4">"Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS framework.</p>
@@ -111,7 +111,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Perfect choice for a SaaS application</h3>
                         <p class="my-4">"Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS framework.</p>
@@ -127,7 +127,7 @@ export default component$((props: Props) => {
                 </figure>
             </div>
             <div class="space-y-6">
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
                         <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
@@ -140,7 +140,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
                         <p class="my-4">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.”</p>
@@ -153,7 +153,7 @@ export default component$((props: Props) => {
                         </div>
                     </figcaption>    
                 </figure>
-                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
                         <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.”</p>
