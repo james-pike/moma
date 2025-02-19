@@ -31,6 +31,7 @@ export default component$(() => {
     >
       <div class="absolute inset-0 pointer-events-none"></div>
       <div class="w-full h-6 bg-primary-300  px-6 mx-auto">
+        <p>Deals of the day or week could go here</p>
         <div id="test" class="flex justify-end gap-4">
           <a
             class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"

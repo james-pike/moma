@@ -22,14 +22,14 @@ export default component$(() => {
               <div class=" sm:max-w-md m-auto grid grid-cols-1 border-radius-dot-25 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
                <a href="#">
   <div class="flex w-full justify-center">
-    <button class="btn w-full max-w-[400px] text-white bg-primary-700 hover:bg-primary-500 dark:bg-primary-700 py-2 rounded-md">
+    <button class="btn w-full max-w-[400px] text-white bg-primary-700 hover:bg-primary-400 dark:bg-primary-700 py-2 rounded-md">
       Explore Menu
     </button>
   </div>
 </a>
 <a href="/contact">
   <div class="flex w-full justify-center">
-    <button class="btn w-full max-w-[400px] bg-primary-300 hover:bg-primary-500 dark:bg-primary-600 py-2 rounded-md">
+    <button class="btn w-full max-w-[400px] bg-primary-300 text-white hover:bg-primary-500 dark:bg-primary-600 py-2 rounded-md">
       Order Online
     </button>
   </div>
