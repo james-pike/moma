@@ -3,7 +3,7 @@ import { Carousel } from 'flowbite-qwik';
 
 export default component$(() => {
   return (
-    <section class="relative w-full h-[90vh] flex items-center -mt-20 justify-center text-white">
+    <section class="relative w-full h-[80vh] flex items-center -mt-20 justify-center text-white">
       <Carousel noControls class="w-full h-full">
         <Carousel.Slide class="h-full">
           <img class="w-full h-full object-cover" src="/images/hero1.webp" alt="Freshly Brewed Coffee" />
