@@ -58,7 +58,7 @@ export default component$((props: Props) => {
             items={items}
             defaultIcon={IconArrowDownRight}
             classes={{
-              panel: "max-w-none p-5 bg-white shadow-md rounded-md border-2 border-primary-200 dark:border-gray-700",
+              panel: "max-w-none p-5 bg-white shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
 
               ...(classes?.items ?? {}),
             }}
