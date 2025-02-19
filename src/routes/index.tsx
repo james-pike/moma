@@ -3,7 +3,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Features from "~/components/widgets/Features";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
-const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
 const IconApps = qwikSerialized(() => import("../components/icons/IconApps"));
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBrandGoogle"));
