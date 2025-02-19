@@ -31,7 +31,7 @@ export const ItemGrid = (props: Props) => {
           <div key={`${title}${index}`}>
            <div
   class={twMerge("flex flex-row max-w-md opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up", panelClass, itemClasses.panel)}
-  style={{ animationDelay: `${index * 150}ms` }}
+  style={{ animationDelay: `${index * 100}ms` }}
 >
               <div class="flex justify-center">
                 {(Icon || DefaultIcon) &&
