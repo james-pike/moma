@@ -18,11 +18,10 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${
-        store.isScrolling
+      class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${store.isScrolling
           ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
           : ""
-      }`}
+        }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
           store.isScrolling = true;
@@ -32,56 +31,56 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0 pointer-events-none"></div>
-      <div class="w-full h-6 bg-primary-200 hidden sm:block px-6 mx-auto">
+      <div class="w-full h-6 bg-primary-300  px-6 mx-auto">
         <div id="test" class="flex justify-end gap-4">
-        <a
-                        class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-                        aria-label={"Telegram"}
-                        title={"Telegram"}
-                        href="mailto:info@webdev.ca"
-                      >
-                        <IconTelegram />
-                        <p>(613) 218-8063</p>
-                      </a>
+          <a
+            class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+            aria-label={"Telegram"}
+            title={"Telegram"}
+            href="mailto:info@webdev.ca"
+          >
+            <IconTelegram />
+            <p>(613) 218-8063</p>
+          </a>
 
-                      <p class="text-gray-50">|</p>
-        <a
-                        class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-                        aria-label={"Telegram"}
-                        title={"Telegram"}
-                        href="mailto:info@webdev.ca"
-                      >
-                        <IconTwitter />
-                        <p>info@webdev.ca</p>
-                      </a>
-      </div>
+          <p class="text-gray-50">|</p>
+          <a
+            class="text-gray-50 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+            aria-label={"Telegram"}
+            title={"Telegram"}
+            href="mailto:info@webdev.ca"
+          >
+            <IconTwitter />
+            <p>info@webdev.ca</p>
+          </a>
+        </div>
       </div>
       <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
-           <Logo/>
-           {/* <img width={150} height={100} src="/images/logo.png"></img> */}
+            <Logo />
+            {/* <img width={150} height={100} src="/images/logo.png"></img> */}
           </a>
           <div class="flex items-center md:hidden">
-           
+
             {/* <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" /> */}
-        <ToggleTheme/>
-          <a
-                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                        aria-label={"Telegram"}
-                        title={"Telegram"}
-                        href="mailto:info@webdev.ca"
-                      >
-                        <IconTwitter />
-                      </a>
-                      <a
-                        class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                        aria-label={"Telegram"}
-                        title={"Telegram"}
-                       href="tel:+613 282 6217"
-                      >
-                        <IconTelegram />
-                      </a>
+            <ToggleTheme />
+            <a
+              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label={"Telegram"}
+              title={"Telegram"}
+              href="mailto:info@webdev.ca"
+            >
+              <IconTwitter />
+            </a>
+            <a
+              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label={"Telegram"}
+              title={"Telegram"}
+              href="tel:+613 282 6217"
+            >
+              <IconTelegram />
+            </a>
             <ToggleMenu />
           </div>
         </div>
@@ -133,7 +132,7 @@ export default component$(() => {
                       >
                         <IconTwitter />
                       </a> */}
-        
+
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               <a

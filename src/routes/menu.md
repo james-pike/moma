@@ -1,13 +1,11 @@
 # Menu
 
-## Services
-
-- [Corporate Wellness](/corporate)
-- [Special Events](/events)
-- [Massage At Home](/massage)
+## [Story](/about)
+## [Menu](/about)
 
 
-## [About](/about)
-## [Testimonials](/testimonials)
+
+
+## [Reviews](/testimonials)
 ## [FAQ](/faq)
 ## [Contact](/contact)
