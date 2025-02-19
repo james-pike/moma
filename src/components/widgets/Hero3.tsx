@@ -27,7 +27,7 @@ export default component$(() => {
     </button>
   </div>
 </a>
-<a href="/contact">
+<a href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3">
   <div class="flex w-full justify-center">
     <button class="btn w-full max-w-[400px] bg-primary-300 text-white hover:bg-primary-500 dark:bg-primary-600 py-2 rounded-md">
       Order Online

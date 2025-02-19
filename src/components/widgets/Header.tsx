@@ -6,6 +6,7 @@ import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
+import IconOrder from "../icons/IconOrder";
 
 export default component$(() => {
   const store = useStore({
@@ -65,21 +66,29 @@ export default component$(() => {
 
             {/* <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" /> */}
             {/* <ToggleTheme /> */}
-            <a
+            {/* <a
               class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
               aria-label={"Telegram"}
               title={"Telegram"}
               href="mailto:info@webdev.ca"
             >
               <IconTwitter />
+            </a> */}
+            <a
+              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label={"Telegram"}
+              title={"Telegram"}
+              href="tel:+6132188063"
+            >
+              <IconTelegram />
             </a>
             <a
               class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
               aria-label={"Telegram"}
               title={"Telegram"}
-              href="tel:+613 282 6217"
+              href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3"
             >
-              <IconTelegram />
+              <IconOrder />
             </a>
             <ToggleMenu />
           </div>
