@@ -21,7 +21,7 @@ module.exports = {
           300: '#66b2ff',  
           400: '#3399ff',  
           500: '#007AFF',  // Core blue (base)  
-          DEFAULT: '#007AFF', // Default primary  
+          DEFAULT: '#E59C2A', // Default primary  
           600: '#0066cc',  
           700: '#0052a3',  
           800: '#003d7a',  

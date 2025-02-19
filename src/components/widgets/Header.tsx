@@ -5,7 +5,6 @@ import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
-import { Logo } from "../common/Logo";
 import ToggleTheme from "../common/ToggleTheme";
 
 export default component$(() => {
