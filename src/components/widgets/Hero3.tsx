@@ -9,11 +9,9 @@ export default component$(() => {
           <img class="w-full h-full object-cover" src="/images/hero1.webp" alt="Freshly Brewed Coffee" />
         </Carousel.Slide>
         <Carousel.Slide class="h-full">
-          <img class="w-full h-full object-cover" src="/images/coffee2.webp" alt="Cozy Cafe Ambience" />
+          <img class="w-full h-full object-cover" src="/images/hero2.jpg" alt="Cozy Cafe Ambience" />
         </Carousel.Slide>
-        <Carousel.Slide class="h-full">
-          <img class="w-full h-full object-cover" src="/images/coffee3.webp" alt="Latte Art Perfection" />
-        </Carousel.Slide>
+      
       </Carousel>
       <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-center p-4">
         <h1 class="text-5xl md:text-7xl font-bold">Welcome to Aroma Cafe</h1>
