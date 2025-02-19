@@ -21,7 +21,7 @@ export const ItemGrid = (props: Props) => {
     panel: panelClass = "",
     title: titleClass = "",
     description: descriptionClass = "",
-    icon: defaultIconClass = "text-secondary-500 dark:text-secondary-700",
+    icon: defaultIconClass = "text-primary-500 dark:text-primary-700",
   } = classes as Record<string, string>;
 
   return (
