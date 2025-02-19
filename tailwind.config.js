@@ -14,20 +14,19 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          25:  '#fffaf2',  
-          50:  '#fef3e0',  
-          100: '#fde0b8',  
-          200: '#fbc878',  
-          300: '#f9ae4a',  
-          400: '#f39c2a',  
-          500: '#E59C2A',  // Core orange (base)  
-          DEFAULT: '#E59C2A', // Default primary  
-          600: '#c17e22',  
-          700: '#9d621b',  
-          800: '#794714',  
-          900: '#55300e',  
-          950: '#311b08',  
-       
+          25:  '#faf6f2',  // Light Cream  
+          50:  '#f3ebe3',  // Latte Foam  
+          100: '#e4d3c3',  // Cappuccino  
+          200: '#d1b49a',  // Macchiato  
+          300: '#b8936e',  // Caramel  
+          400: '#996e45',  // Mocha  
+          500: '#7B4B26',  // Espresso (Base)  
+          DEFAULT: '#7B4B26', // Default primary  
+          600: '#633b1e',  // Dark Roast  
+          700: '#4d2e17',  // Coffee Bean  
+          800: '#372110',  // French Roast  
+          900: '#23150a',  // Black Coffee  
+          950: '#120a05',  // Deep Brew  
         },
         secondary: {
           50:  '#e6f9f7',  

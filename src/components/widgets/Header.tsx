@@ -18,10 +18,10 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full  transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? " md:bg-white/90 border-b border-gray-200 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
-          : "bg-white/0"
+          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
+          : ""
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -60,7 +60,7 @@ export default component$(() => {
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
            <Logo/>
-           {/* <img width={100} height={100} src="/images/logo.png"></img> */}
+           {/* <img width={150} height={100} src="/images/logo.png"></img> */}
           </a>
           <div class="flex items-center md:hidden">
            
