@@ -43,7 +43,7 @@ export default component$((props: Props) => {
  
         <div class="grid bg-white rounded-md p-3 md:p-5 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
             <div class="space-y-6">
-                <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
+                <figure class="p-6 bg-primary-25 rounded dark:bg-gray-800">
                     <blockquote class="text-sm text-gray-500 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
                         <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from two different worlds: Figma and Tailwind.”</p>
