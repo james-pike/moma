@@ -16,11 +16,12 @@ import FAQindex from "~/components/widgets/FAQindex";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
 import Steps from "~/components/widgets/Steps";
+import Hero3 from "~/components/widgets/Hero3";
 
 export default component$(() => {
   return (
     <>
-      <Hero />
+      <Hero3 />
  
    
       <Features
