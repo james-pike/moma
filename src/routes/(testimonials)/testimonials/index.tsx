@@ -7,13 +7,13 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
- <Reviews highlight="Features"
-        title="What our clients say"
-        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
-        items={[
-          
+<Reviews highlight="Reviews"
+        title="What Our Guests Say"
+        subtitle="See what our customers love about our café—great coffee, delicious food, and a welcoming atmosphere."
+        items={[  
         ]}
       />
+
     </>
   );
 });

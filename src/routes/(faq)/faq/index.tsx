@@ -12,40 +12,42 @@ export default component$(() => {
   return (
     <>
 <FAQs title="Frequently Asked Questions"
-        subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+        subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="FAQs"
         items={[
+       
           {
-            title: "What do I need to start?",
+            title: "Do you have vegetarian or gluten-free options?",
             description:
-              "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+              "Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!",
           },
           {
-            title: "How to install the Qwik + Tailwind CSS template?",
+            title: "Is there outdoor seating available?",
             description:
-              "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+              "Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.",
           },
           {
-            title: "What's something that you don't understand?",
+            title: "Do you offer takeout?",
             description:
-              "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+              "Yes, all of our food and drinks are available for takeout. Just let us know when you place your order, and we’ll pack it up for you.",
           },
           {
-            title: "What's an example of when you changed your mind?",
+            title: "Can I bring my laptop and work from the café?",
             description:
-              "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+              "Of course! We have free Wi-Fi and plenty of outlets, making our café a great spot for remote work or studying.",
           },
           {
-            title: "What is something that you would like to try again?",
+            title: "Do you take reservations?",
             description:
-              "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+              "We operate mostly on a walk-in basis, but for larger groups or special occasions, feel free to give us a call to arrange a reservation.",
           },
           {
-            title: "If you could only ask one question to each person you meet, what would that question be?",
+            title: "What are your opening hours?",
             description:
-              "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+              "We’re open daily from 7 AM to 8 PM. Join us for a morning coffee, a relaxed lunch, or an evening treat!",
           },
         ]}/>
+
     </>
   );
 });
