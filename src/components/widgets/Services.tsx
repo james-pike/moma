@@ -46,9 +46,9 @@ export default component$((props: Props) => {
           classes={{
             panel: "group max-w-none p-5 bg-white hover:bg-primary-50 shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
             ...(classes?.items ?? {}),
-            container: "md:grid-cols-2",
+            container: "md:grid-cols-3",
             title: "md:text-[1.3rem]",
-            icon: " group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary-400 transition-transform duration-300 text-white  bg-primary-500  dark:bg-primary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
+            icon: "motion-loop-once group-hover:scale-110 group-hover:motion-preset-spin group-hover:bg-primary-400 transition-transform duration-300 text-white  bg-primary-500  dark:bg-primary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
             ...(classes?.items ?? {}),
           }}
         />
