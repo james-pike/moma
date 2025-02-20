@@ -1,51 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
+import { ItemGrid } from "~/components/ui/ItemGrid";
 
-const services = [
-    {
-      title: "Exhibit Photography",
-      description: "Professional photography services tailored for exhibitions and galleries.",
-      details: "Showcase your artwork or exhibits with high-quality, detailed photography.",
-      image: "/images/exhibit.jpg",
-      alt: "Exhibit Photography",
-    },
-    {
-      title: "Reproduction Services",
-      description: "Accurate reproductions for prints, publications, and digital archives.",
-      details: "Ensure every detail is captured for stunnning, true-to-life reproductions.",
-      image: "/images/reproduction.jpg",
-      alt: "Reproduction Services",
-    },
-    {
-      title: "Fine Art Photography",
-      description: "Capture the essence of fine art with our specialized photography services.",
-      details: "Highlight textures, colors, and emotions in your artwork.",
-      image: "/images/fineart.jpg",
-      alt: "Fine Art Photography",
-    },
-    {
-      title: "Digitization Services",
-      description: "Preserve and digitize your valuable artwork or photographs.",
-      details: "Convert physical assets into high-quality digital formats.",
-      image: "/images/digitization.jpg",
-      alt: "Digitization Services",
-    },
-    {
-      title: "Mobile Photography",
-      description: "Professional photography using mobile devices for quick turnarounds.",
-      details: "Creative and fast solutions for on-the-go photography needs.",
-      image: "/images/iphone.jpg",
-      alt: "Mobile Photography",
-    },
-    {
-      title: "Event Photography",
-      description: "Capture unforgettable moments with our event photography expertise.",
-      details: "Ensure every memory is preserved with beautiful, candid shots.",
-      image: "/images/photography.jpg",
-      alt: "Event Photography",
-    },
-  ];
+import IconStar from "~/components/icons/IconStar";
 
 interface Item {
   title?: string;
@@ -65,55 +23,38 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "", items = [], classes = {}, isDark = false } = props;
 
   return (
-    <section class="relative bg-gray-50 scroll-mt-16" {...(id ? { id } : {})}>
-    <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
-      <slot name="bg">
-        <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
-      </slot>
-    </div>
-  
-    <div
-      class={twMerge(
-        "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default",
-        classes?.container,
-        isDark ? "dark" : ""
-      )}
-    >
-      <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-  
-      <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group">
-  {services.map(({ title, description, image, alt }, index) => (
-    <div
-      key={index}
-      class={`group relative overflow-hidden rounded-lg shadow-md opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 100}ms]`}
-    >
-      <img
-        width={700}
-        height={400}
-        src={image}
-        alt={alt}
-        class="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-      <div class="px-4 py-3 bg-gray-50 dark:bg-gray-800">
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+    <section class="relative bg-primary-25 scroll-mt-16" {...(id ? { id } : {})}>
+      <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
+        <slot name="bg">
+          <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
+        </slot>
       </div>
-    </div>
-  ))}
-</div>
-    </div>
-  </section>
-  
+      <div
+        class={twMerge(
+          "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default ",
+          classes?.container,
+          isDark ? "dark" : ""
+        )}
+      >
+        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+        <ItemGrid
+          items={items}
+          defaultIcon={IconStar}
+          classes={{
+            panel: "max-w-none p-5 bg-white shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
+            ...(classes?.items ?? {}),
+            container: "md:grid-cols-2",
+            title: "md:text-[1.3rem]",
+            icon: " text-white  bg-primary-500  dark:bg-primary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
+            ...(classes?.items ?? {}),
+          }}
+        />
+      </div>
+    </section>
 
      
   );
 });
-
-
-// 15000 5000
-// 13000 5000
-// 0
-
