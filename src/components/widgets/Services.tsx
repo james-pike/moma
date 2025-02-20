@@ -44,11 +44,11 @@ export default component$((props: Props) => {
           items={items}
           defaultIcon={IconStar}
           classes={{
-            panel: "max-w-none p-5 bg-white shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
+            panel: "group max-w-none p-5 bg-white hover:bg-primary-50 shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
             ...(classes?.items ?? {}),
             container: "md:grid-cols-2",
             title: "md:text-[1.3rem]",
-            icon: " text-white  bg-primary-500  dark:bg-primary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
+            icon: " group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary-400 transition-transform duration-300 text-white  bg-primary-500  dark:bg-primary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
             ...(classes?.items ?? {}),
           }}
         />

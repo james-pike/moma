@@ -43,7 +43,7 @@ export default component$(() => {
             icon: IconBrandGoogle,
           },
           {
-            title: "Future-Proof & Scalable Solutions",
+            title: "Scalable Solutions",
             description:
               "We develop with scalability in mind, ensuring your site can grow with your business while remaining lightweight, maintainable, and adaptable.",
             icon: IconApps,
