@@ -12,7 +12,6 @@ import { SITE } from "~/config.mjs";
 import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
 import Hero3 from "~/components/widgets/Hero3";
-import FAQs from "~/components/widgets/FAQs";
 
 export default component$(() => {
   return (
@@ -130,7 +129,7 @@ export default component$(() => {
           },
         ]}
       />  */}
-    <FAQs title="Frequently Asked Questions"
+    {/* <FAQs title="Frequently Asked Questions"
             subtitle="Have questions about our café? Find answers to common inquiries below."
             highlight="FAQs"
             items={[
@@ -166,7 +165,7 @@ export default component$(() => {
                 description:
                   "We’re open daily from 7 AM to 8 PM. Join us for a morning coffee, a relaxed lunch, or an evening treat!",
               },
-            ]}/>
+            ]}/> */}
     
     
       <Contact/>
