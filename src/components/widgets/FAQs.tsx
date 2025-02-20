@@ -35,18 +35,8 @@ export default component$((props: Props) => {
 
   return (
     <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
-      {/* <svg class="absolute bg-gradient-to-r from-primary-100 to-primary-50 inset-0 w-full h-full -z-[1]" aria-hidden="true">
-        <defs>
-          <pattern
-            id="coffee-pattern"
-            patternUnits="userSpaceOnUse"
-            width="100"
-            height="100"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-coffee"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1" /><path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /><path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" /><path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z" /><path d="M16.746 16.726a3 3 0 1 0 .252 -5.555" /></svg>          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#coffee-pattern)" />
-      </svg>     */}
+        <div class="absolute left-0 top-0 w-full bg-cover bg-center before:absolute before:inset-0 before:bg-black before:opacity-20 h-[300px] bg-[url('/images/hero2.webp')] z-100"></div>
+
       
         <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
         <slot name="bg">
@@ -61,7 +51,7 @@ export default component$((props: Props) => {
           subtitle={subtitle}
           highlight={highlight}
           classes={{
-            container: "max-w-xl sm:mx-auto lg:max-w-2xl",
+            container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/60 p-6 rounded-md",
             title: "sm:text-4xl text-3xl",
             ...(classes?.headline ?? {}),
           }}
