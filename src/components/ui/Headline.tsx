@@ -25,7 +25,7 @@ export const Headline = (props: Props) => {
   }[align] || "text-center"; // Default to "center" if not specified
 
   return (title || subtitle || highlight) ? (
-    <div class={twMerge("mb-8 md:mx-auto md:mb-12", containerClass, alignmentClass)}>
+    <div class={twMerge("mb-0 md:mx-auto md:mb-0", containerClass, alignmentClass)}>
       {highlight && (
         <p
           class="text-base text-primary-600 dark:text-primary-200 font-bold tracking-wide uppercase"
