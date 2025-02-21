@@ -35,16 +35,19 @@ export default component$((props: Props) => {
 
   return (
     <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
-      <div class="absolute left-0 top-0 w-full h-[300px] bg-cover bg-center before:absolute before:inset-0 before:bg-black before:opacity-20 bg-[url('/images/hero2.webp')] z-100"></div>
-
+ <div
+      class="absolute left-0 top-0 w-full h-[300px] bg-cover bg-center before:absolute before:inset-0 before:bg-black before:opacity-20"
+      style={{ backgroundImage: "url('/images/hero2.webp')" }}
+    ></div>
       {/* Centering Wrapper */}
       <div class="relative flex flex-col items-center justify-center h-[300px] px-4 md:px-6 mx-auto max-w-6xl ">
         <Headline
+        align="left"
           title={title}
           subtitle={subtitle}
           highlight={highlight}
           classes={{
-            container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/60 p-6 rounded-md",
+            container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/70 p-6 rounded-sm",
             title: "sm:text-4xl text-3xl",
             ...(classes?.headline ?? {}),
           }}
