@@ -59,7 +59,7 @@ export default component$((props: Props) => {
       </div>
 
       <div
-        class={twMerge("relative text-default px-4 md:px-6 py-9 md:py-12 lg:py-15 mx-auto max-w-6xl", isDark ? "dark" : "")}>
+        class={twMerge("relative text-default px-4 md:px-6 py-6 md:py-12 lg:py-15 mx-auto max-w-6xl", isDark ? "dark" : "")}>
         <ItemGrid
           items={items}
           defaultIcon={IconArrowDownRight}
