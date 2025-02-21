@@ -4,11 +4,7 @@ import { Carousel } from 'flowbite-qwik';
 export default component$(() => {
   return (
     <>
-      <head>
-        {/* Preload all carousel images */}
-        <link rel="preload" href="/images/hero1.jpg" as="image" />
-        <link rel="preload" href="/images/hero2.jpg" as="image" />
-      </head>
+   
       <Carousel pauseOnHover noControls>
         <Carousel.Slide>
           <img src="/images/hero1.jpg" alt="Hero 1" />

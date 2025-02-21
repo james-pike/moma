@@ -23,6 +23,8 @@ export default component$(() => {
         <RouterHead />
         <DarkThemeLauncher />
         <ServiceWorkerRegister />
+             <link rel="preload" href="/images/hero1.jpg" as="image" />
+                <link rel="preload" href="/images/hero2.jpg" as="image" />
         
       </head>
       <body class="text-gray-900 dark:text-slate-300 tracking-tight bg-primary-50 dark:bg-gray-900 antialiased">
