@@ -17,7 +17,7 @@ export default component$(() => {
   return (
     <Tabs.Root class="max-w-[400px]">
       
-      <Tabs.List class="grid w-full grid-cols-4">
+      <Tabs.List class="grid w-full grid-cols-4 sticky top-0 bg-white z-10 shadow-md">
         <Tabs.Tab>Coffee</Tabs.Tab>
         <Tabs.Tab>Tea</Tabs.Tab>
         <Tabs.Tab>Bistro</Tabs.Tab>
