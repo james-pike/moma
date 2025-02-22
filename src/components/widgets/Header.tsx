@@ -6,7 +6,6 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import IconOrder from "../icons/IconOrder";
-import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
