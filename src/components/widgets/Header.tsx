@@ -6,11 +6,12 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import IconOrder from "../icons/IconOrder";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
-    isMenuExpanded: false, // New state for menu toggle
+    isMenuExpanded: false, // Tracks menu open state
   });
 
   const { menu } = useContent();
@@ -83,7 +84,6 @@ export default component$(() => {
         <nav
           class={`
             items-center w-full md:w-auto 
-            hidden md:flex 
             text-default 
             overflow-y-auto overflow-x-hidden 
             md:overflow-y-visible md:overflow-x-auto 
@@ -96,7 +96,7 @@ export default component$(() => {
             shadow-xl md:shadow-none 
             border-b border-primary-200 dark:border-primary-800 
             transition-all duration-300 ease-in-out 
-            ${store.isMenuExpanded ? "" : "hidden"}
+            ${store.isMenuExpanded ? "" : "hidden md:flex"}
           `}
           aria-label="Main navigation"
         >
@@ -208,9 +208,6 @@ export default component$(() => {
             "
             onClick$={() => {
               store.isMenuExpanded = false;
-              document.body.classList.remove("overflow-hidden");
-              document.getElementById("header")?.classList.remove("h-screen");
-              document.querySelector("#header nav")?.classList.add("hidden");
             }}
           />
         )}

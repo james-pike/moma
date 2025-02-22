@@ -3,8 +3,8 @@ import IconMenu from "~/components/icons/IconMenu";
 
 interface ItemProps {
   iconClass?: string;
-  isExpanded: boolean; // Passed from parent
-  onToggle$: QRL<() => void>; // Callback to toggle state
+  isExpanded: boolean;
+  onToggle$: QRL<() => void>;
 }
 
 export default component$((props: ItemProps) => {
@@ -36,12 +36,7 @@ export default component$((props: ItemProps) => {
         ${isExpanded ? "rotate-90 scale-105" : ""}
       `}
       aria-label="Toggle Menu"
-      onClick$={() => {
-        onToggle$();
-        document.body.classList.toggle("overflow-hidden");
-        document.getElementById("header")?.classList.toggle("h-screen");
-        document.querySelector("#header nav")?.classList.toggle("hidden");
-      }}
+      onClick$={onToggle$}
     >
       <IconMenu
         class={`
