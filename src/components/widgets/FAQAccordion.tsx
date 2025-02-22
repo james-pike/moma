@@ -4,9 +4,9 @@ import { Accordion } from '../ui/Accordion';
 
 export default component$(() => {
   return (
-<Accordion.Root class="w-full px-2 pt-4">
+<Accordion.Root class="w-full px-0 pt-4">
   <Accordion.Item>
-    <Accordion.Trigger class="text-md" header="h2">
+    <Accordion.Trigger class="text-md">
       Do you have vegetarian or gluten-free options?
     </Accordion.Trigger>
     <Accordion.Content>
