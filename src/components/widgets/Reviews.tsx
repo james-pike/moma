@@ -122,7 +122,7 @@ export default component$((props: Props) => {
         <blockquote class="text-sm text-gray-500 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Perfect choice for a SaaS application</h3>
             <p class="my-4">"Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS framework.</p>
-            <p class="my-4">From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.”</p>
+           
         </blockquote>
         <figcaption class="flex items-center space-x-3">
             <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="profile picture" />
