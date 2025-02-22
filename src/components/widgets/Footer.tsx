@@ -33,7 +33,7 @@ export default component$(() => {
       items: [
         { title: "Docs", href: "#" },
         { title: "Community Forum", href: "#" },
-        { title: "Professional Services", href: "#" },
+     
  
       ],
     },
@@ -42,7 +42,7 @@ export default component$(() => {
       items: [
         { title: "About", href: "#" },
         { title: "Blog", href: "#" },
-        { title: "Careers", href: "#" },
+      
 
 
       ],

@@ -6,6 +6,7 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import IconOrder from "../icons/IconOrder";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
@@ -54,6 +55,8 @@ export default component$(() => {
       <IconTwitter />
       <p class="pl-1">info@webdev.ca</p>
     </a>
+
+   
   </div>
 </div>
 
@@ -92,6 +95,8 @@ export default component$(() => {
               <IconOrder />
             </a>
             <ToggleMenu />
+
+            <MenuModal/>
           </div>
         </div>
         <nav
