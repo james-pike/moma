@@ -27,7 +27,7 @@ export default component$(() => {
     }
 
     // Scroll only on subsequent tab changes
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Changed back to 0 as per your original intent
+    window.scrollTo({ top: 200, behavior: 'smooth' }); // Changed back to 0 as per your original intent
   });
 
   return (
