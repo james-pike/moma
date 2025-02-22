@@ -1,5 +1,5 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import { Tabs } from '../ui/Tabs'; // Your original import
+import { Tabs } from '../ui/Tabs';
 import { Card } from '../ui/Card';
 import { Label } from '../ui/Label';
 import { Input } from '../ui/Input';
@@ -14,11 +14,20 @@ const menuItems = [
 
 export default component$(() => {
   const selectedIndex = useSignal(0); // Start with Coffee tab (index 0)
+  const isFirstLoad = useSignal(true); // Flag for initial load
 
-  // Scroll to top when selectedIndex changes
+  // Scroll to top when selectedIndex changes, but not on first load
   useVisibleTask$(({ track }) => {
-    track(() => selectedIndex.value);
-    window.scrollTo({ top: 200, behavior: 'smooth' });
+    track(() => selectedIndex.value); // Watch for tab changes
+
+    // Skip scroll on initial load
+    if (isFirstLoad.value) {
+      isFirstLoad.value = false; // Mark as loaded after first run
+      return;
+    }
+
+    // Scroll only on subsequent tab changes
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Changed back to 0 as per your original intent
   });
 
   return (
