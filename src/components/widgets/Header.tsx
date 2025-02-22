@@ -6,10 +6,12 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import IconOrder from "../icons/IconOrder";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
+    isMenuExpanded: false, // New state for menu toggle
   });
 
   const { menu } = useContent();
@@ -17,102 +19,76 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`
-        sticky top-0 z-40 
-        bg-white dark:bg-gray-900 
-        flex-none mx-auto w-full 
-        border-b border-gray-200/50 
-        transition-all duration-300 ease-in-out 
-        ${store.isScrolling
-          ? "md:bg-white/95 md:backdrop-blur-md dark:md:bg-gray-900/95 shadow-md"
-          : "shadow-sm"
-        }
-      `}
+      class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${
+        store.isScrolling
+          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
+          : ""
+      }`}
       window:onScroll$={() => {
-        store.isScrolling = window.scrollY >= 10;
+        if (!store.isScrolling && window.scrollY >= 10) {
+          store.isScrolling = true;
+        } else if (store.isScrolling && window.scrollY < 10) {
+          store.isScrolling = false;
+        }
       }}
     >
-      {/* Top Bar */}
-      <div
-        class="
-          w-full h-8 
-          bg-gradient-to-r from-primary-600 to-primary-500 
-          px-4 md:px-6 
-          text-white 
-          flex items-center justify-between 
-          text-sm font-medium 
-          shadow-sm
-        "
-      >
-        <div class="flex items-center gap-2">
-          <span class="hidden sm:inline">Today's Specials:</span>
-          <span>Freshly brewed, just for you!</span>
+      <div class="absolute inset-0 pointer-events-none"></div>
+      <div class="w-full h-6 bg-primary-300 px-4 md:px-7 mx-auto text-white flex justify-between items-center">
+        <div>
+          <p>Today's Specials: Freshly brewed, just for you!</p>
         </div>
-        <div class="hidden sm:flex items-center gap-4">
+        <div id="test" class="flex gap-4 sm:flex hidden sm:block">
           <a
+            class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
             href="tel:+16132188063"
-            class="flex items-center gap-1.5 px-2.5 py-1 hover:bg-primary-700 rounded-md transition-colors duration-200"
           >
-            <IconTelegram  />
-            <span>(613) 218-8063</span>
+            <IconTelegram />
+            <p class="pl-1">(613) 218-8063</p>
           </a>
-          <span class="text-primary-200">|</span>
+          <p class="text-gray-50">|</p>
           <a
+            class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
             href="mailto:info@webdev.ca"
-            class="flex items-center gap-1.5 px-2.5 py-1 hover:bg-primary-700 rounded-md transition-colors duration-200"
           >
-            <IconTwitter  />
-            <span>info@webdev.ca</span>
+            <IconTwitter />
+            <p class="pl-1">info@webdev.ca</p>
           </a>
         </div>
       </div>
 
-      {/* Main Header */}
-      <div
-        class="
-          relative 
-          py-3 px-4 md:px-6 
-          mx-auto w-full 
-          max-w-7xl 
-          flex items-center justify-between
-        "
-      >
-        {/* Logo Section */}
-        <div class="flex items-center justify-between w-full md:w-auto">
-          <a href="/" class="flex items-center">
-            <Logo class="h-10 w-auto" />
+      <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+        <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
+          <a class="flex items-center" href={"/"}>
+            <Logo />
           </a>
-          <div class="flex items-center gap-2 md:hidden">
+          <div class="flex items-center md:hidden">
             <a
+              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label={"Telegram"}
+              title={"Telegram"}
               href="tel:+6132188063"
-              class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors duration-200"
-              aria-label="Telegram"
-              title="Telegram"
             >
-              <IconTelegram  />
+              <IconTelegram />
             </a>
             <a
+              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label={"Telegram"}
+              title={"Telegram"}
               href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3"
-              class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors duration-200"
-              aria-label="Order"
-              title="Order"
             >
-              <IconOrder  />
+              <IconOrder />
             </a>
-            <ToggleMenu />
+            <ToggleMenu isExpanded={store.isMenuExpanded} onToggle$={() => (store.isMenuExpanded = !store.isMenuExpanded)} />
           </div>
         </div>
-
-        {/* Navigation (Mobile Dropdown + Desktop) */}
         <nav
           class={`
-            md:flex 
-            md:items-center 
-            md:text-gray-700 dark:md:text-gray-200 
-            md:font-medium 
-            md:text-base 
-            md:gap-6 
-            w-full 
+            items-center w-full md:w-auto 
+            hidden md:flex 
+            text-default 
+            overflow-y-auto overflow-x-hidden 
+            md:overflow-y-visible md:overflow-x-auto 
+            md:mx-5 
             absolute md:static 
             left-0 
             top-full 
@@ -121,7 +97,7 @@ export default component$(() => {
             shadow-xl md:shadow-none 
             border-b border-primary-200 dark:border-primary-800 
             transition-all duration-300 ease-in-out 
-            hidden
+            ${store.isMenuExpanded ? "" : "hidden"}
           `}
           aria-label="Main navigation"
         >
@@ -129,9 +105,9 @@ export default component$(() => {
             <ul
               class="
                 flex flex-col md:flex-row 
-                w-full md:w-auto 
-                text-lg md:text-base 
-                font-semibold 
+                md:self-center w-full md:w-auto 
+                text-xl md:text-[0.9375rem] 
+                tracking-[0.01rem] font-medium 
                 py-6 px-4 md:p-0
               "
             >
@@ -139,7 +115,7 @@ export default component$(() => {
                 <li
                   key={key}
                   class={`
-                    ${items?.length ? "relative group" : ""} 
+                    ${items?.length ? "dropdown" : ""} 
                     border-b border-primary-100 dark:border-primary-800 
                     last:border-b-0 md:border-0
                   `}
@@ -151,46 +127,50 @@ export default component$(() => {
                           flex items-center justify-between w-full md:w-auto 
                           text-primary-700 dark:text-primary-200 
                           hover:text-primary-500 dark:hover:text-primary-400 
-                          py-4 md:py-2 px-3 md:px-0 
+                          px-4 py-3 md:py-3 md:px-4 
                           transition-colors duration-200
                         "
                       >
                         {text}
                         <IconChevronDown
                           class="
-                            w-6 h-6 md:w-4 md:h-4 
+                            w-6 h-6 md:w-3.5 md:h-3.5 
                             text-primary-500 dark:text-primary-300 
-                            group-hover:rotate-180 md:ml-1 
+                            ml-0.5 rtl:ml-0 rtl:mr-0.5 
+                            hidden md:inline 
+                            md:hover:rotate-180 
                             transition-transform duration-200
                           "
                         />
                       </button>
                       <ul
                         class="
-                          md:absolute md:left-0 md:mt-2 
+                          md:backdrop-blur-md 
+                          dark:md:bg-slate-800 
+                          rounded md:absolute 
+                          pl-4 md:pl-0 
+                          md:hidden font-medium 
                           bg-white/90 dark:bg-gray-800/90 
-                          md:rounded-lg md:shadow-lg 
-                          md:border md:border-primary-200 dark:md:border-primary-700 
-                          w-full md:w-[200px] 
-                          hidden md:group-hover:block 
-                          pl-6 md:pl-0 
-                          py-2 md:py-2 
-                          backdrop-blur-sm
+                          md:bg-white/90 
+                          md:min-w-[200px] 
+                          drop-shadow-xl 
+                          py-2 md:py-2
                         "
                       >
                         {items.map(({ text: text2, href: href2 }, key2) => (
                           <li key={key2}>
                             <a
-                              href={href2}
                               class="
                                 block 
-                                py-3 px-4 
+                                py-2 px-5 
                                 text-primary-600 dark:text-primary-200 
                                 hover:bg-primary-200 dark:hover:bg-primary-800 
                                 hover:text-primary-800 dark:hover:text-primary-100 
-                                rounded-md 
+                                first:rounded-t last:rounded-b 
+                                md:hover:bg-primary-50 
                                 transition-all duration-200
                               "
+                              href={href2}
                             >
                               {text2}
                             </a>
@@ -200,62 +180,53 @@ export default component$(() => {
                     </>
                   ) : (
                     <a
-                      href={href}
                       class="
                         block 
                         text-primary-700 dark:text-primary-200 
                         hover:text-primary-500 dark:hover:text-primary-400 
-                        py-4 md:py-2 px-3 md:px-0 
+                        px-4 py-3 
+                        md:flex md:items-centers 
                         transition-colors duration-200
                       "
+                      href={href}
                     >
                       {text}
                     </a>
                   )}
                 </li>
               ))}
-              {/* Mobile-Only CTA */}
-              <li class="md:hidden mt-6 px-3">
-                <a
-                  href="/contact"
-                  class="
-                    block 
-                    bg-gradient-to-r from-primary-600 to-primary-700 
-                    text-white 
-                    py-4 px-6 
-                    rounded-full 
-                    font-semibold 
-                    text-center 
-                    shadow-lg 
-                    hover:bg-primary-800 
-                    transition-all duration-300
-                  "
-                >
-                  Book A Consultation
-                </a>
-              </li>
             </ul>
           ) : null}
         </nav>
-
-        {/* Desktop CTA */}
-        <div class="hidden md:flex items-center gap-4">
-          <a
-            href="/contact"
+        {/* Overlay for Closing Menu */}
+        {store.isMenuExpanded && (
+          <div
             class="
-              bg-primary-600 
-              text-white 
-              py-2 px-5 
-              rounded-full 
-              font-semibold 
-              shadow-md 
-              hover:bg-primary-700 
-              hover:shadow-lg 
-              transition-all duration-200
+              fixed inset-0 
+              bg-black/30 
+              z-30 
+              md:hidden
             "
-          >
-            Book A Consultation
-          </a>
+            onClick$={() => {
+              store.isMenuExpanded = false;
+              document.body.classList.remove("overflow-hidden");
+              document.getElementById("header")?.classList.remove("h-screen");
+              document.querySelector("#header nav")?.classList.add("hidden");
+            }}
+          />
+        )}
+        <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
+          <div class="items-center flex justify-between w-full md:w-auto">
+            <div class="flex">{/* <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" /> */}</div>
+            <span class="ml-4 rtl:ml-0 rtl:mr-4">
+              <a
+                href="/contact"
+                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+              >
+                Book A Consultation
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </header>

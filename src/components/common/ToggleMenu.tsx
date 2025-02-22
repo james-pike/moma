@@ -1,16 +1,14 @@
-import { component$, useStore } from "@builder.io/qwik";
+import { component$, type QRL } from "@builder.io/qwik";
 import IconMenu from "~/components/icons/IconMenu";
 
 interface ItemProps {
   iconClass?: string;
+  isExpanded: boolean; // Passed from parent
+  onToggle$: QRL<() => void>; // Callback to toggle state
 }
 
 export default component$((props: ItemProps) => {
-  const { iconClass } = props;
-
-  const store = useStore({
-    isExpanded: false,
-  });
+  const { iconClass, isExpanded, onToggle$ } = props;
 
   return (
     <button
@@ -35,13 +33,11 @@ export default component$((props: ItemProps) => {
         transition-all 
         duration-300 
         ease-in-out 
-        ${store.isExpanded ? "rotate-90 scale-105" : ""}
+        ${isExpanded ? "rotate-90 scale-105" : ""}
       `}
       aria-label="Toggle Menu"
       onClick$={() => {
-        store.isExpanded = !store.isExpanded; // Simplified toggle
-
-        // TODO: Consider moving to a signal or CSS-based solution if possible
+        onToggle$();
         document.body.classList.toggle("overflow-hidden");
         document.getElementById("header")?.classList.toggle("h-screen");
         document.querySelector("#header nav")?.classList.toggle("hidden");
@@ -52,9 +48,8 @@ export default component$((props: ItemProps) => {
           w-6 
           h-6 
           ${iconClass} 
-          ${store.isExpanded ? "text-primary-100" : "text-white"}
-          transition-colors 
-          duration-200
+          ${isExpanded ? "text-primary-100" : "text-white"}
+          transition-colors duration-200
         `}
       />
     </button>
