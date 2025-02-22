@@ -12,7 +12,6 @@ import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
 import Hero3 from "~/components/widgets/Hero3";
 import Services from "~/components/widgets/Services";
-import FAQs from "~/components/widgets/FAQs";
 import Menu from "~/components/widgets/Menu";
 import FAQAccordion from "~/components/widgets/FAQAccordion";
 
