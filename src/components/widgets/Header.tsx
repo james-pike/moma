@@ -10,7 +10,7 @@ import IconOrder from "../icons/IconOrder";
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
-    isMenuExpanded: false, // Tracks menu open state
+    isMenuExpanded: false,
   });
 
   const { menu } = useContent();
@@ -95,6 +95,7 @@ export default component$(() => {
             shadow-xl md:shadow-none 
             border-b border-primary-200 dark:border-primary-800 
             transition-all duration-300 ease-in-out 
+            z-40 
             ${store.isMenuExpanded ? "" : "hidden md:flex"}
           `}
           aria-label="Main navigation"
@@ -196,11 +197,12 @@ export default component$(() => {
             </ul>
           ) : null}
         </nav>
-        {/* Overlay for Closing Menu */}
+        {/* Overlay Below Header */}
         {store.isMenuExpanded && (
           <div
             class="
-              fixed inset-0 
+              fixed left-0 right-0 bottom-0 
+              top-[64px] 
               bg-black/30 
               z-30 
               md:hidden
