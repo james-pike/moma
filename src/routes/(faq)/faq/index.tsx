@@ -52,16 +52,7 @@ export default component$(() => {
             description:
               "Yes, all of our food and drinks are available for takeout. Just let us know when you place your order, and we’ll pack it up for you.",
           },
-          {
-            title: "Can I bring my laptop and work from the café?",
-            description:
-              "Of course! We have free Wi-Fi and plenty of outlets, making our café a great spot for remote work or studying.",
-          },
-          {
-            title: "Do you take reservations?",
-            description:
-              "We operate mostly on a walk-in basis, but for larger groups or special occasions, feel free to give us a call to arrange a reservation.",
-          },
+        
     
         ]}/>
     </>
