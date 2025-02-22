@@ -3,7 +3,23 @@ import { Headline } from '../ui/Headline';
 
 export default component$(() => {
     return (
+<>
 
+       {/* Hero Banner Section */}
+       <div class="relative text-white py-16 sm:py-24"  style={{ backgroundImage: "url('/images/hero2.webp')" }}>
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="max-w-2xl mx-auto text-center">
+                    
+                     
+                    </div>
+                </div>
+                {/* Optional background overlay */}
+                <div class="absolute inset-0 bg-black opacity-20"></div>
+            </div>
+            
+          
+
+        
         <div class="relative isolate bg-primary-25 rounded-lg dark:bg-gray-900">
             
             <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -103,6 +119,6 @@ export default component$(() => {
                 </form>
             </div>
         </div>
-
+        </>
     );
 });

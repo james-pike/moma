@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
-import PriceTabs from "./PriceTabs";
+import MenuTabs from "./MenuTabs";
 
 interface Item {
   title?: string;
@@ -53,7 +53,7 @@ export default component$((props: Props) => {
           }}
         />
       </div>
-<PriceTabs/>
+<MenuTabs/>
    
     </section>
     </>
