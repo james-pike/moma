@@ -28,7 +28,7 @@ export default component$(() => {
       <Tabs.Panel>
         <Card.Root>
           <Card.Content class="p-4">
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {menuItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                   <img src={item.image} alt={item.title} class="w-full h-40 object-cover" />

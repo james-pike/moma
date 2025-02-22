@@ -42,7 +42,7 @@ export default component$((props: Props) => {
       {/* Centering Wrapper */}
       <div class="relative flex flex-col items-center justify-center h-[200px] sm:h-[250px] px-4 md:px-6 mx-auto max-w-6xl ">
         <Headline
-        align="left"
+        align="center"
           title={title}
           subtitle={subtitle}
           highlight={highlight}
