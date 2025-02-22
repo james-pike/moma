@@ -6,6 +6,7 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import IconOrder from "../icons/IconOrder";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
@@ -202,7 +203,7 @@ export default component$(() => {
           <div
             class="
               fixed left-0 right-0 bottom-0 
-              top-[64px] 
+              top-[92.8px] 
               bg-black/30 
               z-30 
               md:hidden
