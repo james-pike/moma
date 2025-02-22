@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { Carousel } from 'flowbite-qwik';
+import FbModal from './FbModal';
 
 export default component$(() => {
   return (
@@ -13,6 +14,8 @@ export default component$(() => {
         </Carousel.Slide>
       </Carousel>
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-center p-4">
+
+      <FbModal/>
         <h1 class="text-5xl md:text-7xl mb-4 font-bold font-heading">Welcome to Aroma Cafe</h1>
         <div class="max-w-3xl mx-auto lg:max-w-none">
           <p class="text-2xl text-muted mb-6 dark:text-slate-300">
