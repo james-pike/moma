@@ -44,7 +44,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-0 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class,
       )}
     >
