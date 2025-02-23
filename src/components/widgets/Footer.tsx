@@ -96,22 +96,22 @@ export default component$(() => {
                   <h3 class={`text-lg font-semibold text-primary-800 dark:text-primary-200 mb-4 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     {title}
                   </h3>
-                  <ul class="space-y-3">
-                    {items.map(({ title, href }, idx) => (
-                      <li 
-                        key={idx}
-                        class={`transition-opacity duration-500 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}
-                        style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
-                      >
-                        <Link
-                          class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
-                          href={href}
-                        >
-                          {title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <ul class="space-y-1"> {/* Changed from space-y-3 */}
+  {items.map(({ title, href }, idx) => (
+    <li 
+      key={idx}
+      class={`transition-opacity duration-500 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}
+      style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
+    >
+      <Link
+        class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
+        href={href}
+      >
+        {title}
+      </Link>
+    </li>
+  ))}
+</ul>
                 </div>
               ))}
             </div>
