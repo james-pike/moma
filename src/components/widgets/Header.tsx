@@ -32,7 +32,7 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0 pointer-events-none"></div>
-      <div class="w-full h-6 bg-primary-300 px-4 md:px-7 mx-auto text-white flex justify-between items-center">
+      <div class="w-full h-6 bg-primary-400 px-4 md:px-7 mx-auto text-white flex justify-between items-center">
         <div>
           <p>Today's Specials: Freshly brewed, just for you!</p>
         </div>

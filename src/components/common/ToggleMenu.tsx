@@ -23,7 +23,7 @@ export default component$((props: ItemProps) => {
         focus:ring-4 
         focus:ring-primary-300/50 
         dark:focus:ring-primary-700/50 
-        rounded-full 
+        rounded-md 
         p-3 
         inline-flex 
         items-center 
