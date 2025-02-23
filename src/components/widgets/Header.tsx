@@ -20,7 +20,7 @@ export default component$(() => {
       id="header"
       class={`sticky top-0 z-40 bg-white dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
+          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
           : ""
       }`}
       window:onScroll$={() => {
@@ -71,13 +71,16 @@ export default component$(() => {
             </a>
             <a
               class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-              aria-label={"Telegram"}
-              title={"Telegram"}
+              aria-label={"Order"}
+              title={"Order"}
               href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3"
             >
               <IconOrder />
             </a>
-            <ToggleMenu isExpanded={store.isMenuExpanded} onToggle$={() => (store.isMenuExpanded = !store.isMenuExpanded)} />
+            <ToggleMenu 
+              isExpanded={store.isMenuExpanded} 
+              onToggle$={() => (store.isMenuExpanded = !store.isMenuExpanded)} 
+            />
           </div>
         </div>
         <nav
@@ -96,7 +99,10 @@ export default component$(() => {
             border-b border-primary-200 dark:border-primary-800 
             transition-all duration-300 ease-in-out 
             z-40 
-            ${store.isMenuExpanded ? "" : "hidden md:flex"}
+            ${store.isMenuExpanded 
+              ? "max-h-screen opacity-100 translate-y-0" 
+              : "max-h-0 opacity-0 -translate-y-4 md:max-h-none md:opacity-100 md:translate-y-0 md:flex"
+            }
           `}
           aria-label="Main navigation"
         >
@@ -117,7 +123,11 @@ export default component$(() => {
                     ${items?.length ? "dropdown" : ""} 
                     border-b border-primary-100 dark:border-primary-800 
                     last:border-b-0 md:border-0
+                    ${store.isMenuExpanded ? 'animate-stagger' : 'opacity-0'}
                   `}
+                  style={{
+                    '--stagger-delay': `${key * 100}ms`
+                  }}
                 >
                   {items?.length ? (
                     <>
@@ -206,6 +216,7 @@ export default component$(() => {
               bg-black/30 
               z-30 
               md:hidden
+              transition-opacity duration-300 ease-in-out
             "
             onClick$={() => {
               store.isMenuExpanded = false;
@@ -220,12 +231,41 @@ export default component$(() => {
                 href="/contact"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Book A Consultation
+                Book A Table
               </a>
             </span>
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          /* Custom stagger animation */
+          .animate-stagger {
+            animation: staggerIn 0.3s ease-out forwards;
+            animation-delay: var(--stagger-delay);
+          }
+
+          @keyframes staggerIn {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Ensure desktop doesn't get the animation */
+          @media (min-width: 768px) {
+            .animate-stagger {
+              animation: none;
+              opacity: 1 !important;
+            }
+          }
+        `}
+      </style>
     </header>
   );
 });

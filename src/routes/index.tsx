@@ -20,9 +20,6 @@ export default component$(() => {
   return (
     <>
       <Hero3 />
-
-
-
       <Services id="menu"
         highlight="Menu"
         title="Explore Our Menu"

@@ -1,6 +1,6 @@
 # Menu
 
-## [Story](/about)
+## [Story](/story)
 ## [Menu](/about)
 
 
