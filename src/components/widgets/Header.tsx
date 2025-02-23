@@ -113,7 +113,7 @@ export default component$(() => {
                 md:self-center w-full md:w-auto 
                 text-xl md:text-[0.9375rem] 
                 tracking-[0.01rem] font-medium 
-                py-6 px-4 md:p-0
+                py-4 px-4 md:p-0
               "
             >
               {menu.items.map(({ text, href, items }, key) => (
@@ -123,11 +123,7 @@ export default component$(() => {
                     ${items?.length ? "dropdown" : ""} 
                     border-b border-primary-100 dark:border-primary-800 
                     last:border-b-0 md:border-0
-                    ${store.isMenuExpanded ? 'animate-stagger' : 'opacity-0'}
                   `}
-                  style={{
-                    '--stagger-delay': `${key * 100}ms`
-                  }}
                 >
                   {items?.length ? (
                     <>
@@ -217,6 +213,7 @@ export default component$(() => {
               z-30 
               md:hidden
               transition-opacity duration-300 ease-in-out
+              ${store.isMenuExpanded ? 'opacity-100' : 'opacity-0'}
             "
             onClick$={() => {
               store.isMenuExpanded = false;
@@ -237,35 +234,6 @@ export default component$(() => {
           </div>
         </div>
       </div>
-
-      <style>
-        {`
-          /* Custom stagger animation */
-          .animate-stagger {
-            animation: staggerIn 0.3s ease-out forwards;
-            animation-delay: var(--stagger-delay);
-          }
-
-          @keyframes staggerIn {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          /* Ensure desktop doesn't get the animation */
-          @media (min-width: 768px) {
-            .animate-stagger {
-              animation: none;
-              opacity: 1 !important;
-            }
-          }
-        `}
-      </style>
     </header>
   );
 });
