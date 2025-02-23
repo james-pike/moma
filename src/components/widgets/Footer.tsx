@@ -57,20 +57,20 @@ export default component$(() => {
 
   return (
     <div class="py-2 px-2 bg-gradient-to-r from-primary-300 via-primary-100 to-primary-300">
-      <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-md py-12 px-4 sm:px-6">
+      <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-md py-10 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
             {/* Brand Column */}
             <div class="md:col-span-4">
-              <Link 
-                class={`inline-block text-2xl font-serif font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
+              <Link
+                class={`inline-block text-2xl font-serif font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                 href="/"
               >
                 La Petite Bistro
               </Link>
               <p class="mt-4 text-sm text-primary-600 dark:text-primary-400 leading-relaxed">
-                A cozy haven serving artisan coffee, fresh pastries, and heartfelt meals since 2018. 
+                A cozy haven serving artisan coffee, fresh pastries, and heartfelt meals since 2018.
                 Join us for a taste of warmth and community.
               </p>
               <div class="mt-6 flex space-x-4">
@@ -97,21 +97,21 @@ export default component$(() => {
                     {title}
                   </h3>
                   <ul class="space-y-1"> {/* Changed from space-y-3 */}
-  {items.map(({ title, href }, idx) => (
-    <li 
-      key={idx}
-      class={`transition-opacity duration-500 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}
-      style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
-    >
-      <Link
-        class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
-        href={href}
-      >
-        {title}
-      </Link>
-    </li>
-  ))}
-</ul>
+                    {items.map(({ title, href }, idx) => (
+                      <li
+                        key={idx}
+                        class={`transition-opacity duration-500 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}
+                        style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
+                      >
+                        <Link
+                          class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
+                          href={href}
+                        >
+                          {title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
