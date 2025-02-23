@@ -1,123 +1,165 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-
-import IconTwitter from "~/components/icons/IconTwitter"
-import IconInstagram from "~/components/icons/IconInstagram"
-import IconFacebook from "~/components/icons/IconFacebook"
+import IconTwitter from "~/components/icons/IconTwitter";
+import IconInstagram from "~/components/icons/IconInstagram";
+import IconFacebook from "~/components/icons/IconFacebook";
 import IconTelegram from "../icons/IconTelegram";
 
 export default component$(() => {
+  const isVisible = useSignal(false);
+
+  useVisibleTask$(() => {
+    isVisible.value = true;
+  });
+
   const links = [
+    {
+      title: "Menu",
+      items: [
+        { title: "Breakfast", href: "/menu#breakfast" },
+        { title: "Lunch", href: "/menu#lunch" },
+        { title: "Pastries", href: "/menu#pastries" },
+        { title: "Drinks", href: "/menu#drinks" },
+      ],
+    },
+    {
+      title: "Visit",
+      items: [
+        { title: "Hours", href: "/visit#hours" },
+        { title: "Location", href: "/visit#location" },
+        { title: "Contact Us", href: "/contact" },
+      ],
+    },
     {
       title: "About",
       items: [
-        { title: "Features", href: "#" },
-        { title: "Security", href: "#" },
-        { title: "Team", href: "#" },
-        { title: "Enterprise", href: "#" },
-     
-      
+        { title: "Our Story", href: "/about#story" },
+        { title: "Team", href: "/about#team" },
+        { title: "Sustainability", href: "/about#sustainability" },
       ],
     },
     {
-      title: "Services",
+      title: "Connect",
       items: [
-        { title: "Developer API", href: "#" },
-        { title: "Partners", href: "#" },
-        { title: "Atom", href: "#" },
-        { title: "Electron", href: "#" },
-      ],
-    },
-    {
-      title: "Support",
-      items: [
-        { title: "Docs", href: "#" },
-        { title: "Community Forum", href: "#" },
-     
- 
-      ],
-    },
-    {
-      title: "Company",
-      items: [
-        { title: "About", href: "#" },
-        { title: "Blog", href: "#" },
-      
-
-
+        { title: "Events", href: "/events" },
+        { title: "Newsletter", href: "/newsletter" },
+        { title: "Gift Cards", href: "/gift-cards" },
       ],
     },
   ];
 
   const social = [
-    { label: "Twitter", icon: IconTwitter, href: "#" },
-    { label: "Instagram", icon: IconInstagram, href: "#" },
-    { label: "Facebook", icon: IconFacebook, href: "#" },
-    {
-      label: "Github",
-      icon: IconTelegram,
-      href: "",
-    },
+    { label: "Twitter", icon: IconTwitter, href: "https://twitter.com/lapetitebistro" },
+    { label: "Instagram", icon: IconInstagram, href: "https://instagram.com/lapetitebistro" },
+    { label: "Facebook", icon: IconFacebook, href: "https://facebook.com/lapetitebistro" },
+    { label: "Telegram", icon: IconTelegram, href: "tel:+16132188063" },
   ];
 
   return (
     <div class="py-2 px-2 bg-gradient-to-r from-primary-300 via-primary-100 to-primary-300">
-    <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-md">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-          <div class="col-span-12 lg:col-span-4 pr-8">
-            <div class="mb-2">
-              <Link class="inline-block text-primary font-bold text-xl" href={"/"}>
-Webdev.ca              </Link>
+      <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-md py-12 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+          {/* Top Section */}
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+            {/* Brand Column */}
+            <div class="md:col-span-4">
+              <Link 
+                class={`inline-block text-2xl font-serif font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
+                href="/"
+              >
+                La Petite Bistro
+              </Link>
+              <p class="mt-4 text-sm text-primary-600 dark:text-primary-400 leading-relaxed">
+                A cozy haven serving artisan coffee, fresh pastries, and heartfelt meals since 2018. 
+                Join us for a taste of warmth and community.
+              </p>
+              <div class="mt-6 flex space-x-4">
+                {social.map(({ label, href, icon: Icon }, index) => (
+                  <Link
+                    key={index}
+                    class={`text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-full bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+                    style={{ animationDelay: `${index * 100}ms` }}
+                    aria-label={label}
+                    title={label}
+                    href={href}
+                  >
+                    <Icon />
+                  </Link>
+                ))}
+              </div>
             </div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-            Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.     
 
-            </div>
-          </div>
-          {links.map(({ title, items }, index) => (
-            <div key={index} class="col-span-6 md:col-span-3 lg:col-span-2">
-              <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
-              {Array.isArray(items) && items.length > 0 && (
-                <ul class="text-sm">
-                  {items.map(({ title, href }, index2) => (
-                    <li key={index2} class="mb-2">
-                      <Link
-                        class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                        href={href}
+            {/* Navigation Columns */}
+            <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+              {links.map(({ title, items }, index) => (
+                <div key={index}>
+                  <h3 class={`text-lg font-semibold text-primary-800 dark:text-primary-200 mb-4 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                    {title}
+                  </h3>
+                  <ul class="space-y-3">
+                    {items.map(({ title, href }, idx) => (
+                      <li 
+                        key={idx}
+                        class={`transition-opacity duration-500 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}
+                        style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
                       >
-                        {title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                        <Link
+                          class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
+                          href={href}
+                        >
+                          {title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div class="md:flex md:items-center md:justify-between pb-6 md:py-8">
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-            {social.map(({ label, href, icon: Icon }, index) => (
-              <li key={index}>
-                <Link
-                  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={label}
-                  title={label}
-                  href={href}
-                >
-                  {typeof Icon !== "undefined" && <Icon />}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          </div>
 
-          <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-            © 2025 Webdev.ca
-            · All rights reserved.
+          {/* Bottom Section */}
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-700 dark:text-primary-400">
+            <div class="mb-4 md:mb-0">
+              © {new Date().getFullYear()} La Petite Bistro · All rights reserved
+            </div>
+            <div class="flex space-x-6">
+              <Link href="/privacy" class="hover:text-primary-800 dark:hover:text-primary-100 hover:underline">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" class="hover:text-primary-800 dark:hover:text-primary-100 hover:underline">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+
+        <style>
+          {`
+            /* Custom animation for fade-in */
+            .animate-fade-in {
+              animation: fadeIn 0.5s ease-out forwards;
+            }
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            /* Ensure smooth hover effects */
+            footer a {
+              transition-property: color, transform, text-decoration;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in-out;
+            }
+          `}
+        </style>
+      </footer>
     </div>
   );
 });
