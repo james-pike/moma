@@ -31,9 +31,9 @@ export default component$((props: Props) => {
 
   return (
     <>
-     <head>
+     {/* <head>
         <link rel="preload" href="/images/hero2.webp" as="image" />
-      </head>
+      </head> */}
     <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
     <div
         class="absolute left-0 top-0 w-full h-[200px] sm:h-[250px] bg-cover bg-center before:absolute before:inset-0 before:bg-black before:opacity-20"

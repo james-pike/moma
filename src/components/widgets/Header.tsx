@@ -113,7 +113,7 @@ export default component$(() => {
                 md:self-center w-full md:w-auto 
                 text-xl md:text-[0.9375rem] 
                 tracking-[0.01rem] font-medium 
-                py-4 px-4 md:p-0
+                py-2 px-4 md:p-0
               "
             >
               {menu.items.map(({ text, href, items }, key) => (

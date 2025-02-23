@@ -38,7 +38,7 @@ export default component$(() => {
     }
 
     // Scroll to 200px on subsequent tab changes
-    window.scrollTo({ top: 200, behavior: 'smooth' });
+    window.scrollTo({ top: 195, behavior: 'smooth' });
   });
 
   return (
