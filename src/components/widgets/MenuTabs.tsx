@@ -42,9 +42,9 @@ export default component$(() => {
   });
 
   return (
-    <Tabs.Root selectedClassName='bg-primary-50' class="max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
+    <Tabs.Root selectedClassName='bg-primary-50' class="max-w-6xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List */}
-      <Tabs.List class="grid grid-cols-4 sm:inline-flex sm:space-x-4 w-full bg-primary-25 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
+      <Tabs.List class="grid grid-cols-4 sm:justify-start  sm:inline-flex sm:space-x-4 w-full bg-primary-25 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
         <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Tea</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Bistro</Tabs.Tab>
@@ -58,7 +58,7 @@ export default component$(() => {
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {menuItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                  <img src={item.image} alt={item.title} class="w-full h-40 object-cover" />
+                  <img width={1024} height={1024} src={item.image} alt={item.title} class="w-full h-40 object-cover" />
                   <div class="p-3">
                     <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p class="text-sm text-gray-600 mt-1">{item.description}</p>
@@ -78,7 +78,7 @@ export default component$(() => {
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {teaItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                  <img src={item.image} alt={item.title} class="w-full h-40 object-cover" />
+                  <img width={1024} height={1024} src={item.image} alt={item.title} class="w-full h-40 object-cover" />
                   <div class="p-3">
                     <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p class="text-sm text-gray-600 mt-1">{item.description}</p>
