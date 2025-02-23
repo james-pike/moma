@@ -4,7 +4,7 @@ import { Carousel } from 'flowbite-qwik';
 
 export default component$(() => {
   return (
-    <section class="relative w-full !h-[70vh] text-white overflow-hidden">
+    <section class="relative max-w-7xl mx-auto !h-[70vh] text-white overflow-hidden">
       <Carousel noControls slideInterval={4000} class="w-full !h-full">
         <Carousel.Slide class="w-full !h-full flex">
           <img class="flex-1 w-full !h-full object-cover" src="/images/hero1.webp" alt="Freshly Brewed Coffee" />

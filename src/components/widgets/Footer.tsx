@@ -56,7 +56,7 @@ export default component$(() => {
   ];
 
   return (
-    <div class="py-2 px-2 bg-gradient-to-r from-primary-300 via-primary-100 to-primary-300">
+    <div class="max-w-7xl mx-auto py-2 px-2 bg-gradient-to-r from-primary-300 via-primary-100 to-primary-300">
       <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-md py-10 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}

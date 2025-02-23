@@ -7,20 +7,20 @@ import { Button } from '../ui/Button';
 
 const menuItems = [
   { title: 'Espresso', description: 'Rich and bold espresso shot.', price: '$3.50', image: '/images/coffee.webp' },
-  { title: 'Cappuccino', description: 'Espresso with steamed milk and foam.', price: '$4.50', image: '/images/mocha.webp' },
-  { title: 'Latte', description: 'Smooth espresso with milk.', price: '$4.00', image: '/images/mocha.webp' },
-  { title: 'Mocha', description: 'Chocolate and espresso delight.', price: '$4.75', image: '/images/coffee.webp' },
+  { title: 'Cappuccino', description: 'Rich and bold espresso shot.', price: '$4.50', image: '/images/mocha.webp' },
+  { title: 'Latte', description: 'Rich and bold espresso shot.', price: '$4.00', image: '/images/mocha.webp' },
+  { title: 'Mocha', description: 'Rich and bold espresso shot.', price: '$4.75', image: '/images/coffee.webp' },
   { title: 'Espresso', description: 'Rich and bold espresso shot.', price: '$3.50', image: '/images/coffee.webp' },
-  { title: 'Cappuccino', description: 'Espresso with steamed milk and foam.', price: '$4.50', image: '/images/mocha.webp' },
-  { title: 'Latte', description: 'Smooth espresso with milk.', price: '$4.00', image: '/images/mocha.webp' },
-  { title: 'Mocha', description: 'Chocolate and espresso delight.', price: '$4.75', image: '/images/coffee.webp' },
+  { title: 'Cappuccino', description: 'Rich and bold espresso shot.', price: '$4.50', image: '/images/mocha.webp' },
+  { title: 'Latte', description: 'Rich and bold espresso shot.', price: '$4.00', image: '/images/mocha.webp' },
+  { title: 'Mocha', description: 'Rich and bold espresso shot.', price: '$4.75', image: '/images/coffee.webp' },
 ];
 
 const teaItems = [
-  { title: 'Matcha', description: 'Rich and bold espresso shot.', price: '$3.50', image: 'https://via.placeholder.com/300' },
-  { title: 'Green Tea', description: 'Espresso with steamed milk and foam.', price: '$4.50', image: 'https://via.placeholder.com/300' },
-  { title: 'Black Tea', description: 'Smooth espresso with milk.', price: '$4.00', image: 'https://via.placeholder.com/300' },
-  { title: 'Earl Gray', description: 'Chocolate and espresso delight.', price: '$4.75', image: 'https://via.placeholder.com/300' },
+  { title: 'Matcha', description: 'Rich and bold espresso shot.', price: '$3.50', image: '/images/matcha.webp' },
+  { title: 'Green Tea', description: 'Rich and bold espresso shot.', price: '$4.50', image: '/images/matcha2.webp' },
+  { title: 'Black Tea', description: 'Rich and bold espresso shot.', price: '$4.00', image: '/images/matcha2.webp' },
+  { title: 'Earl Gray', description: 'Rich and bold espresso shot.', price: '$4.75', image: '/images/matcha.webp' },
 ];
 
 export default component$(() => {
@@ -42,7 +42,7 @@ export default component$(() => {
   });
 
   return (
-    <Tabs.Root selectedClassName='bg-primary-50' class="max-w-screen-lg mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
+    <Tabs.Root selectedClassName='bg-primary-50' class="max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List */}
       <Tabs.List class="grid grid-cols-4 sm:inline-flex sm:space-x-4 w-full bg-primary-25 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
         <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
@@ -59,7 +59,7 @@ export default component$(() => {
               {menuItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                   <img src={item.image} alt={item.title} class="w-full h-40 object-cover" />
-                  <div class="p-4">
+                  <div class="p-3">
                     <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p class="text-sm text-gray-600 mt-1">{item.description}</p>
                     <p class="text-lg font-bold text-primary mt-2">{item.price}</p>
@@ -79,7 +79,7 @@ export default component$(() => {
               {teaItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                   <img src={item.image} alt={item.title} class="w-full h-40 object-cover" />
-                  <div class="p-4">
+                  <div class="p-3">
                     <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p class="text-sm text-gray-600 mt-1">{item.description}</p>
                     <p class="text-lg font-bold text-primary mt-2">{item.price}</p>

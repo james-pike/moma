@@ -6,7 +6,7 @@ export default component$(() => {
 <>
 
        {/* Hero Banner Section */}
-       <div class="relative text-white py-16 sm:py-24"  style={{ backgroundImage: "url('/images/hero2.webp')" }}>
+       <div class="relative mx-auto max-w-7xl text-white py-16 sm:py-24"  style={{ backgroundImage: "url('/images/hero2.webp')" }}>
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                     <div class="max-w-2xl mx-auto text-center">
                     
