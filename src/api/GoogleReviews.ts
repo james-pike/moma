@@ -20,7 +20,7 @@ export const getReviews = server$(async (): Promise<Review[]> => {
     const data = await response.json();
     return data.result.reviews || [];
   } catch (error) {
-    console.error('Error fetching reviews:', error);
+    console.error('Error fetching reviews', error);
     return []; // Return empty array on error
   }
 });
