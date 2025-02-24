@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import { ItemGrid } from "~/components/ui/ItemGrid";
 import IconArrowDownRight from "~/components/icons/IconArrowDownRight"
+import GoogleReviews from "./GoogleReviews";
 
 interface Item {
   title?: string;
@@ -60,14 +61,7 @@ export default component$((props: Props) => {
 
         <div
           class={twMerge("relative text-default px-4 md:px-6 py-6 md:py-12 lg:py-15 mx-auto max-w-6xl", isDark ? "dark" : "")}>
-          <ItemGrid
-            items={items}
-            defaultIcon={IconArrowDownRight}
-            classes={{
-              panel: "max-w-none p-5 bg-white shadow-md rounded-md border-2 border-primary-100 dark:border-gray-700",
-              ...(classes?.items ?? {}),
-            }}
-          />
+         <GoogleReviews/>
         </div>
       </section>
     </>

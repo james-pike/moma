@@ -1,5 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import FAQs from "~/components/widgets/FAQs";
+import GoogleReviews from "~/components/widgets/GoogleReviews";
+import ReviewPage from "~/components/widgets/ReviewPage";
 import Reviews from "~/components/widgets/Reviews";
 import { SITE } from "~/config.mjs";
 
@@ -7,12 +10,13 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-<Reviews highlight="Reviews"
-        title="What Our Guests Say"
-        subtitle="See what our customers love about our café—great coffee, delicious food, and a welcoming atmosphere."
-        items={[  
-        ]}
-      />
+<ReviewPage title="Frequently Asked Questions"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="FAQs"
+        items={[
+     
+    
+        ]}/>
 
     </>
   );
