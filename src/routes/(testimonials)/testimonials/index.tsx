@@ -8,7 +8,7 @@ export default component$(() => {
   return (
     <>
 <ReviewPage title="What Our Guests Say"
-        subtitle="See what our customers love about our café"
+        subtitle="See what our customers love about our café!"
         highlight="Reviews"
         items={[
      
