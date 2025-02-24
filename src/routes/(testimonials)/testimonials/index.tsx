@@ -7,9 +7,9 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-<ReviewPage title="Frequently Asked Questions"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="FAQs"
+<ReviewPage title="What Our Guests Say"
+        subtitle="See what our customers love about our café"
+        highlight="Reviews"
         items={[
      
     
