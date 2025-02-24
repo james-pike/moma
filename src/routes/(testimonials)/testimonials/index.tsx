@@ -1,9 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import FAQs from "~/components/widgets/FAQs";
-import GoogleReviews from "~/components/widgets/GoogleReviews";
 import ReviewPage from "~/components/widgets/ReviewPage";
-import Reviews from "~/components/widgets/Reviews";
 import { SITE } from "~/config.mjs";
 
 
