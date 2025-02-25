@@ -1,8 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-
-import GoogleReviews from "./GoogleReviews";
+import Reviews from "./Reviews";
 
 interface Item {
   title?: string;
@@ -59,7 +58,7 @@ export default component$((props: Props) => {
 
         <div
           class={twMerge("relative text-default px-4 md:px-6 py-6 md:py-12 lg:py-15 mx-auto max-w-6xl", isDark ? "dark" : "")}>
-         <GoogleReviews/>
+         <Reviews/>
         </div>
       </section>
     </>

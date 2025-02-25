@@ -1,187 +1,103 @@
-import { component$ } from "@builder.io/qwik";
-import { twMerge } from "tailwind-merge";
-import { Headline } from "~/components/ui/Headline";
+import { component$, useResource$, Resource } from '@builder.io/qwik';
+import { twMerge } from 'tailwind-merge';
+import { getReviews } from '~/api/GoogleReviews';
 
+// Define the Review type
+interface Review {
+  author_name: string;
+  rating: number;
+  text: string;
+  time: number; // Unix timestamp in seconds
+}
 
 interface Item {
-    title?: string;
-    description?: string;
-    icon?: any;
-    classes?: Record<string, string>;
+  title?: string;
+  description?: string;
+  icon?: any;
+  classes?: Record<string, string>;
 }
 
 interface Props {
-    id?: string;
-    title?: any;
-    subtitle?: any;
-    highlight?: any;
-    items: Array<Item>;
-    isDark?: boolean;
-    classes?: any;
+  items?: Array<Item>;
+  defaultIcon?: any;
+  classes?: Record<string, string>;
 }
 
-export default component$((props: Props) => {
-    const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+export default component$<Props>((props) => {
+  // Use useResource$ to fetch reviews server-side
+  const reviewsResource = useResource$<Review[]>(async ({ cleanup }) => {
+    const abortController = new AbortController();
+    cleanup(() => abortController.abort());
 
-    return (
+    const reviews = await getReviews();
+    return reviews.filter(review => review.rating >= 4); // Filter only 4+ star reviews
+  });
 
+  return (
+    <Resource
+      value={reviewsResource}
+      onPending={() => <p>Loading reviews...</p>}
+      onResolved={(reviews) =>
+        reviews.length > 0 ? (
+          <div
+            class={twMerge(
+              // Masonry layout with columns instead of grid
+              "motion-group mx-auto max-w-7xl  columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8",
+              props.classes?.container
+            )}
+          >
+            {reviews.map((review, index) => (
+              <div
+                key={`${review.author_name}-${index}`}
+                class="flex flex-col w-full break-inside-avoid mb-6 sm:mb-8" // Break-inside prevents splitting across columns
+              >
+                <div
+                  class={twMerge(
+                    "flex flex-col p-4 bg-white shadow-md rounded-lg border border-gray-200 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    props.classes?.panel
+                  )}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {/* Review Author and Rating */}
+                  <div class="flex items-center mb-2">
+                    <span class="font-semibold text-gray-800">{review.author_name}</span>
+                    <div class="ml-2 flex items-center">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <span
+                          key={i}
+                          class={twMerge(
+                            "text-yellow-400",
+                            i < review.rating ? 'fill-current' : 'text-gray-300'
+                          )}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-    <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
-         <div
-  class="absolute top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
-  style={{ backgroundImage: "url('/images/hero2.webp')" }}
-></div>
-      {/* Centering Wrapper */}
-      <div class="relative flex flex-col items-center justify-center h-[200px] sm:h-[250px] px-4 md:px-6 mx-auto max-w-6xl ">
-        <Headline
-        align="left"
-          title={title}
-          subtitle={subtitle}
-          highlight={highlight}
-          classes={{
-            container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/70 p-6 rounded-sm",
-            title: "sm:text-4xl text-3xl",
-            ...(classes?.headline ?? {}),
-          }}
-        />
-      </div>
+                  {/* Review Text */}
+                  <p class={twMerge("text-gray-600 mt-2", props.classes?.description)}>
+                    {review.text}
+                  </p>
 
-      <div
-        class={twMerge("relative text-default px-4 md:px-6 py-6 md:py-12 lg:py-15 mx-auto max-w-6xl", isDark ? "dark" : "")}>
-    <div class="grid bg-white rounded-md p-3 md:p-5 gap-8 lg:grid-cols-3 mx-auto max-w-screen-xl">
-<div class="space-y-6">
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-            <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from two different worlds: Figma and Tailwind.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Bonnie Green</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Open AI</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">A must-have for designers</h3>
-            <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Lana Byrd</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Tesla</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
-            <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Jese Leos</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">CEO at Oracle</div>
-            </div>
-        </figcaption>
-    </figure>
-</div>
-<div class="space-y-6">
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-            <p class="my-4">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Joseph McFall</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Junior Designer at Adobe</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
-            <p class="my-4">"Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS framework.</p>
-            <p class="my-4">From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Helene Engels</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">CFO at Microsoft</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Perfect choice for a SaaS application</h3>
-            <p class="my-4">"Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS framework.</p>
-           
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Leslie Livingston</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Creative Director at Apple</div>
-            </div>
-        </figcaption>
-    </figure>
-</div>
-<div class="space-y-6">
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-            <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme."</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Michael Gough</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Front-end engineer at Meta</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
-            <p class="my-4">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Neil Sims</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software architect at Amazon</div>
-            </div>
-        </figcaption>
-    </figure>
-    <figure class="p-6 bg-gray-100 rounded dark:bg-gray-800">
-        <blockquote class="text-sm text-gray-500 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
-            <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.”</p>
-        </blockquote>
-        <figcaption class="flex items-center space-x-3">
-            <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="profile picture" />
-            <div class="space-y-0.5 font-medium dark:text-white">
-                <div>Robert Brown</div>
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Junior developer at SAP</div>
-            </div>
-        </figcaption>
-    </figure>
-</div>
-</div>
-
-      </div>
-    </section>
-
-
-    );
+                  {/* Review Date (Optional, formatted from Unix timestamp) */}
+                  <p class={twMerge("text-sm text-gray-400 mt-2")}>
+                    {new Date(review.time * 1000).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>No reviews available.</p>
+        )
+      }
+      onRejected={(error) => <p>Error loading reviews: {error.message}</p>}
+    />
+  );
 });
-
-
-
