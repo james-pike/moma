@@ -35,6 +35,61 @@
   [data-aw-toggle-menu].expanded g > path:last-child {
     @apply rotate-45 translate-y-[-8px] translate-x-[14px];
   }
+
+  .carousel-pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .carousel-pagination-bullet {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  
+  .carousel-pagination-bullet[data-active] {
+    background-color: #000 !important;
+    transform: scale(1.2);
+  }
+}
+
+@layer qwik-ui {
+  [data-qui-carousel-viewport] {
+    overflow: hidden;
+  }
+ 
+  [data-qui-carousel-scroller] {
+    transform: var(--transform);
+    will-change: transform;
+    transition: 0.3s transform ease-out;
+ 
+    display: flex;
+    gap: var(--gap);
+    flex-direction: var(--orientation);
+ 
+    /* for initial slide position */
+    scroll-snap-type: both mandatory;
+    max-height: calc(var(--max-slide-height));
+  }
+ 
+  [data-qui-carousel-slide] {
+    /* default, feel free to override */
+    --total-gap-width: calc(var(--gap) * (var(--slides-per-view) - 1));
+    --available-slide-width: calc(100% - var(--total-gap-width));
+    --slide-width: calc(var(--available-slide-width) / var(--slides-per-view));
+ 
+    flex-basis: var(--slide-width);
+    flex-shrink: 0;
+    position: relative;
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    [data-qui-carousel-player] {
+      display: none;
+    }
+  }
 }
 
 .dropdown:hover .dropdown-menu {
