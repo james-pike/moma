@@ -1,17 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { qwikSerialized } from "~/utils/qwikSerialized";
 
-const IconApps = qwikSerialized(() => import("../components/icons/IconApps"));
-const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
-const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBrandGoogle"));
-const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
-import ReviewsIndex from "~/components/widgets/ReviewsIndex";
 import Contact from "~/components/widgets/Contact";
 import Hero3 from "~/components/widgets/Hero3";
-import Services from "~/components/widgets/Services";
 import Menu from "~/components/widgets/Menu";
 import FAQindex from "~/components/widgets/FAQindex";
 
@@ -20,51 +13,7 @@ export default component$(() => {
   return (
     <>
       <Hero3 />
-      <Services id="menu"
-        highlight="Menu"
-        title="Explore Our Menu"
-        subtitle="Featuring expertly crafted coffee, tea lattes, and cold drinks, alongside a diverse selection of Middle Eastern, North African, European, South Asian, and Canadian dishes—plus decadent cakes and sweets, all at an affordable price."
-        items={[
-       
-          {
-            title: "Custom-Coded, High-Performance Design",
-            description:
-              "We build fully custom-coded websites tailored to your brand, ensuring a unique digital presence with optimized performance and maintainability.",
-            icon: IconBulb,
-          },
-          {
-            title: "Blazing Fast Page Speeds",
-            description:
-              "Performance is at the core of our development approach—fast-loading pages improve user experience, increase engagement, and boost search engine rankings.",
-            icon: IconRocket,
-          },
-          {
-            title: "Search Engine Optimization (SEO)",
-            description:
-              "From clean code to strategic on-page optimizations, we ensure your site is built with SEO best practices to improve visibility and organic reach.",
-            icon: IconBrandGoogle,
-          },
-          {
-            title: "Scalable Solutions",
-            description:
-              "We develop with scalability in mind, ensuring your site can grow with your business while remaining lightweight, maintainable, and adaptable.",
-            icon: IconApps,
-          },
-          {
-            title: "Ready-to-use Components",
-            description:
-              "Beautifully crafted UI components built with Tailwind CSS, ready for use in marketing websites, SaaS platforms, blogs, personal brands, and small businesses.",
-            icon: IconApps,
-          },
-          {
-            title: "Open to New Ideas & Contributions",
-            description:
-              "We embrace collaboration and innovation—whether it's refining designs, integrating new technologies, or optimizing user experience, we welcome fresh ideas.",
-            icon: IconBulb,
-          }
-          
-        ]}
-      />
+    
 
       <Menu title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
@@ -126,12 +75,7 @@ export default component$(() => {
               ]}/>
 
   
-      <ReviewsIndex highlight="Reviews"
-        title="What our guests say"
-        subtitle="See what our customers love about our café—great coffee, delicious food, and a welcoming atmosphere."
-        items={[
-          
-        ]}/>
+    
 
 <FAQindex title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
