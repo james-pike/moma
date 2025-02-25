@@ -1,11 +1,10 @@
 import { component$, useStore } from "@builder.io/qwik";
 import { useContent } from "@builder.io/qwik-city";
-import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
-import IconOrder from "../icons/IconOrder";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
@@ -18,11 +17,10 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 bg-white max-w-7xl dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${
-        store.isScrolling
+      class={`sticky top-0 z-40 bg-white max-w-7xl dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 transition-[opacity] ease-in-out ${store.isScrolling
           ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
           : ""
-      }`}
+        }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
           store.isScrolling = true;
@@ -33,27 +31,27 @@ export default component$(() => {
     >
       <div class="absolute inset-0 pointer-events-none"></div>
       <div class="w-full h-6 bg-primary-400 px-4 md:px-7 mx-auto text-white flex justify-between items-center max-w-7xl">
-  <div>
-    <p>Today's Specials: Freshly brewed, just for you!</p>
-  </div>
-  <div id="test" class="flex gap-4 sm:flex hidden sm:block">
-    <a
-      class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-      href="tel:+16132188063"
-    >
-      <IconTelegram />
-      <p class="pl-1">(613) 218-8063</p>
-    </a>
-    <p class="text-gray-50">|</p>
-    <a
-      class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-      href="mailto:info@webdev.ca"
-    >
-      <IconTwitter />
-      <p class="pl-1">info@webdev.ca</p>
-    </a>
-  </div>
-</div>
+        <div>
+          <p>Today's Specials: Freshly brewed, just for you!</p>
+        </div>
+        <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+          <a
+            class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+            href="tel:+16132188063"
+          >
+            <IconTelegram />
+            <p class="pl-1">(613) 218-8063</p>
+          </a>
+          <p class="text-gray-50">|</p>
+          <a
+            class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+            href="mailto:info@webdev.ca"
+          >
+            <IconTwitter />
+            <p class="pl-1">info@webdev.ca</p>
+          </a>
+        </div>
+      </div>
 
       <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
@@ -69,18 +67,8 @@ export default component$(() => {
             >
               <IconTelegram />
             </a>
-            <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-              aria-label={"Order"}
-              title={"Order"}
-              href="https://www.ubereats.com/ca/store/safi-fine-food/t1GquykYXD-4ZUT5tbSbrQ?srsltid=AfmBOorLqOjIs8pz1RRLuvd1EasP5ZUhIoN3RTgYmWhPDRmpzfTa5CG3"
-            >
-              <IconOrder />
-            </a>
-            <ToggleMenu 
-              isExpanded={store.isMenuExpanded} 
-              onToggle$={() => (store.isMenuExpanded = !store.isMenuExpanded)} 
-            />
+        
+            <MenuModal />
           </div>
         </div>
         <nav
@@ -99,8 +87,8 @@ export default component$(() => {
             border-b border-primary-200 dark:border-primary-800 
             transition-all duration-300 ease-in-out 
             z-40 
-            ${store.isMenuExpanded 
-              ? "max-h-screen opacity-100 translate-y-0" 
+            ${store.isMenuExpanded
+              ? "max-h-screen opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-4 md:max-h-none md:opacity-100 md:translate-y-0 md:flex"
             }
           `}
