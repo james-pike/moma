@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <>
 <FAQs title="Frequently Asked Questions"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
+        subtitle="Find answers to common inquiries about our cafe."
         highlight="FAQs"
         items={[
           {
