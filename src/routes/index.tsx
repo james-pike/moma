@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero3 from "~/components/widgets/Hero3";
-import Carousel from "~/components/widgets/Carousel";
 import ServicesX from "~/components/widgets/ServicesX";
 
 
