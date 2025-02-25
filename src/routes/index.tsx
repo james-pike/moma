@@ -5,7 +5,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Contact from "~/components/widgets/Contact";
 import Hero3 from "~/components/widgets/Hero3";
-import Menu from "~/components/widgets/Menu";
 import FAQindex from "~/components/widgets/FAQindex";
 
 
