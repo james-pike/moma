@@ -36,13 +36,7 @@ export default component$((props: Props) => {
       <head>
         <link rel="preload" href="/images/hero2.webp" as="image" />
       </head>
-      <section
-  class={twMerge(
-    "relative max-w-7xl mx-auto bg-gradient-to-r from-primary-50 to-primary-25",
-    "before:absolute before:inset-0 before:bg-gradient-to-r before:from-gray-200/10 before:to-transparent before:bg-[length:2px_2px] before:opacity-20 before:pointer-events-none"
-  )}
-  {...(id ? { id } : {})}
->
+      <section class="relative max-w-7xl mx-auto bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
         <div
           class="absolute top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
           style={{ backgroundImage: "url('/images/hero2.webp')" }}
