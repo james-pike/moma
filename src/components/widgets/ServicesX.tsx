@@ -22,7 +22,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", items = [], classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
 
   return (
     <section class="relative bg-primary-25 scroll-mt-16" {...(id ? { id } : {})}>
