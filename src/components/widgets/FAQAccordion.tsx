@@ -5,7 +5,22 @@ import { Accordion } from '../ui/Accordion';
 export default component$(() => {
   return (
 <Accordion.Root class="w-full px-0 pt-4">
-
+<Accordion.Item>
+    <Accordion.Trigger class="text-md">
+      Is there outdoor seating available?
+    </Accordion.Trigger>
+    <Accordion.Content>
+      Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.
+    </Accordion.Content>
+  </Accordion.Item>
+  <Accordion.Item>
+    <Accordion.Trigger class="text-md">
+      What are your opening hours?
+    </Accordion.Trigger>
+    <Accordion.Content>
+      We’re open daily from 7 AM to 8 PM. Join us for a morning coffee, a relaxed lunch, or an evening treat!
+    </Accordion.Content>
+  </Accordion.Item>
   <Accordion.Item>
     <Accordion.Trigger class="text-md">
       Do you offer takeout?
@@ -38,22 +53,7 @@ export default component$(() => {
       Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!
     </Accordion.Content>
   </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger class="text-md">
-      Is there outdoor seating available?
-    </Accordion.Trigger>
-    <Accordion.Content>
-      Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.
-    </Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger class="text-md">
-      What are your opening hours?
-    </Accordion.Trigger>
-    <Accordion.Content>
-      We’re open daily from 7 AM to 8 PM. Join us for a morning coffee, a relaxed lunch, or an evening treat!
-    </Accordion.Content>
-  </Accordion.Item>
+
 </Accordion.Root>
 
   );
