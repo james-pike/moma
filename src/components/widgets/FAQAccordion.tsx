@@ -5,14 +5,7 @@ import { Accordion } from '../ui/Accordion';
 export default component$(() => {
   return (
 <Accordion.Root class="w-full px-0 pt-4">
-  <Accordion.Item>
-    <Accordion.Trigger class="text-md">
-      Do you have vegetarian or gluten-free options?
-    </Accordion.Trigger>
-    <Accordion.Content>
-      Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!
-    </Accordion.Content>
-  </Accordion.Item>
+
   <Accordion.Item>
     <Accordion.Trigger class="text-md">
       Do you offer takeout?
@@ -35,6 +28,14 @@ export default component$(() => {
     </Accordion.Trigger>
     <Accordion.Content>
       We operate mostly on a walk-in basis, but for larger groups or special occasions, feel free to give us a call to arrange a reservation.
+    </Accordion.Content>
+  </Accordion.Item>
+  <Accordion.Item>
+    <Accordion.Trigger class="text-md">
+      Do you have vegetarian or gluten-free options?
+    </Accordion.Trigger>
+    <Accordion.Content>
+      Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!
     </Accordion.Content>
   </Accordion.Item>
   <Accordion.Item>
