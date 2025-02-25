@@ -2,12 +2,12 @@ import { component$, PropsOf} from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
-  return (
-    <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
-      <Progress.Indicator class="progress-indicator bg-blue-50" />
-    </Progress.Root>
-  );
-});
+    return (
+      <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
+        <Progress.Indicator class="progress-indicator bg-blue-50" />
+      </Progress.Root>
+    );
+  });
 
 export default component$(() => {
   const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'];
@@ -29,18 +29,7 @@ export default component$(() => {
         {colors.map((color) => (
           <Carousel.Bullet 
             key={color}
-            class="carousel-pagination-bullet"
-            style={{
-              width: '10px',
-              height: '10px',
-              backgroundColor: '#ccc',           // Default color for inactive
-              borderRadius: '2px',              // Makes it square with slight rounding
-              transition: 'all 0.3s ease',      // Smooth transition for changes
-              '&[data-active]': {
-                backgroundColor: '#000',        // Active bullet color
-                transform: 'scale(1.2)',       // Slightly larger when active
-              }
-            }}
+            class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:bg-black data-[active]:scale-125"
           />
         ))}
       </Carousel.Pagination>
