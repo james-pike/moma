@@ -3,6 +3,7 @@ import { Modal } from "../ui/Modal";
 import { Button, buttonVariants } from "../ui/Button";
 import { LuX } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
+import { Logo } from "../common/Logo";
 
 export default component$(() => {
   const show = useSignal(false);
@@ -12,7 +13,7 @@ export default component$(() => {
       <Modal.Root bind:show={show}>
         <Modal.Trigger>Open Navigation</Modal.Trigger>
         <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
-          <Modal.Title>Navigation Menu</Modal.Title>
+          <Modal.Title><Logo/></Modal.Title>
           <Modal.Description>
             Explore your options below.
           </Modal.Description>

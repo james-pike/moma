@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero3 from "~/components/widgets/Hero3";
 import Carousel from "~/components/widgets/Carousel";
+import ServicesX from "~/components/widgets/ServicesX";
 
 
 export default component$(() => {
@@ -10,7 +11,10 @@ export default component$(() => {
     <>
       <Hero3 />
     
-<Carousel/>
+<ServicesX title="What We Do"
+              subtitle="Have questions about our café? Find answers to common inquiries below."
+              highlight="Services"
+              items={[]}/>
      
 
   
