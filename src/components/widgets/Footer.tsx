@@ -19,7 +19,7 @@ export default component$(() => {
         { title: "Breakfast", href: "/menu#breakfast" },
         { title: "Lunch", href: "/menu#lunch" },
         { title: "Pastries", href: "/menu#pastries" },
-        { title: "Drinks", href: "/menu#drinks" },
+       
       ],
     },
     {
@@ -118,7 +118,7 @@ export default component$(() => {
           </div>
 
           {/* Bottom Section */}
-          <div class="border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-700 dark:text-primary-400">
+          <div class="border-t border-gray-200 -mt-2 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-700 dark:text-primary-400">
             <div class="mb-4 md:mb-0">
               © {new Date().getFullYear()} La Petite Bistro · All rights reserved
             </div>
