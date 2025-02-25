@@ -17,10 +17,10 @@ const menuItems = [
 ];
 
 const teaItems = [
-  { title: 'Matcha', description: 'Rich and bold espresso shot.', price: '$3.50', image: '/images/matcha.webp' },
-  { title: 'Green Tea', description: 'Rich and bold espresso shot.', price: '$4.50', image: '/images/matcha2.webp' },
-  { title: 'Black Tea', description: 'Rich and bold espresso shot.', price: '$4.00', image: '/images/matcha2.webp' },
-  { title: 'Earl Gray', description: 'Rich and bold espresso shot.', price: '$4.75', image: '/images/matcha.webp' },
+  { title: 'Matcha', description: 'Rich and bold espresso shot.', price: '$3.50', image: '/images/tea1.webp' },
+  { title: 'Green Tea', description: 'Rich and bold espresso shot.', price: '$4.50', image: '/images/tea2.webp' },
+  { title: 'Black Tea', description: 'Rich and bold espresso shot.', price: '$4.00', image: '/images/tea3.webp' },
+  { title: 'Earl Gray', description: 'Rich and bold espresso shot.', price: '$4.75', image: '/images/tea4.webp' },
 ];
 
 export default component$(() => {
@@ -42,9 +42,9 @@ export default component$(() => {
   });
 
   return (
-    <Tabs.Root selectedClassName='bg-primary-50' class="max-w-6xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
+    <Tabs.Root selectedClassName='bg-white' class="max-w-6xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List */}
-      <Tabs.List class="grid grid-cols-4 sm:justify-start  sm:inline-flex sm:space-x-4 w-full bg-primary-25 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
+      <Tabs.List class="grid grid-cols-4 sm:justify-start  sm:inline-flex sm:space-x-4 w-full bg-primary-50 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
         <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Tea</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Bistro</Tabs.Tab>
