@@ -12,7 +12,7 @@ export default component$(() => {
 
   return (
     <section class="relative max-w-7xl mx-auto !h-[35vh] text-white overflow-hidden rounded-none">
-      <Carousel noControls slideInterval={4000} class="custom-carousel w-full !h-full rounded-none">
+      <Carousel scrollable noControls slideInterval={4000} class="custom-carousel w-full !h-full rounded-none">
         <Carousel.Slide class="w-full !h-full flex relative rounded-none">
           <img 
             class="flex-1 w-full !h-full object-cover rounded-none" 
