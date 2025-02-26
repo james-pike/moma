@@ -6,38 +6,40 @@ import { cn } from "@qwik-ui/utils";
 import { Logo } from "../common/Logo";
 import { Badge } from "../ui/Badge";
 import IconHamburger from "../icons/IconHamburger";
+import { useLocation } from "@builder.io/qwik-city"; // Import for routing
 
 export default component$(() => {
   const show = useSignal(false);
+  const location = useLocation(); // Get current route info
 
   return (
     <>
       <Modal.Root bind:show={show}>
-      <div class="flex items-center pl-4 pr-2 hover:bg-gray-100">
-        <Modal.Trigger>
-         
-          <IconHamburger/>
-         
-
-        </Modal.Trigger>
+        <div class="flex items-center pl-4 pr-2 hover:bg-gray-100">
+          <Modal.Trigger>
+            <IconHamburger />
+          </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
+        <Modal.Panel position={"left"}>
           <div class="border-b border-gray-100 pb-3">
-          <Modal.Title>
-            <Logo/>
+            <Modal.Title>
+              <Logo />
             </Modal.Title>
-          <Modal.Description class="text-md px-2">
-            Join us for a taste of warmth and community.
-          </Modal.Description>
+            <Modal.Description class="text-md px-2">
+              Join us for a taste of warmth and community.
+            </Modal.Description>
           </div>
-          
+
           {/* Navigation Content */}
           <nav class="mt-4 space-y-4">
             <ul class="flex flex-col gap-0 text-lg">
               <li>
                 <a
                   href="/about"
-                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/about" && "bg-primary-50 text-primary-600" // Active route styling
+                  )}
                   onClick$={() => (show.value = false)}
                 >
                   Our Story
@@ -46,21 +48,27 @@ export default component$(() => {
               <li>
                 <a
                   href="/menu"
-                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/menu" && "bg-primary-50 text-primary-600"
+                  )}
                   onClick$={() => (show.value = false)}
                 >
-             <div class="relative inline-block">
-  Menu
-  <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
-    New
-  </Badge>
-</div>
+                  <div class="relative inline-block">
+                    Menu
+                    <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
+                      New
+                    </Badge>
+                  </div>
                 </a>
               </li>
               <li>
                 <a
                   href="/reviews"
-                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/reviews" && "bg-primary-50 text-primary-600"
+                  )}
                   onClick$={() => (show.value = false)}
                 >
                   Reviews
@@ -69,7 +77,10 @@ export default component$(() => {
               <li>
                 <a
                   href="/faq"
-                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/faq" && "bg-primary-50 text-primary-600"
+                  )}
                   onClick$={() => (show.value = false)}
                 >
                   FAQ
@@ -78,7 +89,10 @@ export default component$(() => {
               <li>
                 <a
                   href="/contact"
-                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/contact" && "bg-primary-50 text-primary-600"
+                  )}
                   onClick$={() => (show.value = false)}
                 >
                   Contact Us
