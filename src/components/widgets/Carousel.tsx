@@ -13,11 +13,11 @@ export default component$(() => {
   const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'];
 
   return (
-    <Carousel.Root class="carousel-root pt-4" slidesPerView={2} gap={30}>
-      <div class="carousel-buttons">
+    <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25}>
+      {/* <div class="carousel-buttons">
         <Carousel.Previous>Prev</Carousel.Previous>
         <Carousel.Next>Next</Carousel.Next>
-      </div>
+      </div> */}
       <Carousel.Scroller class="carousel-scroller">
         {colors.map((color) => (
           <Carousel.Slide key={color} class="carousel-slide h-40 bg-primary-200">
