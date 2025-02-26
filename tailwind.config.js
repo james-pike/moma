@@ -12,6 +12,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "4.5xl": "2.625rem", // Between 4xl (2.25rem) and 5xl (3rem)
+      },
       colors: {
         primary: {
           25:  '#faf6f2',  // Light Cream  

@@ -35,7 +35,7 @@ export default component$((props: Props) => {
       </head> */}
       <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
       <div
-  class="absolute top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
+  class="absolute hidden sm:block top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
   style={{ backgroundImage: "url('/images/hero2.webp')" }}
 ></div>
         {/* Centering Wrapper */}
