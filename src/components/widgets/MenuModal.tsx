@@ -21,7 +21,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"}>
-          <div class="border-b border-gray-100 pb-3">
+          <div class="border-b-2 border-gray-100 pb-3">
             <Modal.Title>
               <a href="/">
               <Logo />
