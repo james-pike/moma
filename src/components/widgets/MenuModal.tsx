@@ -16,7 +16,7 @@ export default component$(() => {
       <div class="flex items-center pl-3">
         <Modal.Trigger>
          
-          <IconHamburger class=""/>
+          <IconHamburger/>
          
 
         </Modal.Trigger>
