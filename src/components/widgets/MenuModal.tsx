@@ -33,13 +33,13 @@ export default component$(() => {
               </li>
               <li>
                 <a
-                  href="#profile"
+                  href="/about"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
              <div class="relative inline-block">
   Menu
-  <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
+  <Badge class="absolute -top-0.1 left-11 bg-primary-300 text-white text-xs px-1 py-0 rounded">
     New
   </Badge>
 </div>
