@@ -39,7 +39,10 @@ type PanelProps = PropsOf<typeof HeadlessModal.Panel> &
 
 const Panel = component$<PanelProps>(({ position, ...props }) => {
   return (
-    <HeadlessModal.Panel {...props} class={cn(panelVariants({ position }), props.class)}>
+    <HeadlessModal.Panel
+      {...props}
+      class={cn('custom-modal', panelVariants({ position }), props.class)} // Added custom-modal class
+    >
       <Slot />
     </HeadlessModal.Panel>
   );

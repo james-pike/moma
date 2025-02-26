@@ -57,6 +57,21 @@
     background-color: #000 !important;
     transform: scale(1.2);
   }
+
+  .custom-modal a:focus {
+    outline: none;
+  }
+  
+  /* Optional: Add a custom focus style for accessibility */
+  .custom-modal a:focus-visible {
+    outline: 2px solid #2563eb; /* Example focus color (blue-600) */
+    outline-offset: 2px;
+  }
+  
+  /* Ensure the active link styling from your previous code still works */
+  .custom-modal a.bg-primary-50 {
+    background-color: #f0f9ff; /* Matches Tailwind's primary-50 */
+  }
 }
 
 @layer qwik-ui {
