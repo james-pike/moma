@@ -59,14 +59,7 @@ export default component$(() => {
             <Logo />
           </a>
           <div class="flex items-center md:hidden">
-            <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-              aria-label={"Telegram"}
-              title={"Telegram"}
-              href="tel:+6132188063"
-            >
-              <IconTelegram />
-            </a>
+      
             <a
                 href="/contact"
                 class="btn btn-primary ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
