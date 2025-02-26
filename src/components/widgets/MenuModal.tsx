@@ -5,6 +5,7 @@ import { LuX } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { Logo } from "../common/Logo";
 import { Badge } from "../ui/Badge";
+import IconHamburger from "../icons/IconHamburger";
 
 export default component$(() => {
   const show = useSignal(false);
@@ -12,7 +13,14 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <Modal.Trigger>Open Navigation</Modal.Trigger>
+      <div class="flex items-center pl-3">
+        <Modal.Trigger>
+         
+          <IconHamburger class=""/>
+         
+
+        </Modal.Trigger>
+        </div>
         <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
           <Modal.Title><Logo/></Modal.Title>
           <Modal.Description class="text-md">
