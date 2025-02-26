@@ -38,7 +38,7 @@ export default component$(() => {
                   href="/about"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/about" && "bg-primary-50 text-primary-600" // Active route styling
+                    location.url.pathname === "/about/" && "bg-primary-50 text-primary-600" // Active route styling
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -50,7 +50,7 @@ export default component$(() => {
                   href="/menu"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/menu" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/menu/" && "bg-primary-50 text-primary-600"
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -67,7 +67,7 @@ export default component$(() => {
                   href="/reviews"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/reviews" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/reviews/" && "bg-primary-50 text-primary-600"
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -79,7 +79,7 @@ export default component$(() => {
                   href="/faq"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/faq" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/faq/" && "bg-primary-50 text-primary-600"
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -91,7 +91,7 @@ export default component$(() => {
                   href="/contact"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/contact" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/contact/" && "bg-primary-50 text-primary-600"
                   )}
                   onClick$={() => (show.value = false)}
                 >

@@ -62,12 +62,7 @@
     outline: none;
   }
   
-  
-  
-  /* Ensure the active link styling from your previous code still works */
-  .custom-modal a.bg-primary-50 {
-    background-color: #2b709e; /* Matches Tailwind's primary-50 */
-  }
+
 }
 
 @layer qwik-ui {
