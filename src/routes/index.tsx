@@ -1,20 +1,19 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
-import Hero3 from "~/components/widgets/Hero3";
-
 import Services from "~/components/sections/Services";
 import Menu from "~/components/sections/Menu";
 import FAQ from "~/components/sections/FAQ";
 import Reviews from "~/components/sections/Reviews";
 import Contact from "~/components/sections/Contact";
+import Hero from "~/components/sections/Hero";
 
 
 
 export default component$(() => {
   return (
     <>
-      <Hero3 />
+      <Hero />
       
   
     
