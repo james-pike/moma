@@ -1,7 +1,6 @@
 import { component$, PropsOf } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 
-
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
   return (
     <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
@@ -50,16 +49,16 @@ export default component$(() => {
         {services.map((service) => (
           <Carousel.Slide 
             key={service.title} 
-            class="carousel-slide h-60 bg-primary-200 flex flex-col"
+            class="carousel-slide min-h-60 bg-primary-200 flex flex-col"
           >
             <img 
               src={service.image} 
               alt={service.title}
               class="w-full h-44 object-cover"
             />
-            <div class="service-info p-2">
-              <h1 class="service-title text-lg font-bold">{service.title}</h1>
-              <p class="service-description text-sm">{service.description}</p>
+            <div class="service-info p-2 flex-1 overflow-hidden">
+              <h1 class="service-title text-lg font-bold truncate">{service.title}</h1>
+              <p class="service-description text-sm line-clamp-2">{service.description}</p>
             </div>
           </Carousel.Slide>
         ))}
