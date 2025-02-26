@@ -33,6 +33,18 @@ export default component$(() => {
           {/* Navigation Content */}
           <nav class="mt-4 space-y-4">
             <ul class="flex flex-col gap-0 text-lg">
+            <li>
+                <a
+                  href="/"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/" && "bg-primary-50 text-primary-600" // Active route styling
+                  )}
+                  onClick$={() => (show.value = false)}
+                >
+                  Home
+                </a>
+              </li>
               <li>
                 <a
                   href="/about"
