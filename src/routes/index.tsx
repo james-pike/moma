@@ -2,9 +2,9 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero3 from "~/components/widgets/Hero3";
-import FAQ2 from "~/components/widgets/FAQ2";
-import Reviews2 from "~/components/widgets/Reviews2";
+
 import Services from "~/components/widgets/Services";
+import Menu from "~/components/widgets/Menu";
 
 
 
@@ -20,7 +20,12 @@ export default component$(() => {
               highlight="Services"
               items={[]}/>
 
-<Reviews2 title="Frequently Asked Questions"
+<Menu title="Gallery Of Past Work"
+              subtitle="Have questions about our café? Find answers to common inquiries below."
+              highlight="Portfolio"
+              items={[]}/>
+
+{/* <Reviews2 title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="FAQ"
               items={[]}/>
@@ -29,8 +34,8 @@ export default component$(() => {
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="FAQ"
               items={[]}/>
-{/* 
-<Menu title="Gallery Of Past Work"
+{/*  */}
+{/* <Menu title="Gallery Of Past Work"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="Portfolio"
               items={[]}/>
@@ -40,7 +45,7 @@ export default component$(() => {
               highlight="Portfolio"
               items={[]}/>
   
-    <Contact/> */}
+    <Contact/>  */}
     
     
     </>

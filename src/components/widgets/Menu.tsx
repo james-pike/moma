@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import MenuTabs from "./MenuTabs";
 
@@ -20,40 +21,23 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const {
-    id,
-    title = null,
-    subtitle = null,
-    highlight = null,
-    classes = {},
-  } = props;
+  const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
 
   return (
-    <>
-      {/* <head>
-        <link rel="preload" href="/images/hero2.webp" as="image" />
-      </head> */}
-      <section class="relative bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
+    
       <div
-  class="absolute hidden sm:block top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
-  style={{ backgroundImage: "url('/images/hero2.webp')" }}
-></div>
-        {/* Centering Wrapper */}
-        <div class="relative flex flex-col items-center justify-center h-[200px] sm:h-[250px] px-4 md:px-6 mx-auto max-w-6xl">
-          <Headline
-            align="left"
-            title={title}
-            subtitle={subtitle}
-            highlight={highlight}
-            classes={{
-              container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/70 p-6 rounded-sm",
-              title: "sm:text-4xl text-3xl",
-              ...(classes?.headline ?? {}),
-            }}
-          />
-        </div>
-        <MenuTabs />
-      </section>
-    </>
+        class={twMerge(
+          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          classes?.container,
+          isDark ? "dark" : ""
+        )}
+      >
+        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+    <MenuTabs/>
+      </div>
+    </section>
+
+     
   );
 });

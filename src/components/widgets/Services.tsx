@@ -24,7 +24,7 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
 
   return (
-    <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
         class={twMerge(
