@@ -143,7 +143,7 @@ export default component$(() => {
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-3 top-2"
+              "absolute right-3 top-2 hover:bg-gray-100"
             )}
             type="submit"
           >

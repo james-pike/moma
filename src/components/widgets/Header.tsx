@@ -64,7 +64,7 @@ export default component$(() => {
                 href="/contact"
                 class="btn btn-primary ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Get Quote
+                Get A Quote
               </a>
             <MenuModal />
           </div>
