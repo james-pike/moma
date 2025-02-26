@@ -78,6 +78,18 @@ export default component$(() => {
               </li>
               <li>
                 <a
+                  href="/services"
+                  class={cn(
+                    "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                    location.url.pathname === "/reviews/" && "bg-primary-50 text-primary-600"
+                  )}
+                  onClick$={() => (show.value = false)}
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
                   href="/reviews"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
