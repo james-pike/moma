@@ -13,7 +13,7 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-      <div class="flex items-center pl-3">
+      <div class="flex items-center pl-3 pr-1">
         <Modal.Trigger>
          
           <IconHamburger/>
