@@ -4,7 +4,8 @@ import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
-import MenuModal from "./MenuModal";
+import MenuModal from "../widgets/MenuModal";
+
 
 export default component$(() => {
   const store = useStore({
