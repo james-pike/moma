@@ -21,7 +21,7 @@ export default component$(() => {
           />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-none">
             <div class="text-center">
-              <h1 class="text-4.5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
+              <h1 class="text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
                 Digital Art & Restoration
               </h1>
               <p class="text-2xl md:text-2xl drop-shadow-md">
