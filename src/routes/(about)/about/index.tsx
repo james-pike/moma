@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Menu from "~/components/widgets/Menu";
+import Menu from "~/components/sections/Menu";
 
 
 

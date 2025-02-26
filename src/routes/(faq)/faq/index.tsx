@@ -1,12 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import FAQ2 from "~/components/widgets/FAQ2";
+import FAQ from "~/components/sections/FAQ";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
   return (
     <>
-<FAQ2 title="Frequently Asked Questions"
+<FAQ title="Frequently Asked Questions"
         subtitle="Find answers to common inquiries about our cafe."
         highlight="FAQs"
         items={[

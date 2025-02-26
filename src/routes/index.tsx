@@ -3,8 +3,10 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero3 from "~/components/widgets/Hero3";
 
-import Services from "~/components/widgets/Services";
-import Menu from "~/components/widgets/Menu";
+import Services from "~/components/sections/Services";
+import Menu from "~/components/sections/Menu";
+import FAQ from "~/components/sections/FAQ";
+import Reviews from "~/components/sections/Reviews";
 
 
 
@@ -25,15 +27,19 @@ export default component$(() => {
               highlight="Portfolio"
               items={[]}/>
 
-{/* <Reviews2 title="Frequently Asked Questions"
+<FAQ title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="FAQ"
               items={[]}/>
 
-<FAQ2 title="Frequently Asked Questions"
+<Reviews title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="FAQ"
               items={[]}/>
+
+{/* 
+
+
 {/*  */}
 {/* <Menu title="Gallery Of Past Work"
               subtitle="Have questions about our café? Find answers to common inquiries below."

@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import ServicesCarousel from "./ServicesCarousel";
+import FAQAccordion from "../widgets/FAQAccordion";
 
 interface Item {
   title?: string;
@@ -24,7 +24,7 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
 
   return (
-    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
         class={twMerge(
@@ -33,8 +33,8 @@ export default component$((props: Props) => {
           isDark ? "dark" : ""
         )}
       >
-        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-    <ServicesCarousel/>
+        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+    <FAQAccordion/>
       </div>
     </section>
 
