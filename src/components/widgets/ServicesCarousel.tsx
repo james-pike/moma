@@ -1,60 +1,78 @@
-import { component$ } from "@builder.io/qwik";
-import { Headline } from "~/components/ui/Headline";
-import MenuTabs from "./MenuTabs";
-import Carousel from "./Carousel";
+import { component$, PropsOf } from '@builder.io/qwik';
+import { Carousel, Progress } from '@qwik-ui/headless';
 
-interface Item {
-  title?: string;
-  description?: string;
-  icon?: any;
-  classes?: Record<string, string>;
-}
 
-interface Props {
-  id?: string;
-  title?: any;
-  subtitle?: any;
-  highlight?: any;
-  items: Array<Item>;
-  isDark?: boolean;
-  classes?: any;
-}
+export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
+  return (
+    <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
+      <Progress.Indicator class="progress-indicator bg-blue-50" />
+    </Progress.Root>
+  );
+});
 
-export default component$((props: Props) => {
-  const {
-    id,
-    title = null,
-    subtitle = null,
-    highlight = null,
-    classes = {},
-  } = props;
+export default component$(() => {
+  const services = [
+    {
+      title: 'Web Development',
+      description: 'Building responsive and modern web applications',
+      image: '/images/hero1.webp'
+    },
+    {
+      title: 'Mobile Apps',
+      description: 'Creating native and cross-platform mobile solutions',
+      image: '/images/hero1.webp'
+    },
+    {
+      title: 'UI/UX Design',
+      description: 'Designing intuitive and beautiful user interfaces',
+      image: '/images/hero1.webp'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Implementing scalable cloud infrastructure',
+      image: '/images/hero1.webp'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Implementing scalable cloud infrastructure',
+      image: '/images/hero1.webp'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Implementing scalable cloud infrastructure',
+      image: '/images/hero1.webp'
+    }
+  ];
 
   return (
-    <>
-      {/* <head>
-        <link rel="preload" href="/images/hero2.webp" as="image" />
-      </head> */}
-      <section class="relative pt-10 bg-gradient-to-r from-primary-50 to-primary-25" {...(id ? { id } : {})}>
-      <div
-  class="absolute hidden sm:block top-0 max-w-7xl w-full h-[200px] sm:h-[250px] bg-cover bg-center mx-auto left-1/2 transform -translate-x-1/2 before:absolute before:inset-0 before:bg-black before:opacity-20"
-  style={{ backgroundImage: "url('/images/hero2.webp')" }}
-></div>
-        {/* Centering Wrapper */}
-        <div class="relative flex flex-col items-center justify-center h-[200px] sm:h-[250px] px-4 md:px-6 mx-auto max-w-6xl">
-          <Headline
-            align="left"
-            title={title}
-            subtitle={subtitle}
-            highlight={highlight}
-            classes={{
-              container: "max-w-xl sm:mx-auto lg:max-w-2xl bg-white/70 p-6 rounded-sm",
-              title: "sm:text-4xl text-3xl",
-              ...(classes?.headline ?? {}),
-            }}
+    <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25}>
+      <Carousel.Scroller class="carousel-scroller carousel-animation">
+        {services.map((service) => (
+          <Carousel.Slide 
+            key={service.title} 
+            class="carousel-slide h-60 bg-primary-200 flex flex-col"
+          >
+            <img 
+              src={service.image} 
+              alt={service.title}
+              class="w-full h-44 object-cover"
+            />
+            <div class="service-info p-2">
+              <h1 class="service-title text-lg font-bold">{service.title}</h1>
+              <p class="service-description text-sm">{service.description}</p>
+            </div>
+          </Carousel.Slide>
+        ))}
+      </Carousel.Scroller>
+
+      <Carousel.Pagination class="carousel-pagination justify-start">
+        {services.map((service) => (
+          <Carousel.Bullet 
+            key={service.title}
+            class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:bg-black data-[active]:scale-125"
           />
-        </div>
-        <Carousel/>
-      </section>
-    </>
+        ))}
+      </Carousel.Pagination>
+    </Carousel.Root>
   );
 });

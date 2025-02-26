@@ -1,8 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-
-import Carousel from "./Carousel";
+import ServicesCarousel from "./ServicesCarousel";
 
 interface Item {
   title?: string;
@@ -35,7 +34,7 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-    <Carousel/>
+    <ServicesCarousel/>
       </div>
     </section>
 
