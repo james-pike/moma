@@ -32,22 +32,22 @@ export default component$(() => {
             <ul class="flex flex-col gap-4 text-lg">
               <li>
                 <a
-                  href="#home"
+                  href="/about"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
-                  About Us
+                  Our Story
                 </a>
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="/menu"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
              <div class="relative inline-block">
   Menu
-  <Badge class="absolute -top-0.1 left-11 bg-primary-300 text-white text-xs px-1 py-0 rounded">
+  <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
     New
   </Badge>
 </div>
@@ -55,7 +55,7 @@ export default component$(() => {
               </li>
               <li>
                 <a
-                  href="#settings"
+                  href="/reviews"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
@@ -64,11 +64,20 @@ export default component$(() => {
               </li>
               <li>
                 <a
-                  href="#settings"
+                  href="/faq"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
                   FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  onClick$={() => (show.value = false)}
+                >
+                  Contact Us
                 </a>
               </li>
               <li>

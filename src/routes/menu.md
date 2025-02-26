@@ -1,11 +1,11 @@
 # Menu
 
-## [Story](/story)
-## [Menu](/about)
+## [About](/about)
+## [Menu](/menu)
 
 
 
 
-## [Reviews](/testimonials)
+## [Reviews](/reviews)
 ## [FAQ](/faq)
 ## [Contact](/contact)
