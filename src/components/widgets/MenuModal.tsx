@@ -23,7 +23,9 @@ export default component$(() => {
         <Modal.Panel position={"left"}>
           <div class="border-b border-gray-100 pb-3">
             <Modal.Title>
+              <a href="/">
               <Logo />
+              </a>
             </Modal.Title>
             <Modal.Description class="text-md px-2">
               Join us for a taste of warmth and community.
