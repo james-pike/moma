@@ -12,7 +12,7 @@ export default component$(() => {
 
   return (
     <section class="relative max-w-7xl mx-auto !h-[35vh] text-white overflow-hidden rounded-none">
-      <Carousel scrollable noControls slideInterval={4000} class="custom-carousel w-full !h-full rounded-none">
+      <Carousel scrollable noControls slideInterval={5000} class="custom-carousel w-full !h-full rounded-none">
         <Carousel.Slide class="w-full !h-full flex relative rounded-none">
           <img 
             class="flex-1 w-full !h-full object-cover rounded-none" 
@@ -21,12 +21,11 @@ export default component$(() => {
           />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-none">
             <div class="text-center">
-              <h1 class="text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">
-                Freshly Brewed Perfection
+              <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
+                Digital Art & Restoration
               </h1>
-              <p class="text-lg md:text-xl drop-shadow-md">
-                Start your day with our artisanal coffee
-              </p>
+              <p class="text-xl md:text-2xl drop-shadow-md">
+Specializing in Photography and Fine Art Printing.              </p>
             </div>
           </div>
         </Carousel.Slide>
@@ -48,6 +47,8 @@ export default component$(() => {
           </div>
         </Carousel.Slide>
       </Carousel>
+
+
     </section>
   );
 });

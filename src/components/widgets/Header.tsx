@@ -67,7 +67,12 @@ export default component$(() => {
             >
               <IconTelegram />
             </a>
-        
+            <a
+                href="/contact"
+                class="btn btn-primary ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+              >
+                Get Quote
+              </a>
             <MenuModal />
           </div>
         </div>
@@ -216,7 +221,7 @@ export default component$(() => {
                 href="/contact"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Book A Table
+                Get Quote
               </a>
             </span>
           </div>

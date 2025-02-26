@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "../ui/Button";
 import { LuX } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { Logo } from "../common/Logo";
+import { Badge } from "../ui/Badge";
 
 export default component$(() => {
   const show = useSignal(false);
@@ -14,20 +15,20 @@ export default component$(() => {
         <Modal.Trigger>Open Navigation</Modal.Trigger>
         <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
           <Modal.Title><Logo/></Modal.Title>
-          <Modal.Description>
-            Explore your options below.
+          <Modal.Description class="text-md">
+            Join us for a taste of warmth and community.
           </Modal.Description>
           
           {/* Navigation Content */}
           <nav class="mt-6 space-y-4">
-            <ul class="flex flex-col gap-4">
+            <ul class="flex flex-col gap-4 text-lg">
               <li>
                 <a
                   href="#home"
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
-                  Home
+                  About Us
                 </a>
               </li>
               <li>
@@ -36,7 +37,12 @@ export default component$(() => {
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
-                  Profile
+             <div class="relative inline-block">
+  Menu
+  <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
+    New
+  </Badge>
+</div>
                 </a>
               </li>
               <li>
@@ -45,7 +51,16 @@ export default component$(() => {
                   class="block text-gray-700 hover:text-blue-600 font-medium"
                   onClick$={() => (show.value = false)}
                 >
-                  Settings
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#settings"
+                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  onClick$={() => (show.value = false)}
+                >
+                  FAQ
                 </a>
               </li>
               <li>
@@ -55,9 +70,9 @@ export default component$(() => {
                     alert("Logged out!");
                     show.value = false;
                   }}
-                  class="w-full text-left"
+                  class="w-full text-left bg-primary-400 text-white"
                 >
-                  Logout
+                  Order Online
                 </Button>
               </li>
             </ul>
