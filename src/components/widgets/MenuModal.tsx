@@ -137,7 +137,11 @@ export default component$(() => {
                 </Button>
               </li>
             </ul>
+            <div class="bg-primary-50 w-full min-h-[calc(100vh-0.5rem)] mt-2 flex items-center justify-center text-center">
+  <h1 class="text-3xl font-bold text-gray-800">Special Offer: 20% Off Today!</h1>
+</div>
           </nav>
+    
 
           {/* Close Button */}
           <Modal.Close
