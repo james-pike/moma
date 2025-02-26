@@ -129,7 +129,7 @@ export default component$(() => {
                     <form
                         action="#"
                         method="POST"
-                        class="px-7 pb-6 pt-8 sm:pb-32 lg:px-8 lg:py-24"
+                        class="px-6 pb-6 pt-8 sm:pb-32 lg:px-8 lg:py-24"
                     >
                         <div class="mx-auto max-w-xl lg:max-w-lg">
                             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
