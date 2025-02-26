@@ -137,7 +137,7 @@ export default component$(() => {
                 </Button>
               </li>
             </ul>
-            <div class="bg-primary-50 h-40 w-full flex items-center justify-center text-center p-4">
+            <div class="bg-primary-25 h-40 w-full flex items-center justify-center text-center p-4">
   <div>
     <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
     <p class="text-lg text-gray-600 mt-1">Enjoy 15% off all lattes this week at our cozy café.</p>
