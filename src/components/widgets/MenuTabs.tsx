@@ -25,26 +25,26 @@ const teaItems = [
 
 export default component$(() => {
   const selectedIndex = useSignal(0); // Start with Coffee tab (index 0)
-  const isFirstLoad = useSignal(true); // Flag for initial load
+  // const isFirstLoad = useSignal(true); // Flag for initial load
 
   // Scroll to 200px when selectedIndex changes, but not on first load
   useVisibleTask$(({ track }) => {
     track(() => selectedIndex.value); // Watch for tab changes
 
-    // Skip scroll on initial load
-    if (isFirstLoad.value) {
-      isFirstLoad.value = false; // Mark as loaded after first run
-      return;
-    }
+    // // Skip scroll on initial load
+    // if (isFirstLoad.value) {
+    //   isFirstLoad.value = false; // Mark as loaded after first run
+    //   return;
+    // }
 
     // Scroll to 200px on subsequent tab changes
-    window.scrollTo({ top: 200, behavior: 'smooth' });
+    // window.scrollTo({ top: 200, behavior: 'smooth' });
   });
 
   return (
     <Tabs.Root selectedClassName='bg-white' class="max-w-6xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
-      {/* Responsive Tabs List */}
-      <Tabs.List class="grid grid-cols-4 sm:justify-start  sm:inline-flex sm:space-x-4 w-full bg-primary-50 p-2 rounded-lg shadow-md sticky top-[92px] z-10">
+      {/* Responsive Tabs List sticky top-[92px] z-10 */}
+      <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full bg-primary-50 p-2 rounded-lg shadow-md ">
         <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Tea</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Bistro</Tabs.Tab>
