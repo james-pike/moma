@@ -3,7 +3,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero3 from "~/components/widgets/Hero3";
 import ServicesX from "~/components/widgets/ServicesX";
-import Headliner from "~/components/widgets/Headliner";
 import Menu from "~/components/widgets/Menu";
 
 
