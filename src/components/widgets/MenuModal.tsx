@@ -6,11 +6,11 @@ import { cn } from "@qwik-ui/utils";
 import { Logo } from "../common/Logo";
 import { Badge } from "../ui/Badge";
 import IconHamburger from "../icons/IconHamburger";
-import { useLocation } from "@builder.io/qwik-city";
+import { useLocation } from "@builder.io/qwik-city"; // Import for routing
 
 export default component$(() => {
   const show = useSignal(false);
-  const location = useLocation();
+  const location = useLocation(); // Get current route info
 
   return (
     <>
@@ -20,11 +20,11 @@ export default component$(() => {
             <IconHamburger />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="flex flex-col h-full">
+        <Modal.Panel position={"left"}>
           <div class="border-b-2 border-gray-100 pb-3">
             <Modal.Title>
               <a href="/">
-                <Logo />
+              <Logo />
               </a>
             </Modal.Title>
             <Modal.Description class="text-md px-2">
@@ -33,14 +33,14 @@ export default component$(() => {
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-2 space-y-4 flex-1 flex flex-col">
+          <nav class="mt-2 space-y-4">
             <ul class="flex flex-col gap-0 text-lg">
-              <li>
+            <li>
                 <a
                   href="/"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/" && "bg-primary-50 text-primary-600" // Active route styling
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -52,7 +52,7 @@ export default component$(() => {
                   href="/about"
                   class={cn(
                     "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                    location.url.pathname === "/about/" && "bg-primary-50 text-primary-600"
+                    location.url.pathname === "/about/" && "bg-primary-50 text-primary-600" // Active route styling
                   )}
                   onClick$={() => (show.value = false)}
                 >
@@ -137,11 +137,15 @@ export default component$(() => {
                 </Button>
               </li>
             </ul>
-            {/* Promotional Banner */}
-            <div class="bg-primary-50 w-full mt-2 flex items-center justify-center text-center flex-grow">
-              <h1 class="text-3xl font-bold text-gray-800">Special Offer: 20% Off Today!</h1>
-            </div>
+            <div class="bg-primary-50 h-40 w-full flex items-center justify-center text-center p-4">
+  <div>
+    <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
+    <p class="text-lg text-gray-600 mt-1">Enjoy 15% off all lattes this week at our cozy café.</p>
+    <p class="text-sm text-primary-600 font-medium mt-2">Use code: LATTELOVE</p>
+  </div>
+</div>
           </nav>
+    
 
           {/* Close Button */}
           <Modal.Close
