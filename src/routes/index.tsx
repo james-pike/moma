@@ -7,6 +7,7 @@ import Services from "~/components/sections/Services";
 import Menu from "~/components/sections/Menu";
 import FAQ from "~/components/sections/FAQ";
 import Reviews from "~/components/sections/Reviews";
+import Contact from "~/components/sections/Contact";
 
 
 
@@ -37,23 +38,7 @@ export default component$(() => {
               highlight="FAQ"
               items={[]}/>
 
-
-
-{/* 
-
-
-{/*  */}
-{/* <Menu title="Gallery Of Past Work"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="Portfolio"
-              items={[]}/>
-     
-<FAQindex title="Gallery Of Past Work"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="Portfolio"
-              items={[]}/>
-  
-    <Contact/>  */}
+<Contact/>  
     
     
     </>
