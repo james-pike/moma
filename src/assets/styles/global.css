@@ -36,6 +36,10 @@
     @apply rotate-45 translate-y-[-8px] translate-x-[14px];
   }
 
+  .carousel-animation {
+    transition: 0.35s transform cubic-bezier(0.57, 0.16, 0.95, 0.67);
+  }
+
   .carousel-pagination {
     display: flex;
     gap: 8px;
@@ -59,6 +63,8 @@
   [data-qui-carousel-viewport] {
     overflow: hidden;
   }
+
+  
  
   [data-qui-carousel-scroller] {
     transform: var(--transform);

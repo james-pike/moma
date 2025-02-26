@@ -18,7 +18,7 @@ export default component$(() => {
         <Carousel.Previous>Prev</Carousel.Previous>
         <Carousel.Next>Next</Carousel.Next>
       </div> */}
-      <Carousel.Scroller class="carousel-scroller">
+      <Carousel.Scroller class="carousel-scroller carousel-animation">
         {colors.map((color) => (
           <Carousel.Slide key={color} class="carousel-slide h-40 bg-primary-200">
             {color}
