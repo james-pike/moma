@@ -13,27 +13,46 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-      <div class="flex items-center pl-3 pr-1">
-        <Modal.Trigger>
-         
-          <IconHamburger/>
-         
-
-        </Modal.Trigger>
+        {/* Trigger with a subtle hover effect */}
+        <div class="flex items-center pl-3 pr-1">
+          <Modal.Trigger class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+            <IconHamburger/>
+          </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
-          <Modal.Title><Logo/></Modal.Title>
-          <Modal.Description class="text-md">
+
+        {/* Sidebar Panel with a sleek slide-in feel */}
+        <Modal.Panel
+          position={"left"}
+          class="w-72 bg-white shadow-xl border-r border-gray-200 transform transition-all duration-300 ease-in-out"
+        >
+          {/* Header with Logo and a modern vibe */}
+          <div class="flex items-center justify-between p-4 border-b border-gray-100">
+            <Modal.Title>
+              <Logo class="w-24 h-auto" />
+            </Modal.Title>
+            <Modal.Close
+              class={cn(
+                buttonVariants({ size: "icon", look: "ghost" }),
+                "text-gray-500 hover:text-gray-800 hover:bg-gray-100 rounded-full p-1 transition-colors duration-150"
+              )}
+              type="submit"
+            >
+              <LuX class="h-5 w-5" />
+            </Modal.Close>
+          </div>
+
+          {/* Description with a warm tone */}
+          <Modal.Description class="px-4 pt-3 text-sm text-gray-600 italic">
             Join us for a taste of warmth and community.
           </Modal.Description>
-          
-          {/* Navigation Content */}
-          <nav class="mt-6 space-y-4">
-            <ul class="flex flex-col gap-4 text-lg">
+
+          {/* Navigation with enhanced styling */}
+          <nav class="mt-6 px-4 space-y-2">
+            <ul class="flex flex-col gap-3 text-base">
               <li>
                 <a
                   href="/about"
-                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  class="block py-2 px-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Our Story
@@ -42,21 +61,21 @@ export default component$(() => {
               <li>
                 <a
                   href="/menu"
-                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  class="block py-2 px-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
-             <div class="relative inline-block">
-  Menu
-  <Badge class="absolute -top-0.1 left-12 bg-primary-300 text-white text-xs px-1 py-0 rounded">
-    New
-  </Badge>
-</div>
+                  <div class="relative inline-block">
+                    Menu
+                    <Badge class="absolute -top-1 left-12 bg-primary-500 text-white text-xs px-2 py-0.5 rounded-full shadow-sm">
+                      New
+                    </Badge>
+                  </div>
                 </a>
               </li>
               <li>
                 <a
                   href="/reviews"
-                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  class="block py-2 px-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Reviews
@@ -65,7 +84,7 @@ export default component$(() => {
               <li>
                 <a
                   href="/faq"
-                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  class="block py-2 px-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   FAQ
@@ -74,7 +93,7 @@ export default component$(() => {
               <li>
                 <a
                   href="/contact"
-                  class="block text-gray-700 hover:text-blue-600 font-medium"
+                  class="block py-2 px-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Contact Us
@@ -87,24 +106,13 @@ export default component$(() => {
                     alert("Logged out!");
                     show.value = false;
                   }}
-                  class="w-full text-left bg-primary-400 text-white"
+                  class="w-full mt-2 py-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg shadow-md transition-all duration-200"
                 >
                   Order Online
                 </Button>
               </li>
             </ul>
           </nav>
-
-          {/* Close Button */}
-          <Modal.Close
-            class={cn(
-              buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-3 top-2"
-            )}
-            type="submit"
-          >
-            <LuX class="h-5 w-5" />
-          </Modal.Close>
         </Modal.Panel>
       </Modal.Root>
     </>
