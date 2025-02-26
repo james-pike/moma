@@ -33,12 +33,12 @@ export default component$(() => {
       image: '/images/hero1.webp'
     },
     {
-      title: 'Cloud Services',
+      title: 'Cloud Services2',
       description: 'Implementing scalable cloud infrastructure',
       image: '/images/hero1.webp'
     },
     {
-      title: 'Cloud Services',
+      title: 'Cloud Services3',
       description: 'Implementing scalable cloud infrastructure',
       image: '/images/hero1.webp'
     }
@@ -46,7 +46,7 @@ export default component$(() => {
 
   return (
     <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25}>
-      <Carousel.Scroller class="carousel-scroller carousel-animation">
+      <Carousel.Scroller class="carousel-scroller">
         {services.map((service) => (
           <Carousel.Slide 
             key={service.title} 
