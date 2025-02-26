@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import ServicesCarousel from "./ServicesCarousel";
 import FAQAccordion from "./FAQAccordion";
 
 interface Item {
