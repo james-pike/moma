@@ -49,7 +49,7 @@ export default component$(() => {
         {services.map((service) => (
           <Carousel.Slide 
             key={service.title} 
-            class="carousel-slide min-h-60 bg-primary-200 flex flex-col"
+            class="carousel-slide min-h-60 bg-primary-50 flex flex-col"
           >
             <img 
               src={service.image} 
