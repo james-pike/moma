@@ -63,18 +63,18 @@ export default component$(() => {
           </Carousel.Slide>
         ))}
       </Carousel.Scroller>
-      <div className="flex justify-between items-end">
-  <Carousel.Pagination className="carousel-pagination justify-start">
+      <div class="flex justify-between items-end">
+  <Carousel.Pagination class="carousel-pagination justify-start">
     {services.map((service) => (
       <Carousel.Bullet 
         key={service.title}
-        className="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:bg-black data-[active]:scale-125"
+        class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:bg-black data-[active]:scale-125"
       />
     ))}
   </Carousel.Pagination>
   <a 
     href="/services" 
-    className="text-black text-sm font-medium hover:underline"
+    class="text-black text-sm font-medium hover:underline"
     style={{ transform: 'translateY(5px)' }} // Fine-tune downward shift
   >
     Browse All Services -&gt;
