@@ -13,7 +13,7 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-      <div class="flex items-center pl-3 pr-1">
+      <div class="flex items-center pl-4 pr-2 hover:bg-gray-100">
         <Modal.Trigger>
          
           <IconHamburger/>
@@ -22,18 +22,22 @@ export default component$(() => {
         </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"}> {/* Changed to "left" for sidebar feel */}
-          <Modal.Title><Logo/></Modal.Title>
-          <Modal.Description class="text-md">
+          <div class="border-b border-gray-100 pb-3">
+          <Modal.Title>
+            <Logo/>
+            </Modal.Title>
+          <Modal.Description class="text-md px-2">
             Join us for a taste of warmth and community.
           </Modal.Description>
+          </div>
           
           {/* Navigation Content */}
-          <nav class="mt-6 space-y-4">
-            <ul class="flex flex-col gap-4 text-lg">
+          <nav class="mt-4 space-y-4">
+            <ul class="flex flex-col gap-0 text-lg">
               <li>
                 <a
                   href="/about"
-                  class="block text-gray-700 hover:text-primary-600 font-medium"
+                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Our Story
@@ -42,7 +46,7 @@ export default component$(() => {
               <li>
                 <a
                   href="/menu"
-                  class="block text-gray-700 hover:text-primary-600 font-medium"
+                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
              <div class="relative inline-block">
@@ -56,7 +60,7 @@ export default component$(() => {
               <li>
                 <a
                   href="/reviews"
-                  class="block text-gray-700 hover:text-primary-600 font-medium"
+                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Reviews
@@ -65,7 +69,7 @@ export default component$(() => {
               <li>
                 <a
                   href="/faq"
-                  class="block text-gray-700 hover:text-primary-600 font-medium"
+                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   FAQ
@@ -74,13 +78,13 @@ export default component$(() => {
               <li>
                 <a
                   href="/contact"
-                  class="block text-gray-700 hover:text-primary-600 font-medium"
+                  class="block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200"
                   onClick$={() => (show.value = false)}
                 >
                   Contact Us
                 </a>
               </li>
-              <li>
+              <li class="pt-2">
                 <Button
                   look="primary"
                   onClick$={() => {
