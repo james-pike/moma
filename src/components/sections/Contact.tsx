@@ -4,19 +4,19 @@ import { Headline } from '../ui/Headline';
 export default component$(() => {
     return (
         <>
-            {/* Hero Banner Section */}
-            <div
+           
+            {/* <div
                 class="relative mx-auto max-w-7xl text-white py-16 sm:py-24"
                 style={{ backgroundImage: "url('/images/hero2.webp')" }}
             >
                 <div class="px-6 lg:px-8">
                     <div class="max-w-2xl mx-auto text-center">
-                        {/* Placeholder for content */}
+                      
                     </div>
                 </div>
-                {/* Optional background overlay */}
+             
                 <div class="absolute inset-0 bg-black opacity-20"></div>
-            </div>
+            </div> */}
 
             {/* Form/Contact Section */}
             <div class="relative isolate mx-auto max-w-7xl bg-primary-25 rounded-lg dark:bg-gray-900">
@@ -144,7 +144,7 @@ export default component$(() => {
                                         <input
                                             type="text"
                                             id="first-name"
-                                            class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                            class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                             placeholder="Bonnie"
                                             required
                                         />
@@ -161,7 +161,7 @@ export default component$(() => {
                                         <input
                                             type="text"
                                             id="last-name"
-                                            class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                            class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                             placeholder="Green"
                                             required
                                         />
@@ -178,7 +178,7 @@ export default component$(() => {
                                         <input
                                             type="email"
                                             id="email"
-                                            class="shadow-sm bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                            class="shadow-sm bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                             placeholder="name@flowbite.com"
                                             required
                                         />
@@ -195,7 +195,7 @@ export default component$(() => {
                                         <input
                                             type="number"
                                             id="phone-number"
-                                            class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                            class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                             placeholder="+12 345 6789"
                                             required
                                         />
@@ -210,7 +210,7 @@ export default component$(() => {
                                     </label>
                                     <select
                                         id="topic"
-                                        class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     >
                                         <option selected>Select a topic</option>
                                         <option value="US">Switch plans and add-ons</option>
@@ -229,8 +229,8 @@ export default component$(() => {
                                     <div class="mt-1.5">
                                         <textarea
                                             id="message"
-                                            rows={4}
-                                            class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            rows={3}
+                                            class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                             placeholder="Leave a comment..."
                                         ></textarea>
                                     </div>

@@ -27,15 +27,17 @@ export default component$(() => {
               highlight="Portfolio"
               items={[]}/>
 
+<Reviews title="What Our Clients Say"
+              subtitle="Have questions about our café? Find answers to common inquiries below."
+              highlight="Reviews"
+              items={[]}/>
+
 <FAQ title="Frequently Asked Questions"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="FAQ"
               items={[]}/>
 
-<Reviews title="Frequently Asked Questions"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="FAQ"
-              items={[]}/>
+
 
 {/* 
 
