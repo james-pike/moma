@@ -39,7 +39,7 @@ export const Headline = (props: Props) => {
         />
       )}
 
-      {subtitle && <p class={twMerge("mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
+      {subtitle && <p class={twMerge("mt-3 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
     </div>
   ) : null;
 };
