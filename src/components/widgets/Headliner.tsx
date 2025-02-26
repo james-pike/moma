@@ -2,8 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 
-import Carousel from "./Carousel";
-import { Button } from "../ui/Button";
+
 
 interface Item {
   title?: string;

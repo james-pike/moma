@@ -11,10 +11,7 @@ export default component$(() => {
   return (
     <>
       <Hero3 />
-      <Headliner title="Digital Art & Restoration"
-              subtitle="Specializing in photography and fine art printing."
-            
-              items={[]}/>
+      
   
     
 <ServicesX title="What We Do"
