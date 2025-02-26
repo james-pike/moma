@@ -33,7 +33,7 @@ export default component$(() => {
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-4 space-y-4">
+          <nav class="mt-2 space-y-4">
             <ul class="flex flex-col gap-0 text-lg">
             <li>
                 <a
