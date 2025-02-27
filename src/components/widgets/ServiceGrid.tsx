@@ -15,7 +15,7 @@ const services = [
     details: "Ensure every detail is captured for stunning, true-to-life reproductions.",
     image: "/images/reproduction.jpg",
     alt: "Reproduction Services",
-    delay: 150,
+    delay: 100,
   },
   {
     title: "Fine Art Photography",
@@ -23,7 +23,7 @@ const services = [
     details: "Highlight textures, colors, and emotions in your artwork.",
     image: "/images/fineart.jpg",
     alt: "Fine Art Photography",
-    delay: 300,
+    delay: 200,
   },
   {
     title: "Digitization Services",
@@ -31,7 +31,7 @@ const services = [
     details: "Convert physical assets into high-quality digital formats.",
     image: "/images/digitization.jpg",
     alt: "Digitization Services",
-    delay: 450,
+    delay: 300,
   },
   {
     title: "Mobile Photography",
@@ -39,7 +39,7 @@ const services = [
     details: "Creative and fast solutions for on-the-go photography needs.",
     image: "/images/iphone.jpg",
     alt: "Mobile Photography",
-    delay: 600,
+    delay: 400,
   },
   {
     title: "Event Photography",
@@ -47,7 +47,7 @@ const services = [
     details: "Ensure every memory is preserved with beautiful, candid shots.",
     image: "/images/photography.jpg",
     alt: "Event Photography",
-    delay: 750,
+    delay: 500,
   },
 ];
 

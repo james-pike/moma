@@ -5,6 +5,7 @@ interface Item {
   description?: string;
   icon?: any;
   classes?: Record<string, string>;
+  delay?: number; // Optional delay in milliseconds
 }
 
 interface Props {
@@ -26,13 +27,22 @@ export const ItemGrid = (props: Props) => {
 
   return (
     items.length && (
-      <div class={twMerge("grid motion-group mx-auto gap-6 sm:gap-8", containerClass)}>
-        {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
+      <div
+        class={twMerge(
+          "grid motion-group mx-auto gap-6 sm:gap-8 opacity-0 intersect-once intersect:opacity-100",
+          containerClass
+        )}
+      >
+        {items.map(({ title, description, icon: Icon, classes: itemClasses = {}, delay }, index) => (
           <div key={`${title}${index}`}>
-           <div
-  class={twMerge("flex flex-row max-w-md opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up", panelClass, itemClasses.panel)}
-  style={{ animationDelay: `${index * 100}ms` }}
->
+            <div
+              class={twMerge(
+                "flex flex-row max-w-md motion-preset-slide-up",
+                panelClass,
+                itemClasses.panel
+              )}
+              style={{ "--motion-delay": `${delay ?? index * 100}ms` }} // Match ServiceGrid's 150ms increment
+            >
               <div class="flex justify-center">
                 {(Icon || DefaultIcon) &&
                   (Icon ? (
