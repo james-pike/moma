@@ -21,7 +21,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const {  title = "", subtitle = "", highlight = "", classes = {} } = props;
   const stepsData = {
     title: "Our Process: From Idea to Finished Print",
     items: [
