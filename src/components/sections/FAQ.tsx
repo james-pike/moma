@@ -4,7 +4,6 @@ import { Headline } from "~/components/ui/Headline";
 import FAQAccordion from "../widgets/FAQAccordion";
 import { ItemGrid } from "../ui/ItemGrid";
 import IconArrowDownRight from "../icons/IconArrowDownRight";
-import { useLocation } from "@builder.io/qwik-city";
 
 interface Item {
   title?: string;
