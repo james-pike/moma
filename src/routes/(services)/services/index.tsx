@@ -1,15 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import FAQ from "~/components/sections/FAQ";
+import ServicePage from "~/components/sections/ServicePage";
 
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
   return (
     <>
-<FAQ title="Frequently Asked Questions"
+<ServicePage title="What We Offer"
         subtitle="Find answers to common inquiries about our cafe."
-        highlight="FAQs"
+        highlight="Services"
         items={[
           {
             title: "Do you have vegetarian or gluten-free options?",
