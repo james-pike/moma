@@ -7,13 +7,15 @@ const services = [
     details: "Showcase your artwork or exhibits with high-quality, detailed photography.",
     image: "/images/exhibit.jpg",
     alt: "Exhibit Photography",
+    delay: 0, // Delay in milliseconds
   },
   {
     title: "Reproduction Services",
     description: "Accurate reproductions for prints, publications, and digital archives.",
-    details: "Ensure every detail is captured for stunnning, true-to-life reproductions.",
+    details: "Ensure every detail is captured for stunning, true-to-life reproductions.",
     image: "/images/reproduction.jpg",
     alt: "Reproduction Services",
+    delay: 150,
   },
   {
     title: "Fine Art Photography",
@@ -21,6 +23,7 @@ const services = [
     details: "Highlight textures, colors, and emotions in your artwork.",
     image: "/images/fineart.jpg",
     alt: "Fine Art Photography",
+    delay: 300,
   },
   {
     title: "Digitization Services",
@@ -28,6 +31,7 @@ const services = [
     details: "Convert physical assets into high-quality digital formats.",
     image: "/images/digitization.jpg",
     alt: "Digitization Services",
+    delay: 450,
   },
   {
     title: "Mobile Photography",
@@ -35,6 +39,7 @@ const services = [
     details: "Creative and fast solutions for on-the-go photography needs.",
     image: "/images/iphone.jpg",
     alt: "Mobile Photography",
+    delay: 600,
   },
   {
     title: "Event Photography",
@@ -42,17 +47,22 @@ const services = [
     details: "Ensure every memory is preserved with beautiful, candid shots.",
     image: "/images/photography.jpg",
     alt: "Event Photography",
+    delay: 750,
   },
 ];
 
 export default component$(() => {
   return (
-    <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {services.map(({ title, description, details, image, alt }, index) => (
-        <div key={index} class="group relative overflow-hidden rounded-lg shadow-md">
+    <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group opacity-0 intersect-once intersect:opacity-100">
+      {services.map(({ title, description, details, image, alt, delay }, index) => (
+        <div
+          key={index}
+          class={`group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up`}
+          style={{ "--motion-delay": `${delay}ms` }} // Custom property for the library
+        >
           <img
             width={700}
-            height={400}
+            height={300}
             src={image}
             alt={alt}
             class="w-full h-45 object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
