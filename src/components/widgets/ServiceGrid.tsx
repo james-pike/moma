@@ -55,7 +55,7 @@ export default component$(() => {
             height={400}
             src={image}
             alt={alt}
-            class="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-105"
+            class="w-full h-45 object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
           />
           <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
             <p class="text-white text-center px-4">{details}</p>

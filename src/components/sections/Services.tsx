@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
+import ServiceGrid from "../widgets/ServiceGrid";
 
 interface Item {
   title?: string;
@@ -33,8 +34,13 @@ export default component$((props: Props) => {
           isDark ? "dark" : ""
         )}
       >
-        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-    <ServicesCarousel/>
+        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+    <div class="block sm:hidden">
+    <ServicesCarousel />
+    </div>
+    <div class="hidden sm:block">
+      <ServiceGrid/>
+    </div>
       </div>
     </section>
 
