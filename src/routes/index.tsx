@@ -8,6 +8,7 @@ import Reviews from "~/components/sections/Reviews";
 import Contact from "~/components/sections/Contact";
 import Hero from "~/components/sections/Hero";
 import Steps from "~/components/sections/Steps";
+import Stats from "~/components/widgets/Stats";
 
 
 
@@ -15,34 +16,39 @@ export default component$(() => {
   return (
     <>
       <Hero />
-      
-  
-    
-<Services title="What We Do"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="Services"
-              items={[]}/>
 
-              <Steps/>
 
-<Menu title="Gallery Of Past Work"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="Portfolio"
-              items={[]}/>
 
-<Reviews title="What Our Clients Say"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="Reviews"
-              items={[]}/>
+      <Services title="What We Do"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Services"
+        items={[]} />
 
-<FAQ title="Frequently Asked Questions"
-              subtitle="Have questions about our café? Find answers to common inquiries below."
-              highlight="FAQ"
-              items={[]}/>
+      <Steps title="Our Process"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Steps To Success"
+        items={[]} />
 
-<Contact/>  
-    
-    
+      <Menu title="Gallery Of Past Work"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Portfolio"
+        items={[]} />
+
+      <Reviews title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
+
+      <FAQ title="Frequently Asked Questions"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="FAQ"
+        items={[]} />
+
+        <Stats/>
+
+      <Contact />
+
+
     </>
   );
 });

@@ -1,9 +1,27 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 import IconStar from "~/components/icons/IconStar";
+import { Headline } from "../ui/Headline";
 
+interface Item {
+  title?: string;
+  description?: string;
+  icon?: any;
+  classes?: Record<string, string>;
+}
 
-export default component$(() => {
+interface Props {
+  id?: string;
+  title?: any;
+  subtitle?: any;
+  highlight?: any;
+  items: Array<Item>;
+  isDark?: boolean;
+  classes?: any;
+}
+
+export default component$((props: Props) => {
+  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
   const stepsData = {
     title: "Our Process: From Idea to Finished Print",
     items: [
@@ -38,58 +56,84 @@ export default component$(() => {
     },
   };
 
-
   const { items, image } = stepsData;
 
   return (
-    <section class="mx-auto  max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 bg-gray-100 dark:bg-gray-800">
-      <div class="row-gap-10 grid gap-6 md:grid-cols-2">
-      <div class="motion-group">
-  {items.map(({ title, description, icon: Icon }, index) => (
-    <div
-      key={`item-steps-${index}`}
-      class={`flex opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 150}ms]`}
-    >
-      <div class="mr-4 flex flex-col items-center">
-        <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
-          {Icon ? (
-            <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
-          ) : (
-            <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+    <section class="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 bg-gray-100 dark:bg-gray-800">
+      <div class="grid gap-4 sm:gap-6 md:grid-cols-[1fr_1fr] md:gap-x-8 lg:gap-x-10">
+        {/* Left Column: Headline on mobile, Headline + Image on desktop */}
+        <div class="md:col-start-1 order-1 flex flex-col md:gap-y-0">
+          <div>
+            <Headline 
+              title={title} 
+              subtitle={subtitle} 
+              highlight={highlight} 
+              classes={classes?.headline} 
+              align="left" 
+            />
+          </div>
+          {typeof image !== "undefined" && (
+            <div class="hidden md:block">
+              <Image
+                layout="constrained"
+                src="/images/steps.webp"
+                width={532}
+                height={504}
+                alt={image.alt}
+                class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:h-auto"
+                breakpoints={[320, 480, 640, 768, 1024]}
+              />
+            </div>
           )}
         </div>
-        {index !== items.length - 1 && (
-          <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
-        )}
-      </div>
-      <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
-        {title && (
-          <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
-            {title}
-          </p>
-        )}
-        {description && (
-          <p class="text-gray-600 dark:text-slate-400">{description}</p>
-        )}
-      </div>
-    </div>
-  ))}
-</div>
 
+        {/* Steps */}
+        <div class="motion-group md:col-start-2 md:row-start-1 order-2">
+          {items.map(({ title, description, icon: Icon }, index) => (
+            <div
+              key={`item-steps-${index}`}
+              class={`flex opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 150}ms]`}
+            >
+              <div class="mr-4 flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
+                  {Icon ? (
+                    <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  ) : (
+                    <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  )}
+                </div>
+                {index !== items.length - 1 && (
+                  <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+                )}
+              </div>
+              <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
+                {title && (
+                  <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+                    {title}
+                  </p>
+                )}
+                {description && (
+                  <p class="text-gray-600 dark:text-slate-400">{description}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
 
-        <div class="relative">
-          {typeof image !== "undefined" && (
+        {/* Image (mobile only) */}
+        {typeof image !== "undefined" && (
+          <div class="md:hidden order-3">
             <Image
               layout="constrained"
               src="/images/steps.webp"
               width={532}
-              height={704}
+              height={504}
               alt={image.alt}
-              class="inset-0 w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
-              breakpoints={[320, 480, 640, 1024]}
+              class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 sm:h-[400px]"
+              breakpoints={[320, 480, 640, 768, 1024]}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
