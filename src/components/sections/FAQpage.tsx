@@ -39,11 +39,9 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-    <div class="block sm:hidden">
-    <FAQAccordion/>
-    </div>
+   
 
-    <div class="hidden sm:block">
+  
     <ItemGrid
             items={items}
             defaultIcon={IconArrowDownRight}
@@ -53,7 +51,7 @@ export default component$((props: Props) => {
             }}
           />
 
-    </div>
+   
    
       </div>
     </section>
