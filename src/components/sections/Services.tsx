@@ -34,7 +34,7 @@ export default component$((props: Props) => {
           isDark ? "dark" : ""
         )}
       >
-        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
     <div class="block sm:hidden">
     <ServicesCarousel />
     </div>

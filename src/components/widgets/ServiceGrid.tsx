@@ -5,9 +5,9 @@ const services = [
     title: "Exhibit Photography",
     description: "Professional photography services tailored for exhibitions and galleries.",
     details: "Showcase your artwork or exhibits with high-quality, detailed photography.",
-    image: "/images/exhibit.jpg",
+    image: "/images/hero1.webp",
     alt: "Exhibit Photography",
-    delay: 0, // Delay in milliseconds
+    delay: 0,
   },
   {
     title: "Reproduction Services",
@@ -57,18 +57,19 @@ export default component$(() => {
       {services.map(({ title, description, details, image, alt, delay }, index) => (
         <div
           key={index}
-          class={`group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up`}
-          style={{ "--motion-delay": `${delay}ms` }} // Custom property for the library
+          class="group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up"
+          style={{ "--motion-delay": `${delay}ms` }}
         >
-          <img
-            width={700}
-            height={300}
-            src={image}
-            alt={alt}
-            class="w-full h-45 object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
-            <p class="text-white text-center px-4">{details}</p>
+          <div class="relative aspect-[2/1]"> {/* Wider aspect ratio: height = 50% of width */}
+            <img
+              width={700} // Intrinsic width for optimization
+              src={image}
+              alt={alt}
+              class="w-full h-full object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+              <p class="text-white text-center px-4">{details}</p>
+            </div>
           </div>
           <div class="px-4 py-3 bg-gray-100 dark:bg-gray-800">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>

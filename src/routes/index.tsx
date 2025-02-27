@@ -9,6 +9,7 @@ import Contact from "~/components/sections/Contact";
 import Hero from "~/components/sections/Hero";
 import Steps from "~/components/sections/Steps";
 import Stats from "~/components/widgets/Stats";
+import LogoClouds from "~/components/widgets/LogoClouds";
 
 
 
@@ -76,7 +77,11 @@ export default component$(() => {
           ]}
 
        />
-
+<LogoClouds title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
+        
         <Stats/>
 
       <Contact />
