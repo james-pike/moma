@@ -73,7 +73,7 @@ export default component$(() => {
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
-          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
+          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
             {formatNumber(stars.value)}
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
@@ -81,7 +81,7 @@ export default component$(() => {
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 font-heading">
-          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1]">
+          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary">
             {formatNumber(forks.value)}
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
@@ -89,7 +89,7 @@ export default component$(() => {
           </p>
         </div>
         <div class="text-center">
-          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
+          <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
             {formatNumber(users.value)}
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
