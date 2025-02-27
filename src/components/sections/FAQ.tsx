@@ -26,7 +26,6 @@ interface Props {
 export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "",  items = [], classes = {}, isDark = false } = props;
 
-  const location = useLocation(); // Get current route info
 
   return (
     <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
