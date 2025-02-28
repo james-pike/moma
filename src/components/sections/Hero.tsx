@@ -21,11 +21,14 @@ export default component$(() => {
           />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 rounded-none">
             <div class="text-center">
-              <h1 class="text-4.5xl md:text-7xl font-bold mb-2 drop-shadow-lg leading-none">
-                Digital Art & Restoration
-              </h1>
-              <p class="text-xl md:text-2xl drop-shadow-md leading-tight">
-                Specializing in Photography and Fine Art Printing              </p>
+            <h1 class="text-[clamp(2.625rem,6vw,4.5rem)] md:text-[clamp(3rem,7vw,6rem)] font-bold mb-3 drop-shadow-lg leading-none">
+  Digital Art & Restoration
+</h1>
+<p class="text-[clamp(1.625rem,3.2vw,2.125rem)] md:text-[clamp(1.75rem,3.5vw,2.5rem)] drop-shadow-md leading-tight">
+  Specializing in Photography and Fine Art Printing
+</p>
+
+
             </div>
           </div>
         </Carousel.Slide>
