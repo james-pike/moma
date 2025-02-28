@@ -45,7 +45,7 @@ export default component$(() => {
 
   return (
     <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25}  sensitivity={{
-      touch: 2.25,
+      touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
         {services.map((service) => (
