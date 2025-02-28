@@ -1,8 +1,8 @@
 # Menu
 
 ## [About](/about)
-## [Menu](/menu)
 ## [Services](/services)
+## [Gallery](/gallery)
 ## [Reviews](/reviews)
 ## [FAQ](/faq)
 ## [Contact](/contact)

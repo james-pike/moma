@@ -21,7 +21,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"}>
-          <div class="border-b-2 border-gray-100 pb-3">
+          <div class="border-b-2 border-gray-100 bg-primary-25 pb-3">
             <Modal.Title>
               <a href="/">
               <Logo />
@@ -33,7 +33,7 @@ export default component$(() => {
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-2 space-y-4">
+          <nav class="mt-2 space-y-4 bg-primary-25">
             <ul class="flex flex-col gap-0 text-lg">
             <li>
                 <a
