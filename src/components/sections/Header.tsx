@@ -65,7 +65,7 @@ export default component$(() => {
       
             <a
                 href="/contact"
-                class="btn btn-primary ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                class="btn btn-primary bg-primary hover:bg-primary-400 ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
                 Get A Quote
               </a>
@@ -233,9 +233,9 @@ export default component$(() => {
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               <a
                 href="/contact"
-                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                class="btn btn-primary hover:bg-primary-400 bg-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Get Quote
+                Get A Quote
               </a>
             </span>
           </div>
