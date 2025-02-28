@@ -51,7 +51,7 @@ export default component$((props: Props) => {
       },
     ],
     image: {
-      src: "/assets/images/print-steps.webp",
+      src: "/images/hero1.webp",
       alt: "Steps to professional printing success",
     },
   };
@@ -59,6 +59,7 @@ export default component$((props: Props) => {
   const { items, image } = stepsData;
 
   return (
+    
     <section class="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 bg-gray-100 dark:bg-gray-800">
       <div class="grid gap-4 sm:gap-6 md:grid-cols-[1fr_1fr] md:gap-x-8 lg:gap-x-10">
         {/* Left Column: Headline on mobile, Headline + Image on desktop */}
