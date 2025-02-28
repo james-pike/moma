@@ -51,7 +51,7 @@ export default component$((props: Props) => {
       },
     ],
     image: {
-      src: "/images/hero1.webp",
+       src: "/images/hero1.webp",
       alt: "Steps to professional printing success",
     },
   };
@@ -126,7 +126,7 @@ export default component$((props: Props) => {
           <div class="md:hidden order-3">
             <Image
               layout="constrained"
-              src="/images/steps.webp"
+               src="/images/hero1.webp"
               width={532}
               height={504}
               alt={image.alt}
