@@ -58,7 +58,7 @@ export default component$(() => {
               </a>
             </Modal.Title>
             <Modal.Description class="text-md px-2">
-              Join us for a taste of warmth and community.
+              Add some sweetness to your day!
             </Modal.Description>
           </div>
 
