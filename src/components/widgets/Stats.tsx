@@ -9,10 +9,10 @@ export default component$(() => {
 
   // Target values (parsed from strings like "133K" to numbers)
   const targetValues = {
-    downloads: 50, // 133K
+    downloads: 25, // 133K
     stars: 100, // 24.8K
     forks: 100, // 10.3K
-    users: 10, // 48.4K
+    users: 100, // 48.4K
   };
 
   // Format numbers back to "K" notation
@@ -66,18 +66,18 @@ export default component$(() => {
       <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4 motion-group opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up">
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
-            {formatNumber(downloads.value)}
+            {formatNumber(downloads.value)}+
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Downloads
+            Years of Experience
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
-            {formatNumber(stars.value)}
+            {formatNumber(stars.value)}+
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Stars
+            Happy Clients
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 font-heading">
@@ -90,10 +90,10 @@ export default component$(() => {
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
-            {formatNumber(users.value)}
+            {formatNumber(users.value)}%
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Users
+            Satisfaction Guaranteed
           </p>
         </div>
       </div>
