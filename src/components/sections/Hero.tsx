@@ -29,6 +29,7 @@ export default component$(() => {
 </p>
 
 
+
             </div>
           </div>
         </Carousel.Slide>
