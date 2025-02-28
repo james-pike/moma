@@ -125,7 +125,7 @@ export default component$(() => {
                       )}
                     </li>
                   ))}
-                  <li class="p-2">
+                  <li class="p-3 ">
                     <Button
                       look="primary"
                       onClick$={() => {
