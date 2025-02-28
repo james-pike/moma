@@ -77,7 +77,7 @@ export default component$((props: Props) => {
             <div class="hidden md:block">
               <Image
                 layout="constrained"
-                src="/images/steps.webp"
+                src="/images/hero1.webp"
                 width={532}
                 height={504}
                 alt={image.alt}
