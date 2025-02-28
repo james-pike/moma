@@ -1,7 +1,7 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import { Modal } from "../ui/Modal";
 import { Button, buttonVariants } from "../ui/Button";
-import { LuX, LuArrowLeft, LuChevronRight } from "@qwikest/icons/lucide";
+import { LuX, LuArrowLeft, LuChevronRight } from "@qwikest/icons/lucide"; // Added LuArrowRight
 import { cn } from "@qwik-ui/utils";
 import { Logo } from "../common/Logo";
 import { Badge } from "../ui/Badge";
@@ -21,7 +21,7 @@ export default component$(() => {
             <IconHamburger />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="overflow-hidden">
+        <Modal.Panel position={"left"}>
           {/* Header */}
           <div class="border-b-2 border-gray-100 bg-primary-25 pb-3">
             <Modal.Title>
@@ -34,15 +34,61 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          {/* Navigation Content with Transition */}
-          <nav class="mt-2 space-y-4 bg-primary-25 relative flex-1">
-            <div
-              class={cn(
-                "absolute inset-0 transition-transform duration-300 ease-in-out",
-                isServicesSection.value ? "-translate-x-full" : "translate-x-0"
-              )}
-            >
-              {/* Main Menu */}
+          {/* Navigation Content */}
+          <nav class="mt-2 space-y-4 bg-primary-25">
+            {isServicesSection.value ? (
+              // Services Section
+              <div class="flex flex-col h-full">
+                <div class="flex items-center border-b border-gray-100 p-2">
+                  <button
+                    class="text-gray-700 hover:text-primary-600 p-2"
+                    onClick$={() => (isServicesSection.value = false)}
+                  >
+                    <LuArrowLeft class="h-5 w-5" />
+                  </button>
+                  <h2 class="text-lg font-medium text-gray-800">Services</h2>
+                </div>
+                <ul class="flex flex-col gap-0 text-lg">
+                  <li>
+                    <a
+                      href="/services/web-design"
+                      class={cn(
+                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                        location.url.pathname === "/services/web-design/" && "bg-primary-50 text-primary-600"
+                      )}
+                      onClick$={() => (show.value = false)}
+                    >
+                      Web Design
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/development"
+                      class={cn(
+                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                        location.url.pathname === "/services/development/" && "bg-primary-50 text-primary-600"
+                      )}
+                      onClick$={() => (show.value = false)}
+                    >
+                      Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/seo"
+                      class={cn(
+                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
+                        location.url.pathname === "/services/seo/" && "bg-primary-50 text-primary-600"
+                      )}
+                      onClick$={() => (show.value = false)}
+                    >
+                      SEO
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              // Main Menu
               <ul class="flex flex-col gap-0 text-lg">
                 <li>
                   <a
@@ -146,6 +192,9 @@ export default component$(() => {
                   </Button>
                 </li>
               </ul>
+            )}
+            {/* Footer Promo - Only show in main menu */}
+            {!isServicesSection.value && (
               <div class="bg-primary-25 h-40 w-full flex items-center justify-center text-center p-4">
                 <div>
                   <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
@@ -153,65 +202,7 @@ export default component$(() => {
                   <p class="text-sm text-primary-600 font-medium mt-2">Use code: LATTELOVE</p>
                 </div>
               </div>
-            </div>
-
-            <div
-              class={cn(
-                "absolute inset-0 transition-transform duration-300 ease-in-out",
-                isServicesSection.value ? "translate-x-0" : "translate-x-full"
-              )}
-            >
-              {/* Services Section */}
-              <div class="flex flex-col h-full">
-                <div class="flex items-center border-b border-gray-100 p-2">
-                  <button
-                    class="text-gray-700 hover:text-primary-600 p-2"
-                    onClick$={() => (isServicesSection.value = false)}
-                  >
-                    <LuArrowLeft class="h-5 w-5" />
-                  </button>
-                  <h2 class="text-lg font-medium text-gray-800">Services</h2>
-                </div>
-                <ul class="flex flex-col gap-0 text-lg">
-                  <li>
-                    <a
-                      href="/services/web-design"
-                      class={cn(
-                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                        location.url.pathname === "/services/web-design/" && "bg-primary-50 text-primary-600"
-                      )}
-                      onClick$={() => (show.value = false)}
-                    >
-                      Web Design
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/services/development"
-                      class={cn(
-                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                        location.url.pathname === "/services/development/" && "bg-primary-50 text-primary-600"
-                      )}
-                      onClick$={() => (show.value = false)}
-                    >
-                      Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/services/seo"
-                      class={cn(
-                        "block text-gray-700 hover:text-primary-600 p-2 hover:bg-primary-50 font-medium transition-all duration-200",
-                        location.url.pathname === "/services/seo/" && "bg-primary-50 text-primary-600"
-                      )}
-                      onClick$={() => (show.value = false)}
-                    >
-                      SEO
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            )}
           </nav>
 
           {/* Close Button */}
