@@ -1,5 +1,5 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { useContent } from "@builder.io/qwik-city";
+import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
@@ -14,6 +14,8 @@ export default component$(() => {
   });
 
   const { menu } = useContent();
+  const location = useLocation(); 
+
 
   return (
     <header
@@ -70,126 +72,144 @@ export default component$(() => {
             <MenuModal />
           </div>
         </div>
+       
         <nav
-          class={`
-            items-center w-full md:w-auto 
-            text-default 
-            overflow-y-auto overflow-x-hidden 
-            md:overflow-y-visible md:overflow-x-auto 
-            md:mx-5 
-            absolute md:static 
-            left-0 
-            top-full 
-            bg-gradient-to-b from-primary-50 to-white dark:from-primary-900 dark:to-gray-900 
-            md:bg-transparent dark:md:bg-transparent 
-            shadow-xl md:shadow-none 
-            border-b border-primary-200 dark:border-primary-800 
-            transition-all duration-300 ease-in-out 
-            z-40 
-            ${store.isMenuExpanded
-              ? "max-h-screen opacity-100 translate-y-0"
-              : "max-h-0 opacity-0 -translate-y-4 md:max-h-none md:opacity-100 md:translate-y-0 md:flex"
-            }
-          `}
-          aria-label="Main navigation"
-        >
-          {menu && menu.items ? (
-            <ul
-              class="
-                flex flex-col md:flex-row 
-                md:self-center w-full md:w-auto 
-                text-xl md:text-[0.9375rem] 
-                tracking-[0.01rem] font-medium 
-                py-1 px-4 md:p-0
-              "
-            >
-              {menu.items.map(({ text, href, items }, key) => (
-                <li
-                  key={key}
-                  class={`
-                    ${items?.length ? "dropdown" : ""} 
-                    border-b border-primary-100 dark:border-primary-800 
-                    last:border-b-0 md:border-0
-                  `}
+  class={`
+    items-center w-full md:w-auto 
+    text-default 
+    overflow-y-auto overflow-x-hidden 
+    md:overflow-y-visible md:overflow-x-auto 
+    md:mx-5 
+    absolute md:static 
+    left-0 
+    top-full 
+    dark:bg-gray-900
+    shadow-xl md:shadow-none 
+    border-primary-200 dark:border-primary-800 
+    transition-all duration-300 ease-in-out 
+    z-40 
+    ${store.isMenuExpanded
+      ? "max-h-screen opacity-100 translate-y-0"
+      : "max-h-0 opacity-0 -translate-y-4 md:max-h-none md:opacity-100 md:translate-y-0 md:flex"
+    }
+  `}
+  aria-label="Main navigation"
+>
+  {menu && menu.items ? (
+    <ul
+      class="
+        flex flex-col md:flex-row 
+        md:self-center w-full md:w-auto 
+        text-xl md:text-[0.9375rem] 
+        tracking-[0.01rem] font-medium 
+        py-1 px-4 md:p-0
+        group // Keep group for parent-level hover detection
+      "
+    >
+      {menu.items.map(({ text, href, items }, key) => {
+        const isActive = location.url.pathname === href;
+        return (
+          <li
+            key={key}
+            class={`
+              ${items?.length ? "dropdown" : ""} 
+              border-b border-primary-100 dark:border-primary-800 
+              last:border-b-0 md:border-0
+              group relative
+            `}
+          >
+            {items?.length ? (
+              <>
+                <button
+                  class="
+                    flex items-center justify-between w-full md:w-auto 
+                    text-primary-700 dark:text-primary-200 
+                    hover:text-primary-500 dark:hover:text-primary-400 
+                    px-4 py-3 md:py-2 md:px-4
+                    transition-all duration-200
+                    group-hover:text-primary-500
+                  "
                 >
-                  {items?.length ? (
-                    <>
-                      <button
+                  {text}
+                  <IconChevronDown
+                    class="
+                      w-6 h-6 md:w-3.5 md:h-3.5 
+                      text-primary-500 dark:text-primary-300 
+                      ml-0.5 rtl:ml-0 rtl:mr-0.5 
+                      hidden md:inline 
+                      group-hover:rotate-180
+                      transition-transform duration-200
+                    "
+                  />
+                </button>
+                <ul
+                  class="
+                    md:backdrop-blur-md 
+                    dark:md:bg-slate-800 
+                    rounded md:absolute 
+                    pl-4 md:pl-0 
+                    md:hidden group-hover:md:block
+                    font-medium 
+                    bg-white dark:bg-gray-800 
+                    md:min-w-[200px] 
+                    drop-shadow-xl 
+                    py-2 md:py-2
+                    md:mt-1
+                  "
+                >
+                  {items.map(({ text: text2, href: href2 }, key2) => (
+                    <li key={key2}>
+                      <a
                         class="
-                          flex items-center justify-between w-full md:w-auto 
-                          text-primary-700 dark:text-primary-200 
-                          hover:text-primary-500 dark:hover:text-primary-400 
-                          px-4 py-3 md:py-3 md:px-4 
-                          transition-colors duration-200
+                          block 
+                          py-2 px-5 
+                          text-primary-600 dark:text-primary-200 
+                          hover:bg-primary-500 hover:text-white
+                          first:rounded-t last:rounded-b 
+                          transition-all duration-200
                         "
+                        href={href2}
                       >
-                        {text}
-                        <IconChevronDown
-                          class="
-                            w-6 h-6 md:w-3.5 md:h-3.5 
-                            text-primary-500 dark:text-primary-300 
-                            ml-0.5 rtl:ml-0 rtl:mr-0.5 
-                            hidden md:inline 
-                            md:hover:rotate-180 
-                            transition-transform duration-200
-                          "
-                        />
-                      </button>
-                      <ul
-                        class="
-                          md:backdrop-blur-md 
-                          dark:md:bg-slate-800 
-                          rounded md:absolute 
-                          pl-4 md:pl-0 
-                          md:hidden font-medium 
-                          bg-white/90 dark:bg-gray-800/90 
-                          md:bg-white/90 
-                          md:min-w-[200px] 
-                          drop-shadow-xl 
-                          py-2 md:py-2
-                        "
-                      >
-                        {items.map(({ text: text2, href: href2 }, key2) => (
-                          <li key={key2}>
-                            <a
-                              class="
-                                block 
-                                py-2 px-5 
-                                text-primary-600 dark:text-primary-200 
-                                hover:bg-primary-200 dark:hover:bg-primary-800 
-                                hover:text-primary-800 dark:hover:text-primary-100 
-                                first:rounded-t last:rounded-b 
-                                md:hover:bg-primary-50 
-                                transition-all duration-200
-                              "
-                              href={href2}
-                            >
-                              {text2}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <a
-                      class="
-                        block 
-                        text-primary-700 dark:text-primary-200 
-                        hover:text-primary-500 dark:hover:text-primary-400 
-                        px-4 py-3 
-                        md:flex md:items-centers 
-                        transition-colors duration-200
-                      "
-                      href={href}
-                    >
-                      {text}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </nav>
+                        {text2}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a
+                class={`
+                  block 
+                  text-primary-700 dark:text-primary-200 
+                  hover:text-primary-500 dark:hover:text-primary-400 
+                  px-4 py-3 md:py-2 md:px-4
+                  md:hover:bg-primary-50
+                  relative
+                  transition-all duration-200
+                  after:content-[''] 
+                  after:absolute 
+                  after:bottom-[6px]
+                  after:left-1/2 
+                  after:h-[2px] 
+                  after:bg-primary-500 
+                  after:transition-all 
+                  after:duration-200
+                  ${isActive 
+                    ? 'after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0' 
+                    : 'after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4'
+                  }
+                `}
+                href={href}
+              >
+                {text}
+              </a>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  ) : null}
+</nav>
         {/* Overlay Below Header */}
         {store.isMenuExpanded && (
           <div

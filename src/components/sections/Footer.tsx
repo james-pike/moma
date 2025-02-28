@@ -64,10 +64,10 @@ export default component$(() => {
             {/* Brand Column */}
             <div class="md:col-span-4">
               <Link
-                class={`inline-block text-2xl font-serif font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+                class={`inline-block text-2xl  font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                 href="/"
               >
-                La Petite Bistro
+                Webdev.ca
               </Link>
               <p class="mt-4 text-sm text-primary-600 dark:text-primary-400 leading-relaxed">
                 A cozy haven serving artisan coffee, fresh pastries, and heartfelt meals since 2018.

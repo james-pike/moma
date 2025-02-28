@@ -24,10 +24,8 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
 
   return (
-    <>
-    <head>
-    <link rel="preload" href="/images/hero1.webp" as="image"/>
-    </head>
+   
+   
     <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
@@ -41,7 +39,7 @@ export default component$((props: Props) => {
     <GoogleReviews/>
       </div>
     </section>
-    </>
+   
 
      
   );
