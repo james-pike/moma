@@ -24,7 +24,7 @@ export default component$(() => {
             <h1 class="text-[clamp(2.625rem,6vw,4.5rem)] md:text-[clamp(3rem,7vw,6rem)] font-bold mb-3 drop-shadow-lg leading-none">
   Digital Art & Restoration
 </h1>
-<p class="text-[clamp(1.625rem,3.2vw,2.125rem)] md:text-[clamp(1.75rem,3.5vw,2.5rem)] drop-shadow-md leading-tight">
+<p class="text-[clamp(1.57rem,3.1vw,2.06rem)] md:text-[clamp(1.75rem,3.5vw,2.5rem)] drop-shadow-md leading-tight">
   Specializing in Photography and Fine Art Printing
 </p>
 
