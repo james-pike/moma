@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import { ItemGrid } from "../ui/ItemGrid";
+import { ItemGrid2 } from "../ui/ItemGrid2";
 import IconStar from "../icons/IconStar";
 
 interface Item {
@@ -40,7 +40,7 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
    
-        <ItemGrid
+        <ItemGrid2
           items={items}
           defaultIcon={IconStar}
           classes={{

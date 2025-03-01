@@ -5,6 +5,7 @@ interface Item {
   description?: string;
   icon?: any;
   classes?: Record<string, string>;
+  delay?: number; // Optional delay in milliseconds
 }
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
   classes?: Record<string, string>;
 }
 
-export const ItemGrid = (props: Props) => {
+export const ItemGrid2 = (props: Props) => {
   const { items = [], defaultIcon: DefaultIcon = null, classes = {} } = props;
 
   const {
@@ -21,15 +22,27 @@ export const ItemGrid = (props: Props) => {
     panel: panelClass = "",
     title: titleClass = "",
     description: descriptionClass = "",
-    icon: defaultIconClass = "text-secondary-500 dark:text-secondary-700",
+    icon: defaultIconClass = "text-primary-500 dark:text-primary-700",
   } = classes as Record<string, string>;
 
   return (
     items.length && (
-      <div class={twMerge("grid mx-auto gap-8", containerClass)}>
-        {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
+      <div
+        class={twMerge(
+          "grid motion-group mx-auto gap-6 sm:gap-8 opacity-0 intersect-once intersect:opacity-100",
+          containerClass
+        )}
+      >
+        {items.map(({ title, description, icon: Icon, classes: itemClasses = {}, delay }, index) => (
           <div key={`${title}${index}`}>
-            <div class={twMerge("flex flex-row max-w-md", panelClass, itemClasses.panel)}>
+            <div
+              class={twMerge(
+                "flex flex-row max-w-md motion-preset-slide-up",
+                panelClass,
+                itemClasses.panel
+              )}
+              style={{ "--motion-delay": `${delay ?? index * 100}ms` }} // Match ServiceGrid's 150ms increment
+            >
               <div class="flex justify-center">
                 {(Icon || DefaultIcon) &&
                   (Icon ? (

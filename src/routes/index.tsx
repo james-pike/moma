@@ -35,9 +35,18 @@ export default component$(() => {
         highlight="Services"
         items={[]} />
 
-<Services title="What We Do"
+
+
+
+
+      <Steps title="Our Process"
         subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Services"
+        highlight="Steps To Success"
+        items={[]} />
+
+      <Menu title="Gallery Of Past Work"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Portfolio"
         items={[]} />
 
 <Features
@@ -82,16 +91,6 @@ export default component$(() => {
           },
         ]}
       />
-
-      <Steps title="Our Process"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Steps To Success"
-        items={[]} />
-
-      <Menu title="Gallery Of Past Work"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Portfolio"
-        items={[]} />
 
       <Reviews title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
