@@ -9,7 +9,7 @@ import Contact from "~/components/sections/Contact";
 import Hero from "~/components/sections/Hero";
 import Steps from "~/components/sections/Steps";
 import Stats from "~/components/widgets/Stats";
-import LogoClouds from "~/components/widgets/LogoClouds";
+import LogoClouds from "~/components/sections/LogoClouds";
 import Features from "~/components/sections/Features";
 
 

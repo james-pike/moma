@@ -31,7 +31,7 @@ export default component$((props: Props) => {
     
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          "relative mx-auto max-w-7xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
           classes?.container,
           isDark ? "dark" : ""
         )}
@@ -46,6 +46,7 @@ export default component$((props: Props) => {
             items={items}
             defaultIcon={IconArrowDownRight}
             classes={{
+              container: "md:grid-cols-2 max-w-5xl",
               panel: "max-w-none",
               ...(classes?.items ?? {}),
             }}

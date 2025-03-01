@@ -1,7 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import GoogleReviews from "../widgets/GoogleReviews";
+import GoogleReviews from "../widgets/ReviewsCarousel";
+import ReviewsPage from "../widgets/ReviewsPage";
 
 interface Item {
   title?: string;
@@ -26,17 +27,24 @@ export default component$((props: Props) => {
   return (
    
    
-    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-200 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          "relative mx-auto max-w-7xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
           classes?.container,
           isDark ? "dark" : ""
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
+    <div class="block sm:hidden">
     <GoogleReviews/>
+    </div>
+
+    <div class="hidden sm:block">
+    <ReviewsPage/>
+    </div>
+
       </div>
     </section>
    

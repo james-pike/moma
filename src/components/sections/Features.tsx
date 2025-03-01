@@ -29,11 +29,11 @@ export default component$((props: Props) => {
     {/* <head>
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     </head> */}
-    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          "relative mx-auto max-w-7xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
           classes?.container,
           isDark ? "dark" : ""
         )}
@@ -44,7 +44,7 @@ export default component$((props: Props) => {
           items={items}
           defaultIcon={IconStar}
           classes={{
-            container: "md:grid-cols-2",
+            container: "md:grid-cols-2 max-w-5xl",
             title: "md:text-[1.3rem]",
             icon: "text-white bg-secondary-500 dark:bg-secondary-700 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
             ...(classes?.items ?? {}),

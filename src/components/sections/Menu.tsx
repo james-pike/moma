@@ -28,11 +28,11 @@ export default component$((props: Props) => {
     {/* <head>
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     </head> */}
-    <section class="relative p-0 bg-primary-50 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
     
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          "relative mx-auto max-w-7xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
           classes?.container,
           isDark ? "dark" : ""
         )}

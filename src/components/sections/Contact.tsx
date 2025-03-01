@@ -5,21 +5,10 @@ export default component$(() => {
     return (
         <>
            
-            {/* <div
-                class="relative mx-auto max-w-7xl text-white py-16 sm:py-24"
-                style={{ backgroundImage: "url('/images/hero2.webp')" }}
-            >
-                <div class="px-6 lg:px-8">
-                    <div class="max-w-2xl mx-auto text-center">
-                      
-                    </div>
-                </div>
-             
-                <div class="absolute inset-0 bg-black opacity-20"></div>
-            </div> */}
+           <section class="relative p-0 bg-white scroll-mt-16" >
 
             {/* Form/Contact Section */}
-            <div class="relative isolate mx-auto max-w-5xl bg-gray-100 rounded-lg dark:bg-gray-900">
+            <div class="relative isolate mx-auto max-w-6xl bg-gray-100 rounded-lg dark:bg-gray-900">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <div class="relative px-6 pb-8 pt-8 sm:pt-32 lg:static lg:px-8 lg:py-24">
                         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -248,6 +237,7 @@ export default component$(() => {
                     </form>
                 </div>
             </div>
+            </section>
         </>
     );
 });
