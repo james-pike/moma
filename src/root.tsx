@@ -7,7 +7,6 @@ import {
 
 import { RouterHead } from "~/components/common/RouterHead";
 import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
-import { ObserverProvider } from "~/components/common/ObserverProvider";
 
 import styles from "~/assets/styles/global.css?inline";
 
@@ -20,6 +19,7 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
+        
         <RouterHead />
         <DarkThemeLauncher />
         <ServiceWorkerRegister />
@@ -41,9 +41,9 @@ export default component$(() => {
         
       </head>
       <body class="text-gray-900 max-w-7xl mx-auto dark:text-slate-300 tracking-tight bg-primary-50 dark:bg-gray-900 antialiased">
-        <ObserverProvider>
+       
           <RouterOutlet />
-        </ObserverProvider>
+       
       </body>
     </QwikCityProvider>
   );

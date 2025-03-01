@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city"; // Import Link component
 
 const services = [
   {
@@ -8,6 +9,7 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Exhibit Photography",
     delay: 0,
+    slug: "exhibit-photography" // Added unique slug for routing
   },
   {
     title: "Reproduction Services",
@@ -16,6 +18,7 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Reproduction Services",
     delay: 100,
+    slug: "reproduction-services"
   },
   {
     title: "Fine Art Photography",
@@ -24,6 +27,7 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Fine Art Photography",
     delay: 200,
+    slug: "fine-art-photography"
   },
   {
     title: "Digitization Services",
@@ -32,6 +36,7 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Digitization Services",
     delay: 300,
+    slug: "digitization-services"
   },
   {
     title: "Mobile Photography",
@@ -40,6 +45,7 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Mobile Photography",
     delay: 400,
+    slug: "mobile-photography"
   },
   {
     title: "Event Photography",
@@ -48,21 +54,23 @@ const services = [
     image: "/images/hero1.webp",
     alt: "Event Photography",
     delay: 500,
+    slug: "event-photography"
   },
 ];
 
 export default component$(() => {
   return (
     <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group opacity-0 intersect-once intersect:opacity-100">
-      {services.map(({ title, description, details, image, alt, delay }, index) => (
-        <div
+      {services.map(({ title, description, details, image, alt, delay, slug }, index) => (
+        <Link
+          href={`/services/${slug}`} // Creates URL like "/services/exhibit-photography"
           key={index}
-          class="group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up"
+          class="group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up no-underline"
           style={{ "--motion-delay": `${delay}ms` }}
         >
-          <div class="relative aspect-[2/1]"> {/* Wider aspect ratio: height = 50% of width */}
+          <div class="relative aspect-[2/1]">
             <img
-              width={700} // Intrinsic width for optimization
+              width={700}
               src={image}
               alt={alt}
               class="w-full h-full object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
@@ -75,7 +83,7 @@ export default component$(() => {
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

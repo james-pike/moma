@@ -35,6 +35,11 @@ export default component$(() => {
         highlight="Services"
         items={[]} />
 
+<Services title="What We Do"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Services"
+        items={[]} />
+
 <Features
         highlight="Features"
         title="What you get with Qwind"

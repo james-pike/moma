@@ -26,6 +26,7 @@ export default component$((props: Props) => {
 
   return (
     <>
+   
     {/* <head>
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     </head> */}
@@ -47,6 +48,7 @@ export default component$((props: Props) => {
     </div>
       </div>
     </section>
+   
     </>
      
   );
