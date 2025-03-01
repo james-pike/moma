@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import { ItemGrid2 } from "../ui/ItemGrid2";
 import { PageWrapper } from "../common/PageWrapper";
