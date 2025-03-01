@@ -22,36 +22,28 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "",  items = [], classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "", items = [], classes = {} } = props;
 
 
   return (
     <section class="relative p-0 bg-gray-100 scroll-mt-16" {...(id ? { id } : {})}>
-    
-   <PageWrapper>
+      <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-    <div class="block sm:hidden">
-    <FAQAccordion/>
-    </div>
-
-    <div class="hidden sm:block">
-    <ItemGrid2
+        <div class="block sm:hidden">
+          <FAQAccordion />
+        </div>
+        <div class="hidden sm:block">
+          <ItemGrid2
             items={items}
-            
-          
             classes={{
               container: "md:grid-cols-2 max-w-5xl",
               panel: "max-w-none",
               ...(classes?.items ?? {}),
             }}
           />
-
-    </div>
-   
+        </div>
       </PageWrapper>
     </section>
-
-     
   );
 });
 

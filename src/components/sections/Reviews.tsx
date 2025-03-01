@@ -22,27 +22,19 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
   return (
-   
-   
     <section class="relative p-0 bg-gray-100 scroll-mt-16" {...(id ? { id } : {})}>
-    
-     <PageWrapper>
+      <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-    <div class="block sm:hidden">
-    <GoogleReviews/>
-    </div>
-
-    <div class="hidden sm:block">
-    <ReviewsPage/>
-    </div>
-
+        <div class="block sm:hidden">
+          <GoogleReviews />
+        </div>
+        <div class="hidden sm:block">
+          <ReviewsPage />
+        </div>
       </PageWrapper>
     </section>
-   
-
-     
   );
 });
