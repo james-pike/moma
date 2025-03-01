@@ -30,7 +30,7 @@ export default component$((props: Props) => {
     
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+          "relative mx-auto max-w-5xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
           classes?.container,
           isDark ? "dark" : ""
         )}
@@ -38,16 +38,17 @@ export default component$((props: Props) => {
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
    
 
-  
+  <div class="p-2 py-3 bg-white rounded-xl">
     <ItemGrid
             items={items}
             defaultIcon={IconArrowDownRight}
             classes={{
+              
               panel: "max-w-none",
               ...(classes?.items ?? {}),
             }}
           />
-
+</div>
    
    
       </div>

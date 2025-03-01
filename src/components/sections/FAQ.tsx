@@ -41,7 +41,7 @@ export default component$((props: Props) => {
     <FAQAccordion/>
     </div>
 
-    <div class="hidden sm:block">
+    <div class="hidden sm:block py-10 bg-white rounded-xl">
     <ItemGrid
             items={items}
             defaultIcon={IconArrowDownRight}
