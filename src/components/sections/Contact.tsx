@@ -10,7 +10,7 @@ export default component$(() => {
             {/* Form/Contact Section */}
             <div class="relative isolate mx-auto max-w-6xl bg-gray-100 rounded-lg dark:bg-gray-900">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <div class="relative px-6 pb-8 pt-8 sm:pt-32 lg:static lg:px-8 lg:py-24">
+                    <div class="relative px-6 pb-8 pt-10 sm:pt-32 lg:static lg:px-8 lg:py-24">
                         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
                             <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 dark:bg-gray-900 dark:ring-white/5 lg:w-1/2">
                                 <div
