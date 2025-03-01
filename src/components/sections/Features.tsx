@@ -1,8 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import { ItemGrid2 } from "../ui/ItemGrid2";
 import IconStar from "../icons/IconStar";
+import { ItemGrid } from "../ui/ItemGrid";
+import { ItemGrid2 } from "../ui/ItemGrid2";
 
 interface Item {
   title?: string;
@@ -42,7 +43,7 @@ export default component$((props: Props) => {
    
         <ItemGrid2
           items={items}
-          defaultIcon={IconStar}
+       
           classes={{
             container: "md:grid-cols-2 max-w-5xl",
             title: "md:text-[1.3rem]",

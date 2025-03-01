@@ -4,6 +4,7 @@ import { Headline } from "~/components/ui/Headline";
 import FAQAccordion from "../widgets/FAQAccordion";
 import { ItemGrid } from "../ui/ItemGrid";
 import IconArrowDownRight from "../icons/IconArrowDownRight";
+import { ItemGrid2 } from "../ui/ItemGrid2";
 
 interface Item {
   title?: string;
@@ -41,10 +42,11 @@ export default component$((props: Props) => {
     <FAQAccordion/>
     </div>
 
-    <div class="hidden sm:block bg-white rounded-xl">
-    <ItemGrid
+    <div class="hidden sm:block">
+    <ItemGrid2
             items={items}
-            defaultIcon={IconArrowDownRight}
+            
+          
             classes={{
               container: "md:grid-cols-2 max-w-5xl",
               panel: "max-w-none",
