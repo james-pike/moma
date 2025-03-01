@@ -31,6 +31,8 @@ export default component$(() => {
     return reviews.filter(review => review.rating >= 4); // Filter only 4+ star reviews
   });
 
+  
+
   return (
     <Resource
       value={reviewsResource}
@@ -41,7 +43,8 @@ export default component$(() => {
           <Carousel.Root
             class="carousel-root"
             slidesPerView={1.5} // Increased to 1.5 to show more slides, reducing individual slide width
-            gap={20} // Reduced from 25px to 20px for tighter spacing
+            gap={20}
+            rewind // Reduced from 25px to 20px for tighter spacing
             sensitivity={{ touch: 1.75 }}
           >
             {/* Carousel Scroller with review slides */}

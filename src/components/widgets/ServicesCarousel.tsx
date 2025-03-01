@@ -44,7 +44,7 @@ export default component$(() => {
   ];
 
   return (
-    <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25}  sensitivity={{
+    <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25} rewind sensitivity={{
       touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
