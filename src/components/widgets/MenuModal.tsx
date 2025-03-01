@@ -20,7 +20,7 @@ export default component$(() => {
     { 
       title: "Menu", 
       href: "/menu/", 
-      badge: <Badge class="absolute -top-0.1 left-14 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
+      badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
     },
     { 
       title: "Services", 
