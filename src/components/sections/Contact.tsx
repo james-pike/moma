@@ -4,9 +4,7 @@ import { Headline } from '../ui/Headline';
 export default component$(() => {
     return (
         <>
-           
            <section class="relative p-0 bg-white scroll-mt-16" >
-
             {/* Form/Contact Section */}
             <div class="relative isolate mx-auto max-w-6xl bg-gray-100 rounded-lg dark:bg-gray-900">
                 <div class="grid grid-cols-1 lg:grid-cols-2">

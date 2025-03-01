@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import FAQAccordion from "../widgets/FAQAccordion";
 import { ItemGrid2 } from "../ui/ItemGrid2";
+import { PageWrapper } from "../common/PageWrapper";
 
 interface Item {
   title?: string;
@@ -26,15 +27,9 @@ export default component$((props: Props) => {
 
 
   return (
-    <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative p-0 bg-gray-100 scroll-mt-16" {...(id ? { id } : {})}>
     
-      <div
-        class={twMerge(
-          "relative mx-auto max-w-7xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
-          classes?.container,
-          isDark ? "dark" : ""
-        )}
-      >
+   <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
     <div class="block sm:hidden">
     <FAQAccordion/>
@@ -54,7 +49,7 @@ export default component$((props: Props) => {
 
     </div>
    
-      </div>
+      </PageWrapper>
     </section>
 
      

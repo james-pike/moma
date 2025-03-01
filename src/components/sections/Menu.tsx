@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import MenuTabs from "../widgets/MenuTabs";
+import { PageWrapper } from "../common/PageWrapper";
 
 interface Item {
   title?: string;
@@ -30,16 +31,10 @@ export default component$((props: Props) => {
     </head> */}
     <section class="relative p-0 bg-primary-100 scroll-mt-16" {...(id ? { id } : {})}>
     
-      <div
-        class={twMerge(
-          "relative mx-auto max-w-7xl bg-gray-100 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
-          classes?.container,
-          isDark ? "dark" : ""
-        )}
-      >
+      <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
     <MenuTabs/>
-      </div>
+      </PageWrapper>
     </section>
 </>
      
