@@ -1,8 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import IconStar from "../icons/IconStar";
-import { ItemGrid } from "../ui/ItemGrid";
 import { ItemGrid2 } from "../ui/ItemGrid2";
 
 interface Item {
