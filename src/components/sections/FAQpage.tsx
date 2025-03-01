@@ -36,8 +36,6 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
    
-
-  <div class="p-2 py-3 bg-white rounded-xl">
     <ItemGrid2
             items={items}
           
@@ -47,9 +45,7 @@ export default component$((props: Props) => {
               ...(classes?.items ?? {}),
             }}
           />
-</div>
-   
-   
+
       </div>
     </section>
 
