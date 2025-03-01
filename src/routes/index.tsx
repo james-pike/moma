@@ -29,14 +29,7 @@ export default component$(() => {
     <>
       <Hero />
 
-     
-
-      <Services title="What We Do"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Services"
-        items={[]} />
-
-<Features
+      <Features
         highlight="Features"
         title="What you get with Qwind"
         subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
@@ -79,6 +72,15 @@ export default component$(() => {
           },
         ]}
       />
+
+     
+
+      <Services title="What We Do"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Services"
+        items={[]} />
+
+
 
 
 
