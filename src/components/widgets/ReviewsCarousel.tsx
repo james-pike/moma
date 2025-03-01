@@ -1,4 +1,4 @@
-import { component$, useResource$, Resource, PropsOf } from '@builder.io/qwik';
+import { component$, useResource$, Resource, PropsOf, useVisibleTask$, useSignal } from '@builder.io/qwik';
 import { twMerge } from 'tailwind-merge';
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { getReviews } from '~/api/GoogleReviews';
@@ -22,6 +22,8 @@ export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>
 
 // Reviews Carousel component
 export default component$(() => {
+
+
   // Fetch reviews using useResource$
   const reviewsResource = useResource$<Review[]>(async ({ cleanup }) => {
     const abortController = new AbortController();
@@ -30,6 +32,13 @@ export default component$(() => {
     const reviews = await getReviews();
     return reviews.filter(review => review.rating >= 4); // Filter only 4+ star reviews
   });
+
+  const isPlaying = useSignal<boolean>(false);
+
+
+  useVisibleTask$(() => {
+    isPlaying.value = true;
+  })
 
   
 
@@ -46,6 +55,8 @@ export default component$(() => {
             gap={20}
             rewind // Reduced from 25px to 20px for tighter spacing
             sensitivity={{ touch: 1.75 }}
+            autoPlayIntervalMs={3500}
+            bind:autoplay={isPlaying}
           >
             {/* Carousel Scroller with review slides */}
             <Carousel.Scroller class="carousel-scroller">
