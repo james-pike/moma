@@ -64,14 +64,14 @@ export const ItemGrid2 = component$((props: Props) => {
           ) => (
             <div
               key={`${title}${index}`}
-              class="opacity-0 transition-all duration-500 ease-in-out"
+              class="opacity-0 transition-all duration-500 ease-in-out "
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
             >
               <div
                 class={twMerge(
-                  "flex flex-row max-w-md",
+                  "flex flex-row max-w-md ",
                   panelClass,
                   itemClasses.panel
                 )}

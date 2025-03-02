@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Services from "~/components/sections/Services";
-import Menu from "~/components/sections/Menu";
+import Menu from "~/components/sections/Gallery";
 import FAQ from "~/components/sections/FAQ";
 import Reviews from "~/components/sections/Reviews";
 import Contact from "~/components/sections/Contact";
@@ -82,6 +82,7 @@ export default component$(() => {
       />
 
 
+
       <Steps title="Our Process"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Steps To Success"
@@ -95,6 +96,11 @@ export default component$(() => {
 
 
       <Reviews title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
+
+<LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
         items={[]} />
@@ -142,10 +148,7 @@ export default component$(() => {
           ]}
 
        />
-<LogoClouds title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
-        items={[]} />
+
         
         <Stats/>
 
