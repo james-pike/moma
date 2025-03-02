@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import { routeLoader$ } from "@builder.io/qwik-city";
+import { routeLoader$, StaticGenerateHandler } from "@builder.io/qwik-city";
 
-// Define the Service interface
 interface Service {
   title: string;
   description: string;
@@ -12,7 +11,6 @@ interface Service {
   slug: string;
 }
 
-// Define the services array with explicit typing
 const services: Service[] = [
   {
     title: "Exhibit Photography",
@@ -32,10 +30,8 @@ const services: Service[] = [
     delay: 100,
     slug: "reproduction-services"
   },
-  // ... rest of your services ...
 ];
 
-// Define the route loader with proper typing
 export const useService = routeLoader$<Service | null>(({ params }) => {
   const service = services.find(s => s.slug === params.slug);
   return service || null;
@@ -43,11 +39,9 @@ export const useService = routeLoader$<Service | null>(({ params }) => {
 
 export default component$(() => {
   const service = useService();
-  
   if (!service.value) {
     return <div>Service not found</div>;
   }
-
   return (
     <div class="max-w-screen-xl mx-auto mt-8 mb-16">
       <h1 class="text-3xl font-bold mb-4">{service.value.title}</h1>
@@ -57,3 +51,10 @@ export default component$(() => {
     </div>
   );
 });
+
+// Add this to pre-render all slugs
+export const onStaticGenerate: StaticGenerateHandler = async () => {
+  return {
+    params: services.map(service => ({ slug: service.slug })),
+  };
+};
