@@ -20,7 +20,6 @@ export const PageWrapper = component$((props: PageWrapperProps) => {
     <div
       class={twMerge(
         "relative mx-auto max-w-7xl px-5 md:px-6 text-default", 
-        
         isIndexPage ? "py-10 md:py-16 lg:py-20" : "py-8 md:py-14 lg:py-16", 
         classes?.container,
         isDark ? "dark" : ""

@@ -30,7 +30,7 @@ export default component$((props: Props) => {
       {/* <head>
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     </head> */}
-      <section class="relative p-0 bg-gray-100 scroll-mt-16" {...(id ? { id } : {})}>
+      <section class="relative p-0 bg-white scroll-mt-16" {...(id ? { id } : {})}>
         <PageWrapper>
           <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
           <div class="block sm:hidden">
