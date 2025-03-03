@@ -12,7 +12,7 @@ interface PageWrapperProps {
 
 export const PageWrapper = component$((props: PageWrapperProps) => {
   const { id, isDark = false, classes = {} } = props;
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); // Get the current locations
   const isIndexPage = location.url.pathname === "/";
 
 
