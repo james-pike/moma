@@ -51,13 +51,13 @@ export default component$(() => {
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950">
           {/* Header */}
-          <div class="border-b-2 border-gray-100 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 p-1">
-            <Modal.Title>
+          <div class="border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 p-1">
+            <Modal.Title class="pt-1">
               <a href="/">
                 <Logo />
               </a>
             </Modal.Title>
-            <Modal.Description class="text-md px-2 dark:text-gray-200">
+            <Modal.Description class="text-md px-2 py-1 dark:text-gray-200">
               Add some sweetness to your day!
             </Modal.Description>
           </div>

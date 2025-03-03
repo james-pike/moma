@@ -100,7 +100,7 @@ export default component$(() => {
               >
                 Get A Quote
               </a>
-              <ToggleTheme/>
+              <ToggleTheme iconClass="w-6 h-6"/>
             <MenuModal />
           </div>
         </div>
