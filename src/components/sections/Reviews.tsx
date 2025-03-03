@@ -26,7 +26,7 @@ export default component$((props: Props) => {
   return (
     <section class="relative p-0 bg-white dark:bg-gray-800 scroll-mt-16" {...(id ? { id } : {})}>
       <PageWrapper>
-        <div class="px-4 rounded-xl bg-primary-100">
+        <div class="px-4 py-6 rounded-xl bg-gray-100">
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
         
          
