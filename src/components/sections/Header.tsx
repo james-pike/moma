@@ -36,9 +36,9 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 bg-white max-w-7xl dark:bg-gray-900 flex-none mx-auto w-full border-b border-gray-200 dark:border-gray-600 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 max-w-7xl flex-none mx-auto w-full border-b border-gray-200 dark:border-gray-600 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-slate-900"
+          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90"
           : ""
       }`}
       window:onScroll$={() => {
@@ -115,7 +115,7 @@ export default component$(() => {
     absolute md:static 
     left-0 
     top-full 
-    dark:bg-gray-900
+    
     shadow-xl md:shadow-none 
     border-primary-200 dark:border-primary-800 
     transition-all duration-300 ease-in-out 
