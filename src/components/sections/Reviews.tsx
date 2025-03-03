@@ -24,7 +24,7 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
   return (
-    <section class="relative p-0 bg-background scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
       <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
         
