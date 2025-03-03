@@ -49,21 +49,21 @@ export default component$(() => {
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"}>
+        <Modal.Panel position={"left"} class="dark:bg-gray-950">
           {/* Header */}
-          <div class="border-b-2 border-gray-100 bg-gray-100 p-1">
+          <div class="border-b-2 border-gray-100 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 p-1">
             <Modal.Title>
               <a href="/">
                 <Logo />
               </a>
             </Modal.Title>
-            <Modal.Description class="text-md px-2">
+            <Modal.Description class="text-md px-2 dark:text-gray-200">
               Add some sweetness to your day!
             </Modal.Description>
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-0 space-y-4 bg-gray-100">
+          <nav class="mt-0 space-y-4 bg-gray-100 dark:bg-gray-800">
             {isServicesSection.value ? (
               // Services Section
               <div class="flex flex-col h-full">
@@ -102,7 +102,7 @@ export default component$(() => {
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200 flex items-center justify-between",
+                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:bg-primary-300 font-medium transition-all duration-200 flex items-center justify-between",
                             location.url.pathname.startsWith("/services/") && "bg-gray-100 text-primary-600"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
@@ -114,7 +114,7 @@ export default component$(() => {
                         <a
                           href={item.href}
                           class={cn(
-                            "block text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 font-medium transition-all duration-200 relative",
+                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 font-medium transition-all duration-200 relative",
                             location.url.pathname === item.href && "bg-primary-50 text-primary-600"
                           )}
                           onClick$={() => (show.value = false)}
@@ -139,8 +139,8 @@ export default component$(() => {
                   </li>
                 </ul>
                 
-                <div class="bg-gray-100 h-40 w-full flex items-center justify-center text-center p-2">
-                  <div class="p-4 bg-primary-25">
+                <div class="bg-gray-100 dark:bg-gray-800 h-40 w-full flex items-center justify-center text-center p-3">
+                  <div class="w-full h-full bg-primary-25">
                     <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
                     <p class="text-lg text-gray-600 mt-1">Enjoy 15% off all lattes this week.</p>
                     <p class="text-sm text-primary-600 font-medium mt-2">Use code: LATTELOVE</p>
