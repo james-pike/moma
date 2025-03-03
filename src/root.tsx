@@ -7,7 +7,6 @@ import {
 
 import { RouterHead } from "~/components/common/RouterHead";
 import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
-
 import styles from "~/assets/styles/global.css?inline";
 import { ObserverProvider } from "./components/common/ObserverProvider";
 
