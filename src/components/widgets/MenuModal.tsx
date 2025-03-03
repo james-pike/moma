@@ -45,8 +45,8 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-gray-100">
-          <Modal.Trigger>
-            <IconHamburger class="w-8 h-8 p-2 md:w-5 md:h-5 md:inline-block" />
+          <Modal.Trigger class="p-2">
+            <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"}>
