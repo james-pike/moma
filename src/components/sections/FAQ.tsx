@@ -26,7 +26,7 @@ export default component$((props: Props) => {
 
 
   return (
-    <section class="relative p-0 bg-gray-100 dark:bg-gray-800 scroll-mt-16" {...(id ? { id } : {})}>
+    <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
       <PageWrapper>
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
         <div class="block sm:hidden">
