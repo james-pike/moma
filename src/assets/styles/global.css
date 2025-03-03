@@ -12,9 +12,12 @@
 
 @layer base {
   :root {
-    /* Define your custom variables */
-    --bg-dark: #030712; /* gray-950 */
-    --bg-dark-accent: #1f2937; /* gray-800 */ /* Matches Tailwind's gray-800 */
+    --background: 0 0% 100%;
+    
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    
   }
 }
 
