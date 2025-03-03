@@ -42,7 +42,7 @@ export default component$<Props>((props) => {
           <div
             class={twMerge(
               // Masonry layout with columns instead of grid
-              "motion-group mx-auto max-w-5xl  px-4 py-6 md:p-8 bg-gray-100 columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8",
+              "motion-group mx-auto max-w-5xl columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8",
               props.classes?.container
             )}
           >
