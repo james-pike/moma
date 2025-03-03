@@ -62,7 +62,7 @@ export default component$(() => {
   });
 
   return (
-    <div class="px-4 py-8 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-7xl bg-white">
+    <div class="px-4 py-8 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-7xl bg-white dark:bg-gray-800">
       <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4 motion-group opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up">
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-primary font-heading">
