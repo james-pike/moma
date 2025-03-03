@@ -27,7 +27,7 @@ export default component$((props: Props) => {
 
             <div
                 class={twMerge(
-                    "relative mx-auto max-w-6xl bg-white dark:bg-gray-950 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+                    "relative mx-auto max-w-7xl bg-white dark:bg-gray-950 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
