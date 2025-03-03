@@ -102,8 +102,8 @@ export default component$(() => {
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:bg-primary-300 font-medium transition-all duration-200 flex items-center justify-between",
-                            location.url.pathname.startsWith("/services/") && "bg-gray-100 text-primary-600"
+                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
+                            location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-600"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
                         >
@@ -114,8 +114,8 @@ export default component$(() => {
                         <a
                           href={item.href}
                           class={cn(
-                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 font-medium transition-all duration-200 relative",
-                            location.url.pathname === item.href && "bg-primary-50 text-primary-600"
+                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
+                            location.url.pathname === item.href && "bg-primary-50 dark:bg-gray-700 text-primary-600"
                           )}
                           onClick$={() => (show.value = false)}
                         >
@@ -140,7 +140,7 @@ export default component$(() => {
                 </ul>
                 
                 <div class="bg-gray-100 dark:bg-gray-800 h-40 w-full flex items-center justify-center text-center p-3">
-                  <div class="w-full h-full bg-primary-25">
+                  <div class="w-full h-full bg-primary-25 dark:bg-gray-700">
                     <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
                     <p class="text-lg text-gray-600 mt-1">Enjoy 15% off all lattes this week.</p>
                     <p class="text-sm text-primary-600 font-medium mt-2">Use code: LATTELOVE</p>
