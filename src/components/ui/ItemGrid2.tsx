@@ -54,7 +54,7 @@ export const ItemGrid2 = component$((props: Props) => {
   return (
     items.length && (
       <div
-        class={twMerge("grid px-4 py-6 md:p-8 rounded-xl bg-white dark:bg-gray-950 mx-auto gap-8 animate-observer", containerClass)}
+        class={twMerge("grid px-4 py-6 md:p-8 rounded-xl bg-white mx-auto gap-8 animate-observer", containerClass)}
         data-animate="stagger"
       >
         {items.map(
