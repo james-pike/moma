@@ -13,10 +13,12 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --background-accent: 0 0% 98%;
     
   }
   .dark {
     --background: 222.2 84% 4.9%;
+    --background-accent: 222.2 84% 8.9%;
     
   }
 }
@@ -24,6 +26,9 @@
 @layer utilities {
   .bg-background {
     background-color: hsl(var(--background));
+  }
+  .bg-background-accent {
+    background-color: hsl(var(--background-accent));
   }
 }
 
