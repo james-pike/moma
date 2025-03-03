@@ -44,14 +44,14 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="flex items-center hover:bg-gray-100">
+        <div class="flex items-center hover:bg-primary-100">
           <Modal.Trigger class="p-2">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"}>
           {/* Header */}
-          <div class="border-b-2 border-gray-100 bg-primary-25 p-1">
+          <div class="border-b-2 border-gray-100 bg-gray-100 p-1">
             <Modal.Title>
               <a href="/">
                 <Logo />
@@ -63,7 +63,7 @@ export default component$(() => {
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-2 space-y-4 bg-primary-25">
+          <nav class="mt-0 space-y-4 bg-gray-100">
             {isServicesSection.value ? (
               // Services Section
               <div class="flex flex-col h-full">
@@ -82,8 +82,8 @@ export default component$(() => {
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 font-medium transition-all duration-200",
-                          location.url.pathname === subitem.href && "bg-primary-50 text-primary-600"
+                          "block text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200",
+                          location.url.pathname === subitem.href && "bg-primary-25 text-primary-600"
                         )}
                         onClick$={() => (show.value = false)}
                       >
@@ -102,8 +102,8 @@ export default component$(() => {
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 font-medium transition-all duration-200 flex items-center justify-between",
-                            location.url.pathname.startsWith("/services/") && "bg-primary-50 text-primary-600"
+                            "block w-full text-left text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200 flex items-center justify-between",
+                            location.url.pathname.startsWith("/services/") && "bg-gray-100 text-primary-600"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
                         >
@@ -138,9 +138,9 @@ export default component$(() => {
                     </Button>
                   </li>
                 </ul>
-                <div class="h-2 bg-white"></div>
-                <div class="bg-primary-25 h-40 w-full flex items-center justify-center text-center p-4">
-                  <div>
+                
+                <div class="bg-gray-100 h-40 w-full flex items-center justify-center text-center p-2">
+                  <div class="p-4 bg-primary-25">
                     <h2 class="text-2xl font-bold text-gray-800">Warm Up Your Day!</h2>
                     <p class="text-lg text-gray-600 mt-1">Enjoy 15% off all lattes this week.</p>
                     <p class="text-sm text-primary-600 font-medium mt-2">Use code: LATTELOVE</p>
