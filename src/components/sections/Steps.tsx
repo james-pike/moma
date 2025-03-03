@@ -1,5 +1,4 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik";
-import { twMerge } from "tailwind-merge";
+import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 import IconStar from "~/components/icons/IconStar";
 import { Headline } from "../ui/Headline";
@@ -22,7 +21,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { title = "", subtitle = "", highlight = "", classes = {} } = props;
+  const {  title = "", subtitle = "", highlight = "", classes = {} } = props;
   const stepsData = {
     title: "Our Process: From Idea to Finished Print",
     items: [
@@ -52,123 +51,92 @@ export default component$((props: Props) => {
       },
     ],
     image: {
-      src: "/images/hero1.webp",
+       src: "/images/hero1.webp",
       alt: "Steps to professional printing success",
     },
   };
 
   const { items, image } = stepsData;
 
-  // Set up IntersectionObserver to trigger animations
-  useVisibleTask$(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1, // Trigger when 10% of the element is visible
-      }
-    );
-
-    document.querySelectorAll(".animate-observer").forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => {
-      document.querySelectorAll(".animate-observer").forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
-  });
-
   return (
     <section class="relative p-0 bg-primary-200 scroll-mt-16">
-      <section class="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 bg-white dark:bg-gray-800">
-        <div class="grid gap-4 max-w-5xl mx-auto sm:gap-6 md:grid-cols-[1fr_1fr] md:gap-x-8 lg:gap-x-10">
-          {/* Left Column: Headline on mobile, Headline + Image on desktop */}
-          <div class="md:col-start-1 order-1 flex flex-col md:gap-y-0">
-            <div>
-              <Headline
-                title={title}
-                subtitle={subtitle}
-                highlight={highlight}
-                classes={classes?.headline}
-                align="left"
-              />
-            </div>
-            {typeof image !== "undefined" && (
-              <div class="hidden md:block">
-                <Image
-                  layout="constrained"
-                  src="/images/hero1.webp"
-                  width={532}
-                  height={504}
-                  alt={image.alt}
-                  class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:h-auto"
-                  breakpoints={[320, 480, 640, 768, 1024]}
-                />
-              </div>
-            )}
+    <section class="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 bg-white dark:bg-gray-800">
+      <div class="grid gap-4 max-w-5xl mx-auto sm:gap-6 md:grid-cols-[1fr_1fr] md:gap-x-8 lg:gap-x-10">
+        {/* Left Column: Headline on mobile, Headline + Image on desktop */}
+        <div class="md:col-start-1 order-1 flex flex-col md:gap-y-0">
+          <div>
+            <Headline 
+              title={title} 
+              subtitle={subtitle} 
+              highlight={highlight} 
+              classes={classes?.headline} 
+              align="left" 
+            />
           </div>
-
-          {/* Steps with ItemGrid2-style animation */}
-          <div class="md:col-start-2 md:row-start-1 order-2 animate-observer">
-            {items.map(({ title, description, icon: Icon }, index) => (
-              <div
-                key={`item-steps-${index}`}
-                class={twMerge(
-                  "flex opacity-0 transition-all duration-500 ease-in-out visible:opacity-100 visible:transform visible:translate-y-0",
-                  "translate-y-4" // Initial offset for slide-up effect
-                )}
-                style={{ animationDelay: `${index * 0.1}s` }} // Staggered delay
-              >
-                <div class="mr-4 flex flex-col items-center">
-                  <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
-                    {Icon ? (
-                      <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
-                    ) : (
-                      <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
-                    )}
-                  </div>
-                  {index !== items.length - 1 && (
-                    <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
-                  )}
-                </div>
-                <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
-                  {title && (
-                    <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
-                      {title}
-                    </p>
-                  )}
-                  {description && (
-                    <p class="text-gray-600 dark:text-slate-400">{description}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Image (mobile only) */}
           {typeof image !== "undefined" && (
-            <div class="md:hidden order-3">
+            <div class="hidden md:block">
               <Image
                 layout="constrained"
                 src="/images/hero1.webp"
                 width={532}
                 height={504}
                 alt={image.alt}
-                class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 sm:h-[400px]"
+                class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:h-auto"
                 breakpoints={[320, 480, 640, 768, 1024]}
               />
             </div>
           )}
         </div>
-      </section>
+
+        {/* Steps */}
+        <div class="motion-group md:col-start-2 md:row-start-1 order-2">
+          {items.map(({ title, description, icon: Icon }, index) => (
+            <div
+              key={`item-steps-${index}`}
+              class={`flex opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 150}ms]`}
+            >
+              <div class="mr-4 flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
+                  {Icon ? (
+                    <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  ) : (
+                    <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  )}
+                </div>
+                {index !== items.length - 1 && (
+                  <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+                )}
+              </div>
+              <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
+                {title && (
+                  <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+                    {title}
+                  </p>
+                )}
+                {description && (
+                  <p class="text-gray-600 dark:text-slate-400">{description}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Image (mobile only) */}
+        {typeof image !== "undefined" && (
+          <div class="md:hidden order-3">
+            <Image
+              layout="constrained"
+               src="/images/hero1.webp"
+              width={532}
+              height={504}
+              alt={image.alt}
+              class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 sm:h-[400px]"
+              breakpoints={[320, 480, 640, 768, 1024]}
+            />
+          </div>
+        )}
+      </div>
+    </section>
     </section>
   );
 });
