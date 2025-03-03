@@ -23,11 +23,11 @@ export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
     return (
-        <section class="relative p-0 bg-white dark:bg-gray-800 max-w-7xl scroll-mt-16" {...(id ? { id } : {})}>
+        <section class="relative p-0 bg-white max-w-7xl scroll-mt-16" {...(id ? { id } : {})}>
 
             <div
                 class={twMerge(
-                    "relative mx-auto max-w-6xl bg-white px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
+                    "relative mx-auto max-w-6xl bg-white dark:bg-gray-950 px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default ",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
