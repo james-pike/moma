@@ -5,6 +5,7 @@ import IconTwitter from "../icons/IconTwitter";
 import IconTelegram from "../icons/IconTelegram";
 import { Logo } from "../common/Logo";
 import MenuModal from "../widgets/MenuModal";
+import ToggleTheme from "../common/ToggleTheme";
 
 export default component$(() => {
   const store = useStore({
@@ -99,6 +100,7 @@ export default component$(() => {
               >
                 Get A Quote
               </a>
+              <ToggleTheme/>
             <MenuModal />
           </div>
         </div>
