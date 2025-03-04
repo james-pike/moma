@@ -56,9 +56,9 @@ export default component$(() => {
             <img 
               src={service.image} 
               alt={service.title}
-              class="w-full h-44 object-cover"
+              class="w-full h-44 object-cover rounded-t-md"
             />
-            <div class="service-info p-2 flex-1 overflow-hidden">
+            <div class="service-info p-2 bg-gray-200 dark:bg-gray-800 flex-1 overflow-hidden">
               <h1 class="service-title text-lg font-bold truncate">{service.title}</h1>
               <p class="service-description text-sm line-clamp-2">{service.description}</p>
             </div>
@@ -70,7 +70,7 @@ export default component$(() => {
     {services.map((service) => (
       <Carousel.Bullet 
         key={service.title}
-        class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:bg-black data-[active]:scale-125"
+        class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
       />
     ))}
   </Carousel.Pagination>
