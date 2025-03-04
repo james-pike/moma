@@ -11,9 +11,6 @@ import Steps from "~/components/sections/Steps";
 import Stats from "~/components/widgets/Stats";
 import LogoClouds from "~/components/sections/LogoClouds";
 import Features from "~/components/sections/Features";
-
-
-
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
 const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
@@ -29,13 +26,10 @@ export default component$(() => {
     <>
       <Hero />
 
-      
       <Services title="What We Do"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Services"
         items={[]} />
-
-
 
       <Features
         highlight="Features"
@@ -81,8 +75,6 @@ export default component$(() => {
         ]}
       />
 
-
-
       <Steps title="Our Process"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Steps To Success"
@@ -93,14 +85,12 @@ export default component$(() => {
         highlight="Portfolio"
         items={[]} />
 
-
-
       <Reviews title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
         items={[]} />
 
-<LogoClouds title="What Our Clients Say"
+      <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
         items={[]} />
@@ -145,14 +135,11 @@ export default component$(() => {
               description:
                 "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
             },
-          ]}
+          ]}/>
 
-       />
-
-        
         <Stats/>
 
-      <Contact />
+       <Contact />
 
 
     </>

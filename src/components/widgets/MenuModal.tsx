@@ -18,8 +18,8 @@ export default component$(() => {
     { title: "Home", href: "/", badge: null },
     { title: "Our Story", href: "/about/", badge: null },
     { 
-      title: "Menu", 
-      href: "/menu/", 
+      title: "Portfolio", 
+      href: "/gallery/", 
       badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
     },
     { 
@@ -69,7 +69,7 @@ export default component$(() => {
               <div class="flex flex-col h-full">
                 <div class="flex items-center border-b border-gray-100 p-2">
                   <button
-                    class="text-gray-700 hover:text-primary-600 p-2"
+                    class="text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2"
                     onClick$={() => (isServicesSection.value = false)}
                   >
                     <LuArrowLeft class="h-5 w-5" />
@@ -82,7 +82,7 @@ export default component$(() => {
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-primary-25 text-primary-600"
                         )}
                         onClick$={() => (show.value = false)}
