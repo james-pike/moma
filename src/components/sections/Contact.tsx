@@ -6,7 +6,7 @@ export default component$(() => {
         <>
            <section class="relative p-0 bg-white scroll-mt-16" >
             {/* Form/Contact Section */}
-            <div class="relative isolate mx-auto max-w-6xl bg-gray-100 rounded-lg dark:bg-gray-900">
+            <div class="relative isolate mx-auto max-w-6xl bg-gray-100 dark:bg-gray-900">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <div class="relative px-6 pb-8 pt-10 sm:pt-32 lg:static lg:px-8 lg:py-24">
                         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
