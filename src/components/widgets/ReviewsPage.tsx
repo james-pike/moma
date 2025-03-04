@@ -53,7 +53,7 @@ export default component$<Props>((props) => {
               >
                 <div
                   class={twMerge(
-                    "flex flex-col p-4 bg-white shadow-md rounded-lg border border-gray-200 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    "flex flex-col p-4 bg-background-accent shadow-md rounded-lg border border-gray-200 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
                     props.classes?.panel
                   )}
                   style={{ animationDelay: `${index * 100}ms` }}
