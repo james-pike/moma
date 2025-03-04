@@ -154,11 +154,11 @@ export default component$(() => {
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-4 top-4 hover:bg-gray-100"
+              "absolute right-4 top-4 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900"
             )}
             type="submit"
           >
-            <LuX class="h-6 w-6 dark:text-white-200" />
+            <LuX class="h-6 w-6" />
           </Modal.Close>
         </Modal.Panel>
       </Modal.Root>
