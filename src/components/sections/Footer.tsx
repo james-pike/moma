@@ -25,8 +25,8 @@ export default component$(() => {
     {
       title: "Visit",
       items: [
-        { title: "Hours", href: "/visit#hours" },
-        { title: "Location", href: "/visit#location" },
+        { title: "Hours", href: "/contact#hours" },
+        { title: "Location", href: "/contact#location" },
         { title: "Contact Us", href: "/contact" },
       ],
     },
@@ -52,7 +52,7 @@ export default component$(() => {
     { label: "Twitter", icon: IconTwitter, href: "https://twitter.com/lapetitebistro" },
     { label: "Instagram", icon: IconInstagram, href: "https://instagram.com/lapetitebistro" },
     { label: "Facebook", icon: IconFacebook, href: "https://facebook.com/lapetitebistro" },
-    { label: "Telegram", icon: IconTelegram, href: "tel:+16132188063" },
+    { label: "Telegram", icon: IconTelegram, href: "tel:+16138988063" },
   ];
 
   return (
