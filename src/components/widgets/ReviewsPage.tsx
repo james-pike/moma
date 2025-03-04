@@ -82,7 +82,7 @@ export default component$<Props>((props) => {
                   </p>
 
                   {/* Review Date (Optional, formatted from Unix timestamp) */}
-                  <p class={twMerge("text-sm text-gray-400 dark:text-gray-600 mt-2")}>
+                  <p class={twMerge("text-sm text-gray-500 dark:text-gray-600 mt-2")}>
                     {new Date(review.time * 1000).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',

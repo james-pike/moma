@@ -67,14 +67,14 @@ export default component$(() => {
             {isServicesSection.value ? (
               // Services Section
               <div class="flex flex-col h-full">
-                <div class="flex items-center border-b border-gray-100 p-2">
+                <div class="flex items-center p-2">
                   <button
                     class="text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2"
                     onClick$={() => (isServicesSection.value = false)}
                   >
                     <LuArrowLeft class="h-5 w-5" />
                   </button>
-                  <h2 class="text-lg font-medium text-gray-800">Services</h2>
+                  <h2 class="text-lg font-medium">Services</h2>
                 </div>
                 <ul class="flex flex-col gap-0 text-lg">
                   {servicesSubitems.map((subitem) => (
