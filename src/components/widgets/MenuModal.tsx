@@ -44,7 +44,7 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="flex items-center hover:bg-primary-100">
+        <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
           <Modal.Trigger class="p-2">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
@@ -82,8 +82,8 @@ export default component$(() => {
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 font-medium transition-all duration-200",
-                          location.url.pathname === subitem.href && "bg-primary-25 text-primary-600"
+                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          location.url.pathname === subitem.href && "bg-primary-25 dark:bg-gray-700 text-primary-600"
                         )}
                         onClick$={() => (show.value = false)}
                       >
