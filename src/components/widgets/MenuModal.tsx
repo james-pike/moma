@@ -132,7 +132,7 @@ export default component$(() => {
                         alert("Logged out!");
                         show.value = false;
                       }}
-                      class="w-full text-left bg-primary-400 text-white"
+                      class="w-full text-left bg-primary-400 dark:bg-primary-600 text-white"
                     >
                       Order Online
                     </Button>
