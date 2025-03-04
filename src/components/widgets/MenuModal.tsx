@@ -82,7 +82,7 @@ export default component$(() => {
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700 text-primary-600"
                         )}
                         onClick$={() => (show.value = false)}
