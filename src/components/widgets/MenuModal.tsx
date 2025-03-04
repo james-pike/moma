@@ -102,7 +102,7 @@ export default component$(() => {
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-25 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
+                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
                             location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-600"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
@@ -114,7 +114,7 @@ export default component$(() => {
                         <a
                           href={item.href}
                           class={cn(
-                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
+                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
                             location.url.pathname === item.href && "bg-gray-200 dark:bg-gray-700 text-primary-600"
                           )}
                           onClick$={() => (show.value = false)}
