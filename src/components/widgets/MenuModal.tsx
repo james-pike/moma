@@ -57,7 +57,7 @@ export default component$(() => {
                 <Logo />
               </a>
             </Modal.Title>
-            <Modal.Description class="text-md px-2 py-1 dark:text-gray-200">
+            <Modal.Description class="text-md font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
               Add some sweetness to your day!
             </Modal.Description>
           </div>
@@ -74,7 +74,7 @@ export default component$(() => {
                   >
                     <LuArrowLeft class="h-5 w-5" />
                   </button>
-                  <h2 class="text-lg font-medium">Services</h2>
+                  <h2 class="text-lg font-medium dark:text-gray-200 text-gray-700">Services</h2>
                 </div>
                 <ul class="flex flex-col gap-0 text-lg">
                   {servicesSubitems.map((subitem) => (
@@ -158,7 +158,7 @@ export default component$(() => {
             )}
             type="submit"
           >
-            <LuX class="h-6 w-6" />
+            <LuX class="h-6 w-6 dark:text-white-200" />
           </Modal.Close>
         </Modal.Panel>
       </Modal.Root>
