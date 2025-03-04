@@ -57,27 +57,27 @@ export default component$(() => {
 
   return (
     <div class="max-w-7xl mx-auto py-2 px-2 bg-gradient-to-r from-primary-200 via-primary-50 to-primary-100">
-      <footer class="border-t border-gray-200 bg-primary-25 dark:border-slate-800 rounded-none py-10 px-4 sm:px-6">
+      <footer class="border-t border-gray-200 dark:border-slate-800 rounded-none py-10 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
             {/* Brand Column */}
             <div class="md:col-span-4">
               <Link
-                class={`inline-block text-2xl  font-bold text-primary-800 dark:text-primary-200 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+                class={`inline-block text-2xl font-bold transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                 href="/"
               >
                 Webdev.ca
               </Link>
-              <p class="mt-4 text-sm text-primary-600 dark:text-primary-400 leading-relaxed">
-                A cozy haven serving artisan coffee, fresh pastries, and heartfelt meals since 2018.
-                Join us for a taste of warmth and community.
+              <p class="mt-4 text-sm leading-relaxed">
+              Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.     
+
               </p>
               <div class="mt-6 flex space-x-4">
                 {social.map(({ label, href, icon: Icon }, index) => (
                   <Link
                     key={index}
-                    class={`text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-full bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+                    class={`text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
                     style={{ animationDelay: `${index * 100}ms` }}
                     aria-label={label}
                     title={label}
@@ -120,7 +120,7 @@ export default component$(() => {
           {/* Bottom Section */}
           <div class="border-t border-gray-200 -mt-2 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-700 dark:text-primary-400">
             <div class="mb-4 md:mb-0">
-              © {new Date().getFullYear()} La Petite Bistro · All rights reserved
+              © {new Date().getFullYear()} Webdev.ca · All rights reserved
             </div>
             <div class="flex space-x-6">
               <Link href="/privacy" class="hover:text-primary-800 dark:hover:text-primary-100 hover:underline">
