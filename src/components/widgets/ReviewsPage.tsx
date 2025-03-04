@@ -53,14 +53,14 @@ export default component$<Props>((props) => {
               >
                 <div
                   class={twMerge(
-                    "flex flex-col p-4 bg-background-accent shadow-md rounded-lg border border-gray-200 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    "flex flex-col p-4 bg-background-accent shadow-md rounded-lg border border-gray-200 dark:border-gray-700 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
                     props.classes?.panel
                   )}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Review Author and Rating */}
                   <div class="flex items-center mb-2">
-                    <span class="font-semibold text-gray-800">{review.author_name}</span>
+                    <span class="font-semibold">{review.author_name}</span>
                     <div class="ml-2 flex items-center">
                       {Array.from({ length: 5 }, (_, i) => (
                         <span
@@ -77,12 +77,12 @@ export default component$<Props>((props) => {
                   </div>
 
                   {/* Review Text */}
-                  <p class={twMerge("text-gray-600 mt-2", props.classes?.description)}>
+                  <p class={twMerge("text-gray-600 dark:text-gray-400 mt-2", props.classes?.description)}>
                     {review.text}
                   </p>
 
                   {/* Review Date (Optional, formatted from Unix timestamp) */}
-                  <p class={twMerge("text-sm text-gray-400 mt-2")}>
+                  <p class={twMerge("text-sm text-gray-400 dark:text-gray-600 mt-2")}>
                     {new Date(review.time * 1000).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
