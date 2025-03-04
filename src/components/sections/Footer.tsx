@@ -77,7 +77,7 @@ export default component$(() => {
                 {social.map(({ label, href, icon: Icon }, index) => (
                   <Link
                     key={index}
-                    class={`text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+                    class={` hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
                     style={{ animationDelay: `${index * 100}ms` }}
                     aria-label={label}
                     title={label}
@@ -93,7 +93,7 @@ export default component$(() => {
             <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
               {links.map(({ title, items }, index) => (
                 <div key={index}>
-                  <h3 class={`text-lg font-semibold text-primary-800 dark:text-primary-200 mb-4 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                  <h3 class={`text-lg font-semibold mb-4 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     {title}
                   </h3>
                   <ul class="space-y-1"> {/* Changed from space-y-3 */}
@@ -104,7 +104,7 @@ export default component$(() => {
                         style={{ animationDelay: `${(index * 100) + (idx * 50)}ms` }}
                       >
                         <Link
-                          class="text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
+                          class="hover:text-primary-800 dark:hover:text-primary-100 hover:underline text-sm"
                           href={href}
                         >
                           {title}
@@ -118,7 +118,7 @@ export default component$(() => {
           </div>
 
           {/* Bottom Section */}
-          <div class="border-t border-gray-200 -mt-2 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-700 dark:text-primary-400">
+          <div class="border-t border-gray-200 -mt-2 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
             <div class="mb-4 md:mb-0">
               © {new Date().getFullYear()} Webdev.ca · All rights reserved
             </div>
