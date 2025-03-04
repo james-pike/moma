@@ -18,7 +18,7 @@
   
   .dark {
     --background: 222.2 84% 4.9%; /* Base dark, like gray-900 */
-    --background-accent: 222.2 84% 10.9%; /* Slightly lighter, like gray-800 */
+    --background-accent: 215 28% 17%; /* Tailwind gray-800 */
   }
 }
 
