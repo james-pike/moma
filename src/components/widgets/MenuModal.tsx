@@ -115,7 +115,7 @@ export default component$(() => {
                           href={item.href}
                           class={cn(
                             "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-primary-50 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
-                            location.url.pathname === item.href && "bg-primary-50 dark:bg-gray-700 text-primary-600"
+                            location.url.pathname === item.href && "bg-gray-200 dark:bg-gray-700 text-primary-600"
                           )}
                           onClick$={() => (show.value = false)}
                         >
