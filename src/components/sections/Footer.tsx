@@ -77,7 +77,7 @@ export default component$(() => {
                 {social.map(({ label, href, icon: Icon }, index) => (
                   <Link
                     key={index}
-                    class={` hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-200/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+                    class={` hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-100/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
                     style={{ animationDelay: `${index * 100}ms` }}
                     aria-label={label}
                     title={label}
