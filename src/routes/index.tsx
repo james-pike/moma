@@ -75,25 +75,31 @@ export default component$(() => {
         ]}
       />
 
+<Menu title="Gallery Of Past Work"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Portfolio"
+        items={[]} />
+
+<Reviews title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
+
+<LogoClouds title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
+
       <Steps title="Our Process"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Steps To Success"
         items={[]} />
 
-      <Menu title="Gallery Of Past Work"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Portfolio"
-        items={[]} />
+      
 
-      <Reviews title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
-        items={[]} />
+<Stats/>
 
-      <LogoClouds title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
-        items={[]} />
+     
 
       <FAQ title="Frequently Asked Questions"
         subtitle="Have questions about our café? Find answers to common inquiries below."
@@ -137,7 +143,7 @@ export default component$(() => {
             },
           ]}/>
 
-        <Stats/>
+       
 
        <Contact />
 
