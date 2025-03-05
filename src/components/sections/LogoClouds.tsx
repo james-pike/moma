@@ -79,32 +79,32 @@ const tabContent: TabContent[] = [
 <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z" /><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z" /><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z" /><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z" /><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z" /><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z" />            </svg>
         )
     },
-    {
-        title: "PostgreSQL",
-        description: "PostgreSQL drives our data management needs with its robust relational database capabilities. We use it at our agency to store and query project assets, client data, and design metadata, enabling dynamic content delivery in our web solutions.",
-        icon: (
-            <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
- <path style=" stroke:none;fill-rule:nonzero;fill:rgb(9.411765%,71.372549%,96.470588%);fill-opacity:1;" d="M 95.671875 112.554688 L 78.242188 95.214844 L 77.996094 95.257812 L 77.996094 95.074219 L 40.929688 58.417969 L 50.082031 49.597656 L 44.699219 18.757812 L 19.230469 50.355469 C 14.90625 54.722656 14.074219 61.863281 17.207031 67.105469 L 33.125 93.527344 C 35.558594 97.578125 39.382812 100.183594 44.722656 99.992188 C 56.027344 99.589844 60.996094 99.589844 60.996094 99.589844 L 95.664062 112.546875 L 95.671875 112.558594 Z M 95.671875 112.554688 " />
-//         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(67.45098%,49.411765%,95.686275%);fill-opacity:1;" d="M 104.285156 63.960938 C 106.792969 58.785156 107.691406 54.257812 105.214844 49.707031 L 101.691406 43.222656 L 99.863281 39.894531 L 99.152344 38.597656 L 99.085938 38.671875 L 89.5 22.042969 C 87.082031 17.835938 82.582031 15.265625 77.734375 15.320312 L 69.328125 15.558594 L 44.234375 15.625 C 39.496094 15.65625 35.125 18.175781 32.722656 22.257812 L 17.476562 52.539062 L 44.761719 18.59375 L 80.554688 57.953125 L 74.148438 64.445312 L 77.972656 95.238281 L 78.027344 95.167969 L 78.027344 95.257812 L 77.972656 95.257812 L 78.046875 95.332031 L 81.03125 98.238281 L 95.46875 112.339844 C 96.074219 112.925781 97.058594 112.222656 96.65625 111.5 L 87.730469 93.9375 " />
-//         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 80.640625 57.855469 L 44.753906 18.695312 L 49.851562 49.359375 L 40.71875 58.222656 L 77.90625 95.179688 L 74.554688 64.5 L 80.640625 57.867188 Z M 80.640625 57.855469 " />            </svg>
-        )
-    },
-    {
-        title: "TailwindCSS",
-        description: "TailwindCSS accelerates our styling process with its utility-first approach. Our design agency uses it to rapidly prototype and refine UI designs, translating creative concepts into responsive, consistent layouts with minimal custom CSS.",
-        icon: (
-            <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
-<path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z" />            </svg>
-        )
-    },
-    {
-        title: "Adobe Illustrator",
-        description: "Adobe Illustrator is our go-to for creating vector graphics and design assets. Our agency uses it to craft logos, icons, and illustrations, ensuring high-quality, scalable visuals that integrate seamlessly into our digital projects.",
-        icon: (
-            <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
-                <defs><linearGradient id="a" x1="6" x2="235" y1="33" y2="344" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#41d1ff" /><stop offset="1" stop-color="#bd34fe" /></linearGradient><linearGradient id="b" x1="194.651" x2="236.076" y1="8.818" y2="292.989" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffea83" /><stop offset=".083" stop-color="#ffdd35" /><stop offset="1" stop-color="#ffa800" /></linearGradient></defs><path fill="url(#a)" d="M124.766 19.52 67.324 122.238c-1.187 2.121-4.234 2.133-5.437.024L3.305 19.532c-1.313-2.302.652-5.087 3.261-4.622L64.07 25.187a3.09 3.09 0 0 0 1.11 0l56.3-10.261c2.598-.473 4.575 2.289 3.286 4.594Zm0 0" /><path fill="url(#b)" d="M91.46 1.43 48.954 9.758a1.56 1.56 0 0 0-1.258 1.437l-2.617 44.168a1.563 1.563 0 0 0 1.91 1.614l11.836-2.735a1.562 1.562 0 0 1 1.88 1.836l-3.517 17.219a1.562 1.562 0 0 0 1.985 1.805l7.308-2.223c1.133-.344 2.223.652 1.985 1.812l-5.59 27.047c-.348 1.692 1.902 2.614 2.84 1.164l.625-.968 34.64-69.13c.582-1.16-.421-2.48-1.69-2.234l-12.185 2.352a1.558 1.558 0 0 1-1.793-1.965l7.95-27.562A1.56 1.56 0 0 0 91.46 1.43Zm0 0" />            </svg>
-        )
-    },
+//     {
+//         title: "PostgreSQL",
+//         description: "PostgreSQL drives our data management needs with its robust relational database capabilities. We use it at our agency to store and query project assets, client data, and design metadata, enabling dynamic content delivery in our web solutions.",
+//         icon: (
+//             <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
+//  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(9.411765%,71.372549%,96.470588%);fill-opacity:1;" d="M 95.671875 112.554688 L 78.242188 95.214844 L 77.996094 95.257812 L 77.996094 95.074219 L 40.929688 58.417969 L 50.082031 49.597656 L 44.699219 18.757812 L 19.230469 50.355469 C 14.90625 54.722656 14.074219 61.863281 17.207031 67.105469 L 33.125 93.527344 C 35.558594 97.578125 39.382812 100.183594 44.722656 99.992188 C 56.027344 99.589844 60.996094 99.589844 60.996094 99.589844 L 95.664062 112.546875 L 95.671875 112.558594 Z M 95.671875 112.554688 " />
+// //         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(67.45098%,49.411765%,95.686275%);fill-opacity:1;" d="M 104.285156 63.960938 C 106.792969 58.785156 107.691406 54.257812 105.214844 49.707031 L 101.691406 43.222656 L 99.863281 39.894531 L 99.152344 38.597656 L 99.085938 38.671875 L 89.5 22.042969 C 87.082031 17.835938 82.582031 15.265625 77.734375 15.320312 L 69.328125 15.558594 L 44.234375 15.625 C 39.496094 15.65625 35.125 18.175781 32.722656 22.257812 L 17.476562 52.539062 L 44.761719 18.59375 L 80.554688 57.953125 L 74.148438 64.445312 L 77.972656 95.238281 L 78.027344 95.167969 L 78.027344 95.257812 L 77.972656 95.257812 L 78.046875 95.332031 L 81.03125 98.238281 L 95.46875 112.339844 C 96.074219 112.925781 97.058594 112.222656 96.65625 111.5 L 87.730469 93.9375 " />
+// //         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 80.640625 57.855469 L 44.753906 18.695312 L 49.851562 49.359375 L 40.71875 58.222656 L 77.90625 95.179688 L 74.554688 64.5 L 80.640625 57.867188 Z M 80.640625 57.855469 " />            </svg>
+//         )
+//     },
+//     {
+//         title: "TailwindCSS",
+//         description: "TailwindCSS accelerates our styling process with its utility-first approach. Our design agency uses it to rapidly prototype and refine UI designs, translating creative concepts into responsive, consistent layouts with minimal custom CSS.",
+//         icon: (
+//             <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
+// <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z" />            </svg>
+//         )
+//     },
+//     {
+//         title: "Adobe Illustrator",
+//         description: "Adobe Illustrator is our go-to for creating vector graphics and design assets. Our agency uses it to craft logos, icons, and illustrations, ensuring high-quality, scalable visuals that integrate seamlessly into our digital projects.",
+//         icon: (
+//             <svg class="w-16 h-16 mx-auto" viewBox="0 0 128 128">
+//                 <defs><linearGradient id="a" x1="6" x2="235" y1="33" y2="344" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#41d1ff" /><stop offset="1" stop-color="#bd34fe" /></linearGradient><linearGradient id="b" x1="194.651" x2="236.076" y1="8.818" y2="292.989" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffea83" /><stop offset=".083" stop-color="#ffdd35" /><stop offset="1" stop-color="#ffa800" /></linearGradient></defs><path fill="url(#a)" d="M124.766 19.52 67.324 122.238c-1.187 2.121-4.234 2.133-5.437.024L3.305 19.532c-1.313-2.302.652-5.087 3.261-4.622L64.07 25.187a3.09 3.09 0 0 0 1.11 0l56.3-10.261c2.598-.473 4.575 2.289 3.286 4.594Zm0 0" /><path fill="url(#b)" d="M91.46 1.43 48.954 9.758a1.56 1.56 0 0 0-1.258 1.437l-2.617 44.168a1.563 1.563 0 0 0 1.91 1.614l11.836-2.735a1.562 1.562 0 0 1 1.88 1.836l-3.517 17.219a1.562 1.562 0 0 0 1.985 1.805l7.308-2.223c1.133-.344 2.223.652 1.985 1.812l-5.59 27.047c-.348 1.692 1.902 2.614 2.84 1.164l.625-.968 34.64-69.13c.582-1.16-.421-2.48-1.69-2.234l-12.185 2.352a1.558 1.558 0 0 1-1.793-1.965l7.95-27.562A1.56 1.56 0 0 0 91.46 1.43Zm0 0" />            </svg>
+//         )
+//     },
     {
         title: "React",
         description: "React powers our component-based front-end development. Our design agency uses it to build reusable UI elements, enabling rapid development of interactive interfaces that align with our design-first approach and client needs.",
@@ -130,6 +130,8 @@ const tabContent: TabContent[] = [
         )
     }
 ];
+
+
 
 export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
@@ -158,12 +160,19 @@ export default component$((props: Props) => {
                                 <div
                                     class={twMerge(
                                         "absolute inset-[-2px] hover:inset-[0px] rounded-none transition-all duration-300",
-                                        "border border-gray-200/50",
+                                        "border border-gray-200/50 dark:border-gray-800/50",
                                         selectedIndex.value === index && "bg-gray-400 shadow-[0_0_15px_5px_rgba(59,130,246,0.3)] blur-sm",
-                                        "group-hover:bg-gray-200 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
+                                        "group-hover:bg-gray-100 dark:group-hover:bg-gray-900 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
                                     )}
                                 />
-                                <div class="relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2">
+                                <div 
+                                    class={twMerge(
+                                        "relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
+                                        "transition-transform duration-300",
+                                        selectedIndex.value === index && "scale-105",
+                                        "group-hover:scale-105"
+                                    )}
+                                >
                                     {content.icon}
                                 </div>
                             </div>
