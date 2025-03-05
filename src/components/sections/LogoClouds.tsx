@@ -162,7 +162,7 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
-                    "relative px-2 md:px-6 py-2 md:py-16 lg:py-20 text-default",
+                    "relative px-2 md:px-6 py-1.5 md:py-16 lg:py-20 text-default",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
@@ -224,7 +224,7 @@ export default component$((props: Props) => {
                             <Card.Root>
                                 <Card.Content class="p-4 bg-gray-100 dark:bg-gray-800">
                                     <h2 class="text-2xl font-bold mb-4">{content.title}</h2>
-                                    <p class=" mb-6">{content.description}</p>
+                                    <p class=" mb-2">{content.description}</p>
                                 </Card.Content>
                             </Card.Root>
                         </Tabs.Panel>
