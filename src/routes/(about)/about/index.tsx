@@ -13,7 +13,7 @@ export default component$(() => {
     <>
 <LogoClouds title="Our Tech Stack"
 subtitle="Explore the cutting-edge technologies powering our design solutions."
-        highlight="Technologies"
+        
         items={[]} />
     </>
   );

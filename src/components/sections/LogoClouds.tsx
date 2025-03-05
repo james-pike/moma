@@ -169,7 +169,7 @@ export default component$((props: Props) => {
             >
                  <Card.Root>
                                 <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
-                                <CardHeadline title={title} subtitle={subtitle}  classes={classes?.headline} align="center" />
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
                                 </Card.Content>
                             </Card.Root>
