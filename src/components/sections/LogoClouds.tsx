@@ -131,8 +131,6 @@ const tabContent: TabContent[] = [
     }
 ];
 
-
-
 export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
     const selectedIndex = useSignal<number | undefined>(0);
@@ -165,14 +163,7 @@ export default component$((props: Props) => {
                                         "group-hover:bg-gray-100 dark:group-hover:bg-gray-900 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
                                     )}
                                 />
-                                <div 
-                                    class={twMerge(
-                                        "relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
-                                        "transition-transform duration-300",
-                                        selectedIndex.value === index && "scale-105",
-                                        "group-hover:scale-105"
-                                    )}
-                                >
+                                <div class="relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2">
                                     {content.icon}
                                 </div>
                             </div>
