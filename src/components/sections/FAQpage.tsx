@@ -36,6 +36,7 @@ export default component$((props: Props) => {
                             </Card.Root>        <ItemGrid2
           items={items}
           classes={{
+            container: "rounded-none border-2 dark:border-gray-700 border-gray-200",
             panel: "max-w-none",
             ...(classes?.items ?? {}),
           }}
