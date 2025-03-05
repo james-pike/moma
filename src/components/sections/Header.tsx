@@ -12,24 +12,24 @@ export default component$(() => {
   });
 
   // Add signal for banner visibility
-  const isBannerVisible = useSignal(() => {
-    // Check session storage on initial load
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('bannerClosed') !== 'true';
-    }
-    return true;
-  });
+  // const isBannerVisible = useSignal(() => {
+  //   // Check session storage on initial load
+  //   if (typeof window !== 'undefined') {
+  //     return sessionStorage.getItem('bannerClosed') !== 'true';
+  //   }
+  //   return true;
+  // });
 
   const { menu } = useContent();
   const location = useLocation();
 
   // Function to handle banner close
-  const handleCloseBanner = $(() => {
-    isBannerVisible.value = false;
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('bannerClosed', 'true');
-    }
-  });
+  // const handleCloseBanner = $(() => {
+  //   isBannerVisible.value = false;
+  //   if (typeof window !== 'undefined') {
+  //     sessionStorage.setItem('bannerClosed', 'true');
+  //   }
+  // });
 
   return (
     <header
