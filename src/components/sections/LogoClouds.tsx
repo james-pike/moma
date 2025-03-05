@@ -174,7 +174,7 @@ export default component$((props: Props) => {
                     {tabContent.map((content, index) => (
                         <div
                             key={index}
-                            class="relative p-2 cursor-pointer group"
+                            class="relative p-1 cursor-pointer group"
                             onClick$={() => selectedIndex.value = selectedIndex.value === index ? undefined : index}
                         >
                             <div class="relative flex items-center justify-center">
