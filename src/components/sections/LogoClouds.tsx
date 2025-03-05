@@ -162,7 +162,7 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
-                    "relative px-5 md:px-6 py-10 md:py-16 lg:py-20 text-default",
+                    "relative px-5 md:px-6 py-9 md:py-16 lg:py-20 text-default",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
