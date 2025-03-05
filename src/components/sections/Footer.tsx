@@ -57,7 +57,7 @@ export default component$(() => {
 
   return (
     
-      <footer class="border-t border-gray-200 dark:border-slate-800 rounded-none py-10 px-4 sm:px-6">
+      <footer class="border-t-2 border-gray-200 dark:border-slate-800 rounded-none py-10 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
