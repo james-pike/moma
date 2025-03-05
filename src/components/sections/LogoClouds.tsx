@@ -131,6 +131,33 @@ const tabContent: TabContent[] = [
     }
 ];
 
+
+interface Item {
+    title?: string;
+    description?: string;
+    icon?: any;
+    classes?: Record<string, string>;
+}
+
+interface TabContent {
+    title: string;
+    description: string;
+    icon: any;
+}
+
+interface Props {
+    id?: string;
+    title?: any;
+    subtitle?: any;
+    highlight?: any;
+    items: Array<Item>;
+    isDark?: boolean;
+    classes?: any;
+}
+
+// Assuming tabContent is defined above with the 9 technologies
+// ...
+
 export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
     const selectedIndex = useSignal<number | undefined>(0);
@@ -159,11 +186,18 @@ export default component$((props: Props) => {
                                     class={twMerge(
                                         "absolute inset-[-2px] hover:inset-[0px] rounded-none transition-all duration-300",
                                         "border border-gray-200/50",
-                                        selectedIndex.value === index && "bg-gray-400 shadow-[0_0_15px_5px_rgba(59,130,246,0.3)] blur-sm",
-                                        "group-hover:bg-gray-100 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
+                                        selectedIndex.value === index && "bg-gray-400 shadow-[0_0_15px_5px_rgba(59,130,246,0.3)]",
+                                        "group-hover:bg-gray-100 dark:group-hover:bg-gray-900 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
                                     )}
                                 />
-                                <div class="relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2">
+                                <div 
+                                    class={twMerge(
+                                        "relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
+                                        "transition-transform duration-300",
+                                        selectedIndex.value === index && "scale-105 blur-sm",
+                                        "group-hover:scale-105"
+                                    )}
+                                >
                                     {content.icon}
                                 </div>
                             </div>
