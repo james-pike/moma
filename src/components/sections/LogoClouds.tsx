@@ -223,10 +223,9 @@ export default component$((props: Props) => {
                         <Tabs.Panel key={index}>
                             <Card.Root>
                                 <Card.Content class="p-4 bg-gray-100 dark:bg-gray-800">
-                                <div class="flex items-baseline gap-2">
-  <h2 class="text-2xl font-bold">{content.title}</h2>
-  <p>{content.description}</p>
-</div>
+                                <p>
+  <span class="text-2xl font-bold">{content.title}</span> {content.description}
+</p>
                                 </Card.Content>
                             </Card.Root>
                         </Tabs.Panel>
