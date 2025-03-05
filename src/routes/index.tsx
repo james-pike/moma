@@ -75,6 +75,8 @@ export default component$(() => {
         ]}
       />
 
+      
+
 <Menu title="Gallery Of Past Work"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Portfolio"
