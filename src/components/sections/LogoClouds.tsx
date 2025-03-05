@@ -159,7 +159,7 @@ export default component$((props: Props) => {
     useStyles$(styles);
 
     return (
-        <section class="relative scroll-mt-16 pt-2 max-w-5xl mx-auto" {...(id ? { id } : {})}>
+        <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
                     "relative px-3 md:px-6 pb-2 md:py-16 lg:py-20 text-default",
@@ -167,6 +167,7 @@ export default component$((props: Props) => {
                     isDark ? "dark" : ""
                 )}
             >
+                
                  <Card.Root>
                                 <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
                                 <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
