@@ -30,22 +30,22 @@ export default component$(() => {
         { title: "Contact Us", href: "/contact" },
       ],
     },
-    {
-      title: "About",
-      items: [
-        { title: "Our Story", href: "/about#story" },
-        { title: "Team", href: "/about#team" },
-        { title: "Sustainability", href: "/about#sustainability" },
-      ],
-    },
-    {
-      title: "Connect",
-      items: [
-        { title: "Events", href: "/events" },
-        { title: "Newsletter", href: "/newsletter" },
-        { title: "Gift Cards", href: "/gift-cards" },
-      ],
-    },
+    // {
+    //   title: "About",
+    //   items: [
+    //     { title: "Our Story", href: "/about#story" },
+    //     { title: "Team", href: "/about#team" },
+    //     { title: "Sustainability", href: "/about#sustainability" },
+    //   ],
+    // },
+    // {
+    //   title: "Connect",
+    //   items: [
+    //     { title: "Events", href: "/events" },
+    //     { title: "Newsletter", href: "/newsletter" },
+    //     { title: "Gift Cards", href: "/gift-cards" },
+    //   ],
+    // },
   ];
 
   const social = [
