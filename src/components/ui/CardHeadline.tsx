@@ -13,8 +13,8 @@ export const CardHeadline = (props: Props) => {
 
   const {
     container: containerClass = "max-w-3xl",
-    title: titleClass = "text-4xl md:text-5xl ",
-    subtitle: subtitleClass = "text-xl",
+    title: titleClass = "text-3xl md:text-5xl ",
+    subtitle: subtitleClass = "text-lg",
   } = classes;
 
   // Determine the text alignment class based on the `align` prop
@@ -39,7 +39,7 @@ export const CardHeadline = (props: Props) => {
         />
       )}
 
-      {subtitle && <p class={twMerge("mt-2.5 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
+      {subtitle && <p class={twMerge("mt-2 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
     </div>
   ) : null;
 };
