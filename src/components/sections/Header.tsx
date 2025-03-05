@@ -1,8 +1,7 @@
 import { component$, useStore, useSignal, $ } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
-import IconTwitter from "../icons/IconTwitter";
-import IconTelegram from "../icons/IconTelegram";
+
 import { Logo } from "../common/Logo";
 import MenuModal from "../widgets/MenuModal";
 import ToggleTheme from "../common/ToggleTheme";
@@ -53,39 +52,39 @@ export default component$(() => {
       
       {/* Modified banner section */}
       {isBannerVisible.value && (
-        <div class="w-full h-6 bg-primary-400 px-4 md:px-7 mx-auto text-white flex justify-between items-center max-w-7xl relative">
-          <div>
-            <p>Today's Specials: Freshly brewed, just for you!</p>
-          </div>
-          <div id="test" class="flex gap-4 sm:flex hidden sm:block">
-            <a
-              class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-              href="tel:+16132188063"
-            >
-              <IconTelegram />
-              <p class="pl-1">(613) 218-8063</p>
-            </a>
-            <p class="text-gray-50">|</p>
-            <a
-              class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-              href="mailto:info@webdev.ca"
-            >
-              <IconTwitter />
-              <p class="pl-1">info@webdev.ca</p>
-            </a>
-          </div>
-          {/* Close button for mobile */}
-          <button
-            class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white hover:text-gray-200 focus:outline-none"
-            onClick$={handleCloseBanner}
-            aria-label="Close banner"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      )}
+        // <div class="w-full h-6 bg-primary-400 px-4 md:px-7 mx-auto text-white flex justify-between items-center max-w-7xl relative">
+        //   <div>
+        //     <p>Today's Specials: Freshly brewed, just for you!</p>
+        //   </div>
+        //   <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+        //     <a
+        //       class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+        //       href="tel:+16132188063"
+        //     >
+        //       <IconTelegram />
+        //       <p class="pl-1">(613) 218-8063</p>
+        //     </a>
+        //     <p class="text-gray-50">|</p>
+        //     <a
+        //       class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+        //       href="mailto:info@webdev.ca"
+        //     >
+        //       <IconTwitter />
+        //       <p class="pl-1">info@webdev.ca</p>
+        //     </a>
+        //   </div>
+        //   {/* Close button for mobile */}
+        //   <button
+        //     class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white hover:text-gray-200 focus:outline-none"
+        //     onClick$={handleCloseBanner}
+        //     aria-label="Close banner"
+        //   >
+        //     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        //       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        //     </svg>
+        //   </button>
+        // </div>
+      // )}
 
       <div class="relative text-default py-2.5 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
