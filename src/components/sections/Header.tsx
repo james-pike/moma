@@ -86,11 +86,16 @@ export default component$(() => {
 
       <div class="relative text-default py-2 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex items-center" href={"/"}>
-            <Logo />
-          </a>
+          
+
+          <a href="/contact"
+              class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+                     <Logo />
+                     </a>
           <div class="flex items-center md:hidden gap-2">
-          <ToggleTheme iconClass="w-6 h-6" />
+          <a href="/contact"
+              class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+              <ToggleTheme iconClass="w-6 h-6" />               </a>
 
             <a href="/contact"
               class="p-2 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">

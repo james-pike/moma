@@ -2,7 +2,8 @@ import { PropsOf, component$ } from '@builder.io/qwik';
 
 export const Logo = component$<PropsOf<'svg'>>(({ ...props }) => {
   return (
-    
+    <div class="flex justify-between">
+
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,11 @@ export const Logo = component$<PropsOf<'svg'>>(({ ...props }) => {
           d="M 1266.5,270.5 C 1311.17,270.5 1355.83,270.5 1400.5,270.5C 1400.5,378.167 1400.5,485.833 1400.5,593.5C 1355.83,593.5 1311.17,593.5 1266.5,593.5C 1266.5,485.833 1266.5,378.167 1266.5,270.5 Z"
         />
       </g>
-    </svg>
+    </svg> 
+    
+    </div>
+
+
   );
 });
 
