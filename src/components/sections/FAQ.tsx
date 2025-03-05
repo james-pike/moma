@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import { Headline } from "~/components/ui/Headline";
 import FAQAccordion from "../widgets/FAQAccordion";
 import { ItemGrid2 } from "../ui/ItemGrid2";
 import { PageWrapper } from "../common/PageWrapper";
