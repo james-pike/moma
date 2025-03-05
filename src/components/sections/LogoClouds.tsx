@@ -107,7 +107,6 @@ const tabContent: TabContent[] = [
 
 import { component$, useSignal, useStyles$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
-import { Headline } from "~/components/ui/Headline";
 import { Tabs } from "~/components/ui/Tabs";
 import { Card } from "~/components/ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
