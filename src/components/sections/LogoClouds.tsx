@@ -110,6 +110,7 @@ import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import { Tabs } from "~/components/ui/Tabs";
 import { Card } from "~/components/ui/Card";
+import { CardHeadline } from "../ui/CardHeadline";
 
 
 interface Item {
@@ -162,20 +163,20 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
-                    "relative px-2 md:px-6 py-1.5 md:py-16 lg:py-20 text-default",
+                    "relative px-2 md:px-6 py-2 md:py-16 lg:py-20 text-default",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
             >
                  <Card.Root>
                                 <Card.Content class="bg-gray-100 dark:bg-gray-800 items-center">
-                                <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
                                 </Card.Content>
                             </Card.Root>
 
                 {/* SVG Grid */}
-                <div class="mt-1 grid grid-cols-3 lg:grid-cols-4 gap-0.5 -mx-0.5 mb-1 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
+                <div class="mt-1.5 grid grid-cols-3 lg:grid-cols-4 gap-1 -mx-0.5 mb-1.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
                             key={index}

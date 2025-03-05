@@ -8,7 +8,7 @@ interface Props {
   align?: "left" | "center" | "right"; // New prop for text alignment
 }
 
-export const Headline = (props: Props) => {
+export const CardHeadline = (props: Props) => {
   const { title = "", subtitle = "", highlight = "", classes = {}, align = "center" } = props;
 
   const {
@@ -25,7 +25,7 @@ export const Headline = (props: Props) => {
   }[align] || "text-center"; // Default to "center" if not specified
 
   return (title || subtitle || highlight) ? (
-      <div class={twMerge("mb-8 md:mx-auto md:mb-12", containerClass, alignmentClass)}>
+      <div class={twMerge("mb-0 md:mx-auto md:mb-12", containerClass, alignmentClass)}>
       {highlight && (
         <p
           class="text-base text-primary-600 dark:text-primary-200 font-bold tracking-wide uppercase"
@@ -39,7 +39,7 @@ export const Headline = (props: Props) => {
         />
       )}
 
-      {subtitle && <p class={twMerge("mt-3 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
+      {subtitle && <p class={twMerge("mt-2.5 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
     </div>
   ) : null;
 };
