@@ -187,7 +187,7 @@ export default component$((props: Props) => {
                                     class={twMerge(
                                         "absolute inset-[-2px] hover:inset-[0px] rounded-none transition-all duration-300",
                                         "bg-blue-100/50 dark:bg-blue-900/50", // Default background
-                                        "border border-blue-200/50 dark:border-blue-800/50",
+                                        "border-2 border-gray-200 dark:border-gray-700",
                                         selectedIndex.value === index && "bg-blue-300/70 dark:bg-blue-800/70 shadow-[0_0_20px_8px_rgba(59,130,246,0.6)] breathing-glow",
                                         "group-hover:bg-blue-200/70 dark:group-hover:bg-blue-800/70 group-hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.4)]"
                                     )}
