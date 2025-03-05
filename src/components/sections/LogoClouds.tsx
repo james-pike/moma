@@ -170,7 +170,7 @@ export default component$((props: Props) => {
                 <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
                 {/* SVG Grid */}
-                <div class="mt-6 grid grid-cols-3 lg:grid-cols-4 gap-0.1 mb-1 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
+                <div class="mt-6 grid grid-cols-3 lg:grid-cols-4 gap-0.5 -mx-0.5 mb-1 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
                             key={index}
@@ -219,7 +219,7 @@ export default component$((props: Props) => {
                             <Card.Root>
                                 <Card.Content class="p-4">
                                     <h2 class="text-2xl font-bold mb-4">{content.title}</h2>
-                                    <p class="text-gray-700 mb-6">{content.description}</p>
+                                    <p class=" mb-6">{content.description}</p>
                                 </Card.Content>
                             </Card.Root>
                         </Tabs.Panel>
