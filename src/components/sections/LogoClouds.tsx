@@ -167,10 +167,15 @@ export default component$((props: Props) => {
                     isDark ? "dark" : ""
                 )}
             >
-                <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+                 <Card.Root>
+                                <Card.Content class="bg-gray-100 dark:bg-gray-800">
+                                <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+
+                                </Card.Content>
+                            </Card.Root>
 
                 {/* SVG Grid */}
-                <div class="mt-6 grid grid-cols-3 lg:grid-cols-4 gap-0.5 -mx-0.5 mb-1 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
+                <div class="mt-1 grid grid-cols-3 lg:grid-cols-4 gap-0.5 -mx-0.5 mb-1 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
                             key={index}
