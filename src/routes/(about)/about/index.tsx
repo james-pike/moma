@@ -11,9 +11,9 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-<LogoClouds title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
+<LogoClouds title="Our Tech Stack"
+subtitle="Explore the cutting-edge technologies powering our design solutions."
+        highlight="Technologies"
         items={[]} />
     </>
   );
