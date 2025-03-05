@@ -172,7 +172,7 @@ export default component$((props: Props) => {
                 )}
             >
                 <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-    
+
                 {/* SVG Grid */}
                 <div class="mt-6 grid grid-cols-3 lg:grid-cols-4 gap-0 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
@@ -185,19 +185,26 @@ export default component$((props: Props) => {
                                 <div
                                     class={twMerge(
                                         "absolute inset-[-2px] hover:inset-[0px] rounded-none transition-all duration-300",
-                                        "border border-gray-200/50",
+                                        "border border-gray-200/50 dark:border-gray-800/50",
                                         selectedIndex.value === index && "bg-gray-400 shadow-[0_0_15px_5px_rgba(59,130,246,0.3)] blur-sm",
                                         "group-hover:bg-gray-100 dark:group-hover:bg-gray-900 group-hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.2)]"
                                     )}
                                 />
-                                <div class="relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2">
+                                <div 
+                                    class={twMerge(
+                                        "relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
+                                        "transition-transform duration-300",
+                                        selectedIndex.value === index && "scale-105",
+                                        "group-hover:scale-105"
+                                    )}
+                                >
                                     {content.icon}
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-    
+
                 {/* Tabs Component */}
                 <Tabs.Root
                     selectedClassName='bg-white'
@@ -209,7 +216,7 @@ export default component$((props: Props) => {
                             <Tabs.Tab key={index} class="px-4 py-2">{content.title}</Tabs.Tab>
                         ))}
                     </Tabs.List>
-    
+
                     {tabContent.map((content, index) => (
                         <Tabs.Panel key={index}>
                             <Card.Root>
