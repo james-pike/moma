@@ -1,7 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import { Headline } from "~/components/ui/Headline";
 import { ItemGrid2 } from "../ui/ItemGrid2";
 import { PageWrapper } from "../common/PageWrapper";
+import { Card } from "../ui/Card";
+import { CardHeadline } from "../ui/CardHeadline";
 
 interface Item {
   title?: string;
@@ -27,8 +28,12 @@ export default component$((props: Props) => {
   return (
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
       <PageWrapper>
-        <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-        <ItemGrid2
+<Card.Root class="mb-2">
+                                <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+
+                                </Card.Content>
+                            </Card.Root>        <ItemGrid2
           items={items}
           classes={{
             panel: "max-w-none",
