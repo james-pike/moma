@@ -32,11 +32,12 @@ export default component$((props: Props) => {
 <Card.Root>
                                 <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
                                 <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-
-                                </Card.Content>
-                            </Card.Root>        <div class="block sm:hidden">
+                                <div class="block pt-6 px-1 sm:hidden">
           <FAQAccordion />
         </div>
+                                </Card.Content>
+                            </Card.Root>   
+          
         <div class="hidden sm:block">
           <ItemGrid2
             items={items}
