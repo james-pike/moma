@@ -34,7 +34,8 @@ export default component$(() => {
       <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md ">
         <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Tea</Tabs.Tab>
-        
+        <Tabs.Tab class="px-4 py-2">Bistro</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Dessert</Tabs.Tab>
       </Tabs.List>
 
       {/* Coffee Menu Panel */}
@@ -78,9 +79,50 @@ export default component$(() => {
       </Tabs.Panel>
 
       {/* Bistro Panel */}
-     
+      <Tabs.Panel>
+        <Card.Root>
+          <Card.Header>
+            <Card.Title>Account</Card.Title>
+            <Card.Description>Make changes to your account here.</Card.Description>
+          </Card.Header>
+          <Card.Content class="space-y-2">
+            <div class="space-y-1">
+              <Label for="name">Name</Label>
+              <Input id="name" value="Pedro Duarte" />
+            </div>
+            <div class="space-y-1">
+              <Label for="username">Username</Label>
+              <Input id="username" value="~peduarte" />
+            </div>
+          </Card.Content>
+          <Card.Footer>
+            <Button>Save changes</Button>
+          </Card.Footer>
+        </Card.Root>
+      </Tabs.Panel>
 
-   
+      {/* Dessert Panel */}
+      <Tabs.Panel>
+        <Card.Root>
+          <Card.Header>
+            <Card.Title>Account</Card.Title>
+            <Card.Description>Make changes to your account here.</Card.Description>
+          </Card.Header>
+          <Card.Content class="space-y-2">
+            <div class="space-y-1">
+              <Label for="name">Name</Label>
+              <Input id="name" value="Pedro Duarte" />
+            </div>
+            <div class="space-y-1">
+              <Label for="username">Username</Label>
+              <Input id="username" value="~peduarte" />
+            </div>
+          </Card.Content>
+          <Card.Footer>
+            <Button>Save changes</Button>
+          </Card.Footer>
+        </Card.Root>
+      </Tabs.Panel>
     </Tabs.Root>
   );
 });
