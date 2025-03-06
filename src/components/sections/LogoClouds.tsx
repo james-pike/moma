@@ -172,6 +172,35 @@ export default component$((props: Props) => {
 
 
                 {/* SVG Grid */}
+               
+
+                {/* Tabs Component */}
+                <Tabs.Root
+                    selectedClassName='bg-white'
+                    selectedIndex={selectedIndex.value}
+                    onSelectedIndexChange$={(index) => (selectedIndex.value = index)}
+                >
+                    <Tabs.List class="hidden grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md">
+                        {tabContent.map((content, index) => (
+                            <Tabs.Tab key={index} class="px-4 py-2">{content.title}</Tabs.Tab>
+                        ))}
+                    </Tabs.List>
+
+                    {tabContent.map((content, index) => (
+                        <Tabs.Panel key={index}>
+                            <Card2.Root>
+                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
+                                    <p>
+                                        <span class="text-2xl font-bold">{content.title}</span> {content.description}
+                                    </p>
+                                </Card.Content>
+                            </Card2.Root>
+                        </Tabs.Panel>
+                    ))}
+
+                    
+                </Tabs.Root>
+
                 <div class="mt-0.5 grid grid-cols-3 lg:grid-cols-4 gap-0.25 -mx-0.5 mb-0.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
@@ -203,31 +232,6 @@ export default component$((props: Props) => {
                         </div>
                     ))}
                 </div>
-
-                {/* Tabs Component */}
-                <Tabs.Root
-                    selectedClassName='bg-white'
-                    selectedIndex={selectedIndex.value}
-                    onSelectedIndexChange$={(index) => (selectedIndex.value = index)}
-                >
-                    <Tabs.List class="hidden grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md">
-                        {tabContent.map((content, index) => (
-                            <Tabs.Tab key={index} class="px-4 py-2">{content.title}</Tabs.Tab>
-                        ))}
-                    </Tabs.List>
-
-                    {tabContent.map((content, index) => (
-                        <Tabs.Panel key={index}>
-                            <Card2.Root>
-                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
-                                    <p>
-                                        <span class="text-2xl font-bold">{content.title}</span> {content.description}
-                                    </p>
-                                </Card.Content>
-                            </Card2.Root>
-                        </Tabs.Panel>
-                    ))}
-                </Tabs.Root>
 
                 <Card2.Root>
                                 <Card.Content class="px-2 items-center">
