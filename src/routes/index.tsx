@@ -13,6 +13,7 @@ import LogoClouds from "~/components/sections/LogoClouds";
 import Features from "~/components/sections/Features";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { Card2 } from "~/components/ui/Card2";
+import { Card0 } from "~/components/ui/Card0";
 
 const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
 const IconApps = qwikSerialized(() => import("../components/icons/IconApps"));
@@ -26,11 +27,16 @@ export default component$(() => {
   return (
     <>
 
+<Card0.Root class="mx-1.5 ">
+  <Card0.Content>
+     <Hero/>
+        </Card0.Content>
+        </Card0.Root>
 <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
         items={[]} />
-      <Hero />
+   
 <Card2.Root class="mx-2">
   <Card2.Content>
       <Services title="What We Do"
