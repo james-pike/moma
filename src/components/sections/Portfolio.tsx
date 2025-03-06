@@ -171,7 +171,7 @@ export default component$((props: Props) => {
             >
                 
                  <Card2.Root>
-                                <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
+                                <Card.Content class="bg-gray-200 px-2 dark:bg-gray-800 items-center">
                                 <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
                                 </Card.Content>
@@ -180,7 +180,7 @@ export default component$((props: Props) => {
                 {/* SVG Grid */}
 
                 <Card2.Root class="mt-1">
-                                <Card.Content class="bg-gray-100 px-3 dark:bg-gray-800 items-center">
+                                <Card.Content class="bg-gray-200 px-3 dark:bg-gray-800 items-center">
 <ServicesCarousel/>
                                 </Card.Content>
                             </Card2.Root>
@@ -197,14 +197,14 @@ export default component$((props: Props) => {
                                     class={twMerge(
                                         "absolute inset-[-2px] hover:inset-[0px] rounded-none transition-all duration-300",
                                         "bg-blue-100/50 dark:bg-blue-900/50", // Default background
-                                        "border-2 border-gray-200 dark:border-gray-700",
+                                        "border-2 border-gray-300 dark:border-gray-700",
                                         selectedIndex.value === index && "bg-blue-300/70 dark:bg-blue-800/70 shadow-[0_0_20px_8px_rgba(59,130,246,0.6)] breathing-glow",
                                         "group-hover:bg-blue-200/70 dark:group-hover:bg-blue-800/70 group-hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.4)]"
                                     )}
                                 />
                                 <div 
                                     class={twMerge(
-                                        "relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
+                                        "relative bg-gray-200 hover:bg-gray-30000 dark:hover:bg-gray-700 dark:bg-gray-800 w-full p-2",
                                         "transition-transform duration-300",
                                         selectedIndex.value === index && "scale-105",
                                         "group-hover:scale-105"
@@ -232,7 +232,7 @@ export default component$((props: Props) => {
                     {tabContent.map((content, index) => (
                         <Tabs.Panel key={index}>
                             <Card2.Root>
-                                <Card.Content class="p-4 bg-gray-100 dark:bg-gray-800">
+                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
                                 <p>
   <span class="text-2xl font-bold">{content.title}</span> {content.description}
 </p>

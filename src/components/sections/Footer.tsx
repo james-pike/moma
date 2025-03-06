@@ -4,6 +4,7 @@ import IconTwitter from "~/components/icons/IconTwitter";
 import IconInstagram from "~/components/icons/IconInstagram";
 import IconFacebook from "~/components/icons/IconFacebook";
 import IconTelegram from "../icons/IconTelegram";
+import { Card2 } from "../ui/Card2";
 
 export default component$(() => {
   const isVisible = useSignal(false);
@@ -56,8 +57,15 @@ export default component$(() => {
   ];
 
   return (
+    <div>
+
+             <Card2.Root class="mx-2">
+                                      <Card2.Content class="p-4 bg-yellow-50 dark:bg-yellow-100">
+                                    
+                                    
     
       <footer class="border-t-2 border-gray-200 dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">
+
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
@@ -160,6 +168,9 @@ export default component$(() => {
           `}
         </style>
       </footer>
+      </Card2.Content>
+                                  </Card2.Root>
+                                  </div>
   
   );
 });

@@ -93,16 +93,16 @@ export default component$(() => {
 
 
           <a href="/"
-            class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+            class="p-0 bg-gray-200 flex items-center h-full dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700">
             <Logo />
           </a>
           <div class="flex items-center md:hidden gap-1">
             <a href="/"
-              class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+              class="p-0 bg-gray-200 flex items-center h-full dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700">
               <ToggleTheme iconClass="w-6 h-6" />               </a>
 
             <a href="/contact"
-              class="p-2 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+              class="p-2 bg-yellow-50 flex items-center h-full dark:bg-gray-800 border-2 border-primary-200 dark:border-gray-700">
               Get A Quote                </a>
             {/* <a
               class="btn btn-primary bg-primary hover:bg-primary-400 ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"
