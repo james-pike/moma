@@ -282,6 +282,7 @@ export default component$(() => {
         </div>
       </div>
 
+      {/* <div class="border-b-2 mb-1 border-yellow-200 dark:border-yellow-00 mx-2"></div> */}
     </header>
   );
 });
