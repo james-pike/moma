@@ -16,7 +16,7 @@ export default component$(() => {
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     <link rel="preload" href="/images/hero2.webp" as="image"/>
     </head> */}
-    <section class="relative px-0 max-w-7xl mx-auto !h-[35vh] md:!h-[50vh] lg:!h-[50vh] xl:!h-[35vh] text-white overflow-hidden rounded-none">
+    <section class="relative px-0 max-w-7xl mx-auto !h-[25vh] md:!h-[50vh] lg:!h-[50vh] xl:!h-[35vh] text-white overflow-hidden rounded-none">
       <Carousel scrollable noControls slideInterval={5000} class="custom-carousel w-full !h-full rounded-none">
         <Carousel.Slide class="w-full !h-full flex relative rounded-none">
           <img
