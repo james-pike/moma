@@ -24,6 +24,11 @@ const IconArrowDown = qwikSerialized(() => import("../components/icons/IconArrow
 export default component$(() => {
   return (
     <>
+
+<LogoClouds title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
       <Hero />
 
       <Services title="What We Do"
@@ -87,10 +92,7 @@ export default component$(() => {
         highlight="Reviews"
         items={[]} />
 
-<LogoClouds title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
-        items={[]} />
+
 
       <Steps title="Our Process"
         subtitle="Have questions about our café? Find answers to common inquiries below."

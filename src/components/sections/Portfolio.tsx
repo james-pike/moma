@@ -110,6 +110,7 @@ import { twMerge } from "tailwind-merge";
 import { Tabs } from "~/components/ui/Tabs";
 import { Card } from "~/components/ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
+import ServicesCarousel from "../widgets/ServicesCarousel";
 import { Card2 } from "../ui/Card2";
 
 
@@ -163,7 +164,7 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
-                    "relative px-3 md:px-6 pb-2 md:py-16 lg:py-20 text-default",
+                    "relative px-2 md:px-6 pb-2 md:py-16 lg:py-20 text-default",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
@@ -177,6 +178,13 @@ export default component$((props: Props) => {
                             </Card2.Root>
 
                 {/* SVG Grid */}
+
+                <Card2.Root class="mt-1">
+                                <Card.Content class="bg-gray-100 px-3 dark:bg-gray-800 items-center">
+<ServicesCarousel/>
+                                </Card.Content>
+                            </Card2.Root>
+
                 <div class="mt-0.5 grid grid-cols-3 lg:grid-cols-4 gap-0.25 -mx-0.5 mb-0.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div

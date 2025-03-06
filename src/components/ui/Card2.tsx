@@ -6,7 +6,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
     <div
       {...props}
       class={cn(
-        'rounded-base border-2 border-t-0 dark:border-gray-700 bg-card text-card-foreground shadow-sm',
+        'rounded-base border-2 dark:border-gray-700 bg-card text-card-foreground shadow-sm',
         props.class,
       )}
     >
@@ -60,7 +60,7 @@ const Image = component$<PropsOf<'img'>>(({ ...props }) => {
   return <img {...props} class={cn('w-full object-cover', props.class)} />;
 });
 
-export const Card = {
+export const Card2 = {
   Root,
   Header,
   Title,
