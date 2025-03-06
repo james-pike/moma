@@ -34,7 +34,7 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 bg-background max-w-7xl dark:bg-background flex-none mx-auto w-full border-gray-200 dark:border-gray-600 transition-[opacity] ease-in-out ${store.isScrolling
+      class={`sticky top-0 z-40 bg-background max-w-7xl dark:bg-background flex-none mx-auto w-full border-b-2 border-gray-200 dark:border-gray-600 transition-[opacity] ease-in-out ${store.isScrolling
           ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-background"
           : ""
         }`}
@@ -92,7 +92,7 @@ export default component$(() => {
               class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
                      <Logo />
                      </a>
-          <div class="flex items-center md:hidden gap-2">
+          <div class="flex items-center md:hidden gap-1">
           <a href="/contact"
               class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
               <ToggleTheme iconClass="w-6 h-6" />               </a>
