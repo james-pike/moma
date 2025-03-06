@@ -47,7 +47,6 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0 pointer-events-none"></div>
-      <div class="border-b-2 mt-1 border-gray-200 dark:border-gray-700 mx-2"></div>
 
       {isBannerVisible.value && (
         <div
