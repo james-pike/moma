@@ -35,8 +35,8 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 z-40 bg-background max-w-7xl dark:bg-background flex-none mx-auto w-full border-gray-200 dark:border-gray-700 transition-[opacity] ease-in-out ${store.isScrolling
-          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-background"
-          : ""
+        ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-background"
+        : ""
         }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -47,57 +47,58 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0 pointer-events-none"></div>
+      <div class="border-b-2 mt-1 border-gray-200 dark:border-gray-700 mx-2"></div>
 
       {isBannerVisible.value && (
-           <div 
-           class="p-0 bg-gray-100 mx-2 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
-                        
-        <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
-          <div>
-            <p>Today's Specials: Freshly brewed, just for you!</p>
-          </div>
-          <div id="test" class="flex gap-4 sm:flex hidden sm:block">
-            <a
-              class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-              href="tel:+16132188063"
-            >
-              <IconTelegram />
-              <p class="pl-1">(613) 218-8063</p>
-            </a>
-            <p class="text-gray-50">|</p>
-            <a
-              class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-              href="mailto:info@webdev.ca"
-            >
-              <IconTwitter />
-              <p class="pl-1">info@webdev.ca</p>
-            </a>
-          </div>
+        <div
+          class="p-0 bg-gray-100 mx-2 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+
+          <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
+            <div>
+              <p>Today's Specials: Freshly brewed, just for you!</p>
+            </div>
+            <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+              <a
+                class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+                href="tel:+16132188063"
+              >
+                <IconTelegram />
+                <p class="pl-1">(613) 218-8063</p>
+              </a>
+              <p class="text-gray-50">|</p>
+              <a
+                class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+                href="mailto:info@webdev.ca"
+              >
+                <IconTwitter />
+                <p class="pl-1">info@webdev.ca</p>
+              </a>
+            </div>
 
 
-          <button
-            class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white hover:text-gray-200 focus:outline-none"
-            onClick$={handleCloseBanner}
-            aria-label="Close banner"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
+            <button
+              class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white hover:text-gray-200 focus:outline-none"
+              onClick$={handleCloseBanner}
+              aria-label="Close banner"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
       )}
 
       <div class="relative text-default py-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          
+
 
           <a href="/"
-              class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
-                     <Logo />
-                     </a>
+            class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+            <Logo />
+          </a>
           <div class="flex items-center md:hidden gap-1">
-          <a href="/"
+            <a href="/"
               class="p-0 bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
               <ToggleTheme iconClass="w-6 h-6" />               </a>
 
@@ -281,6 +282,8 @@ export default component$(() => {
           </div>
         </div>
       </div>
+
+      <div class="border-b-2 mb-1 border-gray-200 dark:border-gray-700 mx-2"></div>
     </header>
   );
 });
