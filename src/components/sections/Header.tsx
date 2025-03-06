@@ -1,9 +1,11 @@
-import { component$, useStore } from "@builder.io/qwik";
+import { $, component$, useSignal, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo } from "../common/Logo";
 import MenuModal from "../widgets/MenuModal";
 import ToggleTheme from "../common/ToggleTheme";
+import IconTwitter from "../icons/IconTwitter";
+import IconTelegram from "../icons/IconTelegram";
 
 export default component$(() => {
   const store = useStore({
@@ -11,25 +13,23 @@ export default component$(() => {
     isMenuExpanded: false,
   });
 
-  // Add signal for banner visibility
-  // const isBannerVisible = useSignal(() => {
-  //   // Check session storage on initial load
-  //   if (typeof window !== 'undefined') {
-  //     return sessionStorage.getItem('bannerClosed') !== 'true';
-  //   }
-  //   return true;
-  // });
+  const isBannerVisible = useSignal(() => {
+    // Check session storage on initial load
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('bannerClosed') !== 'true';
+    }
+    return true;
+  });
 
   const { menu } = useContent();
   const location = useLocation();
 
-  // Function to handle banner close
-  // const handleCloseBanner = $(() => {
-  //   isBannerVisible.value = false;
-  //   if (typeof window !== 'undefined') {
-  //     sessionStorage.setItem('bannerClosed', 'true');
-  //   }
-  // });
+  const handleCloseBanner = $(() => {
+    isBannerVisible.value = false;
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('bannerClosed', 'true');
+    }
+  });
 
   return (
     <header
@@ -48,8 +48,11 @@ export default component$(() => {
     >
       <div class="absolute inset-0 pointer-events-none"></div>
 
-      {/* {isBannerVisible.value && (
-        <div class="w-full h-6 bg-primary-400 px-4 md:px-7 mx-auto text-white flex justify-between items-center max-w-7xl relative">
+      {isBannerVisible.value && (
+           <div 
+           class="p-0 bg-gray-100 mx-2 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+                        
+        <div class="w-full h-6  px-4 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
           <div>
             <p>Today's Specials: Freshly brewed, just for you!</p>
           </div>
@@ -82,7 +85,8 @@ export default component$(() => {
             </svg>
           </button>
         </div>
-      )} */}
+        </div>
+      )}
 
       <div class="relative text-default py-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
