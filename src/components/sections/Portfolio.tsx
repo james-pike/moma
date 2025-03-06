@@ -231,13 +231,13 @@ export default component$((props: Props) => {
 
                     {tabContent.map((content, index) => (
                         <Tabs.Panel key={index}>
-                            <Card.Root>
+                            <Card2.Root>
                                 <Card.Content class="p-4 bg-gray-100 dark:bg-gray-800">
                                 <p>
   <span class="text-2xl font-bold">{content.title}</span> {content.description}
 </p>
                                 </Card.Content>
-                            </Card.Root>
+                            </Card2.Root>
                         </Tabs.Panel>
                     ))}
                 </Tabs.Root>
