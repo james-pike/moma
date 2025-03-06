@@ -282,7 +282,7 @@ export default component$(() => {
         </div>
       </div>
 
-      <div class="border-b-2 mb-1 border-yellow-200 dark:border-yellow-700 mx-2"></div>
+      <div class="border-b-2 mb-1 border-yellow-200 dark:border-yellow-200 mx-2"></div>
     </header>
   );
 });
