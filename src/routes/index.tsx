@@ -27,7 +27,7 @@ export default component$(() => {
   return (
     <>
 
-<Card0.Root class="mx-1.5 pb-2 ">
+<Card0.Root class="mx-1.5 mb-2 ">
   <Card0.Content>
      <Hero/>
         </Card0.Content>
