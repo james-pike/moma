@@ -4,7 +4,7 @@ import { Accordion } from '../ui/Accordion';
 
 export default component$(() => {
   return (
-<Accordion.Root class="w-full px-0 -mt-2">
+<Accordion.Root class="w-full px-0">
 <Accordion.Item>
     <Accordion.Trigger class="text-md">
       Is there outdoor seating available?
