@@ -64,7 +64,7 @@ export default component$(() => {
                                     
                                     
     
-      <footer class="border-t-2 border-gray-200 dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">
+      <footer class=" border-gray-200 dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">
 
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
