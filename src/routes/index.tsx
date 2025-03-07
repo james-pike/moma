@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Hero from "~/components/sections/Hero";
 import { SITE } from "~/config.mjs";
 
-import Services1 from "~/components/sections/Services1";
 
 
 
@@ -10,12 +10,8 @@ import Services1 from "~/components/sections/Services1";
 export default component$(() => {
   return (
     <>
-
-    <Services1  
-      title="What We Do"
-      // subtitle="Have questions about our café? Find answers to common inquiries below."
-      highlight="Services"
-      items={[]} />
+<Hero/>
+   
 
     {/* <ServicesX title="What We Do"
         subtitle="Have questions about our café? Find answers to common inquiries below."

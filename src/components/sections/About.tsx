@@ -1,10 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import ServicesCarousel from "../widgets/ServicesCarousel";
-import MenuTabs from "../widgets/MenuTabs";
-import ServiceTabs from "../widgets/ServiceTabs";
+
 
 interface Item {
   title?: string;
@@ -37,13 +34,10 @@ export default component$((props: Props) => {
           </Card.Content>
         </Card.Root>
 
-        <Card.Root>
-          <Card.Content class="p-0">
-            <ServiceTabs />                                </Card.Content>
-        </Card.Root>
+      
 
 
-        <ServicesCarousel />
+       
       </div>
 
     </section>

@@ -1,10 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Portfolio from "~/components/sections/Portfolio";
-
-
-
-
 import { SITE } from "~/config.mjs";
 
 
