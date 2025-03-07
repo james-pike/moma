@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
 import ServiceGrid from "../widgets/ServiceGrid";
-import { PageWrapper } from "../common/PageWrapper";
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import FAQAccordion from "../widgets/FAQAccordion";
