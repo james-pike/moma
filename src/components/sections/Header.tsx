@@ -98,7 +98,7 @@ export default component$(() => {
           </a>
           <div class="flex items-center md:hidden gap-1">
             <a href="/"
-              class="p-0 bg-yellow-50 flex items-center h-full dark:bg-yellow-200 border-2 border-yellow-100 dark:border-gray-700">
+              class="p-0 bg-yellow-50 flex items-center h-full  border-2 border-yellow-200 ">
               <ToggleTheme iconClass="w-6 h-6" />               </a>
 
             <a href="/contact"
