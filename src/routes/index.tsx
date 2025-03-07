@@ -37,7 +37,7 @@ export default component$(() => {
 
 
 
-      <div class="headercard">
+      <div class="headercard bg-blue-50">
         <Headline title="What We Offer"
           highlight="Services"
           subtitle="Transform your online presence with our custom web design and development services. "
@@ -50,10 +50,18 @@ export default component$(() => {
 
       <ServicesCarousel/>
 
-      <LogoClouds title="What We Offer"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Services"
-        items={[]} />
+      <div class="headercard bg-blue-50">
+        <Headline title="Frequently Asked Questions"
+          highlight="FAQ"
+          subtitle="Transform your online presence with our custom web design and development services. "
+          classes={{
+            // title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
+            align: "center"
+          }}>
+        </Headline>
+      </div>
+
+     
 
 
 
