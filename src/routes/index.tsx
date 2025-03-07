@@ -13,7 +13,7 @@ export default component$(() => {
 
     <Services1  
       title="What We Do"
-      subtitle="Have questions about our café? Find answers to common inquiries below."
+      // subtitle="Have questions about our café? Find answers to common inquiries below."
       highlight="Services"
       items={[]} />
 
