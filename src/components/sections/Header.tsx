@@ -35,7 +35,7 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 -mt-0.5 z-40 bg-gray-100 max-w-7xl dark:bg-background flex-none mx-auto w-full border-gray-200 dark:border-gray-700 transition-[opacity] ease-in-out ${store.isScrolling
-        ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary-50 dark:bg-background"
+        ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-gray-100 dark:bg-background"
         : ""
         }`}
       window:onScroll$={() => {
