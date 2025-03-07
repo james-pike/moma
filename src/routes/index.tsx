@@ -17,7 +17,7 @@ export default component$(() => {
       subtitle="Transform your online presence with our custom web design and development services. 
       We help business create stunning, fast, and secure websites.">
       </Headline>
-      <div class=" sm:max-w-md  grid grid-cols-1 pt-3 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+      <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
       <a class="btnx w-full py-2" href="/contact">Get Started
 
