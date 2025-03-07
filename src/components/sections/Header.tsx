@@ -52,7 +52,7 @@ export default component$(() => {
         <div
           class="btnx">
 
-          <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
+          <div class="w-full h-6 -mt-1 px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
             <div>
               <p>Today's Specials: Freshly brewed, just for you!</p>
             </div>
