@@ -11,51 +11,51 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-     <div class="herocard">
-      <div class="flex flex-col">
-      <Headline title="Premium Web Design & Development" 
-      subtitle="Transform your online presence with our custom web design and development services. 
+      <div class="herocard">
+        <div class="flex flex-col">
+          <Headline title="Premium Web Design & Development"
+            subtitle="Transform your online presence with our custom web design and development services. 
       We help business create stunning, fast, and secure websites."
-         classes={{
-    title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
-  }}>
-      </Headline>
-      <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+            classes={{
+              title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
+            }}>
+          </Headline>
+          <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
-      <a class="btn2" href="/contact">Get A Quote
+            <a class="btn2" href="/contact">Get A Quote
 
-      </a>
-      <a class="btn2" href="/contact">Book A Consultation
+            </a>
+            <a class="btn2" href="/contact">Book A Consultation
 
-</a>
-</div>
-      </div>
-      </div>
-
-
-
-<div class="h-0.5"></div>
-
-<div class="headercard">
-<Headline title="What We Offer" 
-highlight="Services"
-      subtitle="Transform your online presence with our custom web design and development services. "
-         classes={{
-    // title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
-    align: "left"
-  }}>
-      </Headline>
+            </a>
+          </div>
+        </div>
       </div>
 
-<LogoClouds title="What We Offer"
+
+
+      <div class="h-0.5"></div>
+
+      <div class="headercard">
+        <Headline title="What We Offer"
+          highlight="Services"
+          subtitle="Transform your online presence with our custom web design and development services. "
+          classes={{
+            // title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
+            align: "left"
+          }}>
+        </Headline>
+      </div>
+
+      <LogoClouds title="What We Offer"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Services"
         items={[]} />
 
 
-   
 
-    {/* <ServicesX title="What We Do"
+
+      {/* <ServicesX title="What We Do"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Services"
         items={[]} />
