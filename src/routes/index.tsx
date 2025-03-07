@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import LogoClouds from "~/components/sections/LogoClouds";
 import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
+import ServicesCarousel from "~/components/widgets/ServicesCarousel";
 import { SITE } from "~/config.mjs";
 
 
@@ -36,7 +37,7 @@ export default component$(() => {
 
 
 
-      <div class="headercard bg-blue-50">
+      <div class="headercard">
         <Headline title="What We Offer"
           highlight="Services"
           subtitle="Transform your online presence with our custom web design and development services. "
@@ -46,6 +47,8 @@ export default component$(() => {
           }}>
         </Headline>
       </div>
+
+      <ServicesCarousel/>
 
       <LogoClouds title="What We Offer"
         subtitle="Have questions about our café? Find answers to common inquiries below."
