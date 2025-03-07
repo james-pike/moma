@@ -50,7 +50,7 @@ export default component$(() => {
 
       {isBannerVisible.value && (
         <div
-          class="bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+          class="card">
 
           <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
             <div>

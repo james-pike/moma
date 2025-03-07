@@ -32,6 +32,7 @@ export default component$(() => {
 
 
 <div class="h-1"></div>
+
 <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
