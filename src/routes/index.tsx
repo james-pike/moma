@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
+import FAQAccordion from "~/components/widgets/FAQAccordion";
 import ServicesCarousel from "~/components/widgets/ServicesCarousel";
 import { SITE } from "~/config.mjs";
 
@@ -36,7 +37,7 @@ export default component$(() => {
 
 
 
-      <div class="headercard bg-yellow-50">
+      <div class="headercard flex flex-col gap-4 bg-yellow-50">
         <Headline title="What We Offer"
           highlight="Services"
           subtitle="Transform your online presence with our custom web design and development services. "
@@ -45,11 +46,12 @@ export default component$(() => {
             align: "left"
           }}>
         </Headline>
+        <ServicesCarousel/>
       </div>
 
-      <ServicesCarousel/>
+    
 
-      <div class="headercard">
+      <div class="headercard flex flex-col gap-4">
         <Headline title="Frequently Asked Questions"
           highlight="FAQ"
           subtitle="Transform your online presence with our custom web design and development services. "
@@ -58,6 +60,7 @@ export default component$(() => {
             align: "center"
           }}>
         </Headline>
+        <FAQAccordion/>
       </div>
 
      
