@@ -22,10 +22,10 @@ export default component$(() => {
       </Headline>
       <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
-      <a class="btn2 w-full py-2" href="/contact">Get Started
+      <a class="btn2 w-full py-2" href="/contact">Get A Quote
 
       </a>
-      <a class="btn2 w-full py-2" href="/contact">Get Started
+      <a class="btn2 w-full py-2" href="/contact">Book A Consultation
 
 </a>
 </div>
