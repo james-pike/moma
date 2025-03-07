@@ -36,7 +36,7 @@ export default component$(() => {
 
 
 
-      <div class="headercard">
+      <div class="headercard bg-blue-50">
         <Headline title="What We Offer"
           highlight="Services"
           subtitle="Transform your online presence with our custom web design and development services. "
