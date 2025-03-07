@@ -114,7 +114,7 @@
   }
 
   .card{
-    @apply bg-gray-200 flex py-6 px-3 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+    @apply bg-gray-200 flex py-6 px-4 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 
   }
   .btnx {

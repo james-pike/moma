@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "4.5xl": "2.625rem", // Between 4xl (2.25rem) and 5xl (3rem)
+        '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       },
       colors: {
         primary: {
