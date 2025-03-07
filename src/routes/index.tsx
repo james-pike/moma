@@ -11,11 +11,14 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
+      <div class="flex flex-col gap-0.5 pb-1">
 <Hero/>
 <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
         highlight="Reviews"
         items={[]} />
+
+</div>
    
 
     {/* <ServicesX title="What We Do"
