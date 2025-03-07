@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Hero from "~/components/sections/Hero";
+import LogoClouds from "~/components/sections/LogoClouds";
 import { SITE } from "~/config.mjs";
 
 
@@ -11,6 +12,10 @@ export default component$(() => {
   return (
     <>
 <Hero/>
+<LogoClouds title="What Our Clients Say"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Reviews"
+        items={[]} />
    
 
     {/* <ServicesX title="What We Do"
@@ -24,10 +29,7 @@ export default component$(() => {
      <Hero/>
         </Card0.Content>
         </Card0.Root>
-<LogoClouds title="What Our Clients Say"
-        subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
-        items={[]} />
+
    
 <Card2.Root class="mx-2">
   <Card2.Content>

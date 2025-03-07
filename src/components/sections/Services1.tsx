@@ -3,7 +3,6 @@ import { component$ } from "@builder.io/qwik";
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
-import MenuTabs from "../widgets/MenuTabs";
 import ServiceTabs from "../widgets/ServiceTabs";
 
 interface Item {

@@ -163,13 +163,18 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
             <div
                 class={twMerge(
-                    "relative px-1.5 md:px-6 pb-2 md:py-16 lg:py-20 text-default",
+                    "relative md:px-6 pb-2 md:py-16 lg:py-20 text-default",
                     classes?.container,
                     isDark ? "dark" : ""
                 )}
             >
 
+<Card2.Root>
+                                <Card.Content class="px-2 items-center">
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
+                                </Card.Content>
+                            </Card2.Root>
 
                 {/* SVG Grid */}
                
@@ -233,12 +238,7 @@ export default component$((props: Props) => {
                     ))}
                 </div>
 
-                <Card2.Root>
-                                <Card.Content class="px-2 items-center">
-                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-
-                                </Card.Content>
-                            </Card2.Root>
+               
             </div>
 
 
