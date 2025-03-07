@@ -50,7 +50,7 @@ export default component$(() => {
 
       {isBannerVisible.value && (
         <div
-          class="p-0 bg-gray-100 mx-1.5 mt-1 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+          class="bg-gray-100 flex items-center h-full dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
 
           <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
             <div>
@@ -88,7 +88,7 @@ export default component$(() => {
         </div>
       )}
 
-      <div class="relative text-default py-1 px-1.5 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-1 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
 
 

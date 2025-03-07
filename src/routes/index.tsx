@@ -1,31 +1,27 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
-import Services from "~/components/sections/Services";
-import Menu from "~/components/sections/Gallery";
-import FAQ from "~/components/sections/FAQ";
-import Reviews from "~/components/sections/Reviews";
-import Contact from "~/components/sections/Contact";
-import Hero from "~/components/sections/Hero";
-import Steps from "~/components/sections/Steps";
-import Stats from "~/components/widgets/Stats";
-import LogoClouds from "~/components/sections/LogoClouds";
-import Features from "~/components/sections/Features";
-import { qwikSerialized } from "~/utils/qwikSerialized";
-import { Card2 } from "~/components/ui/Card2";
-import { Card0 } from "~/components/ui/Card0";
 
-const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
-const IconApps = qwikSerialized(() => import("../components/icons/IconApps"));
-const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
-const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBrandGoogle"));
-const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
-const IconArrowDown = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
+import Services1 from "~/components/sections/Services1";
+
+
 
 
 export default component$(() => {
   return (
     <>
+
+    <Services1  
+      title="What We Do"
+      // subtitle="Have questions about our café? Find answers to common inquiries below."
+      highlight="Services"
+      items={[]} />
+
+    {/* <ServicesX title="What We Do"
+        subtitle="Have questions about our café? Find answers to common inquiries below."
+        highlight="Services"
+        items={[]} />
+        
 
 <Card0.Root class="mx-1.5 mb-1 ">
   <Card0.Content>
@@ -159,7 +155,7 @@ export default component$(() => {
 
        
 
-       <Contact />
+       <Contact /> */}
 
 
     </>

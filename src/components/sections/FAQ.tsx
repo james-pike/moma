@@ -29,8 +29,8 @@ export default component$((props: Props) => {
   return (
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
       <PageWrapper>
-<Card.Root>
-                                <Card.Content class="bg-gray-100 px-2 dark:bg-gray-800 items-center">
+<Card.Root class="btnx">
+                                <Card.Content class="">
                                 <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
                                 <div class="block pt-6 px-1 sm:hidden">
           <FAQAccordion />

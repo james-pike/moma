@@ -1,6 +1,8 @@
 import { component$, PropsOf } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 
+import { Card } from '../ui/Card';
+
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
   return (
     <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
@@ -44,7 +46,10 @@ export default component$(() => {
   ];
 
   return (
-    <Carousel.Root class="carousel-root" slidesPerView={1.2} gap={25} rewind sensitivity={{
+    <>
+             <Card.Root>
+                                <Card.Content class="">
+                                <Carousel.Root class="carousel-root bg-gray-200 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
       touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
@@ -58,7 +63,7 @@ export default component$(() => {
               alt={service.title}
               class="w-full h-44 object-cover rounded-t-md"
             />
-            <div class="service-info p-2 bg-gray-200 dark:bg-gray-800 flex-1 overflow-hidden">
+            <div class="service-info p-2 bg-gray-300 dark:bg-gray-700 flex-1 overflow-hidden">
               <h1 class="service-title text-lg font-bold truncate">{service.title}</h1>
               <p class="service-description text-sm line-clamp-2">{service.description}</p>
             </div>
@@ -66,7 +71,7 @@ export default component$(() => {
         ))}
       </Carousel.Scroller>
       <div class="flex justify-between items-end">
-  <Carousel.Pagination class="carousel-pagination justify-start">
+  <Carousel.Pagination class="carousel-pagination justify-start -mt-1">
     {services.map((service) => (
       <Carousel.Bullet 
         key={service.title}
@@ -83,5 +88,10 @@ export default component$(() => {
   </a>
 </div>
     </Carousel.Root>
+                                </Card.Content>
+                            </Card.Root>   
+                            
+                          
+    </>
   );
 });

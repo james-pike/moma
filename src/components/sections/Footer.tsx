@@ -59,7 +59,7 @@ export default component$(() => {
   return (
     <div>
 
-             <Card2.Root class="mx-2">
+             <Card2.Root class="">
                                       <Card2.Content class="p-4 bg-yellow-50 dark:bg-yellow-100">
                                     
                                     
