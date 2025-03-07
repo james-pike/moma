@@ -93,7 +93,7 @@ export default component$(() => {
 
 
           <a href="/"
-            class="p-0 bg-gray-200 rounded-sm flex items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
+            class="p-0 bg-gray-100 rounded-sm flex items-center h-full dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <Logo />
           </a>
           <div class="flex items-center md:hidden gap-0.5">
