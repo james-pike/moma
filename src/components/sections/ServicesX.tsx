@@ -33,7 +33,7 @@ export default component$((props: Props) => {
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     </head> */}
       <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
-        <Card.Root class="btnx">
+        <Card.Root class="btnsx">
           <Card.Content class="">
           <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
           <div class="block pt-6 px-1 sm:hidden">
