@@ -47,9 +47,9 @@ export default component$(() => {
       </Headline>
       </div>
 
-<LogoClouds title="What Our Clients Say"
+<LogoClouds title="What We Offer"
         subtitle="Have questions about our café? Find answers to common inquiries below."
-        highlight="Reviews"
+        highlight="Services"
         items={[]} />
 
 
