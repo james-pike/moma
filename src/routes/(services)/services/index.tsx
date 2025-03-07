@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import ServicePage from "~/components/sections/ServicePage";
 import Services1 from "~/components/sections/Services1";
 
 import { SITE } from "~/config.mjs";
