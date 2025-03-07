@@ -1,8 +1,6 @@
 import { component$, PropsOf } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 
-import { Card } from '../ui/Card';
-
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
   return (
     <Progress.Root {...props} class="progress" style={{ marginBottom: '2rem' }}>
