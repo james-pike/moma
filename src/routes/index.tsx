@@ -34,7 +34,6 @@ export default component$(() => {
 
 
 
-      <div class="h-0.5"></div>
 
       <div class="headercard">
         <Headline title="What We Offer"
