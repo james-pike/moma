@@ -49,7 +49,7 @@ export default component$(() => {
     <>
              <Card.Root>
                                 <Card.Content class="">
-                                <Carousel.Root class="carousel-root bg-gray-200 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
+                                <Carousel.Root class="carousel-root bg-gray-200 dark:bg-gray-800 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
       touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
@@ -61,7 +61,7 @@ export default component$(() => {
             <img 
               src={service.image} 
               alt={service.title}
-              class="w-full h-44 object-cover rounded-t-md"
+              class="w-full h-44 object-cover rounded-none"
             />
             <div class="service-info p-2 bg-gray-300 dark:bg-gray-700 flex-1 overflow-hidden">
               <h1 class="service-title text-lg font-bold truncate">{service.title}</h1>
