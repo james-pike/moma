@@ -36,12 +36,12 @@ export default component$(() => {
 
 <div class="h-0.5"></div>
 
-<div>
+<div class="headercard">
 <Headline title="Premium Web Design & Development" 
       subtitle="Transform your online presence with our custom web design and development services. 
       We help business create stunning, fast, and secure websites."
          classes={{
-    title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
+    // title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
     align: "left"
   }}>
       </Headline>
