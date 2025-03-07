@@ -31,11 +31,11 @@ export default component$(() => {
   return (
     <Tabs.Root selectedClassName='bg-white' class="max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List sticky top-[92px] z-10 */}
-      <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md ">
-        <Tabs.Tab class="px-4 py-2">Coffee</Tabs.Tab>
-        <Tabs.Tab class="px-4 py-2">Tea</Tabs.Tab>
-        <Tabs.Tab class="px-4 py-2">Bistro</Tabs.Tab>
-        <Tabs.Tab class="px-4 py-2">Dessert</Tabs.Tab>
+      <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full shadow-md ">
+        <Tabs.Tab class="px-4 py-2">Design</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Development</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Branding</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Marketing</Tabs.Tab>
       </Tabs.List>
 
       {/* Coffee Menu Panel */}
@@ -44,7 +44,7 @@ export default component$(() => {
           <Card.Content class="p-4">
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {menuItems.map((item, index) => (
-                <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                <div key={index} class="bg-white shadow-md overflow-hidden border border-gray-200">
                   <img width={1024} height={1024} src={item.image} alt={item.title} class="w-full h-40 object-cover" />
                   <div class="p-3">
                     <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>

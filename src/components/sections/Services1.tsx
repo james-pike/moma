@@ -37,7 +37,7 @@ export default component$((props: Props) => {
                                 </Card.Root>
 
                                 <Card.Root>
-        <Card.Content>
+        <Card.Content class="p-0">
 <MenuTabs/>                                </Card.Content>
                                 </Card.Root>
 
