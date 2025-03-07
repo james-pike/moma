@@ -11,7 +11,7 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-     <div class="card">
+     <div class="herocard">
       <div class="flex flex-col">
       <Headline title="Premium Web Design & Development" 
       subtitle="Transform your online presence with our custom web design and development services. 
