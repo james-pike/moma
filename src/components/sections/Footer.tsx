@@ -59,12 +59,11 @@ export default component$(() => {
   return (
     <div>
 
-             <Card2.Root class="">
-                                      <Card2.Content class="p-4 bg-yellow-50 dark:bg-yellow-100">
+          
                                     
                                     
     
-      <footer class=" border-gray-200 dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">
+      <footer class=" border-gray-200 border dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">
 
         <div class="max-w-7xl mx-auto">
           {/* Top Section */}
@@ -168,8 +167,6 @@ export default component$(() => {
           `}
         </style>
       </footer>
-      </Card2.Content>
-                                  </Card2.Root>
                                   </div>
   
   );
