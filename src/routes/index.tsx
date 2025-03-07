@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Hero from "~/components/sections/Hero";
 import LogoClouds from "~/components/sections/LogoClouds";
+import { Headline } from "~/components/ui/Headline";
 import { SITE } from "~/config.mjs";
 
 
@@ -11,8 +11,26 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-     
-<Hero/>
+     <div class="card">
+      <div class="flex flex-col">
+      <Headline title="Premium Web Design & Development" 
+      subtitle="Transform your online presence with our custom web design and development services. 
+      We help business create stunning, fast, and secure websites.">
+      </Headline>
+      <div class=" sm:max-w-md  grid grid-cols-1 pt-3 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+
+      <a class="btnx w-full py-2" href="/contact">Get Started
+
+      </a>
+      <a class="btnx w-full py-2" href="/contact">Get Started
+
+</a>
+</div>
+      </div>
+      </div>
+
+
+
 <div class="h-1"></div>
 <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
