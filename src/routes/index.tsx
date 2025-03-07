@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import LogoClouds from "~/components/sections/LogoClouds";
 import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import ServicesCarousel from "~/components/widgets/ServicesCarousel";
@@ -50,7 +49,7 @@ export default component$(() => {
 
       <ServicesCarousel/>
 
-      <div class="headercard bg-blue-50">
+      <div class="headercard">
         <Headline title="Frequently Asked Questions"
           highlight="FAQ"
           subtitle="Transform your online presence with our custom web design and development services. "
