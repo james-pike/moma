@@ -88,21 +88,21 @@ export default component$(() => {
         </div>
       )}
 
-      <div class="relative text-default py-1 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-0.5 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
 
 
           <a href="/"
-            class="p-0 bg-gray-200 flex items-center h-full dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700">
+            class="p-0 bg-gray-200 flex items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
             <Logo />
           </a>
-          <div class="flex items-center md:hidden gap-1">
+          <div class="flex items-center md:hidden gap-0.5">
             <a href="/"
-              class="p-0 bg-yellow-50 flex items-center h-full  border-2 border-yellow-200 ">
+              class="p-0 bg-yellow-50 dark:bg-gray-800 dark:border-gray-700 flex items-center h-full  border border-yellow-200 ">
               <ToggleTheme iconClass="w-6 h-6" />               </a>
 
             <a href="/contact"
-              class="p-2 bg-blue-50 flex items-center h-full dark:bg-gray-800 border-2 border-blue-200 dark:border-gray-700">
+              class="p-2 bg-blue-50 flex items-center h-full dark:bg-gray-800 border border-blue-200 dark:border-gray-700">
               Get A Quote                </a>
             {/* <a
               class="btn btn-primary bg-primary hover:bg-primary-400 ml-2 py-2.5 px-2.5 md:px-6 font-semibold shadow-none text-sm w-auto"

@@ -29,7 +29,7 @@ export default component$((props: Props) => {
   return (
    <section >
 
-    <div class="flex flex-col gap-1 pb-1">
+    <div class="flex flex-col gap-0.5 pb-1">
     <Card.Root>
         <Card.Content>
                                 <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
