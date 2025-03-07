@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import FAQAccordion from "../widgets/FAQAccordion";
-import { ItemGrid2 } from "../ui/ItemGrid2";
-import { PageWrapper } from "../common/PageWrapper";
+
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
