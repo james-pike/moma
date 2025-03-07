@@ -47,9 +47,9 @@ export default component$(() => {
 
   return (
     <>
-             <Card.Root>
+             <Card.Root class="bg-yellow-50">
                                 <Card.Content class="">
-                                <Carousel.Root class="carousel-root bg-blue-50 dark:bg-gray-800 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
+                                <Carousel.Root class="carousel-root bg-gray-200 dark:bg-gray-800 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
       touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
