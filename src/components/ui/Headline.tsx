@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Headline = (props: Props) => {
-  const { title = "", subtitle = "", highlight = "", classes = {}, align = "center" } = props;
+  const { title = "", subtitle = "", highlight = "", classes = {}, align = "left" } = props;
 
   const {
     container: containerClass = "max-w-3xl",
