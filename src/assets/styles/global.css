@@ -119,17 +119,17 @@
 }
 
   .herocard{
-    @apply bg-gray-200 flex py-8 rounded-md px-4 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+    @apply bg-gray-200 flex py-8 rounded-sm px-4 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 
   }
 
   .headercard{
-    @apply bg-gray-200 my-1 rounded-md flex pt-8 pb-4 px-4 shadow-sm h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+    @apply bg-gray-200 my-1 rounded-sm flex pt-8 pb-4 px-4 shadow-sm h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 
   }
 
   .btnx {
-    @apply bg-gray-200 flex shadow-sm rounded-md justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+    @apply bg-gray-200 flex shadow-sm rounded-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 
 }
   .btn {
