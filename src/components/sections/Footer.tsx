@@ -4,7 +4,6 @@ import IconTwitter from "~/components/icons/IconTwitter";
 import IconInstagram from "~/components/icons/IconInstagram";
 import IconFacebook from "~/components/icons/IconFacebook";
 import IconTelegram from "../icons/IconTelegram";
-import { Card2 } from "../ui/Card2";
 
 export default component$(() => {
   const isVisible = useSignal(false);
