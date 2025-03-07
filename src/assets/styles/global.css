@@ -114,7 +114,7 @@
   }
 
   .btn2 {
-    @apply bg-gray-300 flex shadow-sm justify-center items-center h-full dark:bg-gray-700 border border-gray-400 dark:border-gray-600
+    @apply bg-gray-300 w-full py-2 flex shadow-sm justify-center items-center h-full dark:bg-gray-700 border border-gray-400 dark:border-gray-600
 
 }
 
@@ -122,6 +122,12 @@
     @apply bg-gray-200 flex py-8 px-4 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 
   }
+
+  .headercard{
+    @apply bg-gray-200 flex py-4 px-2 shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+
+  }
+
   .btnx {
     @apply bg-gray-200 flex shadow-sm justify-center items-center h-full dark:bg-gray-800 border border-gray-300 dark:border-gray-700
 

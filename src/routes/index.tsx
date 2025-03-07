@@ -22,10 +22,10 @@ export default component$(() => {
       </Headline>
       <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
-      <a class="btn2 w-full py-2" href="/contact">Get A Quote
+      <a class="btn2" href="/contact">Get A Quote
 
       </a>
-      <a class="btn2 w-full py-2" href="/contact">Book A Consultation
+      <a class="btn2" href="/contact">Book A Consultation
 
 </a>
 </div>
@@ -34,7 +34,18 @@ export default component$(() => {
 
 
 
-<div class="h-1"></div>
+<div class="h-0.5"></div>
+
+<div>
+<Headline title="Premium Web Design & Development" 
+      subtitle="Transform your online presence with our custom web design and development services. 
+      We help business create stunning, fast, and secure websites."
+         classes={{
+    title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
+    align: "left"
+  }}>
+      </Headline>
+      </div>
 
 <LogoClouds title="What Our Clients Say"
         subtitle="Have questions about our café? Find answers to common inquiries below."
