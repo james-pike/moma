@@ -50,7 +50,7 @@ export default component$(() => {
 
       {isBannerVisible.value && (
         <div
-          class="card">
+          class="btnx">
 
           <div class="w-full h-6  px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
             <div>
