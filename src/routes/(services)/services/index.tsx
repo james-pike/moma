@@ -9,9 +9,14 @@ export default component$(() => {
     <>
  <Services1  
       title="What We Do"
-      // subtitle="Have questions about our café? Find answers to common inquiries below."
+      subtitle="Now Serving Preston, Wellington & Almonte"
       highlight="Services"
-      items={[]} />
+      items={[]}
+      classes={{
+        
+        headline: { subtitle: "text-md md:text-5xl" },
+      }}
+      />
     </>
   );
 });

@@ -34,9 +34,9 @@ export default component$((props: Props) => {
           <Card.Content>
             <div class="flex justify-between">
             <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-            <a href="/contact"
-              class="p-2 bg-blue-50 self-end rounded-sm flex items-center h-full dark:bg-gray-800 border border-blue-200 dark:border-gray-700">
-              Get A Quote                </a>
+            {/* <a href="/contact"
+              class="p-2 bg-blue-50 mb-1 self-end rounded-sm flex items-center h-full dark:bg-gray-800 border border-blue-200 dark:border-gray-700">
+              Get A Quote                </a> */}
             </div>
           </Card.Content>
         </Card.Root>

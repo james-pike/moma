@@ -39,7 +39,7 @@ export const CardHeadline = (props: Props) => {
         />
       )}
 
-      {subtitle && <p class={twMerge("mt-2 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
+      {subtitle && <p class={twMerge("mt-0 md:mt-4 text-muted", subtitleClass)} dangerouslySetInnerHTML={subtitle} />}
     </div>
   ) : null;
 };
