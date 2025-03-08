@@ -13,7 +13,8 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-      <div class="herocard">
+    <div class="px-2">
+      <div class="herocard ">
         <div class="flex flex-col">
           <HeroHeadline title="Premium Web Design & Development"
             subtitle="Transform your online presence with our custom web design and development services. 
@@ -33,7 +34,7 @@ export default component$(() => {
           </div>
         </div>
       </div>
-
+      </div>
 
 
 

@@ -34,7 +34,7 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 -mx-1.5 -mt-0.5 z-40 max-w-7xl bg-background flex-none mx-auto w-full border-gray-200 dark:border-gray-700 transition-[opacity] ease-in-out ${store.isScrolling
+      class={`sticky top-0 -mt-0.5 z-40 max-w-7xl bg-background flex-none mx-auto w-full border-gray-200 dark:border-gray-700 transition-[opacity] ease-in-out ${store.isScrolling
         ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-background"
         : ""
         }`}

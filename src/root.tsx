@@ -40,7 +40,7 @@ export default component$(() => {
                 <link rel="preload" href="/images/hero2.webp" as="image" />
         
       </head>
-      <body class="text-gray-900 max-w-7xl px-1 py-1 mx-auto bg-white dark:bg-background dark:text-gray-300 tracking-tight antialiased">
+      <body class="text-gray-900 max-w-7xl px-0 py-1 mx-auto bg-white dark:bg-background dark:text-gray-300 tracking-tight antialiased">
        <ObserverProvider>
           <RouterOutlet />
           </ObserverProvider>
