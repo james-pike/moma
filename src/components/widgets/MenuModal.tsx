@@ -19,7 +19,7 @@ export default component$(() => {
     { title: "Our Story", href: "/about/", badge: null },
     { 
       title: "Portfolio", 
-      href: "/gallery/", 
+      href: "/services/", 
       badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
     },
     { 
