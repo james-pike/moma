@@ -49,7 +49,7 @@ export default component$(() => {
                 <div key={index} class="bg-white shadow-md overflow-hidden border border-gray-200">
                   <img width={1024} height={1024} src={item.image} alt={item.title} class="w-full h-40 object-cover" />
                   <div class="p-3">
-                    <h3 class="text-lg font-semibold text-gray-900">{item.title}</h3>
+                    <h3 class="text-lg font-semibold text-gray-900">Design</h3>
                     <p class="text-sm text-gray-600 mt-1">{item.description}</p>
                     <p class="text-lg font-bold text-primary mt-2">{item.price}</p>
                   </div>

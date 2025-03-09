@@ -79,30 +79,30 @@ const tabContent: TabContent[] = [
     //                 <defs><linearGradient id="a" x1="6" x2="235" y1="33" y2="344" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#41d1ff" /><stop offset="1" stop-color="#bd34fe" /></linearGradient><linearGradient id="b" x1="194.651" x2="236.076" y1="8.818" y2="292.989" gradientTransform="translate(0 .937) scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffea83" /><stop offset=".083" stop-color="#ffdd35" /><stop offset="1" stop-color="#ffa800" /></linearGradient></defs><path fill="url(#a)" d="M124.766 19.52 67.324 122.238c-1.187 2.121-4.234 2.133-5.437.024L3.305 19.532c-1.313-2.302.652-5.087 3.261-4.622L64.07 25.187a3.09 3.09 0 0 0 1.11 0l56.3-10.261c2.598-.473 4.575 2.289 3.286 4.594Zm0 0" /><path fill="url(#b)" d="M91.46 1.43 48.954 9.758a1.56 1.56 0 0 0-1.258 1.437l-2.617 44.168a1.563 1.563 0 0 0 1.91 1.614l11.836-2.735a1.562 1.562 0 0 1 1.88 1.836l-3.517 17.219a1.562 1.562 0 0 0 1.985 1.805l7.308-2.223c1.133-.344 2.223.652 1.985 1.812l-5.59 27.047c-.348 1.692 1.902 2.614 2.84 1.164l.625-.968 34.64-69.13c.582-1.16-.421-2.48-1.69-2.234l-12.185 2.352a1.558 1.558 0 0 1-1.793-1.965l7.95-27.562A1.56 1.56 0 0 0 91.46 1.43Zm0 0" />            </svg>
     //         )
     //     },
-    {
-        title: "React",
-        description: "powers our component-based front-end development. Our design agency uses it to build reusable UI elements, enabling rapid development of interactive interfaces that align with our design-first approach and client needs.",
-        icon: (
-            <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
-                <path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8" />            </svg>
-        )
-    },
-    {
-        title: "QwikJS",
-        description: "optimizes our web performance with its innovative approach to hydration. Our agency uses it to deliver fast-loading, interactive sites, ensuring our designs perform as well as they look, even under heavy client demands.",
-        icon: (
-            <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
-                <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z" /><path data-name="original" fill="#007acc" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z" />            </svg>
-        )
-    },
-    {
-        title: "Figma",
-        description: "is our collaborative design hub, streamlining the creative process. Our agency uses it for wireframing, prototyping, and sharing designs with clients and developers, ensuring a cohesive transition from concept to final product.",
-        icon: (
-            <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
-                <path fill="#DD4814" d="M64 3.246C30.445 3.246 3.245 30.446 3.245 64c0 33.552 27.2 60.754 60.755 60.754 33.554 0 60.755-27.202 60.755-60.754 0-33.554-27.2-60.754-60.755-60.754zm13.631 20.922a8.108 8.108 0 1114.046 8.108A8.105 8.105 0 0180.6 35.243a8.11 8.11 0 01-2.969-11.075zM64 28.763c3.262 0 6.417.453 9.414 1.281a11.357 11.357 0 005.548 8.042 11.378 11.378 0 009.725.789c5.998 5.898 9.901 13.919 10.47 22.854l-11.558.17C86.532 49.796 76.377 40.306 64 40.306a23.6 23.6 0 00-9.98 2.203L48.383 32.41A35.116 35.116 0 0164 28.763zM22.689 72.112A8.112 8.112 0 0114.576 64a8.111 8.111 0 018.113-8.113 8.113 8.113 0 010 16.225zm7.191.722A11.377 11.377 0 0034.08 64c0-3.565-1.639-6.747-4.2-8.836 2.194-8.489 7.475-15.738 14.571-20.483l5.931 9.934C44.29 48.902 40.308 55.984 40.308 64s3.981 15.098 10.074 19.383l-5.931 9.937c-7.099-4.744-12.38-11.995-14.571-20.486zm58.831 33.964a8.105 8.105 0 01-11.077-2.969c-2.241-3.877-.911-8.835 2.969-11.076 3.877-2.239 8.838-.908 11.077 2.969a8.106 8.106 0 01-2.969 11.076zm-.024-17.673a11.357 11.357 0 00-9.725.788 11.36 11.36 0 00-5.547 8.042A35.232 35.232 0 0164 99.239a35.097 35.097 0 01-15.616-3.649l5.636-10.1A23.6 23.6 0 0064 87.694c12.378 0 22.532-9.488 23.596-21.592l11.561.169c-.569 8.935-4.472 16.956-10.47 22.854z" />            </svg>
-        )
-    }
+    // {
+    //     title: "React",
+    //     description: "powers our component-based front-end development. Our design agency uses it to build reusable UI elements, enabling rapid development of interactive interfaces that align with our design-first approach and client needs.",
+    //     icon: (
+    //         <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
+    //             <path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8" />            </svg>
+    //     )
+    // },
+    // {
+    //     title: "QwikJS",
+    //     description: "optimizes our web performance with its innovative approach to hydration. Our agency uses it to deliver fast-loading, interactive sites, ensuring our designs perform as well as they look, even under heavy client demands.",
+    //     icon: (
+    //         <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
+    //             <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z" /><path data-name="original" fill="#007acc" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z" />            </svg>
+    //     )
+    // },
+    // {
+    //     title: "Figma",
+    //     description: "is our collaborative design hub, streamlining the creative process. Our agency uses it for wireframing, prototyping, and sharing designs with clients and developers, ensuring a cohesive transition from concept to final product.",
+    //     icon: (
+    //         <svg class="w-14 h-14 mx-auto" viewBox="0 0 128 128">
+    //             <path fill="#DD4814" d="M64 3.246C30.445 3.246 3.245 30.446 3.245 64c0 33.552 27.2 60.754 60.755 60.754 33.554 0 60.755-27.202 60.755-60.754 0-33.554-27.2-60.754-60.755-60.754zm13.631 20.922a8.108 8.108 0 1114.046 8.108A8.105 8.105 0 0180.6 35.243a8.11 8.11 0 01-2.969-11.075zM64 28.763c3.262 0 6.417.453 9.414 1.281a11.357 11.357 0 005.548 8.042 11.378 11.378 0 009.725.789c5.998 5.898 9.901 13.919 10.47 22.854l-11.558.17C86.532 49.796 76.377 40.306 64 40.306a23.6 23.6 0 00-9.98 2.203L48.383 32.41A35.116 35.116 0 0164 28.763zM22.689 72.112A8.112 8.112 0 0114.576 64a8.111 8.111 0 018.113-8.113 8.113 8.113 0 010 16.225zm7.191.722A11.377 11.377 0 0034.08 64c0-3.565-1.639-6.747-4.2-8.836 2.194-8.489 7.475-15.738 14.571-20.483l5.931 9.934C44.29 48.902 40.308 55.984 40.308 64s3.981 15.098 10.074 19.383l-5.931 9.937c-7.099-4.744-12.38-11.995-14.571-20.486zm58.831 33.964a8.105 8.105 0 01-11.077-2.969c-2.241-3.877-.911-8.835 2.969-11.076 3.877-2.239 8.838-.908 11.077 2.969a8.106 8.106 0 01-2.969 11.076zm-.024-17.673a11.357 11.357 0 00-9.725.788 11.36 11.36 0 00-5.547 8.042A35.232 35.232 0 0164 99.239a35.097 35.097 0 01-15.616-3.649l5.636-10.1A23.6 23.6 0 0064 87.694c12.378 0 22.532-9.488 23.596-21.592l11.561.169c-.569 8.935-4.472 16.956-10.47 22.854z" />            </svg>
+    //     )
+    // }
 ];
 
 import { component$, useSignal, useStyles$ } from "@builder.io/qwik";
@@ -161,51 +161,16 @@ export default component$((props: Props) => {
 
     return (
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
-            <div
-                class={twMerge(
-                    "relative md:px-6 pb-2 md:py-16 lg:py-20 text-default",
-                    classes?.container,
-                    isDark ? "dark" : ""
-                )}
-            >
+       
 
-<Card2.Root>
+<Card.Root>
                                 <Card.Content class="px-2 items-center">
-                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
 
                                 </Card.Content>
-                            </Card2.Root>
+                            </Card.Root>
 
                 {/* SVG Grid */}
-               
-
-                {/* Tabs Component */}
-                <Tabs.Root
-                    selectedClassName='bg-white'
-                    selectedIndex={selectedIndex.value}
-                    onSelectedIndexChange$={(index) => (selectedIndex.value = index)}
-                >
-                    <Tabs.List class="hidden grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md">
-                        {tabContent.map((content, index) => (
-                            <Tabs.Tab key={index} class="px-4 py-2">{content.title}</Tabs.Tab>
-                        ))}
-                    </Tabs.List>
-
-                    {tabContent.map((content, index) => (
-                        <Tabs.Panel key={index}>
-                            <Card2.Root>
-                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
-                                    <p>
-                                        <span class="text-2xl font-bold">{content.title}</span> {content.description}
-                                    </p>
-                                </Card.Content>
-                            </Card2.Root>
-                        </Tabs.Panel>
-                    ))}
-
-                    
-                </Tabs.Root>
-
                 <div class="mt-0.5 grid grid-cols-3 lg:grid-cols-4 gap-0.25 -mx-0.5 mb-0.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
@@ -238,8 +203,37 @@ export default component$((props: Props) => {
                     ))}
                 </div>
 
+
+                {/* Tabs Component */}
+                <Tabs.Root
+                    selectedClassName='bg-white'
+                    selectedIndex={selectedIndex.value}
+                    onSelectedIndexChange$={(index) => (selectedIndex.value = index)}
+                >
+                    <Tabs.List class="hidden grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full p-2 rounded-lg shadow-md">
+                        {tabContent.map((content, index) => (
+                            <Tabs.Tab key={index} class="px-4 py-2">{content.title}</Tabs.Tab>
+                        ))}
+                    </Tabs.List>
+
+                    {tabContent.map((content, index) => (
+                        <Tabs.Panel key={index}>
+                            <Card2.Root>
+                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
+                                    <p>
+                                        <span class="text-2xl font-bold">{content.title}</span> {content.description}
+                                    </p>
+                                </Card.Content>
+                            </Card2.Root>
+                        </Tabs.Panel>
+                    ))}
+
+                    
+                </Tabs.Root>
+
+                
                
-            </div>
+        
 
 
         </section>
