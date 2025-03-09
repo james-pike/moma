@@ -282,7 +282,7 @@ export default component$(() => {
         </div>
       </div>
 
-      {/* <div class="border border-t-0 h-1 bg-gray-200 dark:bg-gray-800 mb-1 px-2 border-gray-200 dark:border-gray-700 mx-2"></div> */}
+      <div class=" border-b h-1 mb-1 px-2 border-gray-200 dark:border-gray-700 mx-2"></div>
     </header>
   );
 });
