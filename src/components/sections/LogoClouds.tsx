@@ -154,7 +154,7 @@ const styles = `
 `;
 
 export default component$((props: Props) => {
-    const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+    const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
     const selectedIndex = useSignal<number | undefined>(0);
 
     useStyles$(styles);
