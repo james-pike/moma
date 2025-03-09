@@ -170,7 +170,7 @@ export default component$((props: Props) => {
                             </Card.Root>
 
                 {/* SVG Grid */}
-                <div class="mt-0.5 grid grid-cols-3 lg:grid-cols-4 gap-0.25 -mx-0.5 mb-0.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
+                <div class="grid grid-cols-3 lg:grid-cols-4 gap-0.25 -mx-0.5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
                     {tabContent.map((content, index) => (
                         <div
                             key={index}
