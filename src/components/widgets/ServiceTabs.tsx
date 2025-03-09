@@ -33,10 +33,10 @@ export default component$(() => {
     <Tabs.Root selectedClassName='bg-white' class=" max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List sticky top-[92px] z-10 */}
       <Tabs.List class="grid grid-cols-4  rounded-sm sm:justify-start sm:inline-flex sm:space-x-4 w-full mb-0.5 shadow-md ">
-        <Tabs.Tab class="px-4 ml-0.5 py-2">Design</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Design</Tabs.Tab>
         <Tabs.Tab class="px-4 mx-0.5 py-2">Develop</Tabs.Tab>
         <Tabs.Tab class="px-4  mr-0.5 py-2">Branding</Tabs.Tab>
-        <Tabs.Tab class="px-4 mr-0.5 py-2">Marketing</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Marketing</Tabs.Tab>
       </Tabs.List>
       
 
