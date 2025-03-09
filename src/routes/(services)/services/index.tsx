@@ -14,7 +14,7 @@ export default component$(() => {
       items={[]}
       classes={{
         
-        headline: { subtitle: "text-md md:text-5xl" },
+        headline: { subtitle: " md:text-5xl" },
       }}
       />
     </>
