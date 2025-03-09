@@ -29,8 +29,8 @@ export default component$((props: Props) => {
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
      
      <Card.Root>
-                                <Card.Content class="px-2 items-center">
-                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
+                                <Card.Content class="">
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
 
                                 </Card.Content>
                             </Card.Root>
