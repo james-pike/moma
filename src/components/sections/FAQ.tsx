@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import FAQAccordion from "../widgets/FAQAccordion";
 import { ItemGrid2 } from "../ui/ItemGrid2";
-import { PageWrapper } from "../common/PageWrapper";
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 
@@ -28,15 +27,19 @@ export default component$((props: Props) => {
 
   return (
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
-      <PageWrapper>
-<Card.Root class="btnx">
-                                <Card.Content class="">
-                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="center" />
-                                <div class="block pt-6 px-1 sm:hidden">
-          <FAQAccordion />
-        </div>
+     
+     <Card.Root>
+                                <Card.Content class="px-2 items-center">
+                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
+
                                 </Card.Content>
-                            </Card.Root>   
+                            </Card.Root>
+
+                            <Card.Root>
+                            <Card.Content class="py-0 items-center">
+                            <FAQAccordion/>  
+                            </Card.Content>
+                            </Card.Root>
           
         <div class="hidden sm:block">
           <ItemGrid2
@@ -48,7 +51,7 @@ export default component$((props: Props) => {
             }}
           />
         </div>
-      </PageWrapper>
+
     </section>
   );
 });
