@@ -15,36 +15,36 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-    <div class="px-0">
-      <div class="herocard ">
-        <div class="flex flex-col">
-          <HeroHeadline title="Premium Web Design & Development"
-            subtitle="Transform your online presence with our custom web design and development services. 
+      <div class="pb-0.5">
+        <div class="herocard ">
+          <div class="flex flex-col">
+            <HeroHeadline title="Premium Web Design & Development"
+              subtitle="Transform your online presence with our custom web design and development services. 
       We help business create stunning, fast, and secure websites."
-            classes={{
-              title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
-            }}>
-          </HeroHeadline>
-          <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+              classes={{
+                title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
+              }}>
+            </HeroHeadline>
+            <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
-            <a class="btn2" href="/contact">Get A Quote
+              <a class="btn2" href="/contact">Get A Quote
 
-            </a>
-            <a class="btn2" href="/contact">Book A Consultation
+              </a>
+              <a class="btn2" href="/contact">Book A Consultation
 
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      </div>
 
       <LogoClouds title="Our Tech & Design Stack"
-              subtitle="The cutting-edge tehcnology powering our designs."
-              highlight="Technologies"
-              items={[
-           
-          
-              ]}/>
+        subtitle="The cutting-edge tehcnology powering our designs."
+        highlight="Technologies"
+        items={[
+
+
+        ]} />
 
 
 
@@ -57,10 +57,10 @@ export default component$(() => {
             align: "left"
           }}>
         </Headline>
-        <ServicesCarousel/>
+        <ServicesCarousel />
       </div>
 
-    
+
 
       <div class="headercard flex flex-col gap-4">
         <Headline title="Frequently Asked Questions"
@@ -71,20 +71,20 @@ export default component$(() => {
             align: "center"
           }}>
         </Headline>
-        <FAQAccordion/>
+        <FAQAccordion />
       </div>
 
       <FAQ title="Frequently Asked Questions"
-              subtitle="Find answers to common inquiries about our cafe."
-              highlight="FAQs"
-              items={[
-               
-           
-        
-          
-              ]}/>
+        subtitle="Find answers to common inquiries about our cafe."
+        highlight="FAQs"
+        items={[
 
-     
+
+
+
+        ]} />
+
+
 
 
 
