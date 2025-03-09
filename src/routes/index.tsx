@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import LogoClouds from "~/components/sections/LogoClouds";
 import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import FAQAccordion from "~/components/widgets/FAQAccordion";
@@ -35,6 +36,14 @@ export default component$(() => {
         </div>
       </div>
       </div>
+
+      <LogoClouds title="Our Tech & Design Stack"
+              subtitle="The cutting-edge tehcnology powering our designs."
+              highlight="Technologies"
+              items={[
+           
+          
+              ]}/>
 
 
 
