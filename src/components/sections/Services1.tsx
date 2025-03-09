@@ -41,10 +41,8 @@ export default component$((props: Props) => {
           </Card.Content>
         </Card.Root>
 
-        <Card.Root>
-          <Card.Content class="p-0">
-            <ServiceTabs />                                </Card.Content>
-        </Card.Root>
+      
+            <ServiceTabs />                             
 
 
         <ServicesCarousel />

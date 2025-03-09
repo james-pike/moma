@@ -29,14 +29,16 @@ export default component$(() => {
   });
 
   return (
-    <Tabs.Root selectedClassName='bg-white' class="max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
+    <div class="bg-black">
+    <Tabs.Root selectedClassName='bg-white' class=" max-w-5xl mx-auto" selectedIndex={selectedIndex.value} onSelectedIndexChange$={(index) => (selectedIndex.value = index)}>
       {/* Responsive Tabs List sticky top-[92px] z-10 */}
-      <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full shadow-md ">
+      <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full pb-0.5 shadow-md ">
         <Tabs.Tab class="px-4 py-2">Design</Tabs.Tab>
-        <Tabs.Tab class="px-4 py-2">Development</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Develop</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Branding</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Marketing</Tabs.Tab>
       </Tabs.List>
+      
 
       {/* Coffee Menu Panel */}
       <Tabs.Panel>
@@ -124,5 +126,6 @@ export default component$(() => {
         </Card.Root>
       </Tabs.Panel>
     </Tabs.Root>
+    </div>
   );
 });

@@ -12,6 +12,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '0.375': '0.09375rem', // Between mx-0.25 and mx-0.5
+      },
       fontSize: {
         '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       },
