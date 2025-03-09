@@ -30,7 +30,7 @@ const Tab = component$<PropsOf<typeof HeadlessTabs.Tab>>((props) => {
     <HeadlessTabs.Tab
       {...props}
       class={cn(
-        'inline-flex items-center bg-gray-800 mx-0.375 border rounded-sm border-gray-700 justify-center whitespace-nowrap  px-3 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base data-[state=selected]:bg-gray-700 data-[state=selected]:text-foreground data-[state=selected]:shadow-inner',
+        'inline-flex items-center bg-gray-800 border rounded-sm border-gray-700 justify-center whitespace-nowrap  px-3 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base data-[state=selected]:bg-gray-700 data-[state=selected]:text-foreground data-[state=selected]:shadow-inner',
         props.class,
       )}
     >
