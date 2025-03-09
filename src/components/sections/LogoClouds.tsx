@@ -218,7 +218,7 @@ export default component$((props: Props) => {
                     {tabContent.map((content, index) => (
                         <Tabs.Panel key={index}>
                             <Card.Root>
-                                <Card.Content class="p-4 bg-gray-200 dark:bg-gray-800">
+                                <Card.Content class=" bg-gray-200 dark:bg-gray-800">
                                     <p>
                                         <span class="text-2xl font-bold">{content.title}</span> {content.description}
                                     </p>
