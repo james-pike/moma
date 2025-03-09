@@ -32,7 +32,7 @@ export default component$(() => {
         { title: "SEO", href: "/services/seo" }
       ]
     },
-    { title: "Reviews", href: "/reviews/", badge: null },
+    { title: "Technology", href: "/technology/", badge: null },
     { title: "FAQ", href: "/faq/", badge: null },
     { title: "Contact Us", href: "/contact/", badge: null }
   ];

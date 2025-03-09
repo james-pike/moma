@@ -1,15 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Reviews from "~/components/sections/Reviews";
+import LogoClouds from "~/components/sections/LogoClouds";
 import { SITE } from "~/config.mjs";
 
 
 export default component$(() => {
   return (
     <>
-<Reviews title="What Our Guests Say"
-        subtitle="See what our customers love about our café!"
-        highlight="Reviews"
+<LogoClouds title="Our Tech & Design Stack"
+        subtitle="The cutting-edge tehcnology powering our designs."
+        highlight="Technologies"
         items={[
      
     
