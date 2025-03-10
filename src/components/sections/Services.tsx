@@ -1,46 +1,41 @@
 import { component$ } from "@builder.io/qwik";
-import { Headline } from "~/components/ui/Headline";
+import FAQAccordion from "../widgets/FAQAccordion";
+import { Card } from "../ui/Card";
+import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
-import ServiceGrid from "../widgets/ServiceGrid";
-import { PageWrapper } from "../common/PageWrapper";
-
-interface Item {
-  title?: string;
-  description?: string;
-  icon?: any;
-  classes?: Record<string, string>;
-}
+import ServiceTabs from "../widgets/ServiceTabs";
 
 interface Props {
-  id?: string;
-  title?: any;
-  subtitle?: any;
-  highlight?: any;
-  items: Array<Item>;
-  isDark?: boolean;
-  classes?: any;
+    id?: string;
+    title?: any;
+    subtitle?: any;
+    highlight?: any;
+    classes?: any;
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
+    const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
-  return (
-    <>
+    return (
+        <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
+            <Card.Root class="">
+                <Card.Header>
+                    <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
 
-      {/* <head>
-    <link rel="preload" href="/images/hero1.webp" as="image"/>
-    </head> */}
-      <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
-        <PageWrapper>
-          <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
-          <div class="block sm:hidden">
-            <ServicesCarousel />
-          </div>
-          <div class="hidden sm:block">
-            <ServiceGrid />
-          </div>
-        </PageWrapper>
-      </section>
-    </>
-  );
+                </Card.Header>
+                <Card.Content class="relative">
+                    <ServiceTabs />
+
+                </Card.Content>
+
+
+                <Card.Footer class="flex justify-end">
+                    View More FAQs
+                </Card.Footer>
+            </Card.Root>
+
+        </section>
+    );
 });
+
+

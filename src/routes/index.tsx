@@ -1,7 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { Card } from "flowbite-qwik";
 import FAQ from "~/components/sections/FAQ";
 import LogoClouds from "~/components/sections/LogoClouds";
+import Portfolio from "~/components/sections/Portfolio";
+import Services from "~/components/sections/Services";
 import Services1 from "~/components/sections/Services1";
 import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
@@ -36,6 +39,16 @@ export default component$(() => {
             </div>
           </div>
         </div>
+
+        <Portfolio title="Our Design Stack"
+        subtitle="The cutting-edge tehcnology powering our designs."
+        highlight="Technologies"
+        />
+
+<Services title="Our Design Stack"
+        subtitle="The cutting-edge tehcnology powering our designs."
+        highlight="Technologies"
+        />
      
 
       <LogoClouds title="Our Design Stack"
