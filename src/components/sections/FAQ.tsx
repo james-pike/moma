@@ -17,7 +17,7 @@ export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
     return (
-        <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
+        <section class="relative mt-2 scroll-mt-16" {...(id ? { id } : {})}>
             <Card.Root class="">
                 <Card.Header class="relative">
                 <div class="absolute inset-y-0 right-[5%] flex items-center opacity-20 z-10 text-gray-500">
