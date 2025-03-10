@@ -4,7 +4,6 @@ import FAQ from "~/components/sections/FAQ";
 import { SITE } from "~/config.mjs";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
-const IconArrowDown = qwikSerialized(() => import("~/components/icons/IconArrowDownRight"));
 
 
 export default component$(() => {
