@@ -1,38 +1,26 @@
 import { component$ } from "@builder.io/qwik";
 import FAQAccordion from "../widgets/FAQAccordion";
-import { ItemGrid2 } from "../ui/ItemGrid2";
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 
-interface Item {
-  title?: string;
-  description?: string;
-  icon?: any;
-  classes?: Record<string, string>;
-}
+
 
 interface Props {
-  id?: string;
-  title?: any;
-  subtitle?: any;
-  highlight?: any;
-  items: Array<Item>;
-  isDark?: boolean;
-  classes?: any;
+    id?: string;
+    title?: any;
+    subtitle?: any;
+    highlight?: any;
+    classes?: any;
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", items = [], classes = {} } = props;
+    const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
-
-  return (
-    <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
-
-
-     
-     <Card.Root class="mb-0.5">
-                                <Card.Content class="relative">
-                                <div class="absolute inset-y-0 right-[2%] flex items-center opacity-20 z-10 text-gray-500">
+    return (
+        <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
+            <Card.Root class="">
+                <Card.Header class="relative">
+                <div class="absolute inset-y-0 right-[5%] flex items-center opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -41,30 +29,24 @@ export default component$((props: Props) => {
                             </g>
                         </svg>
                     </div>
-                                <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
+                    <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
 
-                                </Card.Content>
-                            </Card.Root>
+                </Card.Header>
+                <Card.Content class="relative">
+                <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div>
 
-                            <Card.Root>
-                            <Card.Content class="py-0 items-center">
-                            <FAQAccordion/>  
-                            </Card.Content>
-                            </Card.Root>
-          
-        <div class="hidden sm:block">
-          <ItemGrid2
-            items={items}
-            classes={{
-              container: "md:grid-cols-2 max-w-5xl",
-              panel: "max-w-none",
-              ...(classes?.items ?? {}),
-            }}
-          />
-        </div>
+                    <FAQAccordion />
 
-    </section>
-  );
+                </Card.Content>
+
+
+                <Card.Footer class="flex justify-end">
+                    View More FAQs
+                </Card.Footer>
+            </Card.Root>
+
+        </section>
+    );
 });
 
 
