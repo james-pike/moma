@@ -1,9 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import FAQAccordion from "../widgets/FAQAccordion";
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
-import ServiceTabs from "../widgets/ServiceTabs";
 
 interface Props {
     id?: string;
@@ -24,7 +22,7 @@ export default component$((props: Props) => {
 
                 </Card.Header>
                 <Card.Content class="relative">
-                    <ServiceTabs />
+                    <ServicesCarousel />
 
                 </Card.Content>
 
