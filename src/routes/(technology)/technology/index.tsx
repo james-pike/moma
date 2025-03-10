@@ -7,7 +7,7 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-<LogoClouds title="Our Tech & Design Stack"
+<LogoClouds title="Our Design Stack"
         subtitle="The cutting-edge tehcnology powering our designs."
         highlight="Technologies"
         items={[

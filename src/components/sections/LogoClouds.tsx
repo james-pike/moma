@@ -1,5 +1,13 @@
 
 
+import { component$, useSignal, useStyles$ } from "@builder.io/qwik";
+import { twMerge } from "tailwind-merge";
+import { Tabs } from "~/components/ui/Tabs";
+import { CardHeadline } from "../ui/CardHeadline";
+import { Card } from "../ui/Card";
+
+
+
 
 const tabContent: TabContent[] = [
     {
@@ -105,13 +113,6 @@ const tabContent: TabContent[] = [
     // }
 ];
 
-import { component$, useSignal, useStyles$ } from "@builder.io/qwik";
-import { twMerge } from "tailwind-merge";
-import { Tabs } from "~/components/ui/Tabs";
-import { CardHeadline } from "../ui/CardHeadline";
-import { Card } from "../ui/Card";
-import IconMoon from "../icons/IconMoon";
-
 
 interface Item {
     title?: string;
@@ -167,7 +168,7 @@ export default component$((props: Props) => {
                               <Card.Content class="relative">
   {/* Background Icon */}
   <div class="absolute inset-y-0 right-[2%] flex items-center opacity-20 z-10 text-gray-500">
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1s_ease-in-out]">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
