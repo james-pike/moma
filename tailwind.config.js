@@ -20,8 +20,8 @@ module.exports = {
       },
       colors: {
         gray: {
-          750: '#2F2F35', // Custom shade between 700 & 800
-          850: '#1F1F23', // Custom shade between 800 & 900
+          750: '#2D3645', // Between 700 and 800
+          850: '#181E2A', // Custom shade between 800 & 900
         },
         primary: {
           25:  '#faf6f2',  // Light Cream  
