@@ -30,7 +30,7 @@ export default component$((props: Props) => {
 
 
      
-     <Card.Root class="mb-0.5 pt-0">
+     <Card.Root class="mb-0.5">
                                 <Card.Content class="relative">
                                 <div class="absolute inset-y-0 right-[2%] flex items-center opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
