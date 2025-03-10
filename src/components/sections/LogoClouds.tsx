@@ -168,7 +168,7 @@ export default component$((props: Props) => {
                               <Card.Content class="relative">
   {/* Background Icon */}
   <div class="absolute inset-y-0 right-[2%] flex items-center opacity-20 z-10 text-gray-500">
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1s_ease-in-out]">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
