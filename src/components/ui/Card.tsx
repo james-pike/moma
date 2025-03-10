@@ -17,7 +17,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
 
 const Header = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('flex flex-col space-y-1.5 p-6', props.class)}>
+    <div {...props} class={cn('flex flex-col space-y-1.5 p-5', props.class)}>
       <Slot />
     </div>
   );
@@ -41,7 +41,7 @@ const Description = component$<PropsOf<'p'>>((props) => {
 
 const Content = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('p-4 pt-0', props.class)}>
+    <div {...props} class={cn('p-5 pt-0', props.class)}>
       <Slot />
     </div>
   );
@@ -49,7 +49,7 @@ const Content = component$<PropsOf<'div'>>((props) => {
 
 const Footer = component$<PropsOf<'div'>>(({ ...props }) => {
   return (
-    <div {...props} class={cn('flex items-center p-4 pt-0', props.class)}>
+    <div {...props} class={cn('flex items-center p-5 pt-0', props.class)}>
       <Slot />
     </div>
   );
