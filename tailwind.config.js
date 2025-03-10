@@ -19,6 +19,10 @@ module.exports = {
         '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       },
       colors: {
+        gray: {
+          750: '#2F2F35', // Custom shade between 700 & 800
+          850: '#1F1F23', // Custom shade between 800 & 900
+        },
         primary: {
           25:  '#faf6f2',  // Light Cream  
           50:  '#f3ebe3',  // Latte Foam  
