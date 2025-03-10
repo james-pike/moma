@@ -24,6 +24,8 @@ export default component$((props: Props) => {
 
                 </Card.Header>
                 <Card.Content class="relative">
+                <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div>
+
                     <FAQAccordion />
 
                 </Card.Content>
