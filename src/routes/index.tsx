@@ -58,7 +58,7 @@ export default component$(() => {
 <FAQ title="Frequently Asked Questions"
         subtitle="Find answers to common inquiries about our cafe."
         highlight="FAQs"
-        items={[]} />
+         />
 
 
         <Services1  
