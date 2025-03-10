@@ -10,7 +10,7 @@ export default component$(() => {
 <Portfolio title="Gallery of Our Work"
 subtitle="Explore the cutting-edge technologies powering our design solutions."
         highlight="Portfolio"
-        items={[]} />
+        />
     </>
   );
 });
