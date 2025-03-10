@@ -38,7 +38,7 @@ export default component$(() => {
         </div>
       </div>
 
-      <LogoClouds title="Our Tech & Design Stack"
+      <LogoClouds title="Our Design Stack"
         subtitle="The cutting-edge tehcnology powering our designs."
         highlight="Technologies"
         items={[
