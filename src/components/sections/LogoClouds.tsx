@@ -164,7 +164,7 @@ export default component$((props: Props) => {
         <section class="relative scroll-mt-16 max-w-5xl mx-auto" {...(id ? { id } : {})}>
 
 
-            <Card.Root class="pt-4">
+            <Card.Root class="pt-0">
                 <Card.Content class="relative">
                     {/* Background Icon */}
                     <div class="absolute inset-y-0 right-[2%] flex items-center opacity-20 z-10 text-gray-500">

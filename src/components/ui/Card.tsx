@@ -6,7 +6,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
     <div
       {...props}
       class={cn(
-        'rounded-base p-2 border border-white dark:border-gray-700 dark:bg-gray-800 bg-gray-100 text-card-foreground shadow-sm',
+        'rounded-base p-3 border border-white dark:border-gray-700 dark:bg-gray-800 bg-gray-100 text-card-foreground shadow-sm',
         props.class,
       )}
     >
@@ -41,7 +41,7 @@ const Description = component$<PropsOf<'p'>>((props) => {
 
 const Content = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('px-2 pt-2 pb-1', props.class)}>
+    <div {...props} class={cn('px-1 pt-2 pb-2', props.class)}>
       <Slot />
     </div>
   );
