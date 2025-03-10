@@ -4,10 +4,7 @@ import FAQ from "~/components/sections/FAQ";
 import LogoClouds from "~/components/sections/LogoClouds";
 import Portfolio from "~/components/sections/Portfolio";
 import Services from "~/components/sections/Services";
-import Services1 from "~/components/sections/Services1";
-import { Headline } from "~/components/ui/Headline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
-import ServicesCarousel from "~/components/widgets/ServicesCarousel";
 import { SITE } from "~/config.mjs";
 
 
@@ -17,12 +14,12 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-     <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2">
         <div class="herocard ">
           <div class="flex flex-col">
             <HeroHeadline title="Premium Web Design & Development"
               subtitle="Transform your online presence with our custom web design and development services. 
-      We help business create stunning, fast, and secure websites."
+          We help business create stunning, fast, and secure websites."
               classes={{
                 title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
               }}>
@@ -37,54 +34,37 @@ export default component$(() => {
               </a>
             </div>
           </div>
+
+
         </div>
 
         <Portfolio title="Our Design Stack"
-        subtitle="The cutting-edge tehcnology powering our designs."
-        highlight="Technologies"
+          subtitle="The cutting-edge tehcnology powering our designs."
+          highlight="Technologies"
         />
 
-<Services title="Our Design Stack"
-        subtitle="The cutting-edge tehcnology powering our designs."
-        highlight="Technologies"
+        <Services title="Our Design Stack"
+          subtitle="The cutting-edge tehcnology powering our designs."
+          highlight="Technologies"
         />
-     
-
-      <LogoClouds title="Our Design Stack"
-        subtitle="The cutting-edge tehcnology powering our designs."
-        highlight="Technologies"
-        items={[]} />
-
-<FAQ title="Frequently Asked Questions"
-        subtitle="Find answers to common inquiries about our cafe."
-        highlight="FAQs"
-         />
 
 
-        <Services1  
-             title="What We Do"
-             subtitle="Now Serving Preston, Wellington & Almonte"
-             highlight="Services"
-             items={[]}
-             classes={{
-               
-           
-             }}
-             />
+        <LogoClouds title="Our Design Stack"
+          subtitle="The cutting-edge tehcnology powering our designs."
+          highlight="Technologies"
+          items={[]} />
 
-</div>
+        <FAQ title="Frequently Asked Questions"
+          subtitle="Find answers to common inquiries about our cafe."
+          highlight="FAQs"
+        />
 
-      <div class="headercard flex flex-col gap-4 bg-yellow-50">
-        <Headline title="What We Offer"
-          highlight="Services"
-          subtitle="Transform your online presence with our custom web design and development services. "
-          classes={{
-            // title: "text-4.5xl", // Overrides the default "text-4xl md:text-5xl"
-            align: "left"
-          }}>
-        </Headline>
-        <ServicesCarousel />
+
+
+
       </div>
+
+
 
 
     </>
