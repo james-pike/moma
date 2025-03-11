@@ -18,6 +18,7 @@ export default component$((props: Props) => {
 
     return (
         <section class="relative mt-0.5 scroll-mt-16" {...(id ? { id } : {})}>
+            <Card.Root class="p-1.5">
             <Card.Root class="">
            <   Card.Root class="bg-gray-900 m-0.5 mb-0.5 border">
                 <Card.Header class="relative bg-gray-850">
@@ -46,7 +47,7 @@ export default component$((props: Props) => {
                 {/* <Card.Footer class="flex justify-end">
                     View More FAQs
                 </Card.Footer> */}
-            </Card.Root>
+            </Card.Root></Card.Root>
 
         </section>
     );
