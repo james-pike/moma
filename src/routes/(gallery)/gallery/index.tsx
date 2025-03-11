@@ -1,15 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Menu from "~/components/sections/Gallery";
+import Tech from "~/components/sections/Tech";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
   return (
     <>
-<Menu title="Gallery Of Past Work"
+<Tech title="Gallery Of Past Work"
               subtitle="Have questions about our café? Find answers to common inquiries below."
               highlight="Portfolio"
-              items={[]}/>
+          />
     </>
   );
 });
