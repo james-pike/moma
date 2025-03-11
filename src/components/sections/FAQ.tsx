@@ -17,10 +17,11 @@ export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
     return (
-        <section class="relative mt-1 scroll-mt-16" {...(id ? { id } : {})}>
+        <section class="relative mt-0 scroll-mt-16" {...(id ? { id } : {})}>
             <Card.Root class="">
-                <Card.Header class="relative">
-                <div class="absolute inset-y-0 right-[5%] flex items-center opacity-20 z-10 text-gray-500">
+           <   Card.Root class="bg-gray-900 m-3 mb-2 border">
+                <Card.Header class="relative bg-gray-850">
+                <div class="absolute inset-y-0 right-[1%] top-[2%] flex opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -32,9 +33,10 @@ export default component$((props: Props) => {
                     <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
 
                 </Card.Header>
+                </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="px-3 py-2 rounded-md border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="px-4 py-2 rounded-md border dark:border-gray-700 dark:bg-gray-850">
                     <FAQAccordion />
                     </Card.Root>
 
