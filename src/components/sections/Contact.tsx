@@ -18,8 +18,8 @@ export default component$((props: Props) => {
 
     return (
         <section class="relative mt-0 scroll-mt-16" {...(id ? { id } : {})}>
-            <Card.Root class="">
-           <   Card.Root class="bg-gray-900 m-3 mb-3 border">
+            <Card.Root class="border-2 rounded-sm">
+           <   Card.Root class="bg-gray-900 m-3 mb-3 border rounded-sm">
                 <Card.Header class="relative bg-gray-850">
                 <div class="absolute inset-y-0 right-[1%] top-[2%] flex opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
@@ -36,11 +36,11 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="px-4 py-2 rounded-md border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="m-3 px-4 py-6 rounded-md border dark:border-gray-700 dark:bg-gray-850">
 <form
                         action="#"
                         method="POST"
-                        class="px-6 pb-6 pt-8 sm:pb-32 lg:px-8 lg:py-24"
+                        class="px-0 py-0 sm:pb-32 lg:px-8 lg:py-24"
                     >
                         <div class="mx-auto max-w-xl lg:max-w-lg">
                             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -147,10 +147,10 @@ export default component$((props: Props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3.5 pb-4 flex">
+                            <div class="mt-3.5 pb-2 flex">
                                 <button
                                     type="submit"
-                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-primary-600 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-gray-600 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-gray-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                                 >
                                     Send message
                                 </button>
@@ -161,9 +161,7 @@ export default component$((props: Props) => {
                 </Card.Content>
 
 
-                <Card.Footer class="flex justify-end">
-                    View More FAQs
-                </Card.Footer>
+            
             </Card.Root>
 
         </section>
