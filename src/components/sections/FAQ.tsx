@@ -36,7 +36,7 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="px-3 py-2 rounded-sm border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="px-2 py-2 rounded-sm border dark:border-gray-700 dark:bg-gray-850">
                     <FAQAccordion />
                     </Card.Root>
 
