@@ -17,7 +17,7 @@ export default component$((props: Props) => {
     const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
 
     return (
-        <section class="relative mt-0 scroll-mt-16" {...(id ? { id } : {})}>
+        <section class="relative mt-0.5 scroll-mt-16" {...(id ? { id } : {})}>
             <Card.Root class="">
            <   Card.Root class="bg-gray-900 m-2 mb-2 border">
                 <Card.Header class="relative bg-gray-850">
@@ -36,16 +36,16 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="px-4 py-2 rounded-md border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="px-3 py-2 rounded-sm border dark:border-gray-700 dark:bg-gray-850">
                     <FAQAccordion />
                     </Card.Root>
 
                 </Card.Content>
 
 
-                <Card.Footer class="flex justify-end">
+                {/* <Card.Footer class="flex justify-end">
                     View More FAQs
-                </Card.Footer>
+                </Card.Footer> */}
             </Card.Root>
 
         </section>
