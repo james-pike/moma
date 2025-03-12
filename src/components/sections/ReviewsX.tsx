@@ -1,9 +1,7 @@
 import { component$ } from '@builder.io/qwik';
-
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ReviewsPage from '../widgets/ReviewsPage';
-
 
 
 interface Props {
