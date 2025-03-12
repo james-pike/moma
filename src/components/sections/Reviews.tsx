@@ -18,7 +18,7 @@ export default component$((props: Props) => {
     return (
         <section class="relative mt-0 scroll-mt-16" {...(id ? { id } : {})}>
             <Card.Root class="border-2 rounded-sm">
-           <   Card.Root class="bg-gray-900 m-2 border rounded-sm">
+           <   Card.Root class="bg-gray-900 m-1 border rounded-sm">
                 <Card.Header class="relative bg-gray-850">
                 <div class="absolute inset-y-0 right-[1%] top-[2%] flex opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
@@ -35,7 +35,7 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="m-2 p-3 rounded-none border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="m-1 p-3 rounded-none border dark:border-gray-700 dark:bg-gray-850">
 
 <ReviewsPage/>
 
