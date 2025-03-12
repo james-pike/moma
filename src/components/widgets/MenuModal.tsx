@@ -16,21 +16,27 @@ export default component$(() => {
   // Menu items array structure
   const menuItems = [
     { title: "Home", href: "/", badge: null },
-    { title: "Our Story", href: "/about/", badge: null },
-    { 
-      title: "Portfolio", 
-      href: "/services/", 
-      badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
-    },
+    { title: "About", href: "/about/", badge: null },
+  
     { 
       title: "Services", 
-      href: "#",
+      href: "/services/",
       hasSubmenu: true,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Development", href: "/services/development" },
         { title: "SEO", href: "/services/seo" }
       ]
+    },
+    { 
+      title: "Portfolio", 
+      href: "/gallery/", 
+      badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
+    },
+    { 
+      title: "Reviews", 
+      href: "/reviews/", 
+      badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
     },
     { title: "Technology", href: "/technology/", badge: null },
     { title: "FAQ", href: "/faq/", badge: null },

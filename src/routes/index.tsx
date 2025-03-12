@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
+import Portfolio from "~/components/sections/Portfolio";
+import Reviews from "~/components/sections/Reviews";
 import Tech from "~/components/sections/Tech";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
@@ -34,10 +36,23 @@ export default component$(() => {
 
         </div>
 
+        <Portfolio title="Gallery Of Past Work"
+subtitle="Browse past work from our clients."
+        highlight="Portfolio"
+        />
+
      <Tech title="Our Design Stack"
              subtitle="The cutting-edge technology powering our designs."
              highlight="Technology"
            />
+
+           <Reviews title="What Our Guests Say"
+                   subtitle="See what our customers love about our café!"
+                   highlight="Reviews"
+                   items={[
+                
+               
+                   ]}/>
 
         <FAQ title="Frequently Asked Questions"
           subtitle="Find answers to common inquiries about our cafe."
