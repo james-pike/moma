@@ -18,7 +18,7 @@ export default component$((props: Props) => {
 
     return (
         <section class="relative mt-1 scroll-mt-16" {...(id ? { id } : {})}>
-            <Card.Root class="p-3 border-2">
+            <Card.Root class="p-2.5 border-2">
             <Card.Root class="">
            <   Card.Root class="bg-gray-900 m-0.5 mb-0.5 border">
                 <Card.Header class="relative bg-gray-850">
