@@ -8,8 +8,8 @@ export default component$(() => {
   return (
     <>
 <Tech title="Our Design Stack"
-        subtitle="The cutting-edge tehcnology powering our designs."
-        highlight="Technologies"
+        subtitle="The cutting-edge technology powering our designs."
+        highlight="Technology"
       />
 
     </>
