@@ -1,9 +1,8 @@
 import { component$ } from '@builder.io/qwik';
-
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import ServicesCarousel from '../widgets/ServicesCarousel';
-
+import ReviewsPage from '../widgets/ReviewsPage';
+import ServiceTabs from '../widgets/ServiceTabs';
 
 
 interface Props {
@@ -37,9 +36,9 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="m-2 p-3 rounded-md border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="m-2 p-3 rounded-none border dark:border-gray-700 dark:bg-gray-850">
 
-<ServicesCarousel/>
+<ServiceTabs/>
 
                    </Card.Root>
 

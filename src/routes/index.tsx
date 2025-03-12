@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
+import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
 import ServiceGrid from "~/components/sections/ServiceGrid";
@@ -50,6 +51,11 @@ export default component$(() => {
         <Tech title="Our Design Stack"
           subtitle="The cutting-edge technology powering our designs."
           highlight="Technology"
+        />
+
+<Menu title="Menu & Product Gallery"
+          subtitle="Browse past work from our clients."
+          highlight="Menu/Products"
         />
 
         <Reviews title="What Our Guests Say"
