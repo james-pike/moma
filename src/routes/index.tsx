@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
 import LogoClouds from "~/components/sections/LogoClouds";
 import Portfolio from "~/components/sections/Portfolio";
@@ -38,21 +39,7 @@ export default component$(() => {
 
         </div>
 
-        <Portfolio title="Our Design Stack"
-          subtitle="The cutting-edge tehcnology powering our designs."
-          highlight="Technologies"
-        />
-
-        <Services title="Our Design Stack"
-          subtitle="The cutting-edge tehcnology powering our designs."
-          highlight="Technologies"
-        />
-
-
-        <LogoClouds title="Our Design Stack"
-          subtitle="The cutting-edge tehcnology powering our designs."
-          highlight="Technologies"
-          items={[]} />
+     
 
         <FAQ title="Frequently Asked Questions"
           subtitle="Find answers to common inquiries about our cafe."
@@ -60,6 +47,10 @@ export default component$(() => {
         />
 
 
+<Contact title="Request A Quote"
+subtitle="Get in touch for a consultation."
+        highlight="Contact Us"
+        />
 
 
       </div>
