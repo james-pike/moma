@@ -1,19 +1,16 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import LogoClouds from "~/components/sections/LogoClouds";
+import Tech from "~/components/sections/Tech";
 import { SITE } from "~/config.mjs";
 
 
 export default component$(() => {
   return (
     <>
-<LogoClouds title="Our Design Stack"
+<Tech title="Our Design Stack"
         subtitle="The cutting-edge tehcnology powering our designs."
         highlight="Technologies"
-        items={[
-     
-    
-        ]}/>
+      />
 
     </>
   );

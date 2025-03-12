@@ -6,9 +6,6 @@ import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
 
 
-
-
-
 export default component$(() => {
   return (
     <>
