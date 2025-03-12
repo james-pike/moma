@@ -9,8 +9,7 @@ export default component$(() => {
     <>
 <Reviews title="What Our Guests Say"
         subtitle="See what our customers love about our café!"
-        highlight="Reviews"
-    />
+        highlight="Reviews"/>
 
     </>
   );

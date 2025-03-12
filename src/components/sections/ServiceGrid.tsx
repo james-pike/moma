@@ -1,9 +1,7 @@
 import { component$ } from '@builder.io/qwik';
-
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import LogoClouds from './LogoClouds';
-
+import ServiceGrid from '../widgets/ServiceGrid';
 
 
 interface Props {
@@ -22,7 +20,7 @@ export default component$((props: Props) => {
             <Card.Root class="border-2 rounded-sm">
            <   Card.Root class="bg-gray-900 m-2.5 border rounded-sm">
                 <Card.Header class="relative bg-gray-850">
-                <div class="absolute inset-y-0 right-[1%] items-center flex opacity-20 z-10 text-gray-500">
+                <div class="absolute inset-y-0 right-[1%] top-[2%] flex opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -39,7 +37,7 @@ export default component$((props: Props) => {
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
 <Card.Root class="m-2.5 p-3 rounded-md border dark:border-gray-700 dark:bg-gray-850">
 
-<LogoClouds/>
+<ServiceGrid/>
 
                    </Card.Root>
 

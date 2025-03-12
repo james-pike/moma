@@ -22,7 +22,7 @@ export default component$((props: Props) => {
             <Card.Root class="">
            <   Card.Root class="bg-gray-900 m-0.5 mb-0.5 border">
                 <Card.Header class="relative bg-gray-850">
-                <div class="absolute inset-y-0 right-[1%] top-[2%] flex opacity-20 z-10 text-gray-500">
+                <div class="absolute inset-y-0 right-[1%] items-center flex opacity-20 z-10 text-gray-500">
                         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

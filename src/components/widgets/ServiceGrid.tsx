@@ -60,7 +60,7 @@ const services = [
 
 export default component$(() => {
   return (
-    <div class="grid mx-auto max-w-screen-xl mt-8 mb-8 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group opacity-0 intersect-once intersect:opacity-100">
+    <div class="grid mx-auto max-w-screen-xl mt-2 mb-2 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 motion-group opacity-0 intersect-once intersect:opacity-100">
       {services.map(({ title, description, details, image, alt, delay, slug }, index) => (
         <Link
           href={`/services/${slug}`} // Creates URL like "/services/exhibit-photography"
