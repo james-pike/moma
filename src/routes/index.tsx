@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
 import Portfolio from "~/components/sections/Portfolio";
+import Reviews from "~/components/sections/Reviews";
 import ReviewsX from "~/components/sections/ReviewsX";
 import Tech from "~/components/sections/Tech";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
@@ -46,7 +47,7 @@ subtitle="Browse past work from our clients."
              highlight="Technology"
            />
 
-           <ReviewsX title="What Our Guests Say"
+           <Reviews title="What Our Guests Say"
                    subtitle="See what our customers love about our café!"
                    highlight="Reviews"
                 />
