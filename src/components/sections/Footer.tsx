@@ -1,9 +1,6 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import IconTwitter from "~/components/icons/IconTwitter";
-import IconInstagram from "~/components/icons/IconInstagram";
-import IconFacebook from "~/components/icons/IconFacebook";
-import IconTelegram from "../icons/IconTelegram";
+
 import { Card } from "../ui/Card";
 
 export default component$(() => {
