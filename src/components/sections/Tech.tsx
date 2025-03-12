@@ -3,8 +3,6 @@ import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from "../widgets/ServicesCarousel";
 
-
-
 interface Props {
     id?: string;
     title?: any;

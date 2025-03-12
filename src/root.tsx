@@ -12,6 +12,7 @@ import { ObserverProvider } from "./components/common/ObserverProvider";
 
 export default component$(() => {
   useStyles$(styles);
+  
 
   return (
     <QwikCityProvider>
