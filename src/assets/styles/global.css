@@ -118,6 +118,12 @@
 
 }
 
+.btn3 {
+  @apply bg-gray-200 py-2 flex shadow-sm justify-center items-center h-full dark:bg-gray-700 border border-gray-300 dark:border-gray-600
+
+}
+
+
 .zerocard{
   @apply bg-gray-100 px-3 pt-2 flex  rounded-sm shadow-sm items-center h-full dark:bg-gray-800 border border-white dark:border-gray-700
 

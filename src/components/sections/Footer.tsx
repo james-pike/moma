@@ -31,6 +31,14 @@ export default component$(() => {
         { title: "Contact Us", href: "/contact" },
       ],
     },
+    {
+      title: "Visit",
+      items: [
+        { title: "Hours", href: "/contact#hours" },
+        { title: "Location", href: "/contact#location" },
+        { title: "Contact Us", href: "/contact" },
+      ],
+    },
     // {
     //   title: "About",
     //   items: [
@@ -81,7 +89,10 @@ export default component$(() => {
 
               </p>
               <div class="mt-6 flex space-x-4">
-                {social.map(({ label, href, icon: Icon }, index) => (
+              <a class="btn3 px-4 rounded-xl w-half" href="/contact">Get Started Today
+
+</a>
+                {/* {social.map(({ label, href, icon: Icon }, index) => (
                   <Link
                     key={index}
                     class={` hover:text-primary-800 dark:hover:text-primary-100 p-2 rounded-none bg-primary-100/50 dark:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
@@ -92,12 +103,12 @@ export default component$(() => {
                   >
                     <Icon />
                   </Link>
-                ))}
+                ))} */}
               </div>
             </div>
 
             {/* Navigation Columns */}
-            <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="md:col-span-8 grid grid-cols-3 md:grid-cols-4 gap-8">
               {links.map(({ title, items }, index) => (
                 <div key={index}>
                   <h3 class={`text-lg font-semibold mb-4 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
