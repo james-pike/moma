@@ -7,6 +7,7 @@ import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
 import ServiceGrid from "~/components/sections/ServiceGrid";
 import Tech from "~/components/sections/Tech";
+import Test from "~/components/sections/Test";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
 
@@ -37,6 +38,11 @@ export default component$(() => {
 
 
         </div>
+
+        <Test title="What We Offer"
+          subtitle="Browse past work from our clients."
+          highlight="Services"
+        />
 
         <ServiceGrid title="What We Offer"
           subtitle="Browse past work from our clients."
