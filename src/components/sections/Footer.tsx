@@ -57,12 +57,12 @@ export default component$(() => {
     // },
   ];
 
-  const social = [
-    { label: "Twitter", icon: IconTwitter, href: "https://twitter.com/lapetitebistro" },
-    { label: "Instagram", icon: IconInstagram, href: "https://instagram.com/lapetitebistro" },
-    { label: "Facebook", icon: IconFacebook, href: "https://facebook.com/lapetitebistro" },
-    { label: "Telegram", icon: IconTelegram, href: "tel:+16138988063" },
-  ];
+  // const social = [
+  //   { label: "Twitter", icon: IconTwitter, href: "https://twitter.com/lapetitebistro" },
+  //   { label: "Instagram", icon: IconInstagram, href: "https://instagram.com/lapetitebistro" },
+  //   { label: "Facebook", icon: IconFacebook, href: "https://facebook.com/lapetitebistro" },
+  //   { label: "Telegram", icon: IconTelegram, href: "tel:+16138988063" },
+  // ];
 
   return (
     <footer class="mt-2">
