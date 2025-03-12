@@ -2,7 +2,6 @@ import { component$ } from '@builder.io/qwik';
 
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import LogoClouds from './LogoClouds';
 import ReviewsPage from '../widgets/ReviewsPage';
 
 

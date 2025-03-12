@@ -3,7 +3,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
 import Portfolio from "~/components/sections/Portfolio";
-import Reviews from "~/components/sections/Reviews";
 import ReviewsX from "~/components/sections/ReviewsX";
 import Tech from "~/components/sections/Tech";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
