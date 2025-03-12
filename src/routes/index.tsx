@@ -2,9 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
-import LogoClouds from "~/components/sections/LogoClouds";
-import Portfolio from "~/components/sections/Portfolio";
-import Services from "~/components/sections/Services";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
 
