@@ -55,7 +55,7 @@ export default component$(() => {
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="dark:bg-gray-950">
+        <Modal.Panel position={"left"} class="dark:bg-gray-950 border-2 border-gray-700">
           {/* Header */}
           <div class="border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 p-1">
             <Modal.Title class="pt-1">
