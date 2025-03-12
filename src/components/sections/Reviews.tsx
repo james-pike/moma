@@ -35,7 +35,7 @@ export default component$((props: Props) => {
                 </Card.Root>
                 <Card.Content class="relative">
                 {/* <div class="h-2 bg-black rounded-sm border-2 border-gray-700"></div> */}
-<Card.Root class="m-1.5 p-3 rounded-none border dark:border-gray-700 dark:bg-gray-850">
+<Card.Root class="m-1.5 p-2 rounded-none border dark:border-gray-700 dark:bg-gray-850">
 
 <ReviewsPage/>
 
