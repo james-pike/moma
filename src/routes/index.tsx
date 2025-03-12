@@ -4,6 +4,7 @@ import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
 import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
+import ReviewsX from "~/components/sections/ReviewsX";
 import Tech from "~/components/sections/Tech";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
@@ -46,13 +47,10 @@ subtitle="Browse past work from our clients."
              highlight="Technology"
            />
 
-           <Reviews title="What Our Guests Say"
+           <ReviewsX title="What Our Guests Say"
                    subtitle="See what our customers love about our café!"
                    highlight="Reviews"
-                   items={[
-                
-               
-                   ]}/>
+                />
 
         <FAQ title="Frequently Asked Questions"
           subtitle="Find answers to common inquiries about our cafe."

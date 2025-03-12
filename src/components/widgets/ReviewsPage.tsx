@@ -49,7 +49,7 @@ export default component$<Props>((props) => {
             {reviews.map((review, index) => (
               <div
                 key={`${review.author_name}-${index}`}
-                class="flex flex-col w-full break-inside-avoid mb-6 sm:mb-8" // Break-inside prevents splitting across columns
+                class="flex flex-col w-full break-inside-avoid mb-4 sm:mb-8" // Break-inside prevents splitting across columns
               >
                 <div
                   class={twMerge(
