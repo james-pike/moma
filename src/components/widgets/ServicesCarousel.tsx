@@ -46,7 +46,7 @@ export default component$(() => {
   return (
     <>
              
-                                <Carousel.Root class="carousel-root bg-yellow-50 dark:bg-gray-800 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
+                                <Carousel.Root class="carousel-root bg-yellow-50 dark:bg-gray-850 border-gray-300" slidesPerView={1.2} gap={25} rewind sensitivity={{
       touch: 1.75,
     }}>
       <Carousel.Scroller class="carousel-scroller">
@@ -60,7 +60,7 @@ export default component$(() => {
               alt={service.title}
               class="w-full h-44 object-cover rounded-none"
             />
-            <div class="service-info p-2 bg-gray-300 dark:bg-gray-700 flex-1 overflow-hidden">
+            <div class="service-info p-2 bg-gray-300 dark:bg-gray-800 flex-1 overflow-hidden">
               <h1 class="service-title text-lg font-bold truncate">{service.title}</h1>
               <p class="service-description text-sm line-clamp-2">{service.description}</p>
             </div>

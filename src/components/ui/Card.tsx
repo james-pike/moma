@@ -6,7 +6,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
     <div
       {...props}
       class={cn(
-        'rounded-sm border bg-card dark:bg-gray-800 dark:border-gray-700 text-card-foreground shadow-sm',
+        'rounded-sm border-2 bg-gray-100 p-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-sm',
         props.class,
       )}
     >
@@ -17,7 +17,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
 
 const Header = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('flex flex-col space-y-0 p-4', props.class)}>
+    <div {...props} class={cn('flex flex-col space-y-0 bg-gray-900 p-4', props.class)}>
       <Slot />
     </div>
   );

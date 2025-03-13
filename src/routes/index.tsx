@@ -9,6 +9,8 @@ import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
 import Tech from "~/components/sections/Tech";
 import Test from "~/components/sections/Test";
+import { Card } from "~/components/ui/Card";
+import { CardHeadline } from "~/components/ui/CardHeadline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
 
@@ -17,8 +19,9 @@ export default component$(() => {
   return (
     <>
       <div class="flex flex-col gap-2">
-        <div class="herocard ">
-          <div class="flex flex-col">
+
+<Card.Root class="py-8 px-4">
+<div class="flex flex-col">
             <HeroHeadline title="Premium Web Design & Development"
               subtitle="Transform your online presence with our custom web design and development services. 
           We help business create stunning, fast, and secure websites."
@@ -36,9 +39,8 @@ export default component$(() => {
               </a>
             </div>
           </div>
+</Card.Root>
 
-
-        </div>
 
         <Test title="What We Offer"
           subtitle="Browse past work from our clients."
