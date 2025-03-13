@@ -68,7 +68,7 @@ export default component$(() => {
                                     
                                     
     
-<Card.Root class="bg-yellow-50 border-white border-2">
+<Card.Root class="bg-yellow-50 border-yellow-100 border-2">
   
         <div class="max-w-7xl mx-auto px-4 py-8">
           {/* Top Secti <footer class=" border-gray-200 bg-yellow-50 border dark:border-gray-700 rounded-none py-10 px-4 sm:px-6">on */}
