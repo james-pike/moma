@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import ServiceTabs from '../widgets/ServiceTabs';
+import MenuTabs from '../widgets/MenuTabs';
 
 interface Props {
     title?: any;
@@ -30,7 +30,7 @@ export default component$((props: Props) => {
                         <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
                     </Card.Header>
                     <Card.Content>
-                        <ServiceTabs />
+                        <MenuTabs />
                     </Card.Content>
                 </div>
             </Card.Root>
