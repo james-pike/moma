@@ -29,7 +29,7 @@ export default component$((props: Props) => {
                         </div>
                         <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
                     </Card.Header>
-                    <Card.Content>
+                    <Card.Content class="-mt-2">
                         <MenuTabs />
                     </Card.Content>
                 </div>
