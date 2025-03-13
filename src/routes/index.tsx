@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
-import Hero from "~/components/sections/Hero";
 import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
@@ -16,7 +15,7 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-    <Hero/>
+    {/* <Hero/> */}
       <div class="flex flex-col gap-2">
 
 <Card.Root class="py-8 px-4">
