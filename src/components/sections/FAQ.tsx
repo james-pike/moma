@@ -1,7 +1,7 @@
-import { component$ } from '@builder.io/qwik';
+import { $, component$, useSignal } from '@builder.io/qwik';
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import FAQAccordion from '../widgets/FAQAccordion';
+import { Accordion } from '../ui/Accordion';
 
 interface Props {
     title?: any;
@@ -12,14 +12,28 @@ interface Props {
 
 export default component$((props: Props) => {
     const { title = "", subtitle = "", highlight = "", classes = {} } = props;
+    const rotateTrigger = useSignal(0);
+
+    // Function to handle accordion click and trigger 90-degree rotation
+    const handleAccordionClick = $(() => {
+        rotateTrigger.value += 1; // Increment to trigger new animation
+    });
 
     return (
-        <section class=" scroll-mt-16">
+        <section class="scroll-mt-16">
             <Card.Root>
                 <div class="dark:border-gray-700 border-gray-200 border">
                     <Card.Header class="relative">
                         <div class="absolute inset-y-0 right-[1%] items-center flex opacity-20 z-10 text-gray-500">
-                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 animate-[spin_1.5s_ease-in-out]">
+                            <svg 
+                                viewBox="0 0 24 24" 
+                                fill="currentColor" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class={`w-24 h-24 animate-[spin_1.5s_ease-in-out] ${rotateTrigger.value > 0 ? 'transition-transform duration-1000' : ''}`}
+                                style={{
+                                    transform: `rotate(${rotateTrigger.value * 90}deg)`
+                                }}
+                            >
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
@@ -30,16 +44,59 @@ export default component$((props: Props) => {
                         <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
                     </Card.Header>
                     <Card.Content>
-                        <FAQAccordion />
+                        <Accordion.Root class="w-full -mt-2 rounded-sm">
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    Is there outdoor seating available?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    Absolutely! Enjoy your coffee or meal in our cozy outdoor seating area, perfect for sunny days and fresh air.
+                                </Accordion.Content>
+                            </Accordion.Item>
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    What are your opening hours?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    We’re open daily from 7 AM to 8 PM. Join us for a morning coffee, a relaxed lunch, or an evening treat!
+                                </Accordion.Content>
+                            </Accordion.Item>
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    Do you offer takeout?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    Yes, all of our food and drinks are available for takeout. Just let us know when you place your order, and we’ll pack it up for you.
+                                </Accordion.Content>
+                            </Accordion.Item>
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    Can I bring my laptop and work from the café?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    Of course! We have free Wi-Fi and plenty of outlets, making our café a great spot for remote work or studying.
+                                </Accordion.Content>
+                            </Accordion.Item>
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    Do you take reservations?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    We operate mostly on a walk-in basis, but for larger groups or special occasions, feel free to give us a call to arrange a reservation.
+                                </Accordion.Content>
+                            </Accordion.Item>
+                            <Accordion.Item>
+                                <Accordion.Trigger class="text-md" onClick$={handleAccordionClick}>
+                                    Do you have vegetarian or gluten-free options?
+                                </Accordion.Trigger>
+                                <Accordion.Content>
+                                    Yes! We offer a variety of vegetarian, vegan, and gluten-free options. Just ask our staff for recommendations!
+                                </Accordion.Content>
+                            </Accordion.Item>
+                        </Accordion.Root>
                     </Card.Content>
                 </div>
             </Card.Root>
         </section>
     );
 });
-
-
-
-
-
-
