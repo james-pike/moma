@@ -40,8 +40,8 @@ export default component$(() => {
 
       {/* Coffee Menu Panel */}
       <Tabs.Panel>
-        <Card.Root>
-          <Card.Content class="p-3">
+  
+      
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {menuItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md overflow-hidden border border-gray-200">
@@ -54,14 +54,14 @@ export default component$(() => {
                 </div>
               ))}
             </div>
-          </Card.Content>
-        </Card.Root>
+  
+    
       </Tabs.Panel>
 
       {/* Tea Panel */}
       <Tabs.Panel>
-        <Card.Root>
-          <Card.Content class="p-4">
+
+  
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {teaItems.map((item, index) => (
                 <div key={index} class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
@@ -74,8 +74,8 @@ export default component$(() => {
                 </div>
               ))}
             </div>
-          </Card.Content>
-        </Card.Root>
+      
+      
       </Tabs.Panel>
 
       {/* Bistro Panel */}
