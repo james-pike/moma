@@ -16,10 +16,12 @@ export default component$(() => {
     <link rel="preload" href="/images/hero1.webp" as="image"/>
     <link rel="preload" href="/images/hero2.webp" as="image"/>
     </head> */}
-    <section class="relative px-0 border border-gray-300 dark:border-gray-700 max-w-7xl mx-auto !h-[25vh] md:!h-[50vh] lg:!h-[50vh] xl:!h-[35vh] text-white overflow-hidden rounded-none">
+    <section class="relative px-0 border border-gray-200 dark:border-gray-700 max-w-7xl mx-auto !h-[25vh] md:!h-[50vh] lg:!h-[50vh] xl:!h-[35vh] text-white overflow-hidden rounded-none">
       <Carousel scrollable noControls slideInterval={5000} class="custom-carousel w-full !h-full rounded-none">
         <Carousel.Slide class="w-full !h-full flex relative rounded-none">
           <img
+          width={1024}
+          height={1024}
             class="flex-1 w-full !h-full object-cover rounded-none"
             src="/images/hero1.webp"
             alt="Freshly Brewed Coffee"
@@ -41,6 +43,8 @@ export default component$(() => {
 
         <Carousel.Slide class="w-full !h-full flex relative rounded-none">
           <img
+          width={1024}
+          height={1024}
             class="flex-1 w-full !h-full object-cover rounded-none"
             src="/images/hero1.webp"
             alt="Freshly Brewed Coffee"
