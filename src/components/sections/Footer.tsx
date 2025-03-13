@@ -79,11 +79,10 @@ export default component$(() => {
                 class={`inline-block text-2xl font-bold transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                 href="/"
               >
-                Webdev.ca
+                MLB Media
               </Link>
               <p class="mt-4 text-sm leading-relaxed">
-              Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.     
-
+              Elevate your brand with our professional photography and videography services. We specialize in creating stunning visuals that capture your story and leave a lasting impression.
               </p>
               <div class="mt-6 flex space-x-4">
               <a class="btn3 px-4 rounded-xl w-half" href="/contact">Get Started Today
