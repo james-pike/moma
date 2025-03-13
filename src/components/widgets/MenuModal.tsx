@@ -55,9 +55,9 @@ export default component$(() => {
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="dark:bg-gray-950 border-2">
+        <Modal.Panel position={"left"} class="dark:bg-gray-950">
           {/* Header */}
-          <div class="border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 p-1">
+          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-850 p-1">
             <Modal.Title class="pt-1">
               <a href="/">
                 <Logo />
@@ -68,7 +68,7 @@ Safe & Auto Inc            </Modal.Description>
           </div>
 
           {/* Navigation Content */}
-          <nav class="mt-0 space-y-4 bg-gray-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border-2 border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
             {isServicesSection.value ? (
               // Services Section
               <div class="flex flex-col h-full">
