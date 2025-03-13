@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
-import Hero from "~/components/sections/Hero";
 import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
@@ -19,8 +18,7 @@ export default component$(() => {
       <div class="flex flex-col gap-2">
 
 <Card.Root class="py-8 px-4">
-<div class="">
-<Hero/>
+<div class="flex flex-col">
             <HeroHeadline title="Premium Web Design & Development"
               subtitle="Transform your online presence with our custom web design and development services. 
           We help business create stunning, fast, and secure websites."
@@ -28,7 +26,7 @@ export default component$(() => {
                 title: "text-4.5xl" // Overrides the default "text-4xl md:text-5xl"
               }}>
             </HeroHeadline>
-            <div class=" sm:max-w-md  grid grid-cols-1 pt-4 pb-5 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
+            <div class=" sm:max-w-md  grid grid-cols-1 pt-4 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-7xl">
 
               <a class="btn2" href="/contact">Get A Quote
 
@@ -37,7 +35,6 @@ export default component$(() => {
 
               </a>
             </div>
-           
           </div>
 </Card.Root>
 
