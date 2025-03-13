@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
-import FAQpage from "~/components/sections/FAQpage";
 import Features from "~/components/sections/Features";
 import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
@@ -46,10 +45,6 @@ export default component$(() => {
           highlight="Services"
         />
 
-<FAQpage title="What We Offer"
-          subtitle="Browse past work from our clients."
-          highlight="Services"
-        />
 
         <Features title="What We Offer"
           subtitle="Browse past work from our clients."
