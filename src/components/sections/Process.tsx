@@ -67,8 +67,37 @@ export default component$((props: Props) => {
                         <CardHeadline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} align="left" />
                     </Card.Header>
                     <Card.Content>
-                        <ServicesCarousel />
-                    </Card.Content>
+<div class="motion-group md:col-start-2 md:row-start-1 order-2">
+          {items.map(({ title, description, icon: Icon }, index) => (
+            <div
+              key={`item-steps-${index}`}
+              class={`flex opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up motion-delay-[${index * 150}ms]`}
+            >
+              <div class="mr-4 flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
+                  {Icon ? (
+                    <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  ) : (
+                    <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                  )}
+                </div>
+                {index !== items.length - 1 && (
+                  <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+                )}
+              </div>
+              <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
+                {title && (
+                  <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+                    {title}
+                  </p>
+                )}
+                {description && (
+                  <p class="text-gray-600 dark:text-slate-400">{description}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>                    </Card.Content>
                 </div>
             </Card.Root>
         </section>
