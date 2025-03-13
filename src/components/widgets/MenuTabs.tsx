@@ -33,7 +33,7 @@ export default component$(() => {
       {/* Responsive Tabs List sticky top-[92px] z-10 */}
       <Tabs.List class="grid grid-cols-4 sm:justify-start sm:inline-flex sm:space-x-4 w-full shadow-md ">
         <Tabs.Tab class="px-4 py-2">Design</Tabs.Tab>
-        <Tabs.Tab class="px-4 py-2">Development</Tabs.Tab>
+        <Tabs.Tab class="px-4 py-2">Develop</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Branding</Tabs.Tab>
         <Tabs.Tab class="px-4 py-2">Marketing</Tabs.Tab>
       </Tabs.List>
@@ -80,7 +80,7 @@ export default component$(() => {
 
       {/* Bistro Panel */}
       <Tabs.Panel>
-        <Card.Root>
+       
           <Card.Header>
             <Card.Title>Account</Card.Title>
             <Card.Description>Make changes to your account here.</Card.Description>
@@ -98,12 +98,12 @@ export default component$(() => {
           <Card.Footer>
             <Button>Save changes</Button>
           </Card.Footer>
-        </Card.Root>
+      
       </Tabs.Panel>
 
       {/* Dessert Panel */}
       <Tabs.Panel>
-        <Card.Root>
+      
           <Card.Header>
             <Card.Title>Account</Card.Title>
             <Card.Description>Make changes to your account here.</Card.Description>
@@ -121,7 +121,7 @@ export default component$(() => {
           <Card.Footer>
             <Button>Save changes</Button>
           </Card.Footer>
-        </Card.Root>
+     
       </Tabs.Panel>
     </Tabs.Root>
   );

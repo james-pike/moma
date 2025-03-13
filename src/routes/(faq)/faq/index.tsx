@@ -9,7 +9,7 @@ export default component$(() => {
   return (
     <>
 <FAQ title="Frequently Asked Questions"
-        subtitle="Find answers to common inquiries about our cafe."
+        subtitle="Find answers to common inquiries."
         highlight="FAQs"
        
         
