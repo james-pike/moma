@@ -12,10 +12,12 @@ export default component$(() => {
   return (
     <>
      <About  
-          title="What We Do"
+          title="Who We Are"
           // subtitle="Have questions about our café? Find answers to common inquiries below."
-          highlight="Services"
-          items={[]} />
+          highlight="About Us"
+          subtitle="Find answers to common inquiries."
+
+           />
     </>
   );
 });

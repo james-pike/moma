@@ -2,14 +2,23 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Contact from "~/components/sections/Contact";
 import FAQ from "~/components/sections/FAQ";
+import Features from "~/components/sections/Features";
 import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
 import Reviews from "~/components/sections/Reviews";
+import Services from "~/components/sections/Services";
 import Tech from "~/components/sections/Tech";
-import Test from "~/components/sections/Test";
 import { Card } from "~/components/ui/Card";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
+
+import { qwikSerialized } from "~/utils/qwikSerialized";
+
+const IconBrandTailwind = qwikSerialized(() => import("../components/icons/IconBrandTailwind"));
+const IconApps = qwikSerialized(() => import("../components/icons/IconApps"));
+const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
+const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBrandGoogle"));
+const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 
 export default component$(() => {
@@ -40,9 +49,51 @@ export default component$(() => {
 </Card.Root>
 
 
-        <Test title="What We Offer"
+        <Services title="What We Offer"
           subtitle="Browse past work from our clients."
           highlight="Services"
+        />
+
+<Features title="What You Get"
+          subtitle="Browse past work from our clients."
+          highlight="Features"
+          items={[
+            {
+              title: "Qwik + Tailwind CSS Integration",
+              description:
+                "A seamless integration between two great frameworks that offer high productivity, performance and versatility.",
+              icon: IconBrandTailwind,
+            },
+            {
+              title: "Ready-to-use Components",
+              description:
+                "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
+              icon: IconApps,
+            },
+            {
+              title: "Best Practices",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
+            },
+            {
+              title: "Excellent Page Speed",
+              description:
+                "Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.",
+              icon: IconRocket,
+            },
+            {
+              title: "Search Engine Optimization (SEO)",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
+              icon: IconBrandGoogle,
+            },
+            {
+              title: "Open to new ideas and contributions",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
+              icon: IconBulb
+            },
+          ]}
         />
 
 
