@@ -10,7 +10,6 @@ import Reviews from "~/components/sections/Reviews";
 import Tech from "~/components/sections/Tech";
 import Test from "~/components/sections/Test";
 import { Card } from "~/components/ui/Card";
-import { CardHeadline } from "~/components/ui/CardHeadline";
 import { HeroHeadline } from "~/components/ui/HeroHeadline";
 import { SITE } from "~/config.mjs";
 

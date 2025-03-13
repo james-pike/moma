@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-    const { id, title = "", subtitle = "", highlight = "", classes = {} } = props;
+    const { title = "", subtitle = "", highlight = "", classes = {} } = props;
 
     return (
         <section class="relative scroll-mt-16">
