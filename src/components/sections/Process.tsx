@@ -1,8 +1,9 @@
 import { component$ } from '@builder.io/qwik';
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
-import ServicesCarousel from '../widgets/ServicesCarousel';
 import IconStar from '../icons/IconStar';
+import { Image } from "@unpic/qwik";
+
 
 interface Props {
     title?: any;
@@ -97,7 +98,21 @@ export default component$((props: Props) => {
               </div>
             </div>
           ))}
-        </div>                    </Card.Content>
+        </div>   
+           {typeof image !== "undefined" && (
+                  <div class="md:hidden order-3">
+                    <Image
+                      layout="constrained"
+                       src="/images/hero1.webp"
+                      width={532}
+                      height={504}
+                      alt={image.alt}
+                      class="w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 sm:h-[400px]"
+                      breakpoints={[320, 480, 640, 768, 1024]}
+                    />
+                  </div>
+                )}
+                                 </Card.Content>
                 </div>
             </Card.Root>
         </section>
