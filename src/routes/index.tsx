@@ -20,6 +20,7 @@ export default component$(() => {
 
 <Card.Root class="py-8 px-4">
 <div class="">
+<Hero/>
             <HeroHeadline title="Premium Web Design & Development"
               subtitle="Transform your online presence with our custom web design and development services. 
           We help business create stunning, fast, and secure websites."
@@ -36,7 +37,7 @@ export default component$(() => {
 
               </a>
             </div>
-            <Hero/>
+           
           </div>
 </Card.Root>
 
