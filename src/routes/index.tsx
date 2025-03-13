@@ -5,6 +5,7 @@ import FAQ from "~/components/sections/FAQ";
 import Features from "~/components/sections/Features";
 import Menu from "~/components/sections/Menu";
 import Portfolio from "~/components/sections/Portfolio";
+import Process from "~/components/sections/Process";
 import Reviews from "~/components/sections/Reviews";
 import Services from "~/components/sections/Services";
 import Tech from "~/components/sections/Tech";
@@ -100,6 +101,11 @@ export default component$(() => {
         <Portfolio title="Gallery Of Past Work"
           subtitle="Browse past work from our clients."
           highlight="Portfolio"
+        />
+
+<Process title="Our Design Process"
+          subtitle="Browse past work from our clients."
+          highlight="Steps"
         />
 
         <Tech title="Our Design Stack"

@@ -9,7 +9,7 @@ export const Label = component$<LabelProps>((props) => {
     <HeadlessLabel
       {...props}
       class={cn(
-        'font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+        'font-medium dark:text-gray-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
         props.class,
       )}
     >

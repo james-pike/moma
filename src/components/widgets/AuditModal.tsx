@@ -14,7 +14,7 @@ export default component$(() => {
       <Modal.Trigger class={[buttonVariants({ look: 'outline' })]}>
         Open modal
       </Modal.Trigger>
-      <Modal.Panel>
+      <Modal.Panel class="border-2 bg-gray-200 dark:bg-gray-700">
         <Modal.Title>Edit Profile</Modal.Title>
         <Modal.Description>
           Make changes to your profile here. Click save when you're done.

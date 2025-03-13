@@ -2,6 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { Card } from "../ui/Card";
 import { CardHeadline } from "../ui/CardHeadline";
 import ServicesCarousel from '../widgets/ServicesCarousel';
+import IconStar from '../icons/IconStar';
 
 interface Props {
     title?: any;
@@ -12,6 +13,42 @@ interface Props {
 
 export default component$((props: Props) => {
     const { title = "", subtitle = "", highlight = "", classes = {} } = props;
+
+      const stepsData = {
+        title: "Our Process: From Idea to Finished Print",
+        items: [
+          {
+            title: "Step 1: Request a Quote",
+            description:
+              "Start by requesting a personalized quote for your printing needs. Share your project details, and we'll provide you with a clear and competitive estimate.",
+            icon: IconStar,
+          },
+          {
+            title: "Step 2: Custom Design Assistance",
+            description:
+              "Our expert design team can help you refine your artwork or create a custom design that meets your vision. We ensure your project is print-ready and perfect for production.",
+            icon: IconStar,
+          },
+          {
+            title: "Step 3: High-Quality Printing",
+            description:
+              "Once approved, we bring your project to life using state-of-the-art printing technology. We guarantee vibrant colors, sharp details, and exceptional quality in every print.",
+            icon: IconStar,
+          },
+          {
+            title: "Step 4: Quality Check & Delivery",
+            description:
+              "Before your order leaves our shop, we conduct a thorough quality check to ensure perfection. Then, we pack and deliver your prints right to your doorstep, on time and in perfect condition.",
+            icon: IconStar,
+          },
+        ],
+        image: {
+           src: "/images/hero1.webp",
+          alt: "Steps to professional printing success",
+        },
+      };
+    
+      const { items, image } = stepsData;
 
     return (
         <section class="scroll-mt-16">

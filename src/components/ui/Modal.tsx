@@ -11,7 +11,7 @@ const Close = HeadlessModal.Close;
 
 export const panelVariants = cva(
   [
-    'fixed w-full bg-background p-5 text-foreground transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    'fixed w-full bg-gray-100 dark:bg-gray-800 p-5 text-foreground border-2 border-gray-200 dark:border-gray-700 transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
     'data-[closing]:duration-300 data-[open]:duration-300 data-[open]:animate-in data-[closing]:animate-out',
     'backdrop:data-[closing]:duration-300 backdrop:data-[open]:duration-300 backdrop:data-[open]:animate-in backdrop:data-[closing]:animate-out backdrop:data-[closing]:fade-out backdrop:data-[open]:fade-in',
   ],
@@ -23,7 +23,7 @@ export const panelVariants = cva(
         top: 'inset-x-0 top-0 mt-0 rounded-b-base border-b data-[closing]:slide-out-to-top data-[open]:slide-in-from-top',
         bottom:
           'inset-x-0 bottom-0 mb-0 rounded-t-base border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom',
-        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base  data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
+        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r border-gray-200 dark:border-gray-700 data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
         right:
           'inset-y-0 right-0 mr-0 h-full max-w-sm rounded-l-base border-l data-[closing]:slide-out-to-right data-[open]:slide-in-from-right',
       },
@@ -52,7 +52,7 @@ const Title = component$<PropsOf<'h2'>>(({ ...props }) => {
   return (
     <HeadlessModal.Title
       {...props}
-      class={cn('text-lg font-semibold tracking-tight', props.class)}
+      class={cn('text-lg font-semibold dark:text-gray-300 tracking-tight', props.class)}
     >
       <Slot />
     </HeadlessModal.Title>
@@ -63,7 +63,7 @@ const Description = component$<PropsOf<'p'>>(({ ...props }) => {
   return (
     <HeadlessModal.Description
       {...props}
-      class={cn('text-sm text-muted-foreground', props.class)}
+      class={cn('text-sm text-muted-foreground dark:text-gray-300', props.class)}
     >
       <Slot />
     </HeadlessModal.Description>
