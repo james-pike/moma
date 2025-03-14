@@ -23,7 +23,7 @@ interface Props {
 export default component$((props: Props) => {
   const {  title = "", subtitle = "", highlight = "", classes = {} } = props;
   const stepsData = {
-    title: "Our Process: From Idea to Finished Print",
+    title: "Our Process: Froms Idea to Finished Print",
     items: [
       {
         title: "Step 1: Request a Quote",
